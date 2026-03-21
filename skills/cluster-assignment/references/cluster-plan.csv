@@ -1,0 +1,5 @@
+cluster,branch,base,worktree,push
+Cluster A 3004,codex/3004-rebaseline-phase1,main,3004-rebaseline-phase1,false
+Cluster B 3024+3022,codex/3024-3022-public-polish,main,3024-3022-public-polish,false
+Cluster C 3018,codex/3018-admin-cleanup-next,main,3018-admin-cleanup-next,false
+Cluster D 3005+3006,codex/3005-3006-spec-prep,main,3005-3006-spec-prep,false

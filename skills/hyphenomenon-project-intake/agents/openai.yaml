@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hyphenomenon Intake"
+  short_description: "Build project intake dossier + screenshots"
+  default_prompt: "Prepare a Hyphenomenon project intake dossier and screenshot pack from this repo and live site."

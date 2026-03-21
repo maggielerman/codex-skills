@@ -1,0 +1,56 @@
+name: docs-site-sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '{{DOCS_ROOT}}/**'
+      - 'docs-site/**'
+      - 'scripts/docs/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'wrangler.toml'
+      - '.github/workflows/docs-site-sync.yml'
+
+jobs:
+  docs-sync:
+    runs-on: ubuntu-latest
+    env:
+      DOCS_SITE_ENABLED: '{{DOCS_SITE_ENABLED}}'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install root deps
+        run: npm ci
+
+      - name: Install docs-site deps (optional)
+        run: |
+          if [ "$DOCS_SITE_ENABLED" = "true" ] && [ -d docs-site ]; then
+            npm --prefix docs-site ci
+          else
+            echo "docs-site install skipped (disabled or missing)"
+          fi
+
+      - name: Normalize frontmatter
+        run: npm run docs:frontmatter
+
+      - name: Regenerate docs manifest
+        run: npm run docs:manifest
+
+      - name: Check docs links
+        run: npm run docs:links
+
+      - name: Build docs site (optional)
+        run: |
+          if [ "$DOCS_SITE_ENABLED" = "true" ] && [ -d docs-site ]; then
+            npm run docs:build
+          else
+            echo "docs-site build skipped (disabled or missing)"
+          fi

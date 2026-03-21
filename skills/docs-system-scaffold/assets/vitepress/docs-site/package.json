@@ -1,0 +1,13 @@
+{
+  "name": "docs-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev ../{{DOCS_ROOT}}",
+    "build": "vitepress build ../{{DOCS_ROOT}}",
+    "preview": "vitepress preview ../{{DOCS_ROOT}}"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

@@ -1,0 +1,3 @@
+name = "{{PROJECT_NAME}}"
+pages_build_output_dir = "./{{DOCS_ROOT}}/.vitepress/dist"
+compatibility_date = "{{COMPATIBILITY_DATE}}"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Docs System Scaffold"
+  short_description: "Scaffold docs governance/tooling with expanded lifecycle states"
+  default_prompt: "Use $docs-system-scaffold to standardize docs governance/tooling with active, in-review, blocked, completed, backlog, and stale project states; first ask whether to scaffold a docs site and product docs pack."
