@@ -7,6 +7,7 @@ Total skills: **11**
 ## Status meanings
 
 - `active` - supported for normal use
+- `experimental` - still evolving; expect changes
 - `legacy` - retained for older or transitional scenarios
 - `deprecated` - backward-compatibility only; prefer the listed replacement
 - `archived` - reference-only; do not use for new work

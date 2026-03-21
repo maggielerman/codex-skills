@@ -39,6 +39,7 @@ The repository intentionally tracks an allowlisted subset of local Codex skills 
 
 Skill lifecycle state is tracked separately from membership:
 - `active` means supported for normal use
+- `experimental` means promising but still evolving; expect interface or behavior changes
 - `legacy` means retained for narrow older scenarios
 - `deprecated` means retained for backward compatibility and should point to a replacement
 - `archived` means reference-only and should not be used for new work

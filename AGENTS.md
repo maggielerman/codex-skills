@@ -6,7 +6,7 @@ This repository stores portable custom Codex skills and the docs/scripts that ma
 
 - Treat `skills/` as the primary product.
 - Treat `skills/SUITE_SKILLS.txt` as the source of truth for which skills belong in this repo.
-- Treat `skills/SUITE_METADATA.json` as the source of truth for lifecycle labeling such as `legacy`, `deprecated`, and `archived`.
+- Treat `skills/SUITE_METADATA.json` as the source of truth for lifecycle labeling such as `experimental`, `legacy`, `deprecated`, and `archived`.
 - Keep the repository lean; avoid project-management scaffolding that is meant for delivery repos.
 - Preserve portability. A skill copied out of this repo should still work as a standalone skill.
 - Prefer repo-wide conventions over one-off formatting changes.
@@ -32,6 +32,6 @@ When adding or updating skills:
 ## Quality bar
 
 - Skill metadata must stay trigger-oriented and accurate.
-- Deprecated and archived skills must be visibly labeled in repo-level metadata and generated catalog output.
+- Experimental, deprecated, legacy, and archived skills must be visibly labeled in repo-level metadata and generated catalog output.
 - Public-facing docs should be clear enough for future external sharing.
 - Scripts should use the standard library when practical and avoid unnecessary dependencies.

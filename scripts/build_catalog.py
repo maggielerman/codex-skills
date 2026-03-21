@@ -15,6 +15,7 @@ MANIFEST_PATH = SKILLS_DIR / "manifest.json"
 INDEX_PATH = SKILLS_DIR / "INDEX.md"
 SUITE_LIST_PATH = SKILLS_DIR / "SUITE_SKILLS.txt"
 SUITE_METADATA_PATH = SKILLS_DIR / "SUITE_METADATA.json"
+ALLOWED_STATUSES = {"active", "experimental", "legacy", "deprecated", "archived"}
 
 
 @dataclass
@@ -81,6 +82,19 @@ def load_suite_metadata() -> dict[str, dict[str, str]]:
     return data.get("skills", {})
 
 
+def validate_metadata(skill_folder: str, metadata: dict[str, str]) -> None:
+    status = metadata.get("status", "active")
+    if status not in ALLOWED_STATUSES:
+        allowed = ", ".join(sorted(ALLOWED_STATUSES))
+        raise ValueError(f"{skill_folder}: invalid status '{status}'. Allowed statuses: {allowed}")
+
+    if status == "deprecated" and not metadata.get("replacement"):
+        raise ValueError(f"{skill_folder}: deprecated skills must declare a replacement")
+
+    if status == "archived" and not metadata.get("note"):
+        raise ValueError(f"{skill_folder}: archived skills must include a note explaining why they are retained")
+
+
 def collect_skills() -> list[SkillRecord]:
     suite_metadata = load_suite_metadata()
 
@@ -103,6 +117,7 @@ def collect_skills() -> list[SkillRecord]:
         frontmatter = parse_frontmatter(skill_md)
         interface = parse_openai_yaml(skill_dir / "agents" / "openai.yaml")
         metadata = suite_metadata.get(skill_dir.name, {})
+        validate_metadata(skill_dir.name, metadata)
 
         records.append(
             SkillRecord(
@@ -163,6 +178,7 @@ def write_index(records: list[SkillRecord]) -> None:
         "## Status meanings",
         "",
         "- `active` - supported for normal use",
+        "- `experimental` - still evolving; expect changes",
         "- `legacy` - retained for older or transitional scenarios",
         "- `deprecated` - backward-compatibility only; prefer the listed replacement",
         "- `archived` - reference-only; do not use for new work",

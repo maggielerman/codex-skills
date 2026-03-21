@@ -45,7 +45,7 @@ When relevant, preserve:
 
 1. Add or update the skill files.
 2. Update `skills/SUITE_SKILLS.txt` if the suite membership changed.
-3. Update `skills/SUITE_METADATA.json` if the skill is `legacy`, `deprecated`, or `archived`, and include a replacement or note when applicable.
+3. Update `skills/SUITE_METADATA.json` if the skill is `experimental`, `legacy`, `deprecated`, or `archived`, and include a replacement or note when applicable.
 4. Regenerate the catalog:
 
 ```bash
