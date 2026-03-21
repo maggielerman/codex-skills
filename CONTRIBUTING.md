@@ -20,6 +20,7 @@ Avoid adding:
 
 Each skill should:
 - live in its own folder under `skills/`
+- be listed in `skills/SUITE_SKILLS.txt`
 - include a valid `SKILL.md`
 - use concise, trigger-oriented frontmatter
 - include only the resource folders it actually needs
@@ -42,14 +43,15 @@ When relevant, preserve:
 ## Before opening a change
 
 1. Add or update the skill files.
-2. Regenerate the catalog:
+2. Update `skills/SUITE_SKILLS.txt` if the suite membership changed.
+3. Regenerate the catalog:
 
 ```bash
 python3 scripts/build_catalog.py
 ```
 
-3. Review the generated diff for `skills/INDEX.md` and `skills/manifest.json`.
-4. Sanity-check that the repo docs still describe the repo accurately.
+4. Review the generated diff for `skills/INDEX.md` and `skills/manifest.json`.
+5. Sanity-check that the repo docs still describe the repo accurately.
 
 ## Licensing note
 

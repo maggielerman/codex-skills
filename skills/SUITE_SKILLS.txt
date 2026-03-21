@@ -1,0 +1,11 @@
+cluster-assignment
+codex-to-claude-handoff
+collaborative-walkthrough
+continue-until-blocked
+docs-product-pack
+docs-project-lifecycle-statuses
+docs-system-scaffold
+github-docs-tracking-sync
+hyphenomenon-project-intake
+project-governance-audit
+repo-implementation-review

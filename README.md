@@ -1,9 +1,9 @@
 # Codex Skills Suite
 
-This repository is the durable source of truth for the Codex skills suite: a curated library of reusable skills, prompts, scripts, references, and assets that extend Codex for repeated workflows.
+This repository is the durable source of truth for the custom Codex skills suite: a curated library of authored skills, prompts, scripts, references, and assets that extend Codex for repeated workflows.
 
 The goals of this repo are simple:
-- back up the skills outside local Codex state
+- back up the custom skills outside local Codex state
 - make the collection easier to browse, validate, and evolve
 - support a future paid distribution model for the full suite
 - keep the catalog public-ready even while licensing and packaging decisions are still evolving
@@ -21,7 +21,8 @@ When the paid-access model is finalized, this repository should add a dedicated 
 
 ## Repository layout
 
-- `skills/` - the skill folders themselves
+- `skills/` - the skill folders that belong to this curated suite
+- `skills/SUITE_SKILLS.txt` - the allowlist of skill folders included in this repo
 - `skills/INDEX.md` - human-friendly catalog of the suite
 - `skills/manifest.json` - machine-friendly metadata manifest
 - `scripts/build_catalog.py` - regenerates the index and manifest from skill metadata
@@ -32,6 +33,8 @@ When the paid-access model is finalized, this repository should add a dedicated 
 ## Working model
 
 Each skill should remain self-contained and portable. The repo-level docs explain standards; the skill folders contain the actual behavior.
+
+The repository intentionally tracks an allowlisted subset of local Codex skills rather than mirroring every installed skill.
 
 The catalog files are generated from the skill folders. After adding or updating any skill, run:
 

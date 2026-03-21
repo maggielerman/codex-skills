@@ -13,6 +13,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = REPO_ROOT / "skills"
 MANIFEST_PATH = SKILLS_DIR / "manifest.json"
 INDEX_PATH = SKILLS_DIR / "INDEX.md"
+SUITE_LIST_PATH = SKILLS_DIR / "SUITE_SKILLS.txt"
 
 
 @dataclass
@@ -70,8 +71,18 @@ def parse_openai_yaml(path: Path) -> dict[str, str]:
 
 
 def collect_skills() -> list[SkillRecord]:
+    if SUITE_LIST_PATH.exists():
+        allowed = [
+            line.strip()
+            for line in SUITE_LIST_PATH.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.strip().startswith("#")
+        ]
+        skill_dirs = [SKILLS_DIR / name for name in allowed]
+    else:
+        skill_dirs = sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir() and not p.name.startswith("."))
+
     records: list[SkillRecord] = []
-    for skill_dir in sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir() and not p.name.startswith(".")):
+    for skill_dir in skill_dirs:
         skill_md = skill_dir / "SKILL.md"
         if not skill_md.exists():
             continue
@@ -153,6 +164,7 @@ def write_index(records: list[SkillRecord]) -> None:
             "",
             "## Notes",
             "",
+            "- This catalog is limited to the allowlisted suite in `skills/SUITE_SKILLS.txt`.",
             "- Hidden/system skills are intentionally excluded from this catalog.",
             "- Update this file by running `python3 scripts/build_catalog.py` from the repo root.",
         ]
