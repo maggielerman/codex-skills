@@ -14,6 +14,7 @@ SKILLS_DIR = REPO_ROOT / "skills"
 MANIFEST_PATH = SKILLS_DIR / "manifest.json"
 INDEX_PATH = SKILLS_DIR / "INDEX.md"
 SUITE_LIST_PATH = SKILLS_DIR / "SUITE_SKILLS.txt"
+SUITE_METADATA_PATH = SKILLS_DIR / "SUITE_METADATA.json"
 
 
 @dataclass
@@ -23,6 +24,9 @@ class SkillRecord:
     description: str
     display_name: str | None
     short_description: str | None
+    status: str
+    replacement: str | None
+    note: str | None
     has_agents_metadata: bool
     has_scripts: bool
     has_references: bool
@@ -70,7 +74,16 @@ def parse_openai_yaml(path: Path) -> dict[str, str]:
     return data
 
 
+def load_suite_metadata() -> dict[str, dict[str, str]]:
+    if not SUITE_METADATA_PATH.exists():
+        return {}
+    data = json.loads(SUITE_METADATA_PATH.read_text(encoding="utf-8"))
+    return data.get("skills", {})
+
+
 def collect_skills() -> list[SkillRecord]:
+    suite_metadata = load_suite_metadata()
+
     if SUITE_LIST_PATH.exists():
         allowed = [
             line.strip()
@@ -89,6 +102,7 @@ def collect_skills() -> list[SkillRecord]:
 
         frontmatter = parse_frontmatter(skill_md)
         interface = parse_openai_yaml(skill_dir / "agents" / "openai.yaml")
+        metadata = suite_metadata.get(skill_dir.name, {})
 
         records.append(
             SkillRecord(
@@ -97,6 +111,9 @@ def collect_skills() -> list[SkillRecord]:
                 description=frontmatter.get("description", ""),
                 display_name=interface.get("display_name"),
                 short_description=interface.get("short_description"),
+                status=metadata.get("status", "active"),
+                replacement=metadata.get("replacement"),
+                note=metadata.get("note"),
                 has_agents_metadata=(skill_dir / "agents" / "openai.yaml").exists(),
                 has_scripts=(skill_dir / "scripts").is_dir(),
                 has_references=(skill_dir / "references").is_dir() or (skill_dir / "reference").is_dir(),
@@ -118,6 +135,9 @@ def write_manifest(records: list[SkillRecord]) -> None:
                 "display_name": record.display_name,
                 "description": record.description,
                 "short_description": record.short_description,
+                "status": record.status,
+                "replacement": record.replacement,
+                "note": record.note,
                 "path": f"skills/{record.folder}",
                 "skill_md": f"skills/{record.folder}/SKILL.md",
                 "has_agents_metadata": record.has_agents_metadata,
@@ -140,8 +160,15 @@ def write_index(records: list[SkillRecord]) -> None:
         "",
         f"Total skills: **{len(records)}**",
         "",
-        "| Skill | Summary | Resources |",
-        "| --- | --- | --- |",
+        "## Status meanings",
+        "",
+        "- `active` - supported for normal use",
+        "- `legacy` - retained for older or transitional scenarios",
+        "- `deprecated` - backward-compatibility only; prefer the listed replacement",
+        "- `archived` - reference-only; do not use for new work",
+        "",
+        "| Status | Skill | Summary | Resources | Notes |",
+        "| --- | --- | --- | --- | --- |",
     ]
 
     for record in records:
@@ -155,8 +182,14 @@ def write_index(records: list[SkillRecord]) -> None:
         if record.has_assets:
             resources.append("assets")
         resource_text = ", ".join(resources) if resources else "metadata only"
+        notes = []
+        if record.replacement:
+            notes.append(f"Use `{record.replacement}` instead")
+        if record.note:
+            notes.append(record.note)
+        notes_text = " ".join(notes) if notes else ""
         lines.append(
-            f"| [`{label}`](./{record.folder}/SKILL.md) | {summary.replace('|', '\\|')} | {resource_text} |"
+            f"| `{record.status}` | [`{label}`](./{record.folder}/SKILL.md) | {summary.replace('|', '\\|')} | {resource_text} | {notes_text.replace('|', '\\|')} |"
         )
 
     lines.extend(
@@ -165,6 +198,7 @@ def write_index(records: list[SkillRecord]) -> None:
             "## Notes",
             "",
             "- This catalog is limited to the allowlisted suite in `skills/SUITE_SKILLS.txt`.",
+            "- Lifecycle status comes from `skills/SUITE_METADATA.json`.",
             "- Hidden/system skills are intentionally excluded from this catalog.",
             "- Update this file by running `python3 scripts/build_catalog.py` from the repo root.",
         ]

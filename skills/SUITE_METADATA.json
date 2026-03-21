@@ -1,0 +1,14 @@
+{
+  "skills": {
+    "docs-product-pack": {
+      "status": "deprecated",
+      "replacement": "docs-system-scaffold",
+      "note": "Backward-compatibility shim for older invocations."
+    },
+    "docs-project-lifecycle-statuses": {
+      "status": "legacy",
+      "replacement": "docs-system-scaffold",
+      "note": "Use only for repos scaffolded before in-review and blocked lifecycle support existed."
+    }
+  }
+}

@@ -4,22 +4,30 @@
 
 Total skills: **11**
 
-| Skill | Summary | Resources |
-| --- | --- | --- |
-| [`Cluster Assignment`](./cluster-assignment/SKILL.md) | Plan and bootstrap parallel work clusters | scripts, references |
-| [`Codex to Claude Handoff`](./codex-to-claude-handoff/SKILL.md) | Mirror Codex rules into Claude setup + docs | scripts, references |
-| [`Collaborative Walkthrough`](./collaborative-walkthrough/SKILL.md) | Run Q&A walkthrough on in-review projects | references |
-| [`Continue Until Blocked`](./continue-until-blocked/SKILL.md) | Run autonomously until cutover or blocker | metadata only |
-| [`Product Docs Pack (Deprecated)`](./docs-product-pack/SKILL.md) | Deprecated; redirects to Docs System Scaffold | references |
-| [`Docs Lifecycle Statuses (Legacy)`](./docs-project-lifecycle-statuses/SKILL.md) | Legacy retrofit for in-review/blocked project lifecycle states | scripts, references |
-| [`Docs System Scaffold`](./docs-system-scaffold/SKILL.md) | Scaffold docs governance/tooling with expanded lifecycle states | scripts, references, assets |
-| [`GitHub Docs Tracking Sync (Optional)`](./github-docs-tracking-sync/SKILL.md) | On-demand docs-to-GitHub sync; do not run by default | scripts, references |
-| [`Hyphenomenon Intake`](./hyphenomenon-project-intake/SKILL.md) | Build project intake dossier + screenshots | scripts, references |
-| [`Project Governance Audit`](./project-governance-audit/SKILL.md) | Audit project docs, checkpoint hygiene, and roadmap ordering | metadata only |
-| [`Repo Implementation Review`](./repo-implementation-review/SKILL.md) | Compare 2-3 repos and generate a review report | scripts, references, assets |
+## Status meanings
+
+- `active` - supported for normal use
+- `legacy` - retained for older or transitional scenarios
+- `deprecated` - backward-compatibility only; prefer the listed replacement
+- `archived` - reference-only; do not use for new work
+
+| Status | Skill | Summary | Resources | Notes |
+| --- | --- | --- | --- | --- |
+| `active` | [`Cluster Assignment`](./cluster-assignment/SKILL.md) | Plan and bootstrap parallel work clusters | scripts, references |  |
+| `active` | [`Codex to Claude Handoff`](./codex-to-claude-handoff/SKILL.md) | Mirror Codex rules into Claude setup + docs | scripts, references |  |
+| `active` | [`Collaborative Walkthrough`](./collaborative-walkthrough/SKILL.md) | Run Q&A walkthrough on in-review projects | references |  |
+| `active` | [`Continue Until Blocked`](./continue-until-blocked/SKILL.md) | Run autonomously until cutover or blocker | metadata only |  |
+| `deprecated` | [`Product Docs Pack (Deprecated)`](./docs-product-pack/SKILL.md) | Deprecated; redirects to Docs System Scaffold | references | Use `docs-system-scaffold` instead Backward-compatibility shim for older invocations. |
+| `legacy` | [`Docs Lifecycle Statuses (Legacy)`](./docs-project-lifecycle-statuses/SKILL.md) | Legacy retrofit for in-review/blocked project lifecycle states | scripts, references | Use `docs-system-scaffold` instead Use only for repos scaffolded before in-review and blocked lifecycle support existed. |
+| `active` | [`Docs System Scaffold`](./docs-system-scaffold/SKILL.md) | Scaffold docs governance/tooling with expanded lifecycle states | scripts, references, assets |  |
+| `active` | [`GitHub Docs Tracking Sync (Optional)`](./github-docs-tracking-sync/SKILL.md) | On-demand docs-to-GitHub sync; do not run by default | scripts, references |  |
+| `active` | [`Hyphenomenon Intake`](./hyphenomenon-project-intake/SKILL.md) | Build project intake dossier + screenshots | scripts, references |  |
+| `active` | [`Project Governance Audit`](./project-governance-audit/SKILL.md) | Audit project docs, checkpoint hygiene, and roadmap ordering | metadata only |  |
+| `active` | [`Repo Implementation Review`](./repo-implementation-review/SKILL.md) | Compare 2-3 repos and generate a review report | scripts, references, assets |  |
 
 ## Notes
 
 - This catalog is limited to the allowlisted suite in `skills/SUITE_SKILLS.txt`.
+- Lifecycle status comes from `skills/SUITE_METADATA.json`.
 - Hidden/system skills are intentionally excluded from this catalog.
 - Update this file by running `python3 scripts/build_catalog.py` from the repo root.

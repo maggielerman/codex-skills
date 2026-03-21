@@ -23,6 +23,7 @@ When the paid-access model is finalized, this repository should add a dedicated 
 
 - `skills/` - the skill folders that belong to this curated suite
 - `skills/SUITE_SKILLS.txt` - the allowlist of skill folders included in this repo
+- `skills/SUITE_METADATA.json` - lifecycle metadata such as `active`, `legacy`, `deprecated`, or `archived`
 - `skills/INDEX.md` - human-friendly catalog of the suite
 - `skills/manifest.json` - machine-friendly metadata manifest
 - `scripts/build_catalog.py` - regenerates the index and manifest from skill metadata
@@ -35,6 +36,12 @@ When the paid-access model is finalized, this repository should add a dedicated 
 Each skill should remain self-contained and portable. The repo-level docs explain standards; the skill folders contain the actual behavior.
 
 The repository intentionally tracks an allowlisted subset of local Codex skills rather than mirroring every installed skill.
+
+Skill lifecycle state is tracked separately from membership:
+- `active` means supported for normal use
+- `legacy` means retained for narrow older scenarios
+- `deprecated` means retained for backward compatibility and should point to a replacement
+- `archived` means reference-only and should not be used for new work
 
 The catalog files are generated from the skill folders. After adding or updating any skill, run:
 
@@ -51,7 +58,7 @@ python3 scripts/build_catalog.py
 
 ## Included skills
 
-See [skills/INDEX.md](/Users/maggielerman/Github/codex-skills/skills/INDEX.md) for the current catalog.
+See [skills/INDEX.md](./skills/INDEX.md) for the current catalog.
 
 ## Future commercialization direction
 
