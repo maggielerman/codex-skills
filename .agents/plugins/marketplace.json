@@ -1,0 +1,32 @@
+{
+  "name": "custom-plugin-backups",
+  "interface": {
+    "displayName": "Custom Plugin Backups"
+  },
+  "plugins": [
+    {
+      "name": "design-system-first",
+      "source": {
+        "source": "local",
+        "path": "./plugins/design-system-first"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "project-tranche-orchestrator",
+      "source": {
+        "source": "local",
+        "path": "./plugins/project-tranche-orchestrator"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

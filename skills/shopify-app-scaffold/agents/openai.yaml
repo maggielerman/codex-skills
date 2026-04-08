@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shopify App Scaffold"
+  short_description: "Create a fresh Shopify app shell with reusable comms and review modules"
+  default_prompt: "Scaffold a new Shopify app with the latest installed Shopify CLI template, then layer in the reusable merchant comms and review prompt shell."

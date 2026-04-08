@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design System Starter"
+  short_description: "Scaffold opinionated Next.js design-system starters."
+  default_prompt: "Use $design-system-starter to create a new design-system-first web app."

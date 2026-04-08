@@ -1,9 +1,10 @@
 # Codex Skills Suite
 
-This repository is the durable source of truth for the custom Codex skills suite: a curated library of authored skills, prompts, scripts, references, and assets that extend Codex for repeated workflows.
+This repository is the durable source of truth for a curated custom Codex skills suite plus backups of custom local plugins.
 
 The goals of this repo are simple:
 - back up the custom skills outside local Codex state
+- back up custom local plugins outside local Codex state
 - make the collection easier to browse, validate, and evolve
 - support a future paid distribution model for the full suite
 - keep the catalog public-ready even while licensing and packaging decisions are still evolving
@@ -26,6 +27,8 @@ When the paid-access model is finalized, this repository should add a dedicated 
 - `skills/SUITE_METADATA.json` - lifecycle metadata such as `active`, `legacy`, `deprecated`, or `archived`
 - `skills/INDEX.md` - human-friendly catalog of the suite
 - `skills/manifest.json` - machine-friendly metadata manifest
+- `plugins/` - backups of custom local plugins
+- `.agents/plugins/marketplace.json` - repo-local plugin registry for the backed-up custom plugins
 - `scripts/build_catalog.py` - regenerates the index and manifest from skill metadata
 - `scripts/sync_from_codex_home.sh` - syncs local Codex skills into this repository
 - `AGENTS.md` - operating instructions for agents working in this repo
@@ -35,7 +38,9 @@ When the paid-access model is finalized, this repository should add a dedicated 
 
 Each skill should remain self-contained and portable. The repo-level docs explain standards; the skill folders contain the actual behavior.
 
-The repository intentionally tracks an allowlisted subset of local Codex skills rather than mirroring every installed skill.
+Custom plugins are backed up separately under `plugins/`. They are not currently part of the generated skills catalog, and they should be treated as plugin backups rather than automatically curated suite members.
+
+The repository intentionally tracks an allowlisted subset of local Codex skills rather than mirroring every installed skill. Plugin backups follow the same principle: only custom local plugins should be backed up here.
 
 Skill lifecycle state is tracked separately from membership:
 - `active` means supported for normal use
@@ -56,6 +61,8 @@ If you want to refresh the repo from the local Codex skills directory, run:
 ./scripts/sync_from_codex_home.sh
 python3 scripts/build_catalog.py
 ```
+
+If you update the backed-up custom plugins, also refresh the repo-local plugin registry in `.agents/plugins/marketplace.json` so the backup stays installable.
 
 ## Included skills
 

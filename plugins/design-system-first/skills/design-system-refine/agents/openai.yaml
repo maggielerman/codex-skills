@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design System Refine"
+  short_description: "Refine hierarchy, tokens, and starter surfaces."
+  default_prompt: "Use $design-system-refine to tighten an existing design-system-first starter."

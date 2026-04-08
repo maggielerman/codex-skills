@@ -1,6 +1,6 @@
 {
   "generated_by": "scripts/build_catalog.py",
-  "skill_count": 11,
+  "skill_count": 18,
   "skills": [
     {
       "folder": "cluster-assignment",
@@ -88,6 +88,23 @@
       "file_count": 4
     },
     {
+      "folder": "docs-project-dashboard",
+      "name": "docs-project-dashboard",
+      "display_name": "Docs Project Dashboard",
+      "description": "Backfill a generated HTML project-management dashboard into repositories that already use the docs-system-scaffold `PROJECTS/` lifecycle structure. Use when the user wants a docs-native portfolio view, local PM dashboard, project index, or at-a-glance status board showing active, in-review, blocked, backlog, stale, and completed planning docs.",
+      "short_description": "Backfill a docs-native portfolio dashboard",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/docs-project-dashboard",
+      "skill_md": "skills/docs-project-dashboard/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true,
+      "file_count": 5
+    },
+    {
       "folder": "docs-project-lifecycle-statuses",
       "name": "docs-project-lifecycle-statuses",
       "display_name": "Docs Lifecycle Statuses (Legacy)",
@@ -156,6 +173,23 @@
       "file_count": 5
     },
     {
+      "folder": "plan-signoff-review",
+      "name": "plan-signoff-review",
+      "display_name": "Plan Signoff Review",
+      "description": "Review a proposed final plan against the full current thread and the latest supporting audits, reports, and decision artifacts before approval. Use when the user asks to double-check that a plan reflects everything discussed, incorporates the newest review documents, or needs a final readiness pass in an existing Plan mode thread.",
+      "short_description": "Re-read the full thread and latest audits before plan approval",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/plan-signoff-review",
+      "skill_md": "skills/plan-signoff-review/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": false,
+      "has_references": false,
+      "has_assets": false,
+      "file_count": 2
+    },
+    {
       "folder": "project-governance-audit",
       "name": "project-governance-audit",
       "display_name": "Project Governance Audit",
@@ -173,6 +207,23 @@
       "file_count": 2
     },
     {
+      "folder": "project-tranche-orchestrator",
+      "name": "project-tranche-orchestrator",
+      "display_name": "Project Tranche Orchestrator",
+      "description": "Act as the primary project manager and agent orchestrator for repos using the standard docs scaffold. Use when the user wants one primary agent to read project docs, derive the next tranche, delegate bounded work to subagents, manage handoffs, review completion, and write status updates back into the existing docs without creating a second source of truth.",
+      "short_description": "Primary-agent tranche planning, delegation, review, and docs writeback in collaborative or autonomous mode.",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/project-tranche-orchestrator",
+      "skill_md": "skills/project-tranche-orchestrator/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false,
+      "file_count": 8
+    },
+    {
       "folder": "repo-implementation-review",
       "name": "repo-implementation-review",
       "display_name": "Repo Implementation Review",
@@ -188,6 +239,74 @@
       "has_references": true,
       "has_assets": true,
       "file_count": 8
+    },
+    {
+      "folder": "shopify-app-scaffold",
+      "name": "shopify-app-scaffold",
+      "display_name": "Shopify App Scaffold",
+      "description": "Scaffold a new Shopify app from the latest installed Shopify CLI template, then layer in a reusable shell for merchant email opt-in, unsubscribe flow, review prompts, and optional billing/app-proxy/theme-extension placeholders. Use when creating a new Shopify app quickly without copying an old repo wholesale.",
+      "short_description": "Create a fresh Shopify app shell with reusable comms and review modules",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/shopify-app-scaffold",
+      "skill_md": "skills/shopify-app-scaffold/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true,
+      "file_count": 22
+    },
+    {
+      "folder": "user-journey-audit",
+      "name": "user-journey-audit",
+      "display_name": "User Journey Audit",
+      "description": "Create current-state user journey audits with route mapping, screenshots, coverage verification, and a final PDF report. Use when Codex needs to audit navigation or UX flows for one or more user types in any repository or deployed app, suggest which user types to include, capture click-by-click evidence, verify route coverage against code and tests, and export a screenshot-backed PDF artifact.",
+      "short_description": "Audit user journeys and export PDF",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/user-journey-audit",
+      "skill_md": "skills/user-journey-audit/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false,
+      "file_count": 8
+    },
+    {
+      "folder": "ux-ui-bug-intake",
+      "name": "ux-ui-bug-intake",
+      "display_name": null,
+      "description": "Set up a lightweight UX/UI bug intake system with lifecycle docs, routing rules, and routines. Use when starting a new project stream, standardizing repo operations, or replacing ad hoc bug tracking with a simple docs-backed workflow.",
+      "short_description": null,
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/ux-ui-bug-intake",
+      "skill_md": "skills/ux-ui-bug-intake/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false,
+      "file_count": 5
+    },
+    {
+      "folder": "wrapped",
+      "name": "codex-wrapped",
+      "display_name": "Wrapped",
+      "description": "Generate a Codex Wrapped usage recap from local Codex logs, including last 30 days, last 7 days, and an all-time focus-hours callout. Use when the user asks for a usage summary, activity recap, or Codex Wrapped report.",
+      "short_description": "Create a Codex activity report from local usage data",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/wrapped",
+      "skill_md": "skills/wrapped/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": true,
+      "has_references": false,
+      "has_assets": false,
+      "file_count": 5
     }
   ]
 }

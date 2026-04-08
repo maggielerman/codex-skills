@@ -1,0 +1,4 @@
+version: 1
+display_name: UX/UI Bug Intake
+short_description: Set up a UX/UI bug intake workflow.
+default_prompt: Set up a UX/UI bug intake system for this repository using the skill's lifecycle structure, routing rules, and routines.

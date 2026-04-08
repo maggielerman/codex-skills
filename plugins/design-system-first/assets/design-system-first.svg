@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="128" fill="#08111F"/>
+  <rect x="56" y="72" width="400" height="368" rx="56" fill="url(#panel)" stroke="white" stroke-opacity="0.14"/>
+  <rect x="96" y="124" width="124" height="20" rx="10" fill="#8DF2D3" fill-opacity="0.92"/>
+  <rect x="96" y="166" width="220" height="32" rx="16" fill="white" fill-opacity="0.92"/>
+  <rect x="96" y="214" width="168" height="18" rx="9" fill="white" fill-opacity="0.42"/>
+  <rect x="96" y="270" width="320" height="96" rx="30" fill="url(#card)" stroke="white" stroke-opacity="0.14"/>
+  <path d="M146 336V296H182C202.987 296 220 312.789 220 333.5C220 354.211 202.987 371 182 371H146V336ZM170 351H181.5C191.717 351 200 343.165 200 333.5C200 323.835 191.717 316 181.5 316H170V351Z" fill="white"/>
+  <path d="M248 371V296H271.5V351H306V371H248Z" fill="white"/>
+  <path d="M336 371V296H410V315.5H359.5V325H403V343.5H359.5V351.5H412V371H336Z" fill="#8DF2D3"/>
+  <defs>
+    <linearGradient id="panel" x1="84" y1="92" x2="430" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1D31"/>
+      <stop offset="1" stop-color="#132540"/>
+    </linearGradient>
+    <linearGradient id="card" x1="128" y1="282" x2="394" y2="374" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102238"/>
+      <stop offset="1" stop-color="#0A1729"/>
+    </linearGradient>
+  </defs>
+</svg>

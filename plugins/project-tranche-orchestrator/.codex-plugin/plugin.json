@@ -1,0 +1,40 @@
+{
+  "name": "project-tranche-orchestrator",
+  "version": "0.1.0",
+  "description": "Turn docs-scaffold project state into one governed execution tranche managed through a single primary agent.",
+  "author": {
+    "name": "Local Codex User",
+    "email": "",
+    "url": ""
+  },
+  "homepage": "",
+  "repository": "",
+  "license": "UNLICENSED",
+  "keywords": [
+    "project-management",
+    "agent-orchestration",
+    "docs-scaffold"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Project Tranche Orchestrator",
+    "shortDescription": "Derive, delegate, review, and document one tranche through a single primary agent in collaborative or autonomous mode.",
+    "longDescription": "Reads standardized project docs, derives the next executable tranche, optionally collaborates with the user before delegation, delegates bounded work to subagents, enforces a doc-and-code review gate, and writes status updates back into the existing governance docs without creating a second source of truth.",
+    "developerName": "Local Codex Plugin",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write",
+      "Multi-Agent"
+    ],
+    "websiteURL": "",
+    "privacyPolicyURL": "",
+    "termsOfServiceURL": "",
+    "defaultPrompt": [
+      "Orchestrate the next tranche from this repo's project docs in collaborative mode.",
+      "Review the current tranche and tell me if it is ready to advance.",
+      "Split the next tranche into safe subagent assignments."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

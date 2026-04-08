@@ -1,0 +1,37 @@
+{
+  "name": "design-system-first",
+  "version": "0.1.0",
+  "description": "Opinionated Codex starter plugin for Next.js, Tailwind, shadcn, and design-system-first project setup.",
+  "author": {
+    "name": "Maggie Lerman"
+  },
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "starter",
+    "nextjs",
+    "shadcn",
+    "tailwind",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Design System First",
+    "shortDescription": "Create opinionated Next.js starters with a reusable design system.",
+    "longDescription": "Scaffold greenfield Next.js projects with shared tokens, shadcn foundations, strong starter surfaces, and optional docs or testing overlays.",
+    "developerName": "Maggie Lerman",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Create a new design-system-first marketing site starter.",
+      "Scaffold an app-shell starter with docs and testing enabled.",
+      "Refine this starter's tokens, hierarchy, and surfaces."
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/design-system-first.svg",
+    "logo": "./assets/design-system-first.svg"
+  }
+}

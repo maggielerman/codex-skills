@@ -3,9 +3,16 @@ codex-to-claude-handoff
 collaborative-walkthrough
 continue-until-blocked
 docs-product-pack
+docs-project-dashboard
 docs-project-lifecycle-statuses
 docs-system-scaffold
 github-docs-tracking-sync
 hyphenomenon-project-intake
+plan-signoff-review
 project-governance-audit
+project-tranche-orchestrator
 repo-implementation-review
+shopify-app-scaffold
+user-journey-audit
+ux-ui-bug-intake
+wrapped
