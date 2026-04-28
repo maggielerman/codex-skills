@@ -1,0 +1,49 @@
+name: docs-site-sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'DOCS/**'
+      - 'docs-site/**'
+      - 'scripts/docs/**'
+      - 'scripts/build_catalog.py'
+      - 'scripts/build_docs_site_catalog.py'
+      - 'skills/**'
+      - 'plugins/**/.codex-plugin/plugin.json'
+      - '.github/workflows/docs-site-sync.yml'
+
+jobs:
+  docs-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: docs-site/package-lock.json
+
+      - name: Check suite drift
+        run: python3 scripts/build_catalog.py --check
+
+      - name: Normalize docs frontmatter
+        run: node scripts/docs/normalize-frontmatter.mjs DOCS
+
+      - name: Regenerate docs manifest
+        run: node scripts/docs/manifest.mjs DOCS
+
+      - name: Check docs links
+        run: node scripts/docs/check-links.mjs DOCS
+
+      - name: Regenerate customer docs catalog
+        run: python3 scripts/build_docs_site_catalog.py
+
+      - name: Install docs site deps
+        run: npm --prefix docs-site ci
+
+      - name: Build docs site
+        run: npm --prefix docs-site run build

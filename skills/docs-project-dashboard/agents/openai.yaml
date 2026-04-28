@@ -1,4 +1,0 @@
-interface:
-  display_name: "Docs Project Dashboard"
-  short_description: "Backfill a docs-native portfolio dashboard"
-  default_prompt: "Use $docs-project-dashboard to backfill a generated project dashboard into this repository's docs system."

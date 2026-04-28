@@ -1,4 +1,0 @@
-interface:
-  display_name: "Product Docs Pack (Deprecated)"
-  short_description: "Deprecated; redirects to Docs System Scaffold"
-  default_prompt: "Use $docs-system-scaffold with product docs pack enabled instead of $docs-product-pack."

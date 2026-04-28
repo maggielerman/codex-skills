@@ -16,8 +16,8 @@ STARTER_SKILL_DIR = STARTER_SCRIPT.parents[1]
 PLUGIN_DIR = STARTER_SCRIPT.parents[3]
 
 DOCS_SKILL_CANDIDATES = [
-    Path.home() / ".codex" / "skills" / "docs-system-scaffold",
-    Path((Path.home() / ".codex").expanduser()) / "skills" / "docs-system-scaffold",
+    Path.home() / ".codex" / "skills" / "ML-docs-system-scaffold",
+    Path((Path.home() / ".codex").expanduser()) / "skills" / "ML-docs-system-scaffold",
 ]
 
 
@@ -1175,13 +1175,13 @@ def apply_testing_scaffold(project_dir: Path, package_manager: PackageManager) -
 
 def locate_docs_skill() -> Path:
     codex_home = Path((Path.home() / ".codex").expanduser())
-    candidates = [codex_home / "skills" / "docs-system-scaffold", *DOCS_SKILL_CANDIDATES]
+    candidates = [codex_home / "skills" / "ML-docs-system-scaffold", *DOCS_SKILL_CANDIDATES]
 
     for candidate in candidates:
         if candidate.exists():
             return candidate
 
-    raise SystemExit("Could not locate docs-system-scaffold skill assets for the docs add-on.")
+    raise SystemExit("Could not locate ML-docs-system-scaffold skill assets for the docs add-on.")
 
 
 def docs_placeholders(project_dir: Path, docs_root: str = "DOCS") -> dict[str, str]:
@@ -1277,7 +1277,7 @@ def print_summary(project_dir: Path, mode: str, addons: list[str]) -> None:
         print("- Use $design-system-refine to tighten density, hierarchy, and shell details.")
     print("- Use $react-best-practices after larger React/Next edits.")
     if "docs" in addons:
-        print("- Use $docs-system-scaffold later if you want a docs site or product-doc pack on top of the baseline docs root.")
+        print("- Use $ML-docs-system-scaffold later if you want a docs site or product-doc pack on top of the baseline docs root.")
     if "testing" in addons:
         print("- Run `npx playwright install chromium` before the first e2e run if the browser is not installed yet.")
     print("\nSuggested MCPs / plugins to consider:")

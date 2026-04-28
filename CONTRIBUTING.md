@@ -8,7 +8,7 @@ Good additions include:
 - new Codex skills with clear triggering behavior
 - improvements to existing skill instructions
 - reusable scripts, references, or assets that materially strengthen a skill
-- catalog, validation, and sync tooling for the repo itself
+- catalog, validation, customer docs, and sync tooling for the repo itself
 
 Avoid adding:
 - repo-specific project management docs
@@ -46,14 +46,21 @@ When relevant, preserve:
 1. Add or update the skill files.
 2. Update `skills/SUITE_SKILLS.txt` if the suite membership changed.
 3. Update `skills/SUITE_METADATA.json` if the skill is `experimental`, `legacy`, `deprecated`, or `archived`, and include a replacement or note when applicable.
-4. Regenerate the catalog:
+4. Check for suite drift without writing generated files:
+
+```bash
+python3 scripts/build_catalog.py --check
+```
+
+5. Regenerate the catalog and customer-facing docs-site catalog:
 
 ```bash
 python3 scripts/build_catalog.py
+python3 scripts/build_docs_site_catalog.py
 ```
 
-5. Review the generated diff for `skills/INDEX.md` and `skills/manifest.json`.
-6. Sanity-check that the repo docs still describe the repo accurately.
+6. Review the generated diff for `skills/INDEX.md`, `skills/manifest.json`, and `docs-site/src/lib/catalog.generated.ts`.
+7. Sanity-check that the repo docs still describe the repo accurately.
 
 ## Licensing note
 
@@ -63,3 +70,13 @@ Until a formal commercial license is added:
 - treat the repository as all rights reserved
 - do not assume contribution implies open-source licensing
 - do not add or change top-level licensing terms without explicit owner direction
+
+## Customer-facing docs site
+
+The `docs-site/` app is for buyers implementing skills packs in their own repositories and workflows. Keep its language focused on setup, use cases, and troubleshooting. Do not turn it into maintenance documentation for this repository.
+
+When skill or plugin metadata changes, regenerate `docs-site/src/lib/catalog.generated.ts` with:
+
+```bash
+python3 scripts/build_docs_site_catalog.py
+```

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Collaborative Walkthrough"
-  short_description: "Run Q&A walkthrough on in-review projects"
-  default_prompt: "Use $collaborative-walkthrough to review all in-review projects, surface outstanding decisions, and ask focused sign-off questions before moving anything to completed."

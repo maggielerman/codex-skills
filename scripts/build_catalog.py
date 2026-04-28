@@ -3,9 +3,12 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
-from dataclasses import dataclass
+import sys
+from collections import Counter
+from dataclasses import dataclass, field
 from pathlib import Path
 
 
@@ -33,6 +36,32 @@ class SkillRecord:
     has_references: bool
     has_assets: bool
     file_count: int
+
+
+@dataclass
+class SuiteDriftReport:
+    errors: list[str] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
+
+    @property
+    def has_errors(self) -> bool:
+        return bool(self.errors)
+
+    @property
+    def has_warnings(self) -> bool:
+        return bool(self.warnings)
+
+    def format(self) -> str:
+        lines: list[str] = []
+        if self.errors:
+            lines.append("Catalog drift detected:")
+            lines.extend(f"- {error}" for error in self.errors)
+        if self.warnings:
+            if lines:
+                lines.append("")
+            lines.append("Catalog drift warnings:")
+            lines.extend(f"- {warning}" for warning in self.warnings)
+        return "\n".join(lines) if lines else "No catalog drift detected."
 
 
 def parse_frontmatter(skill_md: Path) -> dict[str, str]:
@@ -75,11 +104,44 @@ def parse_openai_yaml(path: Path) -> dict[str, str]:
     return data
 
 
+def load_suite_list() -> list[str]:
+    if not SUITE_LIST_PATH.exists():
+        return []
+    return [
+        line.strip()
+        for line in SUITE_LIST_PATH.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.strip().startswith("#")
+    ]
+
+
 def load_suite_metadata() -> dict[str, dict[str, str]]:
     if not SUITE_METADATA_PATH.exists():
         return {}
     data = json.loads(SUITE_METADATA_PATH.read_text(encoding="utf-8"))
-    return data.get("skills", {})
+    skills = data.get("skills", {})
+    if not isinstance(skills, dict):
+        raise ValueError(f"{SUITE_METADATA_PATH}: expected top-level 'skills' object")
+    return skills
+
+
+def discover_skill_dirs() -> list[str]:
+    if not SKILLS_DIR.exists():
+        return []
+    return sorted(
+        p.name
+        for p in SKILLS_DIR.iterdir()
+        if p.is_dir() and not p.name.startswith(".") and (p / "SKILL.md").exists()
+    )
+
+
+def discover_non_skill_dirs() -> list[str]:
+    if not SKILLS_DIR.exists():
+        return []
+    return sorted(
+        p.name
+        for p in SKILLS_DIR.iterdir()
+        if p.is_dir() and not p.name.startswith(".") and not (p / "SKILL.md").exists()
+    )
 
 
 def validate_metadata(skill_folder: str, metadata: dict[str, str]) -> None:
@@ -95,15 +157,76 @@ def validate_metadata(skill_folder: str, metadata: dict[str, str]) -> None:
         raise ValueError(f"{skill_folder}: archived skills must include a note explaining why they are retained")
 
 
+def detect_suite_drift() -> SuiteDriftReport:
+    suite_list = load_suite_list()
+    suite_counts = Counter(suite_list)
+    suite_set = set(suite_list)
+    skill_dirs = set(discover_skill_dirs())
+    non_skill_dirs = discover_non_skill_dirs()
+    metadata = load_suite_metadata()
+    metadata_set = set(metadata)
+
+    report = SuiteDriftReport()
+
+    if not SUITE_LIST_PATH.exists():
+        report.errors.append(f"Missing suite allowlist: {SUITE_LIST_PATH.relative_to(REPO_ROOT)}")
+    if not SUITE_METADATA_PATH.exists():
+        report.errors.append(f"Missing lifecycle metadata file: {SUITE_METADATA_PATH.relative_to(REPO_ROOT)}")
+
+    duplicates = sorted(name for name, count in suite_counts.items() if count > 1)
+    if duplicates:
+        report.errors.append(
+            "Duplicate entries in skills/SUITE_SKILLS.txt: " + ", ".join(duplicates)
+        )
+
+    missing_from_disk = sorted(suite_set - skill_dirs)
+    if missing_from_disk:
+        report.errors.append(
+            "Listed in skills/SUITE_SKILLS.txt but missing a skills/<name>/SKILL.md folder: "
+            + ", ".join(missing_from_disk)
+        )
+
+    missing_from_suite = sorted(skill_dirs - suite_set)
+    if missing_from_suite:
+        report.errors.append(
+            "Present in skills/ with SKILL.md but missing from skills/SUITE_SKILLS.txt: "
+            + ", ".join(missing_from_suite)
+        )
+
+    metadata_not_in_suite = sorted(metadata_set - suite_set)
+    if metadata_not_in_suite:
+        report.errors.append(
+            "Present in skills/SUITE_METADATA.json but missing from skills/SUITE_SKILLS.txt: "
+            + ", ".join(metadata_not_in_suite)
+        )
+
+    metadata_missing_from_disk = sorted(metadata_set - skill_dirs)
+    if metadata_missing_from_disk:
+        report.errors.append(
+            "Present in skills/SUITE_METADATA.json but missing a skills/<name>/SKILL.md folder: "
+            + ", ".join(metadata_missing_from_disk)
+        )
+
+    if non_skill_dirs:
+        report.warnings.append(
+            "Directories under skills/ without SKILL.md are ignored by the catalog: "
+            + ", ".join(non_skill_dirs)
+        )
+
+    for skill_folder, skill_metadata in metadata.items():
+        try:
+            validate_metadata(skill_folder, skill_metadata)
+        except ValueError as exc:
+            report.errors.append(str(exc))
+
+    return report
+
+
 def collect_skills() -> list[SkillRecord]:
     suite_metadata = load_suite_metadata()
+    allowed = load_suite_list()
 
-    if SUITE_LIST_PATH.exists():
-        allowed = [
-            line.strip()
-            for line in SUITE_LIST_PATH.read_text(encoding="utf-8").splitlines()
-            if line.strip() and not line.strip().startswith("#")
-        ]
+    if allowed:
         skill_dirs = [SKILLS_DIR / name for name in allowed]
     else:
         skill_dirs = sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir() and not p.name.startswith("."))
@@ -211,6 +334,11 @@ def write_index(records: list[SkillRecord]) -> None:
     lines.extend(
         [
             "",
+            "## Audit guardrails",
+            "",
+            "- Catalog generation fails before writing files when `skills/`, `skills/SUITE_SKILLS.txt`, and `skills/SUITE_METADATA.json` drift out of sync.",
+            "- Run `python3 scripts/build_catalog.py --check` to audit suite membership and lifecycle metadata without regenerating files.",
+            "",
             "## Notes",
             "",
             "- This catalog is limited to the allowlisted suite in `skills/SUITE_SKILLS.txt`.",
@@ -223,13 +351,39 @@ def write_index(records: list[SkillRecord]) -> None:
     INDEX_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def main() -> None:
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Validate the curated skills suite, then regenerate skills/manifest.json and skills/INDEX.md."
+    )
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="only validate drift between skills/, SUITE_SKILLS.txt, and SUITE_METADATA.json; do not write generated files",
+    )
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    drift_report = detect_suite_drift()
+    if drift_report.has_errors:
+        print(drift_report.format(), file=sys.stderr)
+        return 1
+
+    if args.check:
+        print(drift_report.format())
+        return 0
+
+    if drift_report.has_warnings:
+        print(drift_report.format(), file=sys.stderr)
+
     records = collect_skills()
     write_manifest(records)
     write_index(records)
     print(f"Wrote {MANIFEST_PATH}")
     print(f"Wrote {INDEX_PATH}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

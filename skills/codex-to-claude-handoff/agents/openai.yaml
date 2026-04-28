@@ -1,4 +1,0 @@
-interface:
-  display_name: "Codex to Claude Handoff"
-  short_description: "Mirror Codex rules into Claude setup + docs"
-  default_prompt: "Use $codex-to-claude-handoff to generate CLAUDE.md and .claude rules/settings from this repository's Codex instruction files, then update docs and project logs so the handoff is fully documented."

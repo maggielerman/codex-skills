@@ -1,0 +1,4 @@
+interface:
+  display_name: "Docs Project Dashboard (Legacy)"
+  short_description: "Deprecated standalone backfill for the HTML dashboard"
+  default_prompt: "Use $ML-docs-project-dashboard-legacy only when you need to retrofit the HTML project dashboard into an already-scaffolded repo without rerunning $ML-docs-system-scaffold."

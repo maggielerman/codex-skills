@@ -1,0 +1,4 @@
+interface:
+  display_name: "Docs Lifecycle Statuses (Legacy)"
+  short_description: "Legacy retrofit for in-review/blocked project lifecycle states"
+  default_prompt: "Use $ML-docs-project-lifecycle-statuses only for older repos that were scaffolded before in-review/blocked states were built into $ML-docs-system-scaffold."

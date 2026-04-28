@@ -34,7 +34,7 @@ Expected outcome:
 - docs helper scripts under `scripts/docs/`
 - package scripts for docs manifest, links, frontmatter normalization, and timestamps
 
-If the user wants a docs site, product docs pack, or governance expansion beyond that baseline, follow with `$docs-system-scaffold`.
+If the user wants a docs site, product docs pack, or governance expansion beyond that baseline, follow with `$ML-docs-system-scaffold`.
 
 ### `testing`
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Docs Pack (Deprecated)"
+  short_description: "Deprecated; redirects to Docs System Scaffold"
+  default_prompt: "Use $ML-docs-system-scaffold with product docs pack enabled instead of $ML-docs-product-pack."

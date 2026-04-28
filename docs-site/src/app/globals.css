@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(0.982 0.018 86);
+  --foreground: oklch(0.18 0.033 58);
+  --card: oklch(0.997 0.012 88);
+  --card-foreground: oklch(0.18 0.033 58);
+  --popover: oklch(0.997 0.012 88);
+  --popover-foreground: oklch(0.18 0.033 58);
+  --primary: oklch(0.35 0.094 171);
+  --primary-foreground: oklch(0.985 0.014 88);
+  --secondary: oklch(0.925 0.052 78);
+  --secondary-foreground: oklch(0.245 0.047 65);
+  --muted: oklch(0.937 0.028 82);
+  --muted-foreground: oklch(0.45 0.035 63);
+  --accent: oklch(0.78 0.095 46);
+  --accent-foreground: oklch(0.18 0.033 58);
+  --destructive: oklch(0.56 0.19 28);
+  --border: oklch(0.85 0.041 79);
+  --input: oklch(0.85 0.041 79);
+  --ring: oklch(0.52 0.095 171);
+  --chart-1: oklch(0.54 0.11 171);
+  --chart-2: oklch(0.66 0.125 46);
+  --chart-3: oklch(0.44 0.071 258);
+  --chart-4: oklch(0.73 0.085 105);
+  --chart-5: oklch(0.58 0.09 20);
+  --radius: 1rem;
+  --sidebar: oklch(0.972 0.018 86);
+  --sidebar-foreground: oklch(0.18 0.033 58);
+  --sidebar-primary: oklch(0.35 0.094 171);
+  --sidebar-primary-foreground: oklch(0.985 0.014 88);
+  --sidebar-accent: oklch(0.925 0.052 78);
+  --sidebar-accent-foreground: oklch(0.245 0.047 65);
+  --sidebar-border: oklch(0.85 0.041 79);
+  --sidebar-ring: oklch(0.52 0.095 171);
+  --shadow-soft: oklch(0.38 0.05 70 / 13%);
+  --shadow-primary: oklch(0.35 0.094 171 / 28%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply bg-background font-sans;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .grain-field {
+    background-image:
+      radial-gradient(circle at 18% 12%, oklch(0.78 0.095 46 / 24%), transparent 30rem),
+      radial-gradient(circle at 78% 2%, oklch(0.57 0.09 171 / 22%), transparent 24rem),
+      linear-gradient(135deg, oklch(0.995 0.017 88), oklch(0.94 0.032 78));
+  }
+
+  .ruled-paper {
+    background-image:
+      linear-gradient(to right, oklch(0.35 0.094 171 / 8%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.35 0.094 171 / 7%) 1px, transparent 1px);
+    background-size: 42px 42px;
+  }
+}

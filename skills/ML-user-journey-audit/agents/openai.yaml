@@ -1,0 +1,4 @@
+interface:
+  display_name: "User Journey Audit"
+  short_description: "Audit user journeys and export PDF"
+  default_prompt: "Use $ML-user-journey-audit to audit the current-state user journeys for this repo and export a screenshot-backed PDF report."

@@ -1,0 +1,173 @@
+{
+  "generatedAt": "2026-04-28T16:06:16.677Z",
+  "items": [
+    {
+      "path": "DOCS/PROJECTS/README.md",
+      "title": "Projects Index & Numbering",
+      "description": "How to create, name, and organize project planning documents",
+      "status": "stable",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product/Engineering"
+    },
+    {
+      "path": "DOCS/PROJECTS/active/1001_customer_docs_site_and_catalog_guardrails.md",
+      "title": "Customer Docs Site and Catalog Guardrails",
+      "description": "Build the commercial customer docs surface and make suite catalog drift auditable",
+      "status": "active",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product/Engineering"
+    },
+    {
+      "path": "DOCS/PROJECTS/active/NNNN_project_template.md",
+      "title": "NNNN – Project Title",
+      "description": "Short project summary",
+      "status": "active",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product/Engineering"
+    },
+    {
+      "path": "DOCS/README.md",
+      "title": "Documentation Index",
+      "description": "Canonical documentation map for the project",
+      "status": "stable",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Documentation"
+    },
+    {
+      "path": "DOCS/api/index.md",
+      "title": "API",
+      "description": "API contracts and integration guidance",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Engineering"
+    },
+    {
+      "path": "DOCS/contributing/index.md",
+      "title": "Contributing",
+      "description": "Contribution guidelines and workflows",
+      "status": "stable",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Engineering"
+    },
+    {
+      "path": "DOCS/database/index.md",
+      "title": "Database",
+      "description": "Database architecture, migrations, and patterns",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Engineering"
+    },
+    {
+      "path": "DOCS/deployment/index.md",
+      "title": "Deployment",
+      "description": "Deployment environments and procedures",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Engineering"
+    },
+    {
+      "path": "DOCS/development/checkpoint-workflow.md",
+      "title": "Checkpoint Workflow",
+      "description": "Timestamped checkpoint standard for continuous execution docs",
+      "status": "stable",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product/Engineering"
+    },
+    {
+      "path": "DOCS/development/index.md",
+      "title": "Development",
+      "description": "Engineering guides and playbooks",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Engineering"
+    },
+    {
+      "path": "DOCS/evidence/README.md",
+      "title": "Evidence System",
+      "description": "Canonical storage model for audits, baseline packets, review artifacts, and historical proof.",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product/Engineering"
+    },
+    {
+      "path": "DOCS/features/index.md",
+      "title": "Features",
+      "description": "Product feature documentation",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product"
+    },
+    {
+      "path": "DOCS/getting-started/index.md",
+      "title": "Getting Started",
+      "description": "Setup and onboarding instructions for developers",
+      "status": "stable",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Engineering"
+    },
+    {
+      "path": "DOCS/historical/index.md",
+      "title": "Historical Docs",
+      "description": "Historical or deprecated documentation kept for reference",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Documentation"
+    },
+    {
+      "path": "DOCS/index.md",
+      "title": "Project Documentation",
+      "description": "Central hub for product, engineering, and operational docs",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Documentation"
+    },
+    {
+      "path": "DOCS/product/README.md",
+      "title": "Product Docs",
+      "description": "Product operating docs for the commercial Codex Skills Packs offer",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product"
+    },
+    {
+      "path": "DOCS/product/decision-log.md",
+      "title": "Decision Log",
+      "description": "Product and docs decisions for Codex Skills Packs",
+      "status": "stable",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product"
+    },
+    {
+      "path": "DOCS/product/lean-canvas.md",
+      "title": "Lean Canvas",
+      "description": "Lean canvas for Codex Skills Packs",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product"
+    },
+    {
+      "path": "DOCS/product/prd.md",
+      "title": "PRD",
+      "description": "MVP requirements for Codex Skills Packs customer docs and sales surface",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product/Engineering"
+    },
+    {
+      "path": "DOCS/product/product-brief.md",
+      "title": "Product Brief",
+      "description": "One-page product brief for Codex Skills Packs",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product"
+    },
+    {
+      "path": "DOCS/project-master.md",
+      "title": "Project Master",
+      "description": "Product vision, scope, and living system map",
+      "status": "evolving",
+      "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
+      "owner": "Product/Engineering"
+    }
+  ]
+}

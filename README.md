@@ -29,7 +29,10 @@ When the paid-access model is finalized, this repository should add a dedicated 
 - `skills/manifest.json` - machine-friendly metadata manifest
 - `plugins/` - backups of custom local plugins
 - `.agents/plugins/marketplace.json` - repo-local plugin registry for the backed-up custom plugins
-- `scripts/build_catalog.py` - regenerates the index and manifest from skill metadata
+- `scripts/build_catalog.py` - validates suite drift, then regenerates the index and manifest from skill metadata
+- `scripts/build_docs_site_catalog.py` - regenerates customer-facing docs-site catalog data from skill and plugin metadata
+- `docs-site/` - Next.js/Tailwind/shadcn customer-facing marketing and implementation docs site
+- `DOCS/` - repo-native product operating system, project memory, evidence, and product docs
 - `scripts/sync_from_codex_home.sh` - syncs local Codex skills into this repository
 - `AGENTS.md` - operating instructions for agents working in this repo
 - `CONTRIBUTING.md` - contribution and quality standards
@@ -49,10 +52,17 @@ Skill lifecycle state is tracked separately from membership:
 - `deprecated` means retained for backward compatibility and should point to a replacement
 - `archived` means reference-only and should not be used for new work
 
-The catalog files are generated from the skill folders. After adding or updating any skill, run:
+The catalog files are generated from the skill folders. Before regeneration, the catalog script now checks for drift between `skills/`, `skills/SUITE_SKILLS.txt`, and `skills/SUITE_METADATA.json`. To audit without writing generated files, run:
+
+```bash
+python3 scripts/build_catalog.py --check
+```
+
+After adding or updating any skill, run:
 
 ```bash
 python3 scripts/build_catalog.py
+python3 scripts/build_docs_site_catalog.py
 ```
 
 If you want to refresh the repo from the local Codex skills directory, run:
@@ -62,11 +72,23 @@ If you want to refresh the repo from the local Codex skills directory, run:
 python3 scripts/build_catalog.py
 ```
 
-If you update the backed-up custom plugins, also refresh the repo-local plugin registry in `.agents/plugins/marketplace.json` so the backup stays installable.
+If you update the backed-up custom plugins, also refresh the repo-local plugin registry in `.agents/plugins/marketplace.json` so the backup stays installable. Then run `python3 scripts/build_docs_site_catalog.py` so the customer-facing plugin docs stay current.
 
 ## Included skills
 
 See [skills/INDEX.md](./skills/INDEX.md) for the current catalog.
+
+## Customer-facing docs site
+
+The `docs-site/` app is a Next.js, Tailwind, and shadcn site for selling and supporting the skills packs. Its pages should be written for customers who purchased the packs and are implementing them in their own repositories and workflows. Do not use it for internal instructions about maintaining this repo.
+
+The site catalog is generated from `skills/manifest.json` and custom plugin metadata. From the repo root, run:
+
+```bash
+python3 scripts/build_catalog.py
+python3 scripts/build_docs_site_catalog.py
+cd docs-site && npm run build
+```
 
 ## Future commercialization direction
 

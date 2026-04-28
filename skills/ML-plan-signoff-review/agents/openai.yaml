@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Signoff Review"
+  short_description: "Re-read the full thread and latest audits before plan approval"
+  default_prompt: "Use $ML-plan-signoff-review to re-read this full Plan mode thread, compare the latest plan against all decisions and recent audit artifacts, and tell me what must change before I approve it."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Env Bootstrap Sync"
+  short_description: "Help with env sync and bootstrap workflows"
+  default_prompt: "Set up a repo-owned env sync and bootstrap workflow for this codebase."
