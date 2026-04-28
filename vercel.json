@@ -2,6 +2,5 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "npm --prefix docs-site ci",
   "buildCommand": "python3 scripts/build_docs_site_catalog.py && npm --prefix docs-site run build",
-  "outputDirectory": "docs-site/out",
-  "framework": "nextjs"
+  "outputDirectory": "docs-site/out"
 }
