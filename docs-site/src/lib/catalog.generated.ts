@@ -20,22 +20,22 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "asked to create catalog review boards",
-        "set up a catalog cleanup project",
-        "review missing colors/orientations/subjects",
-        "prepare a merchandising review packet",
-        "or apply catalog review corrections"
+        "Create catalog review boards",
+        "Set up a catalog cleanup project",
+        "Review missing colors/orientations/subjects",
+        "Prepare a merchandising review packet",
+        "Apply catalog review corrections"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -54,19 +54,19 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "run multiple agents in parallel",
-        "wants branch/worktree cluster setup"
+        "Run multiple agents in parallel",
+        "Branch/worktree cluster setup"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -85,19 +85,19 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "migrating",
-        "handing off a repo from Codex to Claude while preserving operating rules and safety guardrails"
+        "Migrating",
+        "Handing off a repo from Codex to Claude while preserving operating rules and safety guardrails"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -115,20 +115,20 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "a user asks for collaborative walkthrough",
-        "sign-off review",
-        "or readiness check before moving projects to completed"
+        "A user asks for collaborative walkthrough",
+        "Sign-off review",
+        "Readiness check before moving projects to completed"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -145,22 +145,22 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "the user says to keep going without intervention",
-        "continue until blocked",
-        "finish the cutover",
-        "or otherwise hand the thread continuous execution authority. Assume the current thread already understands the repository and approved scope",
-        "and assume project docs follow the standard docs scaffolding with governance files and status-based project docs"
+        "The user says to keep going without intervention",
+        "Continue until blocked",
+        "Finish the cutover",
+        "Otherwise hand the thread continuous execution authority. Assume the current thread already understands the repository and approved scope",
+        "Assume project docs follow the standard docs scaffolding with governance files and status-based project docs"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -178,22 +178,22 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "an existing repo has evidence spread across places like docs assets",
-        "review-board folders",
-        "repo-root artifacts",
-        "tmp folders",
-        "or legacy generated outputs and needs a canonical docs-root evidence structure such as `DOCS/evidence/`"
+        "An existing repo has evidence spread across places like docs assets",
+        "Review-board folders",
+        "Repo-root artifacts",
+        "Tmp folders",
+        "Legacy generated outputs and needs a canonical docs-root evidence structure such as `DOCS/evidence/`"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -211,19 +211,19 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "Use Product Docs Pack (Deprecated) when this workflow matches the repository outcome you want.",
-        "Bring it in after the target repo has a clear goal, a current branch, and enough context for Codex to act safely."
+        "Run Product Docs Pack (Deprecated) when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -243,19 +243,19 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "Use Docs Project Dashboard (Legacy) when this workflow matches the repository outcome you want.",
-        "Bring it in after the target repo has a clear goal, a current branch, and enough context for Codex to act safely."
+        "Run Docs Project Dashboard (Legacy) when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -274,19 +274,19 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "Use Docs Lifecycle Statuses (Legacy) when this workflow matches the repository outcome you want.",
-        "Bring it in after the target repo has a clear goal, a current branch, and enough context for Codex to act safely."
+        "Run Docs Lifecycle Statuses (Legacy) when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -306,22 +306,22 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "asked for docs system setup",
-        "docs IA cleanup",
-        "docs governance hardening",
-        "product docs scaffolding",
-        "docs-site setup"
+        "Asked for docs system setup",
+        "Docs IA cleanup",
+        "Docs governance hardening",
+        "Product docs scaffolding",
+        "Docs-site setup"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -339,21 +339,21 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "a repo has drifting `.env` files",
-        "unclear setup requirements",
-        "worktree-specific config loss",
-        "or scattered credential/bootstrap instructions"
+        "A repo has drifting `.env` files",
+        "Unclear setup requirements",
+        "Worktree-specific config loss",
+        "Scattered credential/bootstrap instructions"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -372,19 +372,19 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "Use GitHub Docs Tracking Sync (Optional) when this workflow matches the repository outcome you want.",
-        "Bring it in after the target repo has a clear goal, a current branch, and enough context for Codex to act safely."
+        "Run GitHub Docs Tracking Sync (Optional) when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -403,22 +403,22 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "prepare a repo for import as a project + graph nodes",
-        "especially when they require exact dossier section headers",
-        "screenshot gallery links",
-        "hydration artifacts",
-        "workflow summaries"
+        "Prepare a repo for import as a project + graph nodes",
+        "Especially when they require exact dossier section headers",
+        "Screenshot gallery links",
+        "Hydration artifacts",
+        "Workflow summaries"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -435,20 +435,20 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "the user asks to double-check that a plan reflects everything discussed",
-        "incorporates the newest review documents",
-        "or needs a final readiness pass in an existing Plan mode thread"
+        "The user asks to double-check that a plan reflects everything discussed",
+        "Incorporates the newest review documents",
+        "Needs a final readiness pass in an existing Plan mode thread"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -465,19 +465,19 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "Use Project Governance Audit when this workflow matches the repository outcome you want.",
-        "Bring it in after the target repo has a clear goal, a current branch, and enough context for Codex to act safely."
+        "Run Project Governance Audit when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -496,22 +496,22 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "the user wants one primary agent to read project docs",
-        "derive the next tranche",
-        "delegate bounded work to subagents",
-        "manage handoffs",
-        "review completion"
+        "The user wants one primary agent to read project docs",
+        "Derive the next tranche",
+        "Delegate bounded work to subagents",
+        "Manage handoffs",
+        "Review completion"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -531,19 +531,19 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "a user asks for side-by-side technical assessment of multiple implementation repos",
-        "wants a recommendation between competing codebases"
+        "A user asks for side-by-side technical assessment of multiple implementation repos",
+        "A recommendation between competing codebases"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -563,18 +563,18 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "creating a new Shopify app quickly without copying an old repo wholesale"
+        "Creating a new Shopify app quickly without copying an old repo wholesale"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -595,20 +595,20 @@ export const catalog = {
       "useCases": [
         "Codex needs to audit navigation",
         "UX flows for one",
-        "more user types in any repository",
-        "deployed app",
-        "suggest which user types to include"
+        "More user types in any repository",
+        "Deployed app",
+        "Suggest which user types to include"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -627,20 +627,20 @@ export const catalog = {
         "agent metadata"
       ],
       "useCases": [
-        "starting a new project stream",
-        "standardizing repo operations",
-        "or replacing ad hoc bug tracking with a simple docs-backed workflow"
+        "Starting a new project stream",
+        "Standardizing repo operations",
+        "Replacing ad hoc bug tracking with a simple docs-backed workflow"
       ],
       "gettingStarted": [
-        "Install or copy the skill folder into the Codex skills location used by your team.",
-        "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-        "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-        "Review generated scripts, docs, or code changes before committing them to your own workflow."
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
       ],
       "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-        "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-        "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist."
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -663,14 +663,14 @@ export const catalog = {
         "Refine this starter's tokens, hierarchy, and surfaces."
       ],
       "gettingStarted": [
-        "Install the plugin from the delivered pack or repo-local plugin backup.",
-        "Restart or refresh Codex so the plugin skills and interface metadata are visible.",
-        "Invoke one of the suggested prompts, then point Codex at the target repo and desired outcome."
+        "Install the complete plugin folder from the delivered pack or repo-local backup.",
+        "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
+        "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],
       "troubleshooting": [
-        "If the plugin does not appear, verify its .codex-plugin/plugin.json file is present and the plugin registry points to the folder.",
-        "If a plugin skill cannot find its scripts, keep the plugin folder self-contained when copying it into your environment.",
-        "If workflow output is too broad, rerun with the target repo path, desired deliverable, and any no-touch files listed explicitly."
+        "If the plugin does not appear, confirm .codex-plugin/plugin.json is present and the plugin registry points to the folder.",
+        "If a plugin skill cannot find scripts or assets, the plugin folder was likely flattened or partially copied.",
+        "If the workflow is too broad, rerun with a narrower deliverable and explicit no-touch files."
       ]
     },
     {
@@ -694,14 +694,14 @@ export const catalog = {
         "Split the next tranche into safe subagent assignments."
       ],
       "gettingStarted": [
-        "Install the plugin from the delivered pack or repo-local plugin backup.",
-        "Restart or refresh Codex so the plugin skills and interface metadata are visible.",
-        "Invoke one of the suggested prompts, then point Codex at the target repo and desired outcome."
+        "Install the complete plugin folder from the delivered pack or repo-local backup.",
+        "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
+        "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],
       "troubleshooting": [
-        "If the plugin does not appear, verify its .codex-plugin/plugin.json file is present and the plugin registry points to the folder.",
-        "If a plugin skill cannot find its scripts, keep the plugin folder self-contained when copying it into your environment.",
-        "If workflow output is too broad, rerun with the target repo path, desired deliverable, and any no-touch files listed explicitly."
+        "If the plugin does not appear, confirm .codex-plugin/plugin.json is present and the plugin registry points to the folder.",
+        "If a plugin skill cannot find scripts or assets, the plugin folder was likely flattened or partially copied.",
+        "If the workflow is too broad, rerun with a narrower deliverable and explicit no-touch files."
       ]
     }
   ]

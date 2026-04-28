@@ -31,14 +31,24 @@ def first_sentence(text: str) -> str:
     return match.group(1) if match else text.strip()
 
 
+def clean_use_case(piece: str) -> str:
+    piece = piece.strip().strip(".;")
+    piece = re.sub(r"^(a user asks to|asked to|asks to|wants to|wants)\s+", "", piece, flags=re.IGNORECASE)
+    piece = re.sub(r"^(and|or)\s+", "", piece, flags=re.IGNORECASE)
+    piece = piece.replace("repo-native", "repo-native")
+    if not piece:
+        return ""
+    return piece[0].upper() + piece[1:]
+
+
 def extract_use_cases(description: str) -> list[str]:
     marker = "Use when"
     if marker not in description:
         return []
     tail = description.split(marker, 1)[1].strip().rstrip(".")
-    tail = re.sub(r"^a user asks to\s+", "", tail, flags=re.IGNORECASE)
     pieces = re.split(r",\s+|\s+or\s+", tail)
-    return [piece.strip() for piece in pieces if piece.strip()][:5]
+    cleaned = [clean_use_case(piece) for piece in pieces]
+    return [piece for piece in cleaned if piece][:5]
 
 
 def category_for(text: str) -> str:
@@ -69,8 +79,8 @@ def skill_doc(skill: dict) -> dict:
     use_cases = extract_use_cases(description)
     if not use_cases:
         use_cases = [
-            f"Use {label} when this workflow matches the repository outcome you want.",
-            "Bring it in after the target repo has a clear goal, a current branch, and enough context for Codex to act safely.",
+            f"Run {label} when its workflow matches the repo outcome you need.",
+            "Use it after the target repo has enough context for Codex to act safely.",
         ]
     resources = resource_labels(skill)
     return {
@@ -86,15 +96,15 @@ def skill_doc(skill: dict) -> dict:
         "resources": resources,
         "useCases": use_cases,
         "gettingStarted": [
-            "Install or copy the skill folder into the Codex skills location used by your team.",
-            "Open the target repo, read its local AGENTS.md or equivalent agent instructions, then invoke the skill by name.",
-            "Give Codex the business goal, the repo constraints, and any files or routes that should stay untouched.",
-            "Review generated scripts, docs, or code changes before committing them to your own workflow.",
+            "Copy the complete skill folder into the Codex skills location used by your team.",
+            "Open the target repo and read its local agent instructions before invoking the skill.",
+            "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+            "Review generated scripts, docs, or code before adopting them into the customer's workflow.",
         ],
         "troubleshooting": [
-            "If Codex does not trigger the skill, invoke it explicitly with the skill name and a concrete target repo outcome.",
-            "If generated docs feel repo-internal instead of customer-facing, restate the intended audience before rerunning the workflow.",
-            "If a bundled script fails, run it from the target repo root and confirm any expected docs folders or credentials exist.",
+            "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+            "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+            "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact.",
         ],
     }
 
@@ -120,14 +130,14 @@ def plugin_doc(plugin_json: Path) -> dict:
         "resources": [f"{capability} capability" for capability in capabilities] or ["plugin package"],
         "useCases": prompts[:5] or [data.get("description", "Use this plugin when its workflow matches your target repo.")],
         "gettingStarted": [
-            "Install the plugin from the delivered pack or repo-local plugin backup.",
-            "Restart or refresh Codex so the plugin skills and interface metadata are visible.",
-            "Invoke one of the suggested prompts, then point Codex at the target repo and desired outcome.",
+            "Install the complete plugin folder from the delivered pack or repo-local backup.",
+            "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
+            "Start from one suggested prompt, then add the target repo path and desired deliverable.",
         ],
         "troubleshooting": [
-            "If the plugin does not appear, verify its .codex-plugin/plugin.json file is present and the plugin registry points to the folder.",
-            "If a plugin skill cannot find its scripts, keep the plugin folder self-contained when copying it into your environment.",
-            "If workflow output is too broad, rerun with the target repo path, desired deliverable, and any no-touch files listed explicitly.",
+            "If the plugin does not appear, confirm .codex-plugin/plugin.json is present and the plugin registry points to the folder.",
+            "If a plugin skill cannot find scripts or assets, the plugin folder was likely flattened or partially copied.",
+            "If the workflow is too broad, rerun with a narrower deliverable and explicit no-touch files.",
         ],
     }
 
