@@ -1,0 +1,4 @@
+interface:
+  display_name: "Alpine.js Lightweight JS"
+  short_description: "Small progressive interactivity patterns"
+  default_prompt: "Use $alpinejs-lightweight-js to add lightweight progressive interactivity without turning this JAMstack site into a heavy app."

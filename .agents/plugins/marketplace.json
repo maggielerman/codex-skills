@@ -17,6 +17,18 @@
       "category": "Productivity"
     },
     {
+      "name": "jamstack-expert",
+      "source": {
+        "source": "local",
+        "path": "./plugins/jamstack-expert"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
       "name": "project-tranche-orchestrator",
       "source": {
         "source": "local",

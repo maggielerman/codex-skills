@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tailwind CSS Expert"
+  short_description: "Utility-first Tailwind implementation"
+  default_prompt: "Use $tailwindcss-expert to implement this UI with inline Tailwind utility classes as the default styling method."

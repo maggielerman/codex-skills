@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "context7-docs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "note": "Context7 documentation MCP for up-to-date, version-aware library documentation across Tailwind, Eleventy, Nunjucks, Alpine, and related packages. Optional CONTEXT7_API_KEY can be added later for higher rate limits."
+    },
+    "tailwindcss-docs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://gitmcp.io/tailwindlabs/tailwindcss"
+      ],
+      "note": "GitMCP documentation server for the official tailwindlabs/tailwindcss repository."
+    },
+    "eleventy-docs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://gitmcp.io/11ty/eleventy"
+      ],
+      "note": "GitMCP documentation server for the official 11ty/eleventy repository."
+    },
+    "alpinejs-docs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://gitmcp.io/alpinejs/alpine"
+      ],
+      "note": "GitMCP documentation server for the official alpinejs/alpine repository."
+    }
+  }
+}

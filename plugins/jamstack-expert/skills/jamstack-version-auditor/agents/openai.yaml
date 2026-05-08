@@ -1,0 +1,4 @@
+interface:
+  display_name: "JAMstack Version Auditor"
+  short_description: "Repo-aware frontend version checks"
+  default_prompt: "Use $jamstack-version-auditor to inspect this JAMstack repo, compare its framework versions with current stable releases, and recommend whether updates are worthwhile."

@@ -1,0 +1,43 @@
+{
+  "name": "jamstack-expert",
+  "version": "0.2.0",
+  "description": "Tailwind CSS, Eleventy/Build Awesome, Nunjucks, Alpine.js, JAMstack version-audit, and static-first frontend repository expertise.",
+  "author": {
+    "name": "Maggie Lerman"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "jamstack",
+    "eleventy",
+    "build-awesome",
+    "11ty",
+    "nunjucks",
+    "tailwindcss",
+    "alpinejs",
+    "version-audit",
+    "static-site"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "JAMstack Expert",
+    "shortDescription": "11ty, Tailwind, Nunjucks, Alpine expertise",
+    "longDescription": "A local plugin that equips Codex with static-first JAMstack workflows: inline Tailwind utility styling, Eleventy and Nunjucks architecture, lightweight Alpine.js progressive enhancement, and repo-aware version auditing. It wires documentation MCPs that resolve current framework references at use time.",
+    "developerName": "Maggie Lerman",
+    "category": "Developer Tools",
+    "websiteURL": "https://www.11ty.dev/",
+    "privacyPolicyURL": "https://openai.com/policies/row-privacy-policy/",
+    "termsOfServiceURL": "https://openai.com/policies/row-terms-of-use/",
+    "capabilities": [
+      "Code",
+      "Documentation",
+      "MCP"
+    ],
+    "defaultPrompt": [
+      "Use JAMstack Expert on this 11ty/Tailwind repo.",
+      "Make this UI with inline Tailwind utilities.",
+      "Audit this JAMstack repo for stale dependencies."
+    ],
+    "brandColor": "#0EA5E9"
+  }
+}

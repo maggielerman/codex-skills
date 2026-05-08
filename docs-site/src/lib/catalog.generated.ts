@@ -3,8 +3,8 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 20,
-  "pluginCount": 2,
+  "skillCount": 30,
+  "pluginCount": 3,
   "items": [
     {
       "slug": "ml-catalog-review",
@@ -202,8 +202,8 @@ export const catalog = {
       "title": "Product Docs Pack (Deprecated)",
       "folder": "ML-docs-product-pack",
       "status": "deprecated",
-      "summary": "Deprecated; redirects to Docs System Scaffold",
-      "description": "Deprecated shim. Use `ML-docs-system-scaffold` for product-doc scaffolding and docs governance/tooling in one workflow.",
+      "summary": "Deprecated; redirects to Product Operating System Scaffold",
+      "description": "Deprecated shim. Use `ML-product-operating-system-scaffold` for product-doc scaffolding, repo-native product operations, docs governance, evidence, and tooling in one workflow.",
       "category": "Delivery governance",
       "path": "skills/ML-docs-product-pack",
       "resources": [
@@ -233,7 +233,7 @@ export const catalog = {
       "folder": "ML-docs-project-dashboard-legacy",
       "status": "active",
       "summary": "Deprecated standalone backfill for the HTML dashboard",
-      "description": "Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the ML-docs-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$ML-docs-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.",
+      "description": "Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the ML-product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$ML-product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.",
       "category": "Delivery governance",
       "path": "skills/ML-docs-project-dashboard-legacy",
       "resources": [
@@ -265,7 +265,7 @@ export const catalog = {
       "folder": "ML-docs-project-lifecycle-statuses",
       "status": "legacy",
       "summary": "Legacy retrofit for in-review/blocked project lifecycle states",
-      "description": "Transitional legacy patch for repositories that were scaffolded before ML-docs-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.",
+      "description": "Transitional legacy patch for repositories that were scaffolded before ML-product-operating-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.",
       "category": "Delivery governance",
       "path": "skills/ML-docs-project-lifecycle-statuses",
       "resources": [
@@ -292,25 +292,19 @@ export const catalog = {
     {
       "slug": "ml-docs-system-scaffold",
       "kind": "skill",
-      "title": "Docs System Scaffold",
+      "title": "ML-docs-system-scaffold",
       "folder": "ML-docs-system-scaffold",
-      "status": "active",
-      "summary": "Scaffold docs governance, evidence storage, and optional ecommerce review workflow",
-      "description": "Scaffold or standardize a repository documentation system (DOCS/ or docs), optionally scaffold a VitePress docs site, install docs tooling, include an optional lightweight product-doc pack, optionally scaffold an HTML project dashboard over the `PROJECTS/` lifecycle tree, and optionally add an ecommerce ML-catalog-review operating pattern. Use when asked for docs system setup, docs IA cleanup, docs governance hardening, product docs scaffolding, docs-site setup, a repo-native planning dashboard, or ecommerce ML-catalog-review project scaffolding.",
-      "category": "Storefront and commerce",
+      "status": "deprecated",
+      "summary": "Deprecated compatibility alias.",
+      "description": "Deprecated compatibility alias. Use $ML-product-operating-system-scaffold for the full repo-native product operating system scaffold, including docs root, project lifecycle, governance, roadmap/changelog, evidence, dashboards, docs site, product docs, and review-board workflows.",
+      "category": "Delivery governance",
       "path": "skills/ML-docs-system-scaffold",
       "resources": [
-        "bundled scripts",
-        "reference guides",
-        "starter assets",
-        "agent metadata"
+        "portable skill instructions"
       ],
       "useCases": [
-        "Asked for docs system setup",
-        "Docs IA cleanup",
-        "Docs governance hardening",
-        "Product docs scaffolding",
-        "Docs-site setup"
+        "Run ML-docs-system-scaffold when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
         "Copy the complete skill folder into the Codex skills location used by your team.",
@@ -438,6 +432,41 @@ export const catalog = {
         "The user asks to double-check that a plan reflects everything discussed",
         "Incorporates the newest review documents",
         "Needs a final readiness pass in an existing Plan mode thread"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "ml-product-operating-system-scaffold",
+      "kind": "skill",
+      "title": "Product Operating System Scaffold",
+      "folder": "ML-product-operating-system-scaffold",
+      "status": "active",
+      "summary": "Scaffold a repo-native product operating system for human-agent teams",
+      "description": "Scaffold or standardize a comprehensive repo-native product operating system for human-agent teams. Installs the docs root, project lifecycle model, governance files, agent instructions, ROADMAP/CHANGELOG control plane, evidence system, docs automation scripts, timestamp/checkpoint rules, CI/hosting build-minute guardrails, visual design critique gates, optional VitePress docs site, optional product-doc pack, optional PROJECTS dashboard, and optional repo-agnostic review-board workflow. Use when asked for product operating system setup, repo-native product management, agent-readable project memory, lifecycle/governance scaffolding, evidence-system setup, docs-site setup, product docs, project dashboards, checkpoint-driven CI/deploy rules, visual/design quality gates, or review-board scaffolding.",
+      "category": "Delivery governance",
+      "path": "skills/ML-product-operating-system-scaffold",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Asked for product operating system setup",
+        "Repo-native product management",
+        "Agent-readable project memory",
+        "Lifecycle/governance scaffolding",
+        "Evidence-system setup"
       ],
       "gettingStarted": [
         "Copy the complete skill folder into the Codex skills location used by your team.",
@@ -644,6 +673,304 @@ export const catalog = {
       ]
     },
     {
+      "slug": "alpinejs-lightweight-js",
+      "kind": "skill",
+      "title": "Alpine.js Lightweight JS",
+      "folder": "alpinejs-lightweight-js",
+      "status": "active",
+      "summary": "Small progressive interactivity patterns",
+      "description": "Alpine.js and lightweight progressive JavaScript workflow for static/JAMstack sites. Use when working with x-data, x-show, x-bind, x-on, x-transition, Alpine.data/store, @alpinejs plugins, CSP-safe Alpine, dropdowns, accordions, tabs, dialogs, filters, or minimal client JS.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/alpinejs-lightweight-js",
+      "resources": [
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Working with x-data",
+        "X-show",
+        "X-bind",
+        "X-on",
+        "X-transition"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "ci-hosting-manual-gates",
+      "kind": "skill",
+      "title": "CI & Hosting Manual Gates",
+      "folder": "ci-hosting-manual-gates",
+      "status": "active",
+      "summary": "Gate CI and hosting builds to checkpoints",
+      "description": "Convert repositories from automatic CI and hosting builds to checkpoint-driven manual gates. Use when asked to reduce GitHub Actions, Vercel, Netlify, Render, or similar hosting build minutes; disable automatic builds on commit, push, or pull request; preserve frequent commits and PRs without spending CI/deploy minutes; add manual workflow_dispatch actions, deploy hooks, or checkpoint SOPs; or bake build-minute guardrails into Product OS/checkpoint workflows.",
+      "category": "Documentation systems",
+      "path": "skills/ci-hosting-manual-gates",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Reduce GitHub Actions",
+        "Vercel",
+        "Netlify",
+        "Render",
+        "Similar hosting build minutes; disable automatic builds on commit"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "cloudflare-deploy",
+      "kind": "skill",
+      "title": "Cloudflare Deploy",
+      "folder": "cloudflare-deploy",
+      "status": "active",
+      "summary": "Deploy Workers, Pages, and platform services on Cloudflare",
+      "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
+      "category": "Delivery governance",
+      "path": "skills/cloudflare-deploy",
+      "resources": [
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks to deploy",
+        "Host",
+        "Publish",
+        "Set up a project on Cloudflare"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "eleventy-jamstack-expert",
+      "kind": "skill",
+      "title": "Eleventy JAMstack Expert",
+      "folder": "eleventy-jamstack-expert",
+      "status": "active",
+      "summary": "11ty, Nunjucks, and JAMstack patterns",
+      "description": "Eleventy/11ty, Build Awesome, Nunjucks, and JAMstack expert workflow. Use when working with .eleventy.*, eleventy.config.*, @11ty/eleventy, Build Awesome/Pro, .njk, Nunjucks includes/macros/layouts, _data, _includes, collections, pagination, shortcodes, filters, static assets, or deployments.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/eleventy-jamstack-expert",
+      "resources": [
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Working with .eleventy.*",
+        "Eleventy.config.*",
+        "@11ty/eleventy",
+        "Build Awesome/Pro",
+        "Njk"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "jamstack-version-auditor",
+      "kind": "skill",
+      "title": "JAMstack Version Auditor",
+      "folder": "jamstack-version-auditor",
+      "status": "active",
+      "summary": "Repo-aware frontend version checks",
+      "description": "Repo-aware version and upgrade assessment for JAMstack/frontend stacks. Use when checking Tailwind CSS, Eleventy/11ty, Build Awesome, Nunjucks, Alpine.js, PostCSS, Vite, Node, deployment, or static-site repo versions, latest stable releases, docs currency, or upgrade value.",
+      "category": "Documentation systems",
+      "path": "skills/jamstack-version-auditor",
+      "resources": [
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Checking Tailwind CSS",
+        "Eleventy/11ty",
+        "Build Awesome",
+        "Nunjucks",
+        "Alpine.js"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "netlify-deploy",
+      "kind": "skill",
+      "title": "Netlify Deploy",
+      "folder": "netlify-deploy",
+      "status": "active",
+      "summary": "Deploy web projects to Netlify with the Netlify CLI",
+      "description": "Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production deploys.",
+      "category": "Delivery governance",
+      "path": "skills/netlify-deploy",
+      "resources": [
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks to deploy",
+        "Host",
+        "Publish",
+        "Link a site/repo on Netlify",
+        "Including preview and production deploys"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "render-deploy",
+      "kind": "skill",
+      "title": "Render Deploy",
+      "folder": "render-deploy",
+      "status": "active",
+      "summary": "Deploy applications to Render via Blueprints or MCP",
+      "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
+      "category": "Documentation systems",
+      "path": "skills/render-deploy",
+      "resources": [
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user wants to deploy",
+        "Host",
+        "Publish",
+        "Set up their application on Render's cloud platform"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "tailwindcss-expert",
+      "kind": "skill",
+      "title": "Tailwind CSS Expert",
+      "folder": "tailwindcss-expert",
+      "status": "active",
+      "summary": "Utility-first Tailwind implementation",
+      "description": "Tailwind CSS expert workflow for utility-first inline classes. Use when working with Tailwind repos/files: tailwind.config.*, @import \"tailwindcss\", @theme/@apply, class/className utilities, PostCSS/Vite setup, shadcn-style utilities, or default Tailwind UI styling.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/tailwindcss-expert",
+      "resources": [
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Working with Tailwind repos/files: tailwind.config.*",
+        "@import \"tailwindcss\"",
+        "@theme/@apply",
+        "Class/className utilities",
+        "PostCSS/Vite setup"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "vercel-deploy",
+      "kind": "skill",
+      "title": "Vercel Deploy",
+      "folder": "vercel-deploy",
+      "status": "active",
+      "summary": "Deploy apps and agents with zero configuration on Vercel",
+      "description": "Deploy applications and websites to Vercel using the bundled `scripts/deploy.sh` claimable-preview flow. Use when the user asks to deploy to Vercel, wants a preview URL, or says to push a project live on Vercel.",
+      "category": "Delivery governance",
+      "path": "skills/vercel-deploy",
+      "resources": [
+        "bundled scripts",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks to deploy to Vercel",
+        "A preview URL",
+        "Says to push a project live on Vercel"
+      ],
+      "gettingStarted": [
+        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
       "slug": "design-system-first",
       "kind": "plugin",
       "title": "Design System First",
@@ -661,6 +988,37 @@ export const catalog = {
         "Create a new design-system-first marketing site starter.",
         "Scaffold an app-shell starter with docs and testing enabled.",
         "Refine this starter's tokens, hierarchy, and surfaces."
+      ],
+      "gettingStarted": [
+        "Install the complete plugin folder from the delivered pack or repo-local backup.",
+        "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
+        "Start from one suggested prompt, then add the target repo path and desired deliverable."
+      ],
+      "troubleshooting": [
+        "If the plugin does not appear, confirm .codex-plugin/plugin.json is present and the plugin registry points to the folder.",
+        "If a plugin skill cannot find scripts or assets, the plugin folder was likely flattened or partially copied.",
+        "If the workflow is too broad, rerun with a narrower deliverable and explicit no-touch files."
+      ]
+    },
+    {
+      "slug": "jamstack-expert",
+      "kind": "plugin",
+      "title": "JAMstack Expert",
+      "folder": "jamstack-expert",
+      "status": "available",
+      "summary": "11ty, Tailwind, Nunjucks, Alpine expertise",
+      "description": "A local plugin that equips Codex with static-first JAMstack workflows: inline Tailwind utility styling, Eleventy and Nunjucks architecture, lightweight Alpine.js progressive enhancement, and repo-aware version auditing. It wires documentation MCPs that resolve current framework references at use time.",
+      "category": "Developer Tools",
+      "path": "plugins/jamstack-expert",
+      "resources": [
+        "Code capability",
+        "Documentation capability",
+        "MCP capability"
+      ],
+      "useCases": [
+        "Use JAMstack Expert on this 11ty/Tailwind repo.",
+        "Make this UI with inline Tailwind utilities.",
+        "Audit this JAMstack repo for stale dependencies."
       ],
       "gettingStarted": [
         "Install the complete plugin folder from the delivered pack or repo-local backup.",

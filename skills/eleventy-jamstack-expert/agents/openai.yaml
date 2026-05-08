@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eleventy JAMstack Expert"
+  short_description: "11ty, Nunjucks, and JAMstack patterns"
+  default_prompt: "Use $eleventy-jamstack-expert to work in this 11ty/Nunjucks/JAMstack repository with idiomatic static-site patterns."
