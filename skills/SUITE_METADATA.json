@@ -2,13 +2,18 @@
   "skills": {
     "ML-docs-product-pack": {
       "status": "deprecated",
-      "replacement": "ML-docs-system-scaffold",
+      "replacement": "ML-product-operating-system-scaffold",
       "note": "Backward-compatibility shim for older invocations."
     },
     "ML-docs-project-lifecycle-statuses": {
       "status": "legacy",
-      "replacement": "ML-docs-system-scaffold",
+      "replacement": "ML-product-operating-system-scaffold",
       "note": "Use only for repos scaffolded before in-review and blocked lifecycle support existed."
+    },
+    "ML-docs-system-scaffold": {
+      "status": "deprecated",
+      "replacement": "ML-product-operating-system-scaffold",
+      "note": "Deprecated compatibility alias for the renamed product operating system scaffold."
     }
   }
 }

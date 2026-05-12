@@ -1,4 +1,0 @@
-interface:
-  display_name: "Docs System Scaffold"
-  short_description: "Scaffold docs governance, evidence storage, and optional ecommerce review workflow"
-  default_prompt: "Use $ML-docs-system-scaffold to standardize docs governance/tooling with active, in-review, blocked, completed, backlog, and stale project states, plus a canonical docs evidence system; first ask whether to scaffold a docs site, product docs pack, the optional HTML project dashboard, and if the repo is ecommerce/catalog-driven, whether to include the optional ML-catalog-review scaffold."

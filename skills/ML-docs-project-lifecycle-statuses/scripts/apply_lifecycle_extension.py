@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply in-review/blocked lifecycle extensions to ML-docs-system-scaffold repos."""
+"""Apply in-review/blocked lifecycle extensions to product operating system scaffold repos."""
 
 from __future__ import annotations
 

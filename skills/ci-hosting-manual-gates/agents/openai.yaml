@@ -1,0 +1,4 @@
+interface:
+  display_name: "CI & Hosting Manual Gates"
+  short_description: "Gate CI and hosting builds to checkpoints"
+  default_prompt: "Use $ci-hosting-manual-gates to convert this repo to checkpoint-driven GitHub Actions and hosting deploys."

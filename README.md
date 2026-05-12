@@ -68,9 +68,14 @@ python3 scripts/build_docs_site_catalog.py
 If you want to refresh the repo from the local Codex skills directory, run:
 
 ```bash
-./scripts/sync_from_codex_home.sh
+./scripts/sync_from_codex_home.sh --check
+./scripts/sync_from_codex_home.sh --prune-stale
+python3 scripts/build_catalog.py --check
 python3 scripts/build_catalog.py
+python3 scripts/build_docs_site_catalog.py
 ```
+
+The sync preflight reports allowlisted skills that are missing from local Codex home, local skills that are intentionally outside the curated suite, stale repo-only files inside synced skill folders, source-only files, and changed source files. Use `--prune-stale` in apply mode when the preflight identifies stale files that should be deleted from the repo copy.
 
 If you update the backed-up custom plugins, also refresh the repo-local plugin registry in `.agents/plugins/marketplace.json` so the backup stays installable. Then run `python3 scripts/build_docs_site_catalog.py` so the customer-facing plugin docs stay current.
 

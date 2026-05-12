@@ -1,13 +1,13 @@
 ---
 name: ML-docs-project-dashboard-legacy
-description: Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the ML-docs-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$ML-docs-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.
+description: Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the ML-product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$ML-product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.
 ---
 
 # Docs Project Dashboard Legacy
 
 ## Deprecation Note
 
-Prefer the optional HTML project dashboard step built into `$ML-docs-system-scaffold`.
+Prefer the optional HTML project dashboard step built into `$ML-product-operating-system-scaffold`.
 
 Use this legacy skill only when:
 
@@ -19,7 +19,7 @@ Use this legacy skill only when:
 
 Use this legacy skill to add a generated `PROJECTS/dashboard.html` file plus a reusable repo-side generator script so the dashboard can be regenerated after project-doc changes.
 
-Assume the target repository already follows the ML-docs-system-scaffold project layout:
+Assume the target repository already follows the ML-product-operating-system-scaffold project layout:
 
 - `DOCS/`, `docs/`, or `documentation/`
 - `PROJECTS/active/`
@@ -58,7 +58,7 @@ Check for an existing docs root in this order:
 
 If more than one exists, prefer the one that already contains `PROJECTS/` and a `README.md` or `index.md`. If ambiguity remains, ask the user before writing.
 
-If the repo does not already have a `PROJECTS/` tree, stop and use `$ML-docs-system-scaffold` instead.
+If the repo does not already have a `PROJECTS/` tree, stop and use `$ML-product-operating-system-scaffold` instead.
 
 ### 2. Run the installer script
 

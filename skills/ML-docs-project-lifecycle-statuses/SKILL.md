@@ -1,13 +1,13 @@
 ---
 name: ML-docs-project-lifecycle-statuses
-description: Transitional legacy patch for repositories that were scaffolded before ML-docs-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.
+description: Transitional legacy patch for repositories that were scaffolded before ML-product-operating-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.
 ---
 
 # Docs Project Lifecycle Statuses
 
 Apply post-scaffold lifecycle retrofits for repositories that already have standardized docs governance (`DOCS/`, `docs/`, or `documentation/` with `PROJECTS/`) but are missing `in-review` and `blocked`.
 
-Deprecation plan: once all active repositories have been migrated and `ML-docs-system-scaffold` adoption is universal, retire this skill.
+Deprecation plan: once all active repositories have been migrated and `ML-product-operating-system-scaffold` adoption is universal, retire this skill.
 
 Path matching rule: treat folder/file names case-insensitively while preserving the repository's actual casing in written output.
 

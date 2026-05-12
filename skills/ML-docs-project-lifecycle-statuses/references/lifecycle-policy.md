@@ -1,7 +1,7 @@
 # Lifecycle Policy Reference
 
-Use this policy when a repo already has ML-docs-system-scaffold governance and project tracking under `docs/PROJECTS/` or `DOCS/PROJECTS/`.
-Use this skill only for repositories scaffolded before `ML-docs-system-scaffold` included `in-review` and `blocked` by default.
+Use this policy when a repo already has ML-product-operating-system-scaffold governance and project tracking under `docs/PROJECTS/` or `DOCS/PROJECTS/`.
+Use this skill only for repositories scaffolded before `ML-product-operating-system-scaffold` included `in-review` and `blocked` by default.
 
 Path-resolution requirement: resolve folder and file names case-insensitively (for example `docs` vs `DOCS`, `projects` vs `PROJECTS`, `readme.md` vs `README.md`) and preserve the repo's actual casing when writing paths into docs.
 

@@ -55,6 +55,8 @@ python3 "$SKILL_ROOT/scripts/verify_intake.py" \
 - Create `docs/intake/ML-hyphenomenon-project-intake.md`.
 - Create `docs/intake/screenshots/`.
 - Save 4-8 screenshots with clear names; include home, primary workflow, key feature, and admin/settings equivalent.
+- Create `docs/intake/hyphenomenon-project-page-packet.json` for public project-page proof sections, product surfaces, tech stack, key dates, data-model highlights, and first-class data-model artifacts when useful.
+- Create `docs/intake/hyphenomenon-workflow-packet.json` when the project depends on visible process, automation, AI collaboration, human review, or repeatable operations.
 
 4. Enforce exact dossier structure.
 - Use the exact required headers:
@@ -86,6 +88,9 @@ python3 "$SKILL_ROOT/scripts/verify_intake.py" \
 - Use concise, specific language.
 - Mark unknown facts as `Unknown`.
 - Verify screenshot links resolve from the dossier location.
+- Treat the target output as a public logbook/proof record, not a glossy case study. The packet should show artifacts, workflows/process, decisions/tradeoffs, AI or automation use, human review, failures/limits, and enough narrative context to understand what happened.
+- Avoid intake-framed public headings such as `What This Fresh Intake Proves`; write headings for readers inspecting the work and its evidence.
+- Workflow packets should include at least four concrete steps, one decision/subprocess step, artifact or dry-run proof, a human/operator review point, project linkage, and source provenance.
 - End the completion message with:
   - `files created/updated`
   - `unresolved unknowns`

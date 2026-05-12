@@ -60,7 +60,7 @@ def ensure_projects_root(docs_root: Path) -> Path:
     projects_root = find_case_insensitive_dir(docs_root, "PROJECTS")
     if not projects_root:
         raise FileNotFoundError(
-            f"Could not find PROJECTS/ under {docs_root}. Use ML-docs-system-scaffold before backfilling the dashboard."
+            f"Could not find PROJECTS/ under {docs_root}. Use ML-product-operating-system-scaffold before backfilling the dashboard."
         )
     return projects_root
 

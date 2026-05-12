@@ -16,11 +16,12 @@ Before editing, inventory where the repo currently stores:
 - audits and baseline packets
 - review packets and review templates
 - screenshots, exports, and manual evidence
+- visual comparison boards, decision packets, and correction manifests
 - repo-root `artifacts/` or `tmp/` output
 - script defaults that still emit to old paths
 - durable artifacts that embed absolute machine-specific paths
 
-If the repo is greenfield or early-stage and does not already have evidence drift, use [$ML-docs-system-scaffold](/Users/maggielerman/.codex/skills/ML-docs-system-scaffold/SKILL.md) instead.
+If the repo is greenfield or early-stage and does not already have evidence drift, use `$ML-product-operating-system-scaffold` instead.
 
 ## Target Model
 
@@ -71,9 +72,10 @@ Prefer project-scoped organization under each bucket.
 - Older but still useful proof belongs in `archive`.
 - True caches, downloads, and scratch files should be deleted rather than preserved in a fake durable temp area.
 
-## Catalog Review Rule
+## Review Board Evidence Rule
 
-- Store reusable ML-catalog-review scaffolding in `{{DOCS_ROOT}}/evidence/templates/ML-catalog-review/`.
+- Store reusable review-board scaffolding in `{{DOCS_ROOT}}/evidence/templates/review-board-operating-pattern/`.
+- Treat review boards as repo-agnostic visual evidence packets, not ecommerce-only artifacts.
 - If a review packet is intentionally kept, store it in the owning project's evidence directory under `review-packets/`.
 - Do not keep a separate durable review-board temp root.
 
