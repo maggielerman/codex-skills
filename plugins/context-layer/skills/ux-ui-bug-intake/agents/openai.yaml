@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX/UI Bug Intake"
+  short_description: "Maintain lightweight UI bug intake"
+  default_prompt: "Use $ux-ui-bug-intake to set up, triage, or maintain the Context Layer UX/UI bug register and link durable evidence to DOCS/evidence."

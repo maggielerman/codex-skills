@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rapid Iteration Mode"
+  short_description: "Tight visual and product iteration loops"
+  default_prompt: "Use $rapid-iteration-mode to make a fast visual refinement pass while keeping branch hygiene in view."

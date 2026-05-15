@@ -1,5 +1,0 @@
-interface:
-  display_name: "Docs Evidence Backfill"
-  short_description: "Retrofit an existing repo onto a unified docs evidence system"
-  default_prompt: "Use $ML-docs-evidence-backfill to inventory fragmented audit and artifact storage, classify evidence into active/archive/templates, migrate it into a canonical docs evidence system, update old path references and script defaults, and delete true scratch material."
-

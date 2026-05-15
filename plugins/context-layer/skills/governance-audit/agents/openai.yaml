@@ -1,0 +1,4 @@
+interface:
+  display_name: "Governance Audit"
+  short_description: "Audit Context Layer project health"
+  default_prompt: "Use $governance-audit to audit Context Layer projects for blockers, dependency conflicts, lifecycle drift, stale checkpoints, dashboard drift, and missing evidence."

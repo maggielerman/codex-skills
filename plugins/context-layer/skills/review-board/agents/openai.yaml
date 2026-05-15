@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Board"
+  short_description: "Generate numbered review boards"
+  default_prompt: "Use $review-board to generate a numbered review board with evidence, manifest files, human feedback routing, and verification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maggie TODO"
+  short_description: "Track Maggie-owned blockers"
+  default_prompt: "Use $maggie-todo to surface unresolved MAGGIE TODO items, record new Maggie-owned follow-ups, and update blocked project state when needed."

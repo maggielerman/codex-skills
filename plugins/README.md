@@ -11,6 +11,7 @@ Rules:
 
 Current backed-up plugins:
 
+- `context-layer`
 - `design-system-first`
 - `jamstack-expert`
 - `project-tranche-orchestrator`

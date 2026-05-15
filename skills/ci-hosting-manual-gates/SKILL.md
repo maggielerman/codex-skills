@@ -99,7 +99,7 @@ Keep reusable workflows available through `workflow_call` when other manual work
 
 ## Product OS Integration
 
-When the repo uses `$ML-product-operating-system-scaffold`, add this as a checkpoint rule:
+When the repo uses `$product-operating-system-scaffold`, add this as a checkpoint rule:
 
 > Default no-build policy: commits, pushes, and PR creation must not automatically spend GitHub Actions or hosting build minutes. Run CI/deploys manually at named checkpoints and record the run link/result in the owning project doc.
 

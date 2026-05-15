@@ -35,7 +35,7 @@ export function CatalogCard({ item, compact = false }: { item: CatalogItem; comp
           </div>
         ) : null}
         <Link href={href} className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary">
-          Read guide
+          Open note
           <ArrowUpRight aria-hidden="true" className="size-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </Link>
       </CardContent>

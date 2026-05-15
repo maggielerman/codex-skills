@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Design Critique"
+  short_description: "Tasteful UI/UX critique gates"
+  default_prompt: "Use $visual-design-critique to audit this interface for visual polish, UX clarity, and design-system fit."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Board Operating Pattern"
+  short_description: "Run numbered visual review-board workflows for evidence, comparison, and correction"
+  default_prompt: "Use $review-board-operating-pattern as a repo-agnostic review-board operating pattern: open a numbered project, generate numbered JPG review boards with optional PDF bundles, collect numbered human corrections, and translate them into bounded apply/verify passes with evidence artifacts."

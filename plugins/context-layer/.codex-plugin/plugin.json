@@ -1,0 +1,39 @@
+{
+  "name": "context-layer",
+  "version": "0.1.0",
+  "description": "Skill package for repo-native context layers, including scaffold setup and workflow trigger skills.",
+  "author": {
+    "name": "Maggie Lerman",
+    "email": "",
+    "url": ""
+  },
+  "homepage": "",
+  "repository": "",
+  "license": "UNLICENSED",
+  "keywords": [
+    "context-layer",
+    "docs",
+    "agent-workflows",
+    "project-governance"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Context Layer",
+    "shortDescription": "Scaffold and operate repo-native context memory for human-agent teams",
+    "longDescription": "Package for installing and using a repo-native context layer: canonical DOCS root, project lifecycle, evidence, dashboard, MAGGIE TODOs, review boards, checkpoints, governance audits, collaborative walkthroughs, and UX/UI bug intake.",
+    "developerName": "Maggie Lerman",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "",
+    "privacyPolicyURL": "",
+    "termsOfServiceURL": "",
+    "defaultPrompt": [
+      "Use $context-layer-scaffold to standardize this repo as a context layer.",
+      "Use $review-board to generate a numbered review board for this work.",
+      "Use $maggie-todo to surface and resolve Maggie-owned follow-ups."
+    ]
+  }
+}

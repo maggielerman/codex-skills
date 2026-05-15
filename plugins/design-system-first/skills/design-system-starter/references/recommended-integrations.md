@@ -10,7 +10,7 @@ Use this file when the user wants suggestions for follow-on setup, MCPs, or priv
   - Use for stronger art direction, especially on `marketing-only` starters.
 - `$react-best-practices`
   - Use after larger React/Next edits or performance-minded refactors.
-- `$ML-docs-system-scaffold`
+- `$docs-system-scaffold`
   - Use when the user wants a full docs system beyond the starter's baseline docs add-on.
 - `$design-system-refine`
   - Use after content or product requirements become clearer and the starter needs a second pass.

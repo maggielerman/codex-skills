@@ -1,24 +1,21 @@
-# Codex Skills Suite
+# Codex Skills Library
 
-This repository is the durable source of truth for a curated custom Codex skills suite plus backups of custom local plugins.
+This repository is the durable source of truth for Maggie Lerman's custom Codex skills library plus backups of custom local plugins.
 
 The goals of this repo are simple:
 - back up the custom skills outside local Codex state
 - back up custom local plugins outside local Codex state
 - make the collection easier to browse, validate, and evolve
-- support a future paid distribution model for the full suite
-- keep the catalog public-ready even while licensing and packaging decisions are still evolving
+- share useful Codex workflow patterns publicly
+- support Maggie Lerman's public work around practical human-agent workflows
 
-## Current licensing posture
+## License
 
-This repository is not open source today.
+This repository is being prepared for public release, but a public license has not been selected yet.
 
-Until a formal commercial license is added:
+Until an explicit license is added:
 - all rights remain reserved by the repository owner
-- access to the repository does not grant redistribution, resale, sublicensing, or public republishing rights
 - any existing third-party or upstream license files preserved inside individual skill folders continue to apply to those specific files
-
-When the paid-access model is finalized, this repository should add a dedicated commercial license or terms document that defines subscriber rights clearly.
 
 ## Repository layout
 
@@ -30,10 +27,10 @@ When the paid-access model is finalized, this repository should add a dedicated 
 - `plugins/` - backups of custom local plugins
 - `.agents/plugins/marketplace.json` - repo-local plugin registry for the backed-up custom plugins
 - `scripts/build_catalog.py` - validates suite drift, then regenerates the index and manifest from skill metadata
-- `scripts/build_docs_site_catalog.py` - regenerates customer-facing docs-site catalog data from skill and plugin metadata
-- `docs-site/` - Next.js/Tailwind/shadcn customer-facing marketing and implementation docs site
-- `DOCS/` - repo-native product operating system, project memory, evidence, and product docs
-- `scripts/sync_from_codex_home.sh` - syncs local Codex skills into this repository
+- `scripts/build_docs_site_catalog.py` - regenerates public docs-site catalog data from skill and plugin metadata
+- `docs-site/` - Next.js/Tailwind/shadcn public marketing, catalog, and implementation docs site
+- `DOCS/` - lean repo notes, project memory, and evidence that should remain useful in public
+- `scripts/sync_from_codex_home.sh` - syncs local skills from Codex and agent skill homes into this repository
 - `AGENTS.md` - operating instructions for agents working in this repo
 - `CONTRIBUTING.md` - contribution and quality standards
 
@@ -65,7 +62,7 @@ python3 scripts/build_catalog.py
 python3 scripts/build_docs_site_catalog.py
 ```
 
-If you want to refresh the repo from the local Codex skills directory, run:
+If you want to refresh the repo from local skill directories, run:
 
 ```bash
 ./scripts/sync_from_codex_home.sh --check
@@ -75,17 +72,17 @@ python3 scripts/build_catalog.py
 python3 scripts/build_docs_site_catalog.py
 ```
 
-The sync preflight reports allowlisted skills that are missing from local Codex home, local skills that are intentionally outside the curated suite, stale repo-only files inside synced skill folders, source-only files, and changed source files. Use `--prune-stale` in apply mode when the preflight identifies stale files that should be deleted from the repo copy.
+The sync preflight resolves allowlisted skills from `${CODEX_HOME:-$HOME/.codex}/skills` and `${AGENTS_HOME:-$HOME/.agents}/skills`. It reports allowlisted skills that are missing from local sources, local skills that are intentionally outside the curated suite, stale repo-only files inside synced skill folders, source-only files, and changed source files. Use `--prune-stale` in apply mode when the preflight identifies stale files that should be deleted from the repo copy.
 
-If you update the backed-up custom plugins, also refresh the repo-local plugin registry in `.agents/plugins/marketplace.json` so the backup stays installable. Then run `python3 scripts/build_docs_site_catalog.py` so the customer-facing plugin docs stay current.
+If you update the backed-up custom plugins, also refresh the repo-local plugin registry in `.agents/plugins/marketplace.json` so the backup stays installable. Then run `python3 scripts/build_docs_site_catalog.py` so the public plugin docs stay current.
 
 ## Included skills
 
 See [skills/INDEX.md](./skills/INDEX.md) for the current catalog.
 
-## Customer-facing docs site
+## Public docs site
 
-The `docs-site/` app is a Next.js, Tailwind, and shadcn site for selling and supporting the skills packs. Its pages should be written for customers who purchased the packs and are implementing them in their own repositories and workflows. Do not use it for internal instructions about maintaining this repo.
+The `docs-site/` app is a Next.js, Tailwind, and shadcn site for sharing the skill catalog, plugin backups, and implementation notes publicly. Its pages should help readers understand, copy, adapt, and support the workflows. Do not use it for internal instructions about maintaining this repo.
 
 The site catalog is generated from `skills/manifest.json` and custom plugin metadata. From the repo root, run:
 
@@ -95,12 +92,6 @@ python3 scripts/build_docs_site_catalog.py
 cd docs-site && npm run build
 ```
 
-## Future commercialization direction
+## Support
 
-The likely end state is a proprietary commercial license for the full suite. In practice, that usually means:
-- customers pay for access to the bundle
-- customers receive a limited license to use the skills
-- redistribution, repackaging, and resale remain prohibited unless explicitly authorized
-- updates and support can be tied to an active subscription or purchase tier
-
-That model fits this repository better than an open-source license.
+The current direction is public repo plus optional support. The docs site should make the work easy to evaluate and reuse, then route people to GitHub issues, contributions, stars, forks, and a support link when that destination is ready.

@@ -1,4 +1,0 @@
-interface:
-  display_name: "GitHub Docs Tracking Sync (Optional)"
-  short_description: "On-demand docs-to-GitHub sync; do not run by default"
-  default_prompt: "Use $ML-github-docs-tracking-sync only if explicitly requested to sync docs projects/roadmap into GitHub issues/project fields."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Implementation Review"
+  short_description: "Compare 2-3 repos and generate a review report"
+  default_prompt: "Use $repo-implementation-review to review 2-3 implementation repos against the same starting goal, run verification checks (tests/build/endpoints/docs), and generate an HTML report with export options."

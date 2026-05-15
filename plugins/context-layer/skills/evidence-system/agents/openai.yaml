@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence System"
+  short_description: "Route durable project evidence"
+  default_prompt: "Use $evidence-system to place screenshots, manifests, audit packets, review packets, and verification artifacts under the correct DOCS/evidence path."

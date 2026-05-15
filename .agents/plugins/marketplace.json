@@ -29,6 +29,18 @@
       "category": "Developer Tools"
     },
     {
+      "name": "context-layer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/context-layer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
       "name": "project-tranche-orchestrator",
       "source": {
         "source": "local",

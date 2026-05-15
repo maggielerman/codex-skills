@@ -9,7 +9,7 @@ This repository stores portable custom Codex skills, backups of custom local plu
 - Treat `skills/SUITE_METADATA.json` as the source of truth for lifecycle labeling such as `experimental`, `legacy`, `deprecated`, and `archived`.
 - Treat `plugins/` as a backup area for custom plugins only, not a mirrored catalog of every installed plugin.
 - Keep the repository lean; avoid project-management scaffolding that is meant for delivery repos.
-- Treat `docs-site/` as customer-facing marketing and implementation docs for purchased packs, not as repo maintenance documentation.
+- Treat `docs-site/` as the public marketing, catalog, and implementation docs surface, not as repo maintenance documentation.
 - Preserve portability. A skill copied out of this repo should still work as a standalone skill.
 - Prefer repo-wide conventions over one-off formatting changes.
 
@@ -23,7 +23,7 @@ When adding or updating skills:
 - update `skills/SUITE_METADATA.json` when a skill's lifecycle status changes
 - run `python3 scripts/build_catalog.py --check` to catch drift before regeneration
 - regenerate `skills/manifest.json` and `skills/INDEX.md` with `python3 scripts/build_catalog.py`
-- regenerate `docs-site/src/lib/catalog.generated.ts` with `python3 scripts/build_docs_site_catalog.py` when customer-facing skill docs should reflect the change
+- regenerate `docs-site/src/lib/catalog.generated.ts` with `python3 scripts/build_docs_site_catalog.py` when public skill docs should reflect the change
 - update top-level docs when the repo structure or contribution process changes materially
 
 When adding or updating custom plugin backups:
@@ -31,7 +31,7 @@ When adding or updating custom plugin backups:
 - preserve `.codex-plugin/plugin.json` and any plugin-specific assets/scripts
 - update `.agents/plugins/marketplace.json` so the repo backup remains installable as a repo-local plugin set
 - update top-level docs when the plugin backup structure changes materially
-- regenerate `docs-site/src/lib/catalog.generated.ts` with `python3 scripts/build_docs_site_catalog.py` when customer-facing plugin docs should reflect the change
+- regenerate `docs-site/src/lib/catalog.generated.ts` with `python3 scripts/build_docs_site_catalog.py` when public plugin docs should reflect the change
 
 ## Scope boundaries
 
@@ -48,14 +48,13 @@ When adding or updating custom plugin backups:
 - Public-facing docs should be clear enough for future external sharing.
 - Scripts should use the standard library when practical and avoid unnecessary dependencies.
 
-## Product Operating System Docs
+## Repo Notes And Evidence
 
-- Use `DOCS/` as the repo-native product operating system root.
+- Use `DOCS/` as the lean repo-native notes and evidence root.
 - Use `DOCS/PROJECTS/` for numbered project memory and lifecycle tracking.
 - Use `DOCS/evidence/` for durable evidence, review artifacts, and audit packets.
-- Use `docs-site/` only for customer-facing marketing, setup, implementation, and troubleshooting docs for purchased skills packs.
+- Use `docs-site/` only for public marketing, catalog, setup, implementation, and troubleshooting docs.
 - Lifecycle transitions: `active -> in-review` when implementation is complete and awaiting walkthrough/sign-off; `* -> blocked` when progress requires user decision, permission, input, or access; `in-review -> completed` only after collaborative walkthrough/sign-off.
 - Continue autonomous execution from backlog/stale while items are in `in-review` or `blocked`.
 - Use literal `MAGGIE TODO:` callouts for Maggie-owned or externally gated manual follow-up items.
 - Generate docs timestamps with `node scripts/docs/timestamp-et.mjs --json`; do not hand-type relative `today`/`tomorrow` status notes.
-

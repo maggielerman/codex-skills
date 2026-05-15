@@ -3,19 +3,19 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 30,
-  "pluginCount": 3,
+  "skillCount": 72,
+  "pluginCount": 4,
   "items": [
     {
-      "slug": "ml-catalog-review",
+      "slug": "catalog-review",
       "kind": "skill",
       "title": "Catalog Review",
-      "folder": "ML-catalog-review",
+      "folder": "catalog-review",
       "status": "active",
       "summary": "Run numbered Shopify-first catalog review workflows",
       "description": "Standard Shopify-first catalog review workflow for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review boards, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.",
       "category": "Storefront and commerce",
-      "path": "skills/ML-catalog-review",
+      "path": "skills/catalog-review",
       "resources": [
         "agent metadata"
       ],
@@ -27,27 +27,27 @@ export const catalog = {
         "Apply catalog review corrections"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-cluster-assignment",
+      "slug": "cluster-assignment",
       "kind": "skill",
       "title": "Cluster Assignment",
-      "folder": "ML-cluster-assignment",
+      "folder": "cluster-assignment",
       "status": "active",
       "summary": "Plan and bootstrap parallel work clusters",
       "description": "Split repository work into dependency-safe parallel clusters, then bootstrap branches/worktrees, GitHub tracking issues, and ready-to-run agent prompts. Use when a user asks to run multiple agents in parallel or wants branch/worktree cluster setup.",
       "category": "Repository setup",
-      "path": "skills/ML-cluster-assignment",
+      "path": "skills/cluster-assignment",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -58,27 +58,27 @@ export const catalog = {
         "Branch/worktree cluster setup"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-codex-to-claude-handoff",
+      "slug": "codex-to-claude-handoff",
       "kind": "skill",
       "title": "Codex to Claude Handoff",
-      "folder": "ML-codex-to-claude-handoff",
+      "folder": "codex-to-claude-handoff",
       "status": "active",
       "summary": "Mirror Codex rules into Claude setup + docs",
       "description": "Prepare a repository for Claude Code Desktop by generating CLAUDE.md, .claude/rules/*.md, and .claude/settings.json from existing Codex instruction files (especially AGENTS.md and .github/copilot-instructions.md). Use when migrating or handing off a repo from Codex to Claude while preserving operating rules and safety guardrails.",
       "category": "Repository setup",
-      "path": "skills/ML-codex-to-claude-handoff",
+      "path": "skills/codex-to-claude-handoff",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -89,27 +89,27 @@ export const catalog = {
         "Handing off a repo from Codex to Claude while preserving operating rules and safety guardrails"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-collaborative-walkthrough",
+      "slug": "collaborative-walkthrough",
       "kind": "skill",
       "title": "Collaborative Walkthrough",
-      "folder": "ML-collaborative-walkthrough",
+      "folder": "collaborative-walkthrough",
       "status": "active",
       "summary": "Run Q&A walkthrough on in-review projects",
       "description": "Run a structured Q&A walkthrough for in-review project streams in repos with standardized docs scaffolding. Use when a user asks for collaborative walkthrough, sign-off review, or readiness check before moving projects to completed.",
       "category": "Delivery governance",
-      "path": "skills/ML-collaborative-walkthrough",
+      "path": "skills/collaborative-walkthrough",
       "resources": [
         "reference guides",
         "agent metadata"
@@ -120,27 +120,27 @@ export const catalog = {
         "Readiness check before moving projects to completed"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-continue-until-blocked",
+      "slug": "continue-until-blocked",
       "kind": "skill",
       "title": "Continue Until Blocked",
-      "folder": "ML-continue-until-blocked",
+      "folder": "continue-until-blocked",
       "status": "active",
       "summary": "Run autonomously until cutover or blocker",
       "description": "Execute already-scoped repository work autonomously until the cutover is complete or a true blocker requires user input. Use when the user says to keep going without intervention, continue until blocked, finish the cutover, or otherwise hand the thread continuous execution authority. Assume the current thread already understands the repository and approved scope, and assume project docs follow the standard docs scaffolding with governance files and status-based project docs.",
       "category": "Delivery governance",
-      "path": "skills/ML-continue-until-blocked",
+      "path": "skills/continue-until-blocked",
       "resources": [
         "agent metadata"
       ],
@@ -152,27 +152,27 @@ export const catalog = {
         "Assume project docs follow the standard docs scaffolding with governance files and status-based project docs"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-docs-evidence-backfill",
+      "slug": "docs-evidence-backfill",
       "kind": "skill",
       "title": "Docs Evidence Backfill",
-      "folder": "ML-docs-evidence-backfill",
+      "folder": "docs-evidence-backfill",
       "status": "active",
       "summary": "Retrofit an existing repo onto a unified docs evidence system",
       "description": "Retrofit an existing repository from fragmented audit and artifact storage into a unified docs evidence system. Use when an existing repo has evidence spread across places like docs assets, review-board folders, repo-root artifacts, tmp folders, or legacy generated outputs and needs a canonical docs-root evidence structure such as `DOCS/evidence/` or `docs/evidence/` plus path/reference cleanup.",
       "category": "Documentation systems",
-      "path": "skills/ML-docs-evidence-backfill",
+      "path": "skills/docs-evidence-backfill",
       "resources": [
         "reference guides",
         "agent metadata"
@@ -185,27 +185,27 @@ export const catalog = {
         "Legacy generated outputs and needs a canonical docs-root evidence structure such as `DOCS/evidence/`"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-docs-product-pack",
+      "slug": "docs-product-pack",
       "kind": "skill",
       "title": "Product Docs Pack (Deprecated)",
-      "folder": "ML-docs-product-pack",
+      "folder": "docs-product-pack",
       "status": "deprecated",
       "summary": "Deprecated; redirects to Product Operating System Scaffold",
-      "description": "Deprecated shim. Use `ML-product-operating-system-scaffold` for product-doc scaffolding, repo-native product operations, docs governance, evidence, and tooling in one workflow.",
+      "description": "Deprecated shim. Use `product-operating-system-scaffold` for product-doc scaffolding, repo-native product operations, docs governance, evidence, and tooling in one workflow.",
       "category": "Delivery governance",
-      "path": "skills/ML-docs-product-pack",
+      "path": "skills/docs-product-pack",
       "resources": [
         "reference guides",
         "agent metadata"
@@ -215,27 +215,27 @@ export const catalog = {
         "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-docs-project-dashboard-legacy",
+      "slug": "docs-project-dashboard-legacy",
       "kind": "skill",
       "title": "Docs Project Dashboard (Legacy)",
-      "folder": "ML-docs-project-dashboard-legacy",
+      "folder": "docs-project-dashboard-legacy",
       "status": "active",
       "summary": "Deprecated standalone backfill for the HTML dashboard",
-      "description": "Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the ML-product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$ML-product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.",
+      "description": "Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.",
       "category": "Delivery governance",
-      "path": "skills/ML-docs-project-dashboard-legacy",
+      "path": "skills/docs-project-dashboard-legacy",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -247,27 +247,27 @@ export const catalog = {
         "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-docs-project-lifecycle-statuses",
+      "slug": "docs-project-lifecycle-statuses",
       "kind": "skill",
       "title": "Docs Lifecycle Statuses (Legacy)",
-      "folder": "ML-docs-project-lifecycle-statuses",
+      "folder": "docs-project-lifecycle-statuses",
       "status": "legacy",
       "summary": "Legacy retrofit for in-review/blocked project lifecycle states",
-      "description": "Transitional legacy patch for repositories that were scaffolded before ML-product-operating-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.",
+      "description": "Transitional legacy patch for repositories that were scaffolded before product-operating-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.",
       "category": "Delivery governance",
-      "path": "skills/ML-docs-project-lifecycle-statuses",
+      "path": "skills/docs-project-lifecycle-statuses",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -278,56 +278,56 @@ export const catalog = {
         "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-docs-system-scaffold",
+      "slug": "docs-system-scaffold",
       "kind": "skill",
-      "title": "ML-docs-system-scaffold",
-      "folder": "ML-docs-system-scaffold",
+      "title": "docs-system-scaffold",
+      "folder": "docs-system-scaffold",
       "status": "deprecated",
       "summary": "Deprecated compatibility alias.",
-      "description": "Deprecated compatibility alias. Use $ML-product-operating-system-scaffold for the full repo-native product operating system scaffold, including docs root, project lifecycle, governance, roadmap/changelog, evidence, dashboards, docs site, product docs, and review-board workflows.",
+      "description": "Deprecated compatibility alias. Use $product-operating-system-scaffold for the full repo-native product operating system scaffold, including docs root, project lifecycle, governance, roadmap/changelog, evidence, dashboards, docs site, product docs, and review-board workflows.",
       "category": "Delivery governance",
-      "path": "skills/ML-docs-system-scaffold",
+      "path": "skills/docs-system-scaffold",
       "resources": [
         "portable skill instructions"
       ],
       "useCases": [
-        "Run ML-docs-system-scaffold when its workflow matches the repo outcome you need.",
+        "Run docs-system-scaffold when its workflow matches the repo outcome you need.",
         "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-env-bootstrap-sync",
+      "slug": "env-bootstrap-sync",
       "kind": "skill",
       "title": "Env Bootstrap Sync",
-      "folder": "ML-env-bootstrap-sync",
+      "folder": "env-bootstrap-sync",
       "status": "active",
       "summary": "Help with env sync and bootstrap workflows",
       "description": "Create or upgrade a repo-owned environment bootstrap workflow with reproducible `.env` handling, worktree sync, required-variable documentation, secret-file layout, and new-machine runbooks. Use when a repo has drifting `.env` files, unclear setup requirements, worktree-specific config loss, or scattered credential/bootstrap instructions.",
       "category": "Documentation systems",
-      "path": "skills/ML-env-bootstrap-sync",
+      "path": "skills/env-bootstrap-sync",
       "resources": [
         "reference guides",
         "agent metadata"
@@ -339,27 +339,27 @@ export const catalog = {
         "Scattered credential/bootstrap instructions"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-github-docs-tracking-sync",
+      "slug": "github-docs-tracking-sync",
       "kind": "skill",
       "title": "GitHub Docs Tracking Sync (Optional)",
-      "folder": "ML-github-docs-tracking-sync",
+      "folder": "github-docs-tracking-sync",
       "status": "active",
       "summary": "On-demand docs-to-GitHub sync; do not run by default",
       "description": "Optional docs-to-GitHub tracking sync (1027-style). Prefer manual/targeted use only when explicitly requested.",
       "category": "Documentation systems",
-      "path": "skills/ML-github-docs-tracking-sync",
+      "path": "skills/github-docs-tracking-sync",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -370,27 +370,27 @@ export const catalog = {
         "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-hyphenomenon-project-intake",
+      "slug": "hyphenomenon-project-intake",
       "kind": "skill",
       "title": "Hyphenomenon Intake",
-      "folder": "ML-hyphenomenon-project-intake",
+      "folder": "hyphenomenon-project-intake",
       "status": "active",
       "summary": "Build project intake dossier + screenshots",
       "description": "Create a Hyphenomenon import-ready project intake package (single markdown dossier plus 4-8 screenshots) for a software repository. Use when a user asks to prepare a repo for import as a project + graph nodes, especially when they require exact dossier section headers, screenshot gallery links, hydration artifacts, workflow summaries, and a handoff checklist.",
       "category": "Delivery governance",
-      "path": "skills/ML-hyphenomenon-project-intake",
+      "path": "skills/hyphenomenon-project-intake",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -404,27 +404,27 @@ export const catalog = {
         "Workflow summaries"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-plan-signoff-review",
+      "slug": "plan-signoff-review",
       "kind": "skill",
       "title": "Plan Signoff Review",
-      "folder": "ML-plan-signoff-review",
+      "folder": "plan-signoff-review",
       "status": "active",
       "summary": "Re-read the full thread and latest audits before plan approval",
       "description": "Review a proposed final plan against the full current thread and the latest supporting audits, reports, and decision artifacts before approval. Use when the user asks to double-check that a plan reflects everything discussed, incorporates the newest review documents, or needs a final readiness pass in an existing Plan mode thread.",
       "category": "Delivery governance",
-      "path": "skills/ML-plan-signoff-review",
+      "path": "skills/plan-signoff-review",
       "resources": [
         "agent metadata"
       ],
@@ -434,27 +434,27 @@ export const catalog = {
         "Needs a final readiness pass in an existing Plan mode thread"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-product-operating-system-scaffold",
+      "slug": "product-operating-system-scaffold",
       "kind": "skill",
       "title": "Product Operating System Scaffold",
-      "folder": "ML-product-operating-system-scaffold",
+      "folder": "product-operating-system-scaffold",
       "status": "active",
       "summary": "Scaffold a repo-native product operating system for human-agent teams",
       "description": "Scaffold or standardize a comprehensive repo-native product operating system for human-agent teams. Installs the docs root, project lifecycle model, governance files, agent instructions, ROADMAP/CHANGELOG control plane, evidence system, docs automation scripts, timestamp/checkpoint rules, visual design critique gates, optional VitePress docs site, optional product-doc pack, optional PROJECTS dashboard, and optional repo-agnostic review-board workflow. Use when asked for product operating system setup, repo-native product management, agent-readable project memory, lifecycle/governance scaffolding, evidence-system setup, docs-site setup, product docs, project dashboards, visual/design quality gates, or review-board scaffolding.",
       "category": "Delivery governance",
-      "path": "skills/ML-product-operating-system-scaffold",
+      "path": "skills/product-operating-system-scaffold",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -469,27 +469,27 @@ export const catalog = {
         "Evidence-system setup"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-project-governance-audit",
+      "slug": "project-governance-audit",
       "kind": "skill",
       "title": "Project Governance Audit",
-      "folder": "ML-project-governance-audit",
+      "folder": "project-governance-audit",
       "status": "active",
       "summary": "Audit project docs, checkpoint hygiene, and roadmap ordering",
       "description": "Run a governance audit across project planning docs and roadmap artifacts. Use for blocker/dependency/order analysis, strategy consistency checks, and checkpoint-quality enforcement with file-backed evidence.",
       "category": "Delivery governance",
-      "path": "skills/ML-project-governance-audit",
+      "path": "skills/project-governance-audit",
       "resources": [
         "agent metadata"
       ],
@@ -498,27 +498,27 @@ export const catalog = {
         "Use it after the target repo has enough context for Codex to act safely."
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-project-tranche-orchestrator",
+      "slug": "project-tranche-orchestrator",
       "kind": "skill",
       "title": "Project Tranche Orchestrator",
-      "folder": "ML-project-tranche-orchestrator",
+      "folder": "project-tranche-orchestrator",
       "status": "active",
       "summary": "Primary-agent tranche planning, delegation, review, and docs writeback in collaborative or autonomous mode.",
       "description": "Act as the primary project manager and agent orchestrator for repos using the standard docs scaffold. Use when the user wants one primary agent to read project docs, derive the next tranche, delegate bounded work to subagents, manage handoffs, review completion, and write status updates back into the existing docs without creating a second source of truth.",
       "category": "Delivery governance",
-      "path": "skills/ML-project-tranche-orchestrator",
+      "path": "skills/project-tranche-orchestrator",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -532,27 +532,27 @@ export const catalog = {
         "Review completion"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-repo-implementation-review",
+      "slug": "repo-implementation-review",
       "kind": "skill",
       "title": "Repo Implementation Review",
-      "folder": "ML-repo-implementation-review",
+      "folder": "repo-implementation-review",
       "status": "active",
       "summary": "Compare 2-3 repos and generate a review report",
       "description": "Review and compare 2-3 repositories that implement the same product idea, then generate a downloadable HTML comparison artifact with pros/cons, feature gaps, scores, recommendation paths, and CSV/PDF export options. Use when a user asks for side-by-side technical assessment of multiple implementation repos or wants a recommendation between competing codebases.",
       "category": "Documentation systems",
-      "path": "skills/ML-repo-implementation-review",
+      "path": "skills/repo-implementation-review",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -564,27 +564,27 @@ export const catalog = {
         "A recommendation between competing codebases"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-shopify-app-scaffold",
+      "slug": "shopify-app-scaffold",
       "kind": "skill",
       "title": "Shopify App Scaffold",
-      "folder": "ML-shopify-app-scaffold",
+      "folder": "shopify-app-scaffold",
       "status": "active",
       "summary": "Create a fresh Shopify app shell with reusable comms and review modules",
       "description": "Scaffold a new Shopify app from the latest installed Shopify CLI template, then layer in a reusable shell for merchant email opt-in, unsubscribe flow, review prompts, and optional billing/app-proxy/theme-extension placeholders. Use when creating a new Shopify app quickly without copying an old repo wholesale.",
       "category": "Storefront and commerce",
-      "path": "skills/ML-shopify-app-scaffold",
+      "path": "skills/shopify-app-scaffold",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -595,27 +595,27 @@ export const catalog = {
         "Creating a new Shopify app quickly without copying an old repo wholesale"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-user-journey-audit",
+      "slug": "user-journey-audit",
       "kind": "skill",
       "title": "User Journey Audit",
-      "folder": "ML-user-journey-audit",
+      "folder": "user-journey-audit",
       "status": "active",
       "summary": "Audit user journeys and export PDF",
       "description": "Create current-state user journey audits with route mapping, screenshots, coverage verification, and a final PDF report. Use when Codex needs to audit navigation or UX flows for one or more user types in any repository or deployed app, suggest which user types to include, capture click-by-click evidence, verify route coverage against code and tests, and export a screenshot-backed PDF artifact.",
       "category": "Documentation systems",
-      "path": "skills/ML-user-journey-audit",
+      "path": "skills/user-journey-audit",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -629,27 +629,27 @@ export const catalog = {
         "Suggest which user types to include"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
     {
-      "slug": "ml-ux-ui-bug-intake",
+      "slug": "ux-ui-bug-intake",
       "kind": "skill",
-      "title": "ML-ux-ui-bug-intake",
-      "folder": "ML-ux-ui-bug-intake",
+      "title": "ux-ui-bug-intake",
+      "folder": "ux-ui-bug-intake",
       "status": "active",
       "summary": "Set up a lightweight UX/UI bug intake system with lifecycle docs, routing rules, and routines.",
       "description": "Set up a lightweight UX/UI bug intake system with lifecycle docs, routing rules, and routines. Use when starting a new project stream, standardizing repo operations, or replacing ad hoc bug tracking with a simple docs-backed workflow.",
       "category": "Delivery governance",
-      "path": "skills/ML-ux-ui-bug-intake",
+      "path": "skills/ux-ui-bug-intake",
       "resources": [
         "bundled scripts",
         "reference guides",
@@ -661,14 +661,14 @@ export const catalog = {
         "Replacing ad hoc bug tracking with a simple docs-backed workflow"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -694,14 +694,14 @@ export const catalog = {
         "X-transition"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -728,14 +728,14 @@ export const catalog = {
         "Similar hosting build minutes; disable automatic builds on commit"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -761,14 +761,14 @@ export const catalog = {
         "Set up a project on Cloudflare"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -794,14 +794,14 @@ export const catalog = {
         "Njk"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -827,14 +827,14 @@ export const catalog = {
         "Alpine.js"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -861,14 +861,14 @@ export const catalog = {
         "Including preview and production deploys"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -894,14 +894,14 @@ export const catalog = {
         "Set up their application on Render's cloud platform"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -927,14 +927,14 @@ export const catalog = {
         "PostCSS/Vite setup"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
       ]
     },
@@ -959,15 +959,1358 @@ export const catalog = {
         "Says to push a project live on Vercel"
       ],
       "gettingStarted": [
-        "Copy the complete skill folder into the Codex skills location used by your team.",
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
         "Open the target repo and read its local agent instructions before invoking the skill.",
         "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting them into the customer's workflow."
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
       ],
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
         "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "atlas",
+      "kind": "skill",
+      "title": "Atlas Control (macOS)",
+      "folder": "atlas",
+      "status": "active",
+      "summary": "Use the bundled CLI to control Atlas and inspect local browser data.",
+      "description": "macOS-only AppleScript control for the ChatGPT Atlas desktop app. Use only when the user explicitly asks to control Atlas tabs/bookmarks/history on macOS and the \\\"ChatGPT Atlas\\\" app is installed; do not trigger for general browser tasks or non-macOS environments.",
+      "category": "Repository setup",
+      "path": "skills/atlas",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Atlas Control (macOS) when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "chronicle",
+      "kind": "skill",
+      "title": "chronicle",
+      "folder": "chronicle",
+      "status": "active",
+      "summary": "|",
+      "description": "|",
+      "category": "Agent workflow accelerators",
+      "path": "skills/chronicle",
+      "resources": [
+        "portable skill instructions"
+      ],
+      "useCases": [
+        "Run chronicle when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "doc",
+      "kind": "skill",
+      "title": "Word Docs",
+      "folder": "doc",
+      "status": "active",
+      "summary": "Edit and review docx files",
+      "description": "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.",
+      "category": "Documentation systems",
+      "path": "skills/doc",
+      "resources": [
+        "bundled scripts",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The task involves reading",
+        "Creating",
+        "Editing `.docx` documents",
+        "Especially when formatting",
+        "Layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "gh-address-comments",
+      "kind": "skill",
+      "title": "GitHub Address Comments",
+      "folder": "gh-address-comments",
+      "status": "active",
+      "summary": "Address comments in a GitHub PR review",
+      "description": "Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not logged in.",
+      "category": "Repository setup",
+      "path": "skills/gh-address-comments",
+      "resources": [
+        "bundled scripts",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run GitHub Address Comments when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "gh-fix-ci",
+      "kind": "skill",
+      "title": "GitHub Fix CI",
+      "folder": "gh-fix-ci",
+      "status": "active",
+      "summary": "Debug failing GitHub Actions CI",
+      "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+      "category": "Repository setup",
+      "path": "skills/gh-fix-ci",
+      "resources": [
+        "bundled scripts",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Debug",
+        "Fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs",
+        "Summarize failure context",
+        "Draft a fix plan",
+        "Implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "imagegen",
+      "kind": "skill",
+      "title": "Image Gen",
+      "folder": "imagegen",
+      "status": "active",
+      "summary": "Generate and edit images using OpenAI",
+      "description": "Use when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or replacement, transparent background, product shots, concept art, covers, or batch variants); run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live calls.",
+      "category": "Documentation systems",
+      "path": "skills/imagegen",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks to generate",
+        "Edit images via the OpenAI Image API (for example: generate image",
+        "Edit/inpaint/mask",
+        "Background removal",
+        "Replacement"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "jupyter-notebook",
+      "kind": "skill",
+      "title": "Jupyter Notebooks",
+      "folder": "jupyter-notebook",
+      "status": "active",
+      "summary": "Create Jupyter notebooks for experiments and tutorials",
+      "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/jupyter-notebook",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks to create",
+        "Scaffold",
+        "Edit Jupyter notebooks (`.ipynb`) for experiments",
+        "Explorations",
+        "Tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "notion-knowledge-capture",
+      "kind": "skill",
+      "title": "Notion Knowledge Capture",
+      "folder": "notion-knowledge-capture",
+      "status": "active",
+      "summary": "Capture conversations into structured Notion pages",
+      "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/notion-knowledge-capture",
+      "resources": [
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Notion Knowledge Capture when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "notion-meeting-intelligence",
+      "kind": "skill",
+      "title": "Notion Meeting Intelligence",
+      "folder": "notion-meeting-intelligence",
+      "status": "active",
+      "summary": "Prep meetings with Notion context and tailored agendas",
+      "description": "Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/notion-meeting-intelligence",
+      "resources": [
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Notion Meeting Intelligence when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "notion-research-documentation",
+      "kind": "skill",
+      "title": "Notion Research & Documentation",
+      "folder": "notion-research-documentation",
+      "status": "active",
+      "summary": "Research Notion content and produce briefs/reports",
+      "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+      "category": "Documentation systems",
+      "path": "skills/notion-research-documentation",
+      "resources": [
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Notion Research & Documentation when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "notion-spec-to-implementation",
+      "kind": "skill",
+      "title": "Notion Spec to Implementation",
+      "folder": "notion-spec-to-implementation",
+      "status": "active",
+      "summary": "Turn Notion specs into implementation plans, tasks, and progress tracking",
+      "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/notion-spec-to-implementation",
+      "resources": [
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Notion Spec to Implementation when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "openai-docs",
+      "kind": "skill",
+      "title": "OpenAI Docs",
+      "folder": "openai-docs",
+      "status": "active",
+      "summary": "Reference the official OpenAI Developer docs",
+      "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.",
+      "category": "Documentation systems",
+      "path": "skills/openai-docs",
+      "resources": [
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks how to build with OpenAI products",
+        "APIs and needs up-to-date official documentation with citations (for example: Codex",
+        "Responses API",
+        "Chat Completions",
+        "Apps SDK"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "pdf",
+      "kind": "skill",
+      "title": "PDF Skill",
+      "folder": "pdf",
+      "status": "active",
+      "summary": "Create, edit, and review PDFs",
+      "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+      "category": "Research and review",
+      "path": "skills/pdf",
+      "resources": [
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Tasks involve reading",
+        "Creating",
+        "Reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`",
+        "`pdfplumber`",
+        "`pypdf` for generation and extraction"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "playwright",
+      "kind": "skill",
+      "title": "Playwright CLI Skill",
+      "folder": "playwright",
+      "status": "active",
+      "summary": "Automate real browsers from the terminal",
+      "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/playwright",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The task requires automating a real browser from the terminal (navigation",
+        "Form filling",
+        "Snapshots",
+        "Screenshots",
+        "Data extraction"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "playwright-interactive",
+      "kind": "skill",
+      "title": "Playwright Interactive",
+      "folder": "playwright-interactive",
+      "status": "active",
+      "summary": "Persistent browser and Electron QA",
+      "description": "Persistent browser and Electron interaction through `js_repl` for fast iterative UI debugging.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/playwright-interactive",
+      "resources": [
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Playwright Interactive when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "rapid-iteration-mode",
+      "kind": "skill",
+      "title": "Rapid Iteration Mode",
+      "folder": "rapid-iteration-mode",
+      "status": "active",
+      "summary": "Tight visual and product iteration loops",
+      "description": "Custom skill created by Maggie Lerman. Lightweight working mode for fast product, UI, visual, content, and implementation iteration. Use when the user says \"rapid iteration mode\", asks for rapid visual iteration, wants quick color/layout/image/copy/UX finetuning, asks to try several small variants, or explicitly wants a tighter loop with lighter verification while preserving branch and change hygiene.",
+      "category": "Documentation systems",
+      "path": "skills/rapid-iteration-mode",
+      "resources": [
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user says \"rapid iteration mode\"",
+        "Asks for rapid visual iteration",
+        "Quick color/layout/image/copy/UX finetuning",
+        "Try several small variants",
+        "Explicitly wants a tighter loop with lighter verification while preserving branch and change hygiene"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "review-board-operating-pattern",
+      "kind": "skill",
+      "title": "Review Board Operating Pattern",
+      "folder": "review-board-operating-pattern",
+      "status": "active",
+      "summary": "Run numbered visual review-board workflows for evidence, comparison, and correction",
+      "description": "Repo-agnostic visual review-board operating pattern for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into bounded apply/verify passes with evidence artifacts. Use when asked to create review boards, compare visual options, audit UI/screenshots/content/assets, prepare a human review packet, or apply numbered review corrections.",
+      "category": "Delivery governance",
+      "path": "skills/review-board-operating-pattern",
+      "resources": [
+        "agent metadata"
+      ],
+      "useCases": [
+        "Create review boards",
+        "Compare visual options",
+        "Audit UI/screenshots/content/assets",
+        "Prepare a human review packet",
+        "Apply numbered review corrections"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "screenshot",
+      "kind": "skill",
+      "title": "Screenshot Capture",
+      "folder": "screenshot",
+      "status": "active",
+      "summary": "Capture screenshots",
+      "description": "Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-level capture is needed.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/screenshot",
+      "resources": [
+        "bundled scripts",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user explicitly asks for a desktop",
+        "System screenshot (full screen",
+        "Specific app",
+        "Window",
+        "A pixel region)"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "security-best-practices",
+      "kind": "skill",
+      "title": "Security Best Practices",
+      "folder": "security-best-practices",
+      "status": "active",
+      "summary": "Security reviews and secure-by-default guidance",
+      "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.",
+      "category": "Research and review",
+      "path": "skills/security-best-practices",
+      "resources": [
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Security Best Practices when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-admin",
+      "kind": "skill",
+      "title": "shopify-admin",
+      "folder": "shopify-admin",
+      "status": "active",
+      "summary": "The Admin GraphQL API lets you build apps and integrations that extend and enhance the Shopify admin.",
+      "description": "The Admin GraphQL API lets you build apps and integrations that extend and enhance the Shopify admin.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-admin",
+      "resources": [
+        "bundled scripts",
+        "starter assets"
+      ],
+      "useCases": [
+        "Run shopify-admin when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-admin-execution",
+      "kind": "skill",
+      "title": "shopify-admin-execution",
+      "folder": "shopify-admin-execution",
+      "status": "active",
+      "summary": "Run a validated Admin GraphQL operation against a specific store using Shopify CLI.",
+      "description": "Run a validated Admin GraphQL operation against a specific store using Shopify CLI. Use this when the user wants an executable store workflow, not just the query or mutation text. If the answer should include `shopify store auth` and `shopify store execute`, choose this API. Choose this for 'my store', 'this store', a store domain, product reads on a merchant store, low-inventory lookups, product updates, and warehouse/location inventory changes. Examples: 'Show me the first 10 products on my store', 'Find products with low inventory on my store', 'Set inventory at the Toronto warehouse so SKU ABC-123 is 12'.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-admin-execution",
+      "resources": [
+        "portable skill instructions"
+      ],
+      "useCases": [
+        "Run shopify-admin-execution when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-custom-data",
+      "kind": "skill",
+      "title": "shopify-custom-data",
+      "folder": "shopify-custom-data",
+      "status": "active",
+      "summary": "MUST be used first when prompts mention Metafields or Metaobjects.",
+      "description": "MUST be used first when prompts mention Metafields or Metaobjects. Use Metafields and Metaobjects to model and store custom data for your app. Metafields extend built-in Shopify data types like products or customers, Metaobjects are custom data types that can be used to store bespoke data structures. Metafield and Metaobject definitions provide a schema and configuration for values to follow.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-custom-data",
+      "resources": [
+        "portable skill instructions"
+      ],
+      "useCases": [
+        "Run shopify-custom-data when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-customer",
+      "kind": "skill",
+      "title": "shopify-customer",
+      "folder": "shopify-customer",
+      "status": "active",
+      "summary": "The Customer Account API allows customers to access their own data including orders, payment methods, and addresses.",
+      "description": "The Customer Account API allows customers to access their own data including orders, payment methods, and addresses.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-customer",
+      "resources": [
+        "bundled scripts",
+        "starter assets"
+      ],
+      "useCases": [
+        "Run shopify-customer when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-dev",
+      "kind": "skill",
+      "title": "shopify-dev",
+      "folder": "shopify-dev",
+      "status": "active",
+      "summary": "Search Shopify developer documentation across all APIs.",
+      "description": "Search Shopify developer documentation across all APIs. Use only when no API-specific skill applies.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-dev",
+      "resources": [
+        "bundled scripts"
+      ],
+      "useCases": [
+        "Run shopify-dev when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-functions",
+      "kind": "skill",
+      "title": "shopify-functions",
+      "folder": "shopify-functions",
+      "status": "active",
+      "summary": "Shopify Functions allow developers to customize the backend logic that powers parts of Shopify.",
+      "description": "Shopify Functions allow developers to customize the backend logic that powers parts of Shopify. Available APIs: Discount, Cart and Checkout Validation, Cart Transform, Pickup Point Delivery Option Generator, Delivery Customization, Fulfillment Constraints, Local Pickup Delivery Option Generator, Order Routing Location Rule, Payment Customization",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-functions",
+      "resources": [
+        "bundled scripts",
+        "starter assets"
+      ],
+      "useCases": [
+        "Run shopify-functions when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-hydrogen",
+      "kind": "skill",
+      "title": "shopify-hydrogen",
+      "folder": "shopify-hydrogen",
+      "status": "active",
+      "summary": "Hydrogen storefront implementation cookbooks.",
+      "description": "Hydrogen storefront implementation cookbooks. Some of the available recipes are: B2B Commerce, Bundles, Combined Listings, Custom Cart Method, Dynamic Content with Metaobjects, Express Server, Google Tag Manager Integration, Infinite Scroll, Legacy Customer Account Flow, Markets, Partytown + Google Tag Manager, Subscriptions, Third-party API Queries and Caching. MANDATORY: Use this API for ANY Hydrogen storefront question - do NOT use Storefront GraphQL when 'Hydrogen' is mentioned.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-hydrogen",
+      "resources": [
+        "bundled scripts"
+      ],
+      "useCases": [
+        "Run shopify-hydrogen when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-liquid",
+      "kind": "skill",
+      "title": "shopify-liquid",
+      "folder": "shopify-liquid",
+      "status": "active",
+      "summary": "Liquid is an open-source templating language created by Shopify.",
+      "description": "Liquid is an open-source templating language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts. Keywords: liquid, theme, shopify-theme, liquid-component, liquid-block, liquid-section, liquid-snippet, liquid-schemas, shopify-theme-schemas",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-liquid",
+      "resources": [
+        "bundled scripts"
+      ],
+      "useCases": [
+        "Run shopify-liquid when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-merchant-onboarding",
+      "kind": "skill",
+      "title": "shopify-merchant-onboarding",
+      "folder": "shopify-merchant-onboarding",
+      "status": "active",
+      "summary": ">",
+      "description": ">",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-merchant-onboarding",
+      "resources": [
+        "portable skill instructions"
+      ],
+      "useCases": [
+        "Run shopify-merchant-onboarding when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-onboarding-dev",
+      "kind": "skill",
+      "title": "shopify-onboarding-dev",
+      "folder": "shopify-onboarding-dev",
+      "status": "active",
+      "summary": "Get started building on Shopify.",
+      "description": "Get started building on Shopify. Use when a developer asks to build an app, build a theme, create a dev store, set up a partner account, scaffold a project, or get started developing for Shopify. NOT for merchants managing stores.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-onboarding-dev",
+      "resources": [
+        "portable skill instructions"
+      ],
+      "useCases": [
+        "A developer asks to build an app",
+        "Build a theme",
+        "Create a dev store",
+        "Set up a partner account",
+        "Scaffold a project"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-partner",
+      "kind": "skill",
+      "title": "shopify-partner",
+      "folder": "shopify-partner",
+      "status": "active",
+      "summary": "The Partner API lets you programmatically access data about your Partner Dashboard, including your apps, themes, and affiliate referrals.",
+      "description": "The Partner API lets you programmatically access data about your Partner Dashboard, including your apps, themes, and affiliate referrals.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-partner",
+      "resources": [
+        "bundled scripts",
+        "starter assets"
+      ],
+      "useCases": [
+        "Run shopify-partner when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-payments-apps",
+      "kind": "skill",
+      "title": "shopify-payments-apps",
+      "folder": "shopify-payments-apps",
+      "status": "active",
+      "summary": "The Payments Apps API enables payment providers to integrate their payment solutions with Shopify's checkout.",
+      "description": "The Payments Apps API enables payment providers to integrate their payment solutions with Shopify's checkout.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-payments-apps",
+      "resources": [
+        "bundled scripts",
+        "starter assets"
+      ],
+      "useCases": [
+        "Run shopify-payments-apps when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-polaris-admin-extensions",
+      "kind": "skill",
+      "title": "shopify-polaris-admin-extensions",
+      "folder": "shopify-polaris-admin-extensions",
+      "status": "active",
+      "summary": "Add custom actions and blocks from your app at contextually relevant spots throughout the Shopify Admin.",
+      "description": "Add custom actions and blocks from your app at contextually relevant spots throughout the Shopify Admin. Admin UI Extensions also supports scaffolding new adminextensions using Shopify CLI commands.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-polaris-admin-extensions",
+      "resources": [
+        "bundled scripts"
+      ],
+      "useCases": [
+        "Run shopify-polaris-admin-extensions when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-polaris-app-home",
+      "kind": "skill",
+      "title": "shopify-polaris-app-home",
+      "folder": "shopify-polaris-app-home",
+      "status": "active",
+      "summary": "Build your app's primary user interface embedded in the Shopify admin.",
+      "description": "Build your app's primary user interface embedded in the Shopify admin. If the prompt just mentions `Polaris` and you can't tell based off of the context what API they meant, assume they meant this API.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-polaris-app-home",
+      "resources": [
+        "bundled scripts"
+      ],
+      "useCases": [
+        "Run shopify-polaris-app-home when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-polaris-checkout-extensions",
+      "kind": "skill",
+      "title": "shopify-polaris-checkout-extensions",
+      "folder": "shopify-polaris-checkout-extensions",
+      "status": "active",
+      "summary": "Build custom functionality that merchants can install at defined points in the checkout flow, including product information, shipping, payment, order summary, and Shop Pay.",
+      "description": "Build custom functionality that merchants can install at defined points in the checkout flow, including product information, shipping, payment, order summary, and Shop Pay. Checkout UI Extensions also supports scaffolding new checkout extensions using Shopify CLI commands.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-polaris-checkout-extensions",
+      "resources": [
+        "bundled scripts"
+      ],
+      "useCases": [
+        "Run shopify-polaris-checkout-extensions when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-polaris-customer-account-extensions",
+      "kind": "skill",
+      "title": "shopify-polaris-customer-account-extensions",
+      "folder": "shopify-polaris-customer-account-extensions",
+      "status": "active",
+      "summary": "Build custom functionality that merchants can install at defined points on the Order index, Order status, and Profile pages in customer accounts.",
+      "description": "Build custom functionality that merchants can install at defined points on the Order index, Order status, and Profile pages in customer accounts. Customer Account UI Extensions also supports scaffolding new customer account extensions using Shopify CLI commands.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-polaris-customer-account-extensions",
+      "resources": [
+        "bundled scripts"
+      ],
+      "useCases": [
+        "Run shopify-polaris-customer-account-extensions when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-pos-ui",
+      "kind": "skill",
+      "title": "shopify-pos-ui",
+      "folder": "shopify-pos-ui",
+      "status": "active",
+      "summary": "Build retail point-of-sale applications using Shopify's POS UI components.",
+      "description": "Build retail point-of-sale applications using Shopify's POS UI components. These components provide a consistent and familiar interface for POS applications. POS UI Extensions also supports scaffolding new POS extensions using Shopify CLI commands. Keywords: POS, Retail, smart grid",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-pos-ui",
+      "resources": [
+        "bundled scripts"
+      ],
+      "useCases": [
+        "Run shopify-pos-ui when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "shopify-storefront-graphql",
+      "kind": "skill",
+      "title": "shopify-storefront-graphql",
+      "folder": "shopify-storefront-graphql",
+      "status": "active",
+      "summary": "Use for custom storefronts requiring direct GraphQL queries/mutations for data fetching and cart operations.",
+      "description": "Use for custom storefronts requiring direct GraphQL queries/mutations for data fetching and cart operations. Choose this when you need full control over data fetching and rendering your own UI. NOT for Web Components - if the prompt mentions HTML tags like <shopify-store>, <shopify-cart>, use storefront-web-components instead.",
+      "category": "Storefront and commerce",
+      "path": "skills/shopify-storefront-graphql",
+      "resources": [
+        "bundled scripts",
+        "starter assets"
+      ],
+      "useCases": [
+        "Run shopify-storefront-graphql when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "sora",
+      "kind": "skill",
+      "title": "Sora Video Generation Skill",
+      "folder": "sora",
+      "status": "active",
+      "summary": "Generate and manage Sora videos",
+      "description": "Use when the user asks to generate, remix, poll, list, download, or delete Sora videos via OpenAI\\u2019s video API using the bundled CLI (`scripts/sora.py`), including requests like \\u201cgenerate AI video,\\u201d \\u201cSora,\\u201d \\u201cvideo remix,\\u201d \\u201cdownload video/thumbnail/spritesheet,\\u201d and batch video generation; requires `OPENAI_API_KEY` and Sora API access.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/sora",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks to generate",
+        "Remix",
+        "Poll",
+        "List",
+        "Download"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "speech",
+      "kind": "skill",
+      "title": "Speech Generation Skill",
+      "folder": "speech",
+      "status": "active",
+      "summary": "Generate narrated audio from text",
+      "description": "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/speech",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks for text-to-speech narration",
+        "Voiceover",
+        "Accessibility reads",
+        "Audio prompts",
+        "Batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "transcribe",
+      "kind": "skill",
+      "title": "Audio Transcribe",
+      "folder": "transcribe",
+      "status": "active",
+      "summary": "Transcribe audio using OpenAI, with optional speaker diarization when requested. Prefer the bundled CLI for deterministic, repeatable runs.",
+      "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/transcribe",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Transcribe speech from audio/video",
+        "Extract text from recordings",
+        "Label speakers in interviews",
+        "Meetings"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "visual-design-critique",
+      "kind": "skill",
+      "title": "Visual Design Critique",
+      "folder": "visual-design-critique",
+      "status": "active",
+      "summary": "Tasteful UI/UX critique gates",
+      "description": "High-taste visual design, UI, and UX critique plus complete design audits for user-facing interfaces, screenshots, design concepts, prototypes, dashboards, apps, websites, landing pages, forms, design systems, and frontend implementations. Use when Codex is asked to do a design audit, complete design audit, UI audit, UX audit, visual audit, design-system audit, design critique, redesign, restyle, modernize, polish, compare visual options, audit screenshots/routes, assess sophistication or taste, verify implementation fidelity, or complete significant user-facing UI work before sign-off.",
+      "category": "Documentation systems",
+      "path": "skills/visual-design-critique",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Codex is asked to do a design audit",
+        "Complete design audit",
+        "UI audit",
+        "UX audit",
+        "Visual audit"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "wrapped",
+      "kind": "skill",
+      "title": "Wrapped",
+      "folder": "wrapped",
+      "status": "active",
+      "summary": "Create a Codex activity report from local usage data",
+      "description": "Generate a Codex Wrapped usage recap from local Codex logs, including last 30 days, last 7 days, and an all-time focus-hours callout. Use when the user asks for a usage summary, activity recap, or Codex Wrapped report.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/wrapped",
+      "resources": [
+        "bundled scripts",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks for a usage summary",
+        "Activity recap",
+        "Codex Wrapped report"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "context-layer",
+      "kind": "plugin",
+      "title": "Context Layer",
+      "folder": "context-layer",
+      "status": "available",
+      "summary": "Scaffold and operate repo-native context memory for human-agent teams",
+      "description": "Package for installing and using a repo-native context layer: canonical DOCS root, project lifecycle, evidence, dashboard, MAGGIE TODOs, review boards, checkpoints, governance audits, collaborative walkthroughs, and UX/UI bug intake.",
+      "category": "Productivity",
+      "path": "plugins/context-layer",
+      "resources": [
+        "Interactive capability",
+        "Write capability"
+      ],
+      "useCases": [
+        "Use $context-layer-scaffold to standardize this repo as a context layer.",
+        "Use $review-board to generate a numbered review board for this work.",
+        "Use $maggie-todo to surface and resolve Maggie-owned follow-ups."
+      ],
+      "gettingStarted": [
+        "Install the complete plugin folder from the public repo or local backup.",
+        "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
+        "Start from one suggested prompt, then add the target repo path and desired deliverable."
+      ],
+      "troubleshooting": [
+        "If the plugin does not appear, confirm .codex-plugin/plugin.json is present and the plugin registry points to the folder.",
+        "If a plugin skill cannot find scripts or assets, the plugin folder was likely flattened or partially copied.",
+        "If the workflow is too broad, rerun with a narrower deliverable and explicit no-touch files."
       ]
     },
     {
@@ -990,7 +2333,7 @@ export const catalog = {
         "Refine this starter's tokens, hierarchy, and surfaces."
       ],
       "gettingStarted": [
-        "Install the complete plugin folder from the delivered pack or repo-local backup.",
+        "Install the complete plugin folder from the public repo or local backup.",
         "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
         "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],
@@ -1021,7 +2364,7 @@ export const catalog = {
         "Audit this JAMstack repo for stale dependencies."
       ],
       "gettingStarted": [
-        "Install the complete plugin folder from the delivered pack or repo-local backup.",
+        "Install the complete plugin folder from the public repo or local backup.",
         "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
         "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],
@@ -1052,7 +2395,7 @@ export const catalog = {
         "Split the next tranche into safe subagent assignments."
       ],
       "gettingStarted": [
-        "Install the complete plugin folder from the delivered pack or repo-local backup.",
+        "Install the complete plugin folder from the public repo or local backup.",
         "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
         "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],

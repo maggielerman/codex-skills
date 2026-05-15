@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Layer Scaffold"
+  short_description: "Scaffold a repo-native context layer for human-agent teams"
+  default_prompt: "Use $context-layer-scaffold to standardize the repo as a context layer: canonical DOCS root, governance, agent instructions, ROADMAP/CHANGELOG, active/in-review/blocked/completed/backlog/stale project lifecycle, parent/child project rules, canonical evidence, required project dashboard, docs automation scripts, MAGGIE TODOs, and checkpoint rules. First ask whether to scaffold a docs site, product docs pack, UX/UI bug intake, and the optional repo-agnostic Review Board Operating Pattern scaffold."

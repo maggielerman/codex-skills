@@ -1,0 +1,4 @@
+interface:
+  display_name: "Collaborative Walkthrough"
+  short_description: "Run in-review sign-off walkthroughs"
+  default_prompt: "Use $collaborative-walkthrough to review Context Layer projects in in-review, ask sign-off questions, and only move approved streams to completed."

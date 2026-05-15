@@ -1,4 +1,0 @@
-interface:
-  display_name: "Project Tranche Orchestrator"
-  short_description: "Primary-agent tranche planning, delegation, review, and docs writeback in collaborative or autonomous mode."
-  default_prompt: "Use $ML-project-tranche-orchestrator in collaborative mode to select the next safe tranche from this repo's docs, draft the packet for my review, then delegate bounded subagent work, review completion, and update the existing project docs."

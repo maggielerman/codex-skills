@@ -15,7 +15,7 @@ export function DetailPage({ item }: { item: CatalogItem }) {
           <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-14 sm:px-8 lg:py-18">
             <Link href="/docs" className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground transition hover:text-primary">
               <ArrowLeft aria-hidden="true" className="size-4" />
-              Back to customer docs
+              Back to library
             </Link>
             <div className="flex flex-wrap gap-2">
               <Badge className="rounded-full capitalize">{item.kind}</Badge>
@@ -33,7 +33,7 @@ export function DetailPage({ item }: { item: CatalogItem }) {
           <aside className="flex flex-col gap-5">
             <Card className="rounded-3xl border-border/80 bg-card/86 p-1 shadow-sm">
               <CardHeader className="p-5">
-                <CardTitle className="text-xl font-bold tracking-[-0.03em]">Pack metadata</CardTitle>
+                <CardTitle className="text-xl font-bold tracking-[-0.03em]">Source metadata</CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col gap-4 p-5 pt-0 text-sm">
                 <MetaRow label="Folder" value={item.folder} />
@@ -51,9 +51,9 @@ export function DetailPage({ item }: { item: CatalogItem }) {
             <Card className="rounded-3xl border-primary/20 bg-secondary/70 shadow-sm">
               <CardContent className="flex flex-col gap-3 p-5">
                 <div className="flex size-11 items-center justify-center rounded-2xl bg-primary text-primary-foreground"><LifeBuoy aria-hidden="true" /></div>
-                <h2 className="font-heading text-2xl font-bold tracking-[-0.035em]">Customer note</h2>
+                <h2 className="font-heading text-2xl font-bold tracking-[-0.035em]">Library note</h2>
                 <p className="text-sm leading-6 text-muted-foreground">
-                  This page helps a customer decide when to use this workflow and how to get a useful first run from the shipped pack.
+                  This page explains when the workflow is useful, what ships with it, and how to adapt it in your own repo.
                 </p>
               </CardContent>
             </Card>

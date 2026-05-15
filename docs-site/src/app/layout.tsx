@@ -20,8 +20,8 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Codex Skills Packs | Customer Docs",
-  description: "Marketing and customer implementation docs for portable Codex skills and custom plugin packs.",
+  title: "Maggie Lerman | Codex Skills",
+  description: "Open Codex skills, implementation notes, and repo-native workflow patterns shared by Maggie Lerman.",
 };
 
 export default function RootLayout({

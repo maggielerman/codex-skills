@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Lifecycle"
+  short_description: "Move Context Layer projects"
+  default_prompt: "Use $project-lifecycle to move or inspect Context Layer project docs across active, in-review, blocked, completed, backlog, and stale lanes."

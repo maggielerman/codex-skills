@@ -1,0 +1,4 @@
+interface:
+  display_name: "Continue Until Blocked"
+  short_description: "Run autonomously until cutover or blocker"
+  default_prompt: "Use $continue-until-blocked to keep executing autonomously with branch, commit, test, docs, and merge hygiene until the cutover is complete or a real blocker requires my input."

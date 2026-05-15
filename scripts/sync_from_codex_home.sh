@@ -3,6 +3,7 @@ set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 source_root="${CODEX_HOME:-$HOME/.codex}/skills"
+agents_source_root="${AGENTS_HOME:-$HOME/.agents}/skills"
 target_root="$repo_root/skills"
 suite_list="$target_root/SUITE_SKILLS.txt"
 check_only=false
@@ -13,7 +14,8 @@ usage() {
   cat <<'EOF'
 Usage: scripts/sync_from_codex_home.sh [--check] [--prune-stale] [--include-system]
 
-Sync allowlisted skills from ${CODEX_HOME:-$HOME/.codex}/skills into this repo.
+Sync allowlisted skills from ${CODEX_HOME:-$HOME/.codex}/skills and
+${AGENTS_HOME:-$HOME/.agents}/skills into this repo.
 
 Options:
   --check          Report curated suite source/repo drift without writing files.
@@ -67,6 +69,11 @@ if [[ ! -d "$source_root" ]]; then
   exit 1
 fi
 
+source_roots=("$source_root")
+if [[ -d "$agents_source_root" && "$agents_source_root" != "$source_root" ]]; then
+  source_roots+=("$agents_source_root")
+fi
+
 mkdir -p "$target_root"
 
 if [[ "$include_system" == true ]]; then
@@ -94,6 +101,18 @@ else
     return 1
   }
 
+  skill_source_dir() {
+    local candidate="$1"
+    local root
+    for root in "${source_roots[@]}"; do
+      if [[ -f "$root/$candidate/SKILL.md" ]]; then
+        printf '%s\n' "$root/$candidate"
+        return 0
+      fi
+    done
+    return 1
+  }
+
   missing_sources=()
   local_only=()
   stale_files=()
@@ -101,7 +120,8 @@ else
   changed_files=()
 
   for skill_name in "${suite_skills[@]}"; do
-    if [[ ! -f "$source_root/$skill_name/SKILL.md" ]]; then
+    source_dir="$(skill_source_dir "$skill_name" || true)"
+    if [[ -z "$source_dir" ]]; then
       missing_sources+=("$skill_name")
       continue
     fi
@@ -109,29 +129,31 @@ else
     if [[ -d "$target_root/$skill_name" ]]; then
       while IFS= read -r -d '' target_file; do
         relative_path="${target_file#"$target_root/$skill_name/"}"
-        if [[ ! -f "$source_root/$skill_name/$relative_path" ]]; then
+        if [[ ! -f "$source_dir/$relative_path" ]]; then
           stale_files+=("$skill_name/$relative_path")
         fi
-      done < <(find "$target_root/$skill_name" -type f -print0)
+      done < <(find "$target_root/$skill_name" -type f ! -name '.DS_Store' ! -path '*/__pycache__/*' -print0)
     fi
 
     while IFS= read -r -d '' source_file; do
-      relative_path="${source_file#"$source_root/$skill_name/"}"
+      relative_path="${source_file#"$source_dir/"}"
       target_file="$target_root/$skill_name/$relative_path"
       if [[ ! -f "$target_file" ]]; then
         source_only_files+=("$skill_name/$relative_path")
       elif ! cmp -s "$source_file" "$target_file"; then
         changed_files+=("$skill_name/$relative_path")
       fi
-    done < <(find "$source_root/$skill_name" -type f -print0)
+    done < <(find "$source_dir" -type f ! -name '.DS_Store' ! -path '*/__pycache__/*' -print0)
   done
 
-  while IFS= read -r -d '' source_dir; do
-    skill_name="$(basename "$source_dir")"
-    if ! in_suite "$skill_name"; then
-      local_only+=("$skill_name")
-    fi
-  done < <(find "$source_root" -mindepth 1 -maxdepth 1 -type d ! -name '.*' -print0 | sort -z)
+  for root in "${source_roots[@]}"; do
+    while IFS= read -r -d '' source_dir; do
+      skill_name="$(basename "$source_dir")"
+      if [[ -f "$source_dir/SKILL.md" ]] && ! in_suite "$skill_name"; then
+        local_only+=("$skill_name")
+      fi
+    done < <(find "$root" -mindepth 1 -maxdepth 1 -type d ! -name '.*' -print0 | sort -z)
+  done
 
   failed=false
   if ((${#missing_sources[@]})); then
@@ -163,7 +185,7 @@ else
 
   if ((${#local_only[@]})); then
     echo "Local source skills not listed in suite:" >&2
-    printf -- "- %s\n" "${local_only[@]}" >&2
+    printf '%s\n' "${local_only[@]}" | sort -u | sed 's/^/- /' >&2
   fi
 
   if [[ "$failed" == true ]]; then
@@ -178,12 +200,17 @@ else
 
   while IFS= read -r skill_name; do
     [[ -z "$skill_name" || "$skill_name" =~ ^# ]] && continue
+    source_dir="$(skill_source_dir "$skill_name" || true)"
+    if [[ -z "$source_dir" ]]; then
+      echo "Missing source skill: $skill_name" >&2
+      exit 1
+    fi
     mkdir -p "$target_root/$skill_name"
-    rsync_args=(-a)
+    rsync_args=(-a --exclude='.DS_Store' --exclude='__pycache__/')
     if [[ "$prune_stale" == true ]]; then
       rsync_args+=(--delete)
     fi
-    rsync "${rsync_args[@]}" "$source_root/$skill_name"/ "$target_root/$skill_name"/
+    rsync "${rsync_args[@]}" "$source_dir"/ "$target_root/$skill_name"/
   done < "$suite_list"
 
   find "$target_root" -mindepth 1 -maxdepth 1 -type d ! -name '.*' -print0 | while IFS= read -r -d '' dir; do
@@ -194,4 +221,4 @@ else
   done
 fi
 
-echo "Synced skills from $source_root to $target_root"
+echo "Synced skills from ${source_roots[*]} to $target_root"

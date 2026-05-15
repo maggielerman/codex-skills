@@ -1,4 +1,0 @@
-interface:
-  display_name: "Cluster Assignment"
-  short_description: "Plan and bootstrap parallel work clusters"
-  default_prompt: "Use $ML-cluster-assignment to split this repo into parallel project clusters, create branches/worktrees, and draft per-agent prompts."

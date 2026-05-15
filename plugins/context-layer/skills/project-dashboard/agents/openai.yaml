@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Dashboard"
+  short_description: "Generate portfolio dashboard"
+  default_prompt: "Use $project-dashboard to regenerate the Context Layer project dashboard and inspect blocked, in-review, Maggie TODO, and status-drift queues."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Checkpoint Log"
+  short_description: "Write durable project checkpoints"
+  default_prompt: "Use $checkpoint-log to add an ET timestamped checkpoint with completed work, next targets, evidence, risks, and MAGGIE TODOs."

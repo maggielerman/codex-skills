@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the customer-facing docs-site catalog from suite and plugin metadata."""
+"""Build the public docs-site catalog from suite and plugin metadata."""
 
 from __future__ import annotations
 
@@ -96,14 +96,14 @@ def skill_doc(skill: dict) -> dict:
         "resources": resources,
         "useCases": use_cases,
         "gettingStarted": [
-            "Copy the complete skill folder into the Codex skills location used by your team.",
+            "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
             "Open the target repo and read its local agent instructions before invoking the skill.",
             "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-            "Review generated scripts, docs, or code before adopting them into the customer's workflow.",
+            "Review generated scripts, docs, or code before adopting the result into your workflow.",
         ],
         "troubleshooting": [
             "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-            "If the output has the wrong audience, explicitly say whether the deliverable is customer-facing or repo-internal.",
+            "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
             "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact.",
         ],
     }
@@ -130,7 +130,7 @@ def plugin_doc(plugin_json: Path) -> dict:
         "resources": [f"{capability} capability" for capability in capabilities] or ["plugin package"],
         "useCases": prompts[:5] or [data.get("description", "Use this plugin when its workflow matches your target repo.")],
         "gettingStarted": [
-            "Install the complete plugin folder from the delivered pack or repo-local backup.",
+            "Install the complete plugin folder from the public repo or local backup.",
             "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
             "Start from one suggested prompt, then add the target repo path and desired deliverable.",
         ],

@@ -55,7 +55,7 @@ Use the surrounding ecosystem rather than duplicating it:
 - Use `$shadcn` for any follow-on component additions or registry work.
 - Use `$frontend-skill` when the user wants stronger art direction or a more premium visual pass.
 - Use `$react-best-practices` after substantial React/Next edits.
-- If the user wants a full docs site, product docs pack, or docs governance beyond the starter baseline, follow with `$ML-docs-system-scaffold`.
+- If the user wants a full docs site, product docs pack, or docs governance beyond the starter baseline, follow with `$docs-system-scaffold`.
 - If the user wants deeper polish after the initial scaffold, follow with `$design-system-refine`.
 
 ## Guided Integrations

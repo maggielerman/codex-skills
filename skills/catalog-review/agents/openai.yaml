@@ -1,0 +1,4 @@
+interface:
+  display_name: "Catalog Review"
+  short_description: "Run numbered Shopify-first catalog review workflows"
+  default_prompt: "Use $catalog-review to open a catalog-review project, generate numbered JPG review boards with optional PDF bundles, collect numbered human corrections, and translate them into apply/verify passes with audit artifacts."

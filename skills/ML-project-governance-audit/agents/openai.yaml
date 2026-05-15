@@ -1,4 +1,0 @@
-interface:
-  display_name: "Project Governance Audit"
-  short_description: "Audit project docs, checkpoint hygiene, and roadmap ordering"
-  default_prompt: "Use $ML-project-governance-audit to review non-completed project docs and roadmap order, then return blocker/conflict findings with exact amendment actions."

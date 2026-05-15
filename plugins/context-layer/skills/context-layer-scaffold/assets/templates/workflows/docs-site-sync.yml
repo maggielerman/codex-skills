@@ -1,0 +1,73 @@
+name: docs-site-sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '{{DOCS_ROOT}}/**'
+      - 'docs-site/**'
+      - 'scripts/docs/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'wrangler.toml'
+      - '.github/workflows/docs-site-sync.yml'
+
+jobs:
+  docs-sync:
+    runs-on: ubuntu-latest
+    env:
+      DOCS_SITE_ENABLED: '{{DOCS_SITE_ENABLED}}'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install root deps (optional)
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install --ignore-scripts
+          else
+            echo "root package install skipped (no package.json)"
+          fi
+
+      - name: Install docs-site deps (optional)
+        run: |
+          if [ "$DOCS_SITE_ENABLED" = "true" ] && [ -f docs-site/package-lock.json ]; then
+            npm --prefix docs-site ci
+          elif [ "$DOCS_SITE_ENABLED" = "true" ] && [ -f docs-site/package.json ]; then
+            npm --prefix docs-site install --ignore-scripts
+          else
+            echo "docs-site install skipped (disabled or missing)"
+          fi
+
+      - name: Normalize frontmatter
+        run: node scripts/docs/normalize-frontmatter.mjs {{DOCS_ROOT}}
+
+      - name: Regenerate docs manifest
+        run: node scripts/docs/manifest.mjs {{DOCS_ROOT}}
+
+      - name: Regenerate project dashboard
+        run: |
+          if [ -f scripts/docs/projects-dashboard.mjs ]; then
+            node scripts/docs/projects-dashboard.mjs {{DOCS_ROOT}}
+          else
+            echo "project dashboard generator missing"
+            exit 1
+          fi
+
+      - name: Check docs links
+        run: node scripts/docs/check-links.mjs {{DOCS_ROOT}}
+
+      - name: Build docs site (optional)
+        run: |
+          if [ "$DOCS_SITE_ENABLED" = "true" ] && [ -d docs-site ]; then
+            npm --prefix docs-site run build
+          else
+            echo "docs-site build skipped (disabled or missing)"
+          fi
