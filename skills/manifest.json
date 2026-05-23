@@ -1,6 +1,6 @@
 {
   "generated_by": "scripts/build_catalog.py",
-  "skill_count": 72,
+  "skill_count": 73,
   "skills": [
     {
       "folder": "catalog-review",
@@ -51,7 +51,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": false,
-      "file_count": 6
+      "file_count": 4
     },
     {
       "folder": "collaborative-walkthrough",
@@ -100,7 +100,7 @@
       "skill_md": "skills/docs-evidence-backfill/SKILL.md",
       "has_agents_metadata": true,
       "has_scripts": false,
-      "has_references": true,
+      "has_references": false,
       "has_assets": false,
       "file_count": 2
     },
@@ -119,7 +119,7 @@
       "has_scripts": false,
       "has_references": true,
       "has_assets": false,
-      "file_count": 4
+      "file_count": 3
     },
     {
       "folder": "docs-project-dashboard-legacy",
@@ -252,8 +252,8 @@
       "path": "skills/product-operating-system-scaffold",
       "skill_md": "skills/product-operating-system-scaffold/SKILL.md",
       "has_agents_metadata": true,
-      "has_scripts": true,
-      "has_references": true,
+      "has_scripts": false,
+      "has_references": false,
       "has_assets": true,
       "file_count": 44
     },
@@ -305,8 +305,8 @@
       "has_agents_metadata": true,
       "has_scripts": true,
       "has_references": true,
-      "has_assets": true,
-      "file_count": 8
+      "has_assets": false,
+      "file_count": 6
     },
     {
       "folder": "shopify-app-scaffold",
@@ -323,7 +323,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": true,
-      "file_count": 22
+      "file_count": 21
     },
     {
       "folder": "user-journey-audit",
@@ -800,6 +800,23 @@
       "has_references": false,
       "has_assets": false,
       "file_count": 2
+    },
+    {
+      "folder": "rps-wall-art-mockup-workflow",
+      "name": "rps-wall-art-mockup-workflow",
+      "display_name": "RPS Wall Art Mockups",
+      "description": "Use when creating, refining, organizing, or applying Rock Paper Scissors wall art mockups for Shopify listings, Shopify blog/editorial images, collection heroes, catalog cleanup, marketplace imagery, social, ads, or reusable mockup packs. Custom skill by Maggie Lerman.",
+      "short_description": "Create source-aware RPS wall art mockups",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/rps-wall-art-mockup-workflow",
+      "skill_md": "skills/rps-wall-art-mockup-workflow/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false,
+      "file_count": 8
     },
     {
       "folder": "screenshot",
