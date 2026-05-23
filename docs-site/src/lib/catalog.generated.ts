@@ -3,7 +3,7 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 72,
+  "skillCount": 73,
   "pluginCount": 4,
   "items": [
     {
@@ -174,7 +174,6 @@ export const catalog = {
       "category": "Documentation systems",
       "path": "skills/docs-evidence-backfill",
       "resources": [
-        "reference guides",
         "agent metadata"
       ],
       "useCases": [
@@ -456,8 +455,6 @@ export const catalog = {
       "category": "Delivery governance",
       "path": "skills/product-operating-system-scaffold",
       "resources": [
-        "bundled scripts",
-        "reference guides",
         "starter assets",
         "agent metadata"
       ],
@@ -556,7 +553,6 @@ export const catalog = {
       "resources": [
         "bundled scripts",
         "reference guides",
-        "starter assets",
         "agent metadata"
       ],
       "useCases": [
@@ -1506,6 +1502,40 @@ export const catalog = {
         "Audit UI/screenshots/content/assets",
         "Prepare a human review packet",
         "Apply numbered review corrections"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "rps-wall-art-mockup-workflow",
+      "kind": "skill",
+      "title": "RPS Wall Art Mockups",
+      "folder": "rps-wall-art-mockup-workflow",
+      "status": "active",
+      "summary": "Create source-aware RPS wall art mockups",
+      "description": "Use when creating, refining, organizing, or applying Rock Paper Scissors wall art mockups for Shopify listings, Shopify blog/editorial images, collection heroes, catalog cleanup, marketplace imagery, social, ads, or reusable mockup packs. Custom skill by Maggie Lerman.",
+      "category": "Storefront and commerce",
+      "path": "skills/rps-wall-art-mockup-workflow",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Creating",
+        "Refining",
+        "Organizing",
+        "Applying Rock Paper Scissors wall art mockups for Shopify listings",
+        "Shopify blog/editorial images"
       ],
       "gettingStarted": [
         "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",

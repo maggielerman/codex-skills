@@ -45,6 +45,7 @@ playwright
 playwright-interactive
 rapid-iteration-mode
 review-board-operating-pattern
+rps-wall-art-mockup-workflow
 screenshot
 security-best-practices
 shopify-admin
