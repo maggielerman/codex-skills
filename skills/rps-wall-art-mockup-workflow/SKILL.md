@@ -35,8 +35,15 @@ For named artists, public-domain works, or identifiable artworks:
 6. Composite artwork into the generated base with plausible perspective, crop, scale, and frame fill.
 7. Export a small labeled option set and one review board.
 8. Write or update `manifest.json` using `templates/mockup-manifest.template.json`.
-9. Validate the pack with the asset repo script.
-10. Promote approved packs under `mockups/wall-art/approved-packs/`.
+9. If a new reusable wall-art mockup pack or base is created, register it in the relevant channel availability/index before treating the work as complete. For Etsy, update `rps-etsy/docs/etsy/mockup-availability.csv`, regenerate the Etsy mockup visual index, and keep the asset repo wall-art index current.
+10. Validate the pack with the asset repo script.
+11. Promote approved packs under `mockups/wall-art/approved-packs/`.
+
+## Library Naming Rule
+
+Reusable pack names, matrix rows, review-board labels, and generated indexes must use generic product/use-case language such as `modern botanical`, `warm metallic`, `traditional single frame`, or `Samsung Frame TV`.
+
+Do not use artist/provenance names as reusable library labels, CSV product-fit copy, pack titles, or visual-index titles. If old filesystem paths still contain legacy names, migrate them to generic names before publishing or committing new library work.
 
 ## Practical Defaults
 
@@ -57,7 +64,15 @@ For named artists, public-domain works, or identifiable artworks:
 In the asset repo:
 
 ```bash
+node scripts/build-wall-art-index.mjs
 node scripts/validate-manifests.mjs
+```
+
+For Etsy mockup work in `rps-etsy`:
+
+```bash
+python3 scripts/etsy/validate-mockup-availability.py
+python3 scripts/etsy/build-mockup-library-visual-index.py
 ```
 
 For skill repo changes:
