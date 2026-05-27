@@ -13,7 +13,7 @@ such as `image_*`, `video_1`, or `digital_file_*`.
 - Etsy catalog repo: `/Users/maggielerman/Github/rps-etsy`
 - Creative asset repo: `/Users/maggielerman/Github/rps-creative-assets`
 - Hosting policy: `/Users/maggielerman/Github/rps-etsy/docs/etsy/asset-hosting-policy.md`
-- Plugin reference: `references/media-hosting-url-contract.md`
+- Plugin reference: `../../references/media-hosting-url-contract.md`
 
 ## Core Rules
 

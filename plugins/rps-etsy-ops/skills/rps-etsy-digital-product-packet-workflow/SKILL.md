@@ -12,7 +12,7 @@ updating Etsy listings through Shop Uploader.
 
 - Etsy catalog repo: `/Users/maggielerman/Github/rps-etsy`
 - Creative asset repo: `/Users/maggielerman/Github/rps-creative-assets`
-- Packet reference: `references/digital-product-packet-contract.md`
+- Packet reference: `../../references/digital-product-packet-contract.md`
 - Shop Uploader workflow: `$rps-etsy-shop-uploader-listing-workflow`
 - Media hosting workflow: `$rps-etsy-media-hosting-workflow`
 - Wall-art mockup workflow: `$rps-wall-art-mockup-workflow`

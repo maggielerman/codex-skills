@@ -12,7 +12,8 @@ Use this skill for Rock Paper Scissors wall art mockup work across Shopify listi
 ## Source Of Truth
 
 - Asset repo default: `${HOME}/Github/rps-creative-assets`
-- Durable workflow source: `codex-skills/skills/rps-wall-art-mockup-workflow/`
+- Durable plugin backup: `/Users/maggielerman/Github/codex-skills/plugins/rps-etsy-ops/`
+- Standalone transition copy: `/Users/maggielerman/Github/codex-skills/skills/rps-wall-art-mockup-workflow/`
 - Application repos keep project evidence, live apply proof, and deployment records.
 
 If the asset repo is missing, create or locate it before generating a new reusable pack. See `references/repository-contract.md`.

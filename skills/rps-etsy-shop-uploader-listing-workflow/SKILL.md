@@ -13,6 +13,7 @@ Use this skill for RPS Etsy listing work that touches Shop Uploader or could bec
 
 - Etsy catalog repo: `/Users/maggielerman/Github/rps-etsy`
 - Creative asset repo: `/Users/maggielerman/Github/rps-creative-assets`
+- Durable plugin backup: `/Users/maggielerman/Github/codex-skills/plugins/rps-etsy-ops/`
 - Shop Uploader dashboard: `https://www.shopuploader.com/app/dashboard`
 - Live Etsy mutation path: Shop Uploader CSV/XLSX only, after Maggie approves a reviewable apply plan.
 
@@ -30,6 +31,7 @@ In `/Users/maggielerman/Github/rps-etsy`, read:
    - `docs/etsy/mockup-library.md`
    - `docs/etsy/asset-hosting-policy.md`
    - `$rps-wall-art-mockup-workflow`
+   - `$rps-etsy-media-hosting-workflow`
 
 ## Core Rules
 
@@ -142,13 +144,14 @@ Before any Shop Uploader file includes media or file URLs:
 5. Build a review board and manifest mapping listing ID, SKU, source art, mockup base, output path, intended slot, and approval status.
 6. Confirm mockup/media labels use generic product/use-case language and do not expose artist/provenance labels.
 7. Use clear hosted URL paths from `docs/etsy/asset-hosting-policy.md`.
-8. Audit public URLs before upload:
+8. Use `$rps-etsy-media-hosting-workflow` for hosted URL manifests, URL access audits, and cleanup tracking.
+9. Audit public URLs before upload:
 
    ```bash
    python3 scripts/etsy/audit-hosted-url-manifest.py <hosted-url-manifest.csv>
    ```
 
-9. Preserve local media validation, URL audit reports, prepared upload files, upload reports, and post-update proof.
+10. Preserve local media validation, URL audit reports, prepared upload files, upload reports, and post-update proof.
 
 ## Evidence Packet Shape
 

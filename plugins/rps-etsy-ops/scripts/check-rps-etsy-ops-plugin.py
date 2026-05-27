@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -46,6 +47,19 @@ def check_plugin(plugin_root: Path) -> None:
         skill_path = plugin_root / "skills" / skill / "SKILL.md"
         if not skill_path.is_file():
             fail(f"missing required skill: {skill_path}")
+        check_skill_relative_paths(skill_path)
+
+
+def check_skill_relative_paths(skill_path: Path) -> None:
+    text = skill_path.read_text(encoding="utf-8")
+    for match in re.findall(r"`((?:\.\./|references/)[^`]+\.md)`", text):
+        candidate = (skill_path.parent / match).resolve()
+        try:
+            candidate.relative_to(skill_path.parents[2].resolve())
+        except ValueError:
+            fail(f"skill reference escapes plugin root: {skill_path}: {match}")
+        if not candidate.is_file():
+            fail(f"missing skill reference: {skill_path}: {match}")
 
 
 def check_marketplace(marketplace_path: Path) -> None:
