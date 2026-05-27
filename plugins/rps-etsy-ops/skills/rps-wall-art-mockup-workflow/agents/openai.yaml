@@ -1,0 +1,7 @@
+interface:
+  display_name: "RPS Wall Art Mockups"
+  short_description: "Create source-aware RPS wall art mockups"
+  default_prompt: "Use $rps-wall-art-mockup-workflow to create or organize reusable RPS wall art mockups for Shopify listings, editorial content, or marketplace imagery."
+
+policy:
+  allow_implicit_invocation: true

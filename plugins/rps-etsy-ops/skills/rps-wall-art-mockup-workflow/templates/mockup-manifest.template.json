@@ -1,0 +1,28 @@
+{
+  "packId": "pack-slug-yyyy-mm-dd",
+  "title": "Human Readable Pack Title",
+  "createdAt": "YYYY-MM-DD HH:MM ET (America/New_York)",
+  "lastUpdated": "YYYY-MM-DD HH:MM ET (America/New_York)",
+  "status": "draft",
+  "preferredOption": null,
+  "surfaces": ["shopify-listing"],
+  "useCase": "Short description of what this pack is for.",
+  "guardrail": "Generated bases use blank placeholders only; real RPS artwork is composited locally.",
+  "files": {
+    "reviewBoard": "review-board.jpg",
+    "rawBases": ["raw-bases/example-base-1.png"],
+    "compositedExamples": ["composited-examples/example-option-a.jpg"],
+    "sourceAssets": []
+  },
+  "outputs": [
+    {
+      "id": "A1",
+      "title": "Option title",
+      "file": "composited-examples/example-option-a.jpg",
+      "rawBase": "raw-bases/example-base-1.png",
+      "sources": []
+    }
+  ],
+  "promptPattern": "Prompt pattern used to create blank-placeholder base.",
+  "reuseNotes": []
+}

@@ -15,3 +15,4 @@ Current backed-up plugins:
 - `design-system-first`
 - `jamstack-expert`
 - `project-tranche-orchestrator`
+- `rps-etsy-ops`

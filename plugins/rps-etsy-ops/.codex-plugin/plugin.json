@@ -1,0 +1,38 @@
+{
+  "name": "rps-etsy-ops",
+  "version": "0.1.0",
+  "description": "Rock Paper Scissors Etsy catalog operations workflows for mockups, Shop Uploader packets, media hosting, and digital product handoffs.",
+  "author": {
+    "name": "Maggie Lerman"
+  },
+  "homepage": "",
+  "repository": "",
+  "license": "UNLICENSED",
+  "keywords": [
+    "rps",
+    "etsy",
+    "shop-uploader",
+    "mockups",
+    "digital-downloads",
+    "catalog-ops"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "RPS Etsy Ops",
+    "shortDescription": "Govern RPS Etsy mockups, media URLs, Shop Uploader packets, and digital products.",
+    "longDescription": "Local workflow plugin for Rock Paper Scissors Etsy catalog operations. It keeps live listing mutation behind approved Shop Uploader apply plans, routes reusable mockup assets through the creative asset library, and defines reusable packet contracts without storing project evidence or production assets in the plugin.",
+    "developerName": "Maggie Lerman",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Documentation",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Prepare an RPS Etsy Shop Uploader review packet.",
+      "Review RPS Etsy mockup availability before media work.",
+      "Create an RPS digital product packet plan."
+    ],
+    "brandColor": "#0F766E"
+  }
+}
