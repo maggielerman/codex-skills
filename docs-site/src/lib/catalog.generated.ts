@@ -3,7 +3,7 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 75,
+  "skillCount": 74,
   "pluginCount": 4,
   "items": [
     {
@@ -367,38 +367,6 @@ export const catalog = {
       "useCases": [
         "Run GitHub Docs Tracking Sync (Optional) when its workflow matches the repo outcome you need.",
         "Use it after the target repo has enough context for Codex to act safely."
-      ],
-      "gettingStarted": [
-        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
-        "Open the target repo and read its local agent instructions before invoking the skill.",
-        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
-        "Review generated scripts, docs, or code before adopting the result into your workflow."
-      ],
-      "troubleshooting": [
-        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
-        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
-      ]
-    },
-    {
-      "slug": "hyphenomenon-chat-intake",
-      "kind": "skill",
-      "title": "hyphenomenon-chat-intake",
-      "folder": "hyphenomenon-chat-intake",
-      "status": "active",
-      "summary": "Intake a ChatGPT, Codex, Cursor, Gemini, or other AI conversation into Hyphenomenon as a chat object.",
-      "description": "Intake a ChatGPT, Codex, Cursor, Gemini, or other AI conversation into Hyphenomenon as a chat object. Use when a user asks to capture, import, archive, or publish a chat/session/transcript, especially when raw transcripts, created skills, created projects, created repos, related projects, validation, sync, or rendered chat routes are involved.",
-      "category": "Delivery governance",
-      "path": "skills/hyphenomenon-chat-intake",
-      "resources": [
-        "portable skill instructions"
-      ],
-      "useCases": [
-        "Capture",
-        "Import",
-        "Archive",
-        "Publish a chat/session/transcript",
-        "Especially when raw transcripts"
       ],
       "gettingStarted": [
         "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",

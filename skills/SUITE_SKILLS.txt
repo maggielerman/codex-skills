@@ -10,7 +10,6 @@ docs-project-lifecycle-statuses
 docs-system-scaffold
 env-bootstrap-sync
 github-docs-tracking-sync
-hyphenomenon-chat-intake
 hyphenomenon-project-intake
 plan-signoff-review
 product-operating-system-scaffold
