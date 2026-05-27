@@ -10,6 +10,7 @@ docs-project-lifecycle-statuses
 docs-system-scaffold
 env-bootstrap-sync
 github-docs-tracking-sync
+hyphenomenon-chat-intake
 hyphenomenon-project-intake
 plan-signoff-review
 product-operating-system-scaffold
@@ -45,6 +46,7 @@ playwright
 playwright-interactive
 rapid-iteration-mode
 review-board-operating-pattern
+rps-etsy-shop-uploader-listing-workflow
 rps-wall-art-mockup-workflow
 screenshot
 security-best-practices

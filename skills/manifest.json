@@ -1,6 +1,6 @@
 {
   "generated_by": "scripts/build_catalog.py",
-  "skill_count": 73,
+  "skill_count": 75,
   "skills": [
     {
       "folder": "catalog-review",
@@ -51,7 +51,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": false,
-      "file_count": 4
+      "file_count": 6
     },
     {
       "folder": "collaborative-walkthrough",
@@ -119,7 +119,7 @@
       "has_scripts": false,
       "has_references": true,
       "has_assets": false,
-      "file_count": 3
+      "file_count": 4
     },
     {
       "folder": "docs-project-dashboard-legacy",
@@ -136,7 +136,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": true,
-      "file_count": 5
+      "file_count": 8
     },
     {
       "folder": "docs-project-lifecycle-statuses",
@@ -205,6 +205,23 @@
       "has_references": true,
       "has_assets": false,
       "file_count": 4
+    },
+    {
+      "folder": "hyphenomenon-chat-intake",
+      "name": "hyphenomenon-chat-intake",
+      "display_name": null,
+      "description": "Intake a ChatGPT, Codex, Cursor, Gemini, or other AI conversation into Hyphenomenon as a chat object. Use when a user asks to capture, import, archive, or publish a chat/session/transcript, especially when raw transcripts, created skills, created projects, created repos, related projects, validation, sync, or rendered chat routes are involved.",
+      "short_description": null,
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/hyphenomenon-chat-intake",
+      "skill_md": "skills/hyphenomenon-chat-intake/SKILL.md",
+      "has_agents_metadata": false,
+      "has_scripts": false,
+      "has_references": false,
+      "has_assets": false,
+      "file_count": 1
     },
     {
       "folder": "hyphenomenon-project-intake",
@@ -306,7 +323,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": false,
-      "file_count": 6
+      "file_count": 8
     },
     {
       "folder": "shopify-app-scaffold",
@@ -323,7 +340,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": true,
-      "file_count": 21
+      "file_count": 22
     },
     {
       "folder": "user-journey-audit",
@@ -800,6 +817,23 @@
       "has_references": false,
       "has_assets": false,
       "file_count": 2
+    },
+    {
+      "folder": "rps-etsy-shop-uploader-listing-workflow",
+      "name": "rps-etsy-shop-uploader-listing-workflow",
+      "display_name": null,
+      "description": "Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification. Custom skill by Maggie Lerman.",
+      "short_description": null,
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/rps-etsy-shop-uploader-listing-workflow",
+      "skill_md": "skills/rps-etsy-shop-uploader-listing-workflow/SKILL.md",
+      "has_agents_metadata": false,
+      "has_scripts": false,
+      "has_references": false,
+      "has_assets": false,
+      "file_count": 1
     },
     {
       "folder": "rps-wall-art-mockup-workflow",
