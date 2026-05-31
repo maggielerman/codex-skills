@@ -1,0 +1,38 @@
+{
+  "code_order": ["TMORA108", "TMORA109", "TMORA110", "TMORA111", "TMORA112", "TMORA113"],
+  "recommended_option": "B",
+  "back_prefix_to_code": {
+    "01-": "TMORA108",
+    "02-": "TMORA109",
+    "03-": "TMORA110",
+    "04-": "TMORA111",
+    "05-": "TMORA112",
+    "06-": "TMORA113"
+  },
+  "artworks": {
+    "TMORA108": {
+      "artist": "Alexander Samokhvalov",
+      "artwork": "Long Live the Komsomol, 1924"
+    },
+    "TMORA109": {
+      "artist": "Viktor Ivanov",
+      "artwork": "Shine Forever over our Republic: Labor, Peace, May, 1953"
+    },
+    "TMORA110": {
+      "artist": "Vladimir Lebedev",
+      "artwork": "May Day Procession of Workers, 1921"
+    },
+    "TMORA111": {
+      "artist": "Alexander N. Dobrov",
+      "artwork": "A Young Pioneer Tie, Flaming Red, 1961"
+    },
+    "TMORA112": {
+      "artist": "M Brii-Bein",
+      "artwork": "Women Workers Keep the Canteen Clean and the Food Healthy, 1931"
+    },
+    "TMORA113": {
+      "artist": "Artist Unknown",
+      "artwork": "Mospoligraf Pencils, 1929"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "sections": [
+    {
+      "title": "Portable Workflows As Source Code",
+      "body": "Codex Skills Library turns repeatable agent behavior into source-controlled folders rather than loose prompts or chat memory. The project keeps each skill portable with trigger metadata, instructions, references, scripts, examples, assets, and agent metadata, then uses generated catalogs to make the suite inspectable. The important decision is operational: workflows should be reusable and reviewable, but still checked inside the target repository where local instructions, constraints, and verification commands matter."
+    },
+    {
+      "title": "Catalog Discipline And Human Review",
+      "body": "The repository separates skill membership, lifecycle metadata, generated catalog output, plugin backups, and public docs-site pages. Catalog scripts detect drift before regeneration, while the maintainer decides whether a local skill belongs in the curated suite or should stay outside the public catalog. That distinction matters because the repo is public-learning-oriented but still preserves provenance-sensitive skill folders, third-party notices, local plugin backups, and unresolved license boundaries."
+    },
+    {
+      "title": "Current Intake Boundary",
+      "body": "This intake records the repo locally as a Hyphenomenon project without mutating the production knowledge database. The captured state includes a local docs-site review, source-backed hydration artifacts, and an explicit drift finding: an in-progress `hyphenomenon-chat-intake` skill folder exists outside `skills/SUITE_SKILLS.txt`. That is useful proof of the real operating model because the project depends on human/operator review before deciding whether local skill work becomes curated public catalog content."
+    }
+  ],
+  "productSurfaces": [
+    {
+      "title": "Skill Source Library",
+      "summary": "`skills/` contains portable custom Codex skill folders, with suite membership governed by `skills/SUITE_SKILLS.txt` and lifecycle metadata tracked separately.",
+      "audience": "maintainer, agents, and workflow adopters",
+      "url": "https://github.com/maggielerman/codex-skills/tree/main/skills"
+    },
+    {
+      "title": "Plugin Backup Library",
+      "summary": "`plugins/` preserves selected custom local plugin bundles separately from the standalone skill suite so larger surfaces keep plugin metadata, assets, scripts, and bundled skills intact.",
+      "audience": "maintainer and local Codex setup",
+      "url": "https://github.com/maggielerman/codex-skills/tree/main/plugins"
+    },
+    {
+      "title": "Generated Public Docs Site",
+      "summary": "`docs-site/` is a Next.js catalog and documentation surface generated from source metadata so readers can browse skills and plugin patterns without hand-maintained marketing pages.",
+      "audience": "public readers and future contributors"
+    },
+    {
+      "title": "Repo-Native Evidence And Project Memory",
+      "summary": "`DOCS/` stores lean notes, project memory, evidence, and intake artifacts for repository maintenance without turning the repo into a full delivery scaffold.",
+      "audience": "operator and reviewing agents"
+    }
+  ],
+  "techStack": [
+    {
+      "label": "Skill And Plugin Artifacts",
+      "items": ["Codex SKILL.md folders", "agent metadata YAML", "reference files", "bundled scripts", "plugin.json metadata", "repo-local plugin registry"]
+    },
+    {
+      "label": "Catalog Tooling",
+      "items": ["Python catalog builder", "suite allowlist", "suite lifecycle metadata", "generated Markdown index", "generated JSON manifest", "generated TypeScript docs-site catalog"]
+    },
+    {
+      "label": "Docs Site Runtime",
+      "items": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "shadcn/base-ui", "lucide-react"]
+    },
+    {
+      "label": "Verification",
+      "items": ["python3 scripts/build_catalog.py --check", "python3 scripts/build_catalog.py", "python3 scripts/build_docs_site_catalog.py", "docs-site npm run build", "local browser screenshots"]
+    }
+  ],
+  "keyDates": [
+    {
+      "date": "2026-03-21",
+      "label": "Initial skills suite repository",
+      "note": "Git history shows the repository began with `Initial codex skills suite repository`, then quickly narrowed to an allowlisted custom skill suite with explicit lifecycle metadata."
+    },
+    {
+      "date": "2026-04-28",
+      "label": "Docs site and catalog guardrails",
+      "note": "Git history records the addition of the customer docs site and catalog guardrails, followed by Vercel monorepo settings and a calmer public docs design."
+    },
+    {
+      "date": "2026-05-12",
+      "label": "Sync workflow repair",
+      "note": "Git history records a skills sync workflow repair, aligning with the durable convention that local Codex skills are reconciled into this repository through explicit checks."
+    },
+    {
+      "date": "2026-05-27",
+      "label": "Local Hyphenomenon intake",
+      "note": "This local-only intake created source-backed project artifacts and applied them only to the non-production Hyphenomenon knowledge backbone."
+    }
+  ],
+  "dataModelHighlights": [
+    {
+      "title": "Skill Suite Catalog Model",
+      "summary": "The curated suite is modeled as a set of skill folders, an allowlist, lifecycle metadata, generated human-readable index, generated machine-readable manifest, and docs-site catalog data.",
+      "entities": ["skill folder", "SKILL.md", "SUITE_SKILLS.txt", "SUITE_METADATA.json", "skills/INDEX.md", "skills/manifest.json", "catalog.generated.ts"]
+    },
+    {
+      "title": "Plugin Backup Model",
+      "summary": "Custom plugins are backed up as plugin folders with `.codex-plugin/plugin.json`, assets/scripts, and registry metadata rather than being mixed into the standalone skill catalog.",
+      "entities": ["plugin folder", "plugin.json", "bundled skills", "assets", "scripts", "marketplace registry"]
+    },
+    {
+      "title": "Workflow Verification Model",
+      "summary": "Repo maintenance relies on explicit preflight checks, generated catalog diffs, local docs-site review, and human/operator decisions before in-progress local skill work becomes curated public catalog content.",
+      "entities": ["sync check", "catalog drift check", "catalog regeneration", "docs-site build", "screenshot proof", "operator decision"]
+    }
+  ],
+  "dataModels": [
+    {
+      "slug": "skill-suite-catalog-model",
+      "title": "Skill Suite Catalog Model",
+      "summary": "The source suite maps portable skill folders through an allowlist and lifecycle metadata into generated Markdown, JSON, and TypeScript catalog surfaces.",
+      "entities": ["skills/<slug>/SKILL.md", "skills/SUITE_SKILLS.txt", "skills/SUITE_METADATA.json", "skills/INDEX.md", "skills/manifest.json", "docs-site/src/lib/catalog.generated.ts"],
+      "diagram": "flowchart LR\n  A[\"skills/<slug>/SKILL.md\"] --> B[\"SUITE_SKILLS.txt allowlist\"]\n  C[\"SUITE_METADATA.json lifecycle\"] --> D[\"build_catalog.py\"]\n  B --> D\n  A --> D\n  D --> E[\"skills/INDEX.md\"]\n  D --> F[\"skills/manifest.json\"]\n  F --> G[\"build_docs_site_catalog.py\"]\n  G --> H[\"docs-site catalog.generated.ts\"]",
+      "sourcePath": "scripts/build_catalog.py",
+      "sourceUrl": "https://github.com/maggielerman/codex-skills/blob/main/scripts/build_catalog.py"
+    },
+    {
+      "slug": "plugin-backup-model",
+      "title": "Plugin Backup Model",
+      "summary": "Custom local plugin bundles stay in `plugins/` with plugin metadata and registry records so larger workflow surfaces are preserved without pretending they are ordinary standalone skills.",
+      "entities": ["plugins/<slug>/.codex-plugin/plugin.json", "plugin assets", "bundled plugin skills", ".agents/plugins/marketplace.json", "docs-site plugin routes"],
+      "diagram": "flowchart LR\n  A[\"custom local plugin\"] --> B[\"plugins/<slug>\"]\n  B --> C[\".codex-plugin/plugin.json\"]\n  B --> D[\"bundled skills and assets\"]\n  C --> E[\"repo-local marketplace registry\"]\n  C --> F[\"docs-site plugin catalog\"]",
+      "sourcePath": "plugins/context-layer/.codex-plugin/plugin.json",
+      "sourceUrl": "https://github.com/maggielerman/codex-skills/blob/main/plugins/context-layer/.codex-plugin/plugin.json"
+    }
+  ]
+}

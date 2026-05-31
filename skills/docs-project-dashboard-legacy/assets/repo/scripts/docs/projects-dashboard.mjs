@@ -5,6 +5,10 @@ import path from "node:path";
 
 const DASHBOARD_MARKER = "<!-- docs-project-dashboard:generated -->";
 const DOCS_ROOT_CANDIDATES = ["DOCS", "docs", "documentation"];
+const CONTENT_CALENDAR_CANDIDATES = [
+  "content-calendar.json",
+  "blog-content-calendar.json",
+];
 const LANE_ORDER = ["active", "in-review", "blocked", "completed", "backlog", "stale"];
 const STATUS_ALIASES = new Map([
   ["active", "active"],
@@ -26,10 +30,12 @@ function main() {
   const docsRoot = resolveDocsRoot(repoRoot, docsRootName);
   const projectsRoot = resolveProjectsRoot(docsRoot);
   const projects = collectProjects(projectsRoot);
+  const contentCalendar = loadContentCalendar(docsRoot, projectsRoot);
   const dashboardPath = path.join(projectsRoot, "dashboard.html");
   const output = buildDashboard({
     docsRootName: path.basename(docsRoot),
     projects,
+    contentCalendar,
   });
 
   fs.writeFileSync(dashboardPath, output, "utf8");
@@ -121,6 +127,53 @@ function collectProjects(projectsRoot) {
   return projects.sort(compareProjects);
 }
 
+function loadContentCalendar(docsRoot, projectsRoot) {
+  const contentRoot = path.join(docsRoot, "content");
+  if (!isDirectory(contentRoot)) {
+    return null;
+  }
+
+  const namedMatches = CONTENT_CALENDAR_CANDIDATES.map((filename) =>
+    path.join(contentRoot, filename),
+  ).filter((candidate) => exists(candidate));
+  const fallbackMatches = fs
+    .readdirSync(contentRoot, { withFileTypes: true })
+    .filter(
+      (entry) =>
+        entry.isFile() &&
+        entry.name.toLowerCase().includes("calendar") &&
+        entry.name.endsWith(".json"),
+    )
+    .map((entry) => path.join(contentRoot, entry.name))
+    .sort();
+  const calendarPath = namedMatches[0] || fallbackMatches[0];
+  if (!calendarPath) {
+    return null;
+  }
+
+  const parsed = JSON.parse(fs.readFileSync(calendarPath, "utf8"));
+  const items = Array.isArray(parsed.items)
+    ? [...parsed.items].sort((left, right) =>
+        calendarTarget(left).localeCompare(calendarTarget(right)),
+      )
+    : [];
+  const markdownPath = calendarPath.replace(/\.json$/, ".md");
+
+  return {
+    title: parsed.title || "Content Calendar",
+    description:
+      parsed.description ||
+      "Publishing queue generated from the repo-side content calendar.",
+    cadence: parsed.cadence || {},
+    generatedAt: parsed.generatedAt || "",
+    items,
+    sourceLabel: path.relative(docsRoot, calendarPath).replaceAll(path.sep, "/"),
+    sourceHref: exists(markdownPath)
+      ? path.relative(projectsRoot, markdownPath).replaceAll(path.sep, "/")
+      : path.relative(projectsRoot, calendarPath).replaceAll(path.sep, "/"),
+  };
+}
+
 function buildProjectRecord(projectsRoot, lane, filePath, source, frontmatter) {
   const title = frontmatter.title || humanizeFilename(path.basename(filePath, ".md"));
   const id = projectIdFromPath(filePath, title);
@@ -181,7 +234,7 @@ function buildProjectRecord(projectsRoot, lane, filePath, source, frontmatter) {
   };
 }
 
-function buildDashboard({ docsRootName, projects }) {
+function buildDashboard({ docsRootName, projects, contentCalendar }) {
   const timestamp = easternTimestamp();
   const counts = new Map(LANE_ORDER.map((lane) => [lane, 0]));
   const laneProjects = new Map(LANE_ORDER.map((lane) => [lane, []]));
@@ -358,6 +411,7 @@ function buildDashboard({ docsRootName, projects }) {
     .join("");
 
   const totalMaggieTodos = maggieTodoProjects.reduce((count, project) => count + project.maggieTodoCount, 0);
+  const contentCalendarSection = renderContentCalendarSection(contentCalendar);
 
   return `${DASHBOARD_MARKER}
 <!doctype html>
@@ -608,6 +662,66 @@ function buildDashboard({ docsRootName, projects }) {
         line-height: 1.4;
       }
 
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      .calendar-card {
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid var(--line);
+        border-left: 7px solid var(--active);
+        border-radius: 18px;
+        padding: 16px;
+      }
+
+      .calendar-card.calendar-in-review {
+        border-left-color: var(--review);
+      }
+
+      .calendar-card.calendar-blocked {
+        border-left-color: var(--blocked);
+      }
+
+      .calendar-card.calendar-completed {
+        border-left-color: var(--completed);
+      }
+
+      .calendar-card.calendar-backlog {
+        border-left-color: var(--backlog);
+      }
+
+      .calendar-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 12px;
+      }
+
+      .calendar-date,
+      .calendar-meta,
+      .calendar-blocker {
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+
+      .calendar-title {
+        margin: 12px 0 8px;
+        color: var(--text);
+        font-size: 1.08rem;
+        line-height: 1.25;
+        font-weight: 700;
+      }
+
+      .calendar-blocker {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--line);
+      }
+
       .table-shell {
         overflow: auto;
         border-radius: 18px;
@@ -746,6 +860,11 @@ function buildDashboard({ docsRootName, projects }) {
           <div class="meta-pill">Generated ${escapeHtml(timestamp)}</div>
           <div class="meta-pill">${projects.length} tracked project${projects.length === 1 ? "" : "s"}</div>
           <div class="meta-pill">${totalMaggieTodos} MAGGIE TODO item${totalMaggieTodos === 1 ? "" : "s"}</div>
+          ${
+            contentCalendar
+              ? `<div class="meta-pill">${contentCalendar.items.length} content calendar item${contentCalendar.items.length === 1 ? "" : "s"}</div>`
+              : ""
+          }
         </div>
       </section>
 
@@ -764,6 +883,8 @@ function buildDashboard({ docsRootName, projects }) {
         </div>
         <div class="attention-grid">${attentionColumns}</div>
       </section>
+
+      ${contentCalendarSection}
 
       <section class="section">
         <div class="section-header">
@@ -892,6 +1013,123 @@ function renderAttentionLane(title, lane, projects) {
       ${cards}
     </section>
   `;
+}
+
+function renderContentCalendarSection(calendar) {
+  if (!calendar || !Array.isArray(calendar.items) || calendar.items.length === 0) {
+    return "";
+  }
+
+  const readyCount = calendar.items.filter((item) =>
+    ["brief-ready", "draft-ready", "review-ready"].includes(normalizeCalendarStatus(item.status)),
+  ).length;
+  const candidateCount = calendar.items.filter(
+    (item) => normalizeCalendarStatus(item.status) === "candidate",
+  ).length;
+  const nextItem = calendar.items[0];
+  const cadence = calendar.cadence || {};
+
+  return `
+      <section id="content-calendar" class="section">
+        <div class="section-header">
+          <h2>${escapeHtml(calendar.title)}</h2>
+          <p>${escapeHtml(calendar.description)} Source: <code>${escapeHtml(calendar.sourceLabel)}</code>.</p>
+        </div>
+        <div class="summary-grid">
+          ${renderCalendarMetricCard({
+            label: "Queue",
+            count: calendar.items.length,
+            meta: cadence.publishFrequency || "Calendar items in the content queue.",
+          })}
+          ${renderCalendarMetricCard({
+            label: "Review Ready",
+            count: readyCount,
+            meta: "Items with repo-side briefs or drafts ready for review.",
+          })}
+          ${renderCalendarMetricCard({
+            label: "Candidates",
+            count: candidateCount,
+            meta: "Future topics that still need research or brief setup.",
+          })}
+          ${renderCalendarMetricCard({
+            label: "Next Target",
+            count: calendarTarget(nextItem) || "None",
+            meta: nextItem?.title || "No scheduled content target.",
+          })}
+        </div>
+        <div class="calendar-grid">
+          ${calendar.items.map((item) => renderCalendarCard(item)).join("")}
+        </div>
+        <div class="register-footer">
+          <div>Cadence: ${escapeHtml(cadence.publishFrequency || "Not set")} · Publish day: ${escapeHtml(cadence.publishDay || "Not set")}</div>
+          <div><a href="${escapeAttribute(calendar.sourceHref)}" target="_blank" rel="noreferrer">Open content calendar source</a></div>
+        </div>
+      </section>
+  `;
+}
+
+function renderCalendarMetricCard({ label, count, meta }) {
+  return `
+    <article class="summary-card">
+      <div class="summary-label">${escapeHtml(label)}</div>
+      <div class="summary-count">${escapeHtml(String(count))}</div>
+      <div class="summary-meta">${escapeHtml(meta)}</div>
+    </article>
+  `;
+}
+
+function renderCalendarCard(item) {
+  const lane = calendarStatusLane(item.status);
+  const artifactHref = item.artifact ? String(item.artifact) : "";
+  const artifactLink = artifactHref
+    ? `<a href="${escapeAttribute(artifactHref)}" target="_blank" rel="noreferrer">Open artifact</a>`
+    : "Artifact pending";
+  const category = item.pillar || item.category || item.track || "No category";
+  const intent = item.primaryIntent || item.intent || item.description || "";
+
+  return `
+    <article class="calendar-card calendar-${lane}">
+      <div class="calendar-card-header">
+        <span class="lane-badge lane-${lane}">${escapeHtml(item.status || "planned")}</span>
+        <div class="calendar-date">${escapeHtml(calendarTarget(item) || "No target")}</div>
+      </div>
+      <div class="calendar-title">${escapeHtml(item.title || "Untitled")}</div>
+      <div class="calendar-meta">
+        ${escapeHtml(item.priority || "No priority")} · ${escapeHtml(category)}
+        ${item.project ? ` · Project ${escapeHtml(item.project)}` : ""}
+      </div>
+      ${intent ? `<div class="calendar-meta" style="margin-top: 8px;">${escapeHtml(intent)}</div>` : ""}
+      <div class="calendar-blocker">
+        <strong>Blocked by:</strong> ${escapeHtml(item.blockedBy || "Review and QA")}<br />
+        ${artifactLink}
+      </div>
+    </article>
+  `;
+}
+
+function calendarTarget(item) {
+  return String(item?.publishTarget || item?.targetDate || item?.date || "").trim();
+}
+
+function normalizeCalendarStatus(status) {
+  return String(status || "").trim().toLowerCase();
+}
+
+function calendarStatusLane(status) {
+  const normalized = normalizeCalendarStatus(status);
+  if (["brief-ready", "draft-ready", "review-ready"].includes(normalized)) {
+    return "in-review";
+  }
+  if (["published", "complete", "completed", "done"].includes(normalized)) {
+    return "completed";
+  }
+  if (normalized === "blocked") {
+    return "blocked";
+  }
+  if (["candidate", "idea", "backlog"].includes(normalized)) {
+    return "backlog";
+  }
+  return "active";
 }
 
 function parseFrontmatter(source) {

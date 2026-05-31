@@ -21,6 +21,7 @@ This skill combines:
 - optional docs site scaffolding,
 - optional lightweight product-doc pack scaffolding,
 - optional HTML project dashboard scaffolding,
+- optional content calendar setup for repo-side publishing cadence and content review queues,
 - optional Review Board Operating Pattern scaffolding.
 
 Default project lifecycle states created/enforced by the operating system:
@@ -68,12 +69,14 @@ Before writing files, explicitly ask:
 1. Do you want a docs site scaffolded now (`yes`/`no`)?
 2. Do you want product docs pack scaffolding included (`yes`/`no`)?
 3. Do you want the HTML project dashboard scaffolded now (`yes`/`no`)?
-4. Do you want the optional Review Board Operating Pattern scaffold included for visual comparison, evidence review, and numbered human corrections (`yes`/`no`)?
+4. If the dashboard is enabled, do you want the optional content calendar scaffold included (`yes`/`no`)?
+5. Do you want the optional Review Board Operating Pattern scaffold included for visual comparison, evidence review, and numbered human corrections (`yes`/`no`)?
 
 Defaults if user does not specify:
 - docs site: `no` (do not assume site generation)
 - product docs pack: `no` (do not create product docs unless explicitly requested)
 - project dashboard: `no` (do not create the dashboard unless explicitly requested)
+- content calendar: `no` (do not create content calendar files unless explicitly requested)
 - Review Board Operating Pattern scaffold: `no` (do not add review-board workflow docs unless explicitly requested)
 
 Note: if invoked through deprecated `$docs-product-pack`, force `product docs pack: yes`.
@@ -202,6 +205,7 @@ This built-in step should wire the same repo-level assets as the legacy standalo
 - `package.json` script `docs:projects-dashboard`
 - `{{DOCS_ROOT}}/PROJECTS/dashboard.html`
 - `{{DOCS_ROOT}}/PROJECTS/README.md` link to the dashboard
+- optional `{{DOCS_ROOT}}/content/content-calendar.{json,md}` files when the user wants repo-side content calendar setup
 
 ```bash
 python3 "${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/scripts/install_docs_project_dashboard.py" \
@@ -209,11 +213,21 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/script
   --docs-root {{DOCS_ROOT}}
 ```
 
+If the user also asks for a content calendar, pass:
+
+```bash
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/scripts/install_docs_project_dashboard.py" \
+  --repo . \
+  --docs-root {{DOCS_ROOT}} \
+  --with-content-calendar
+```
+
 Expected result:
 - `{{DOCS_ROOT}}/PROJECTS/dashboard.html`
 - `scripts/docs/projects-dashboard.mjs`
 - optional `package.json` script:
   - `docs:projects-dashboard`
+- optional `{{DOCS_ROOT}}/content/content-calendar.json` plus `content-calendar.md`
 - `{{DOCS_ROOT}}/PROJECTS/README.md` link to `dashboard.html`
 
 Rules:
@@ -222,6 +236,7 @@ Rules:
 - If an older generated `dashboard.md` exists, it is safe for the installer to remove it.
 - If a non-generated `dashboard.html` already exists, stop and ask before replacing it unless the user explicitly approved overwrite behavior.
 - The generated dashboard should surface unresolved `MAGGIE TODO:` callouts in a dedicated section.
+- When a content calendar JSON exists under `{{DOCS_ROOT}}/content/`, the generated dashboard should surface it as an optional planning section.
 
 ### 8A) Optional Review Board Operating Pattern scaffolding (only if user said yes)
 If enabled, copy the optional Review Board Operating Pattern templates from `assets/templates/review-board-operating-pattern/` into the repo root with safe-write behavior:

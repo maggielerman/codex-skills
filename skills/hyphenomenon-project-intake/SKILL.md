@@ -8,6 +8,8 @@ description: Create a Hyphenomenon import-ready project intake package (single m
 
 Build a repeatable dossier + screenshot package for Hyphenomenon import.
 
+This skill covers the project intake lane. It does not cover chat/session intake; use `hyphenomenon-chat-intake` for AI conversation transcripts, chat artifacts, created-skill/project/repository capture, and chat route sync. In the Hyphenomenon repo, branch lifecycle and merge/delete policy for committed intake artifacts is documented in `DOCS/intake/README.md`.
+
 ## Quick Start
 
 1. Set the skill root:
@@ -96,6 +98,11 @@ python3 "$SKILL_ROOT/scripts/verify_intake.py" \
   - `files created/updated`
   - `unresolved unknowns`
   - `verification performed`
+
+7. Hand off branch lifecycle explicitly.
+- When the generated intake artifacts are committed on a dedicated branch, apply the target Hyphenomenon repo's `DOCS/intake/README.md` lifecycle standard before recommending merge or deletion.
+- Project intake branches should merge only after validation, dry-run review, intentional apply, `ops:knowledge:drift`, and route/provenance verification.
+- If the branch contains private review material, superseded artifacts, or unapplied diagnostics that should not become source history, do not recommend merging it.
 
 ## Source Priority
 

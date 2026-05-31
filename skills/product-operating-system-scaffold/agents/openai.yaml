@@ -1,4 +1,4 @@
 interface:
   display_name: "Product Operating System Scaffold"
   short_description: "Scaffold a repo-native product operating system for human-agent teams"
-  default_prompt: "Use $product-operating-system-scaffold to standardize the repo as a product operating system: docs root, governance, agent instructions, ROADMAP/CHANGELOG, active/in-review/blocked/completed/backlog/stale project lifecycle, canonical evidence, docs automation scripts, and checkpoint rules. First ask whether to scaffold a docs site, product docs pack, the optional HTML project dashboard, and the optional repo-agnostic Review Board Operating Pattern scaffold."
+  default_prompt: "Use $product-operating-system-scaffold to standardize the repo as a product operating system: docs root, governance, agent instructions, ROADMAP/CHANGELOG, active/in-review/blocked/completed/backlog/stale project lifecycle, canonical evidence, docs automation scripts, and checkpoint rules. First ask whether to scaffold a docs site, product docs pack, the optional HTML project dashboard, optional content calendar, and the optional repo-agnostic Review Board Operating Pattern scaffold."

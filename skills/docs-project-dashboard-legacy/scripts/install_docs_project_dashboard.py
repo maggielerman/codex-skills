@@ -115,6 +115,27 @@ def patch_projects_readme(projects_root: Path) -> bool:
     return True
 
 
+def install_content_calendar_templates(docs_root: Path) -> list[Path]:
+    source_root = skill_root() / "assets" / "repo" / "docs" / "content"
+    if not source_root.exists():
+        raise FileNotFoundError(f"Missing bundled content calendar templates: {source_root}")
+
+    destination_root = docs_root / "content"
+    destination_root.mkdir(parents=True, exist_ok=True)
+    written: list[Path] = []
+
+    for source in sorted(source_root.iterdir()):
+        if not source.is_file():
+            continue
+        destination = destination_root / source.name
+        if destination.exists():
+            continue
+        shutil.copyfile(source, destination)
+        written.append(destination)
+
+    return written
+
+
 def verify_dashboard_write_is_safe(projects_root: Path, force_dashboard: bool) -> None:
     dashboard = projects_root / "dashboard.html"
     if not dashboard.exists() or force_dashboard:
@@ -166,6 +187,11 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Allow replacing an existing PROJECTS/dashboard.html even when it is not marked as generated.",
     )
+    parser.add_argument(
+        "--with-content-calendar",
+        action="store_true",
+        help="Install starter docs/content/content-calendar.{json,md} files that the dashboard will surface when present.",
+    )
     return parser
 
 
@@ -184,6 +210,7 @@ def main() -> int:
         verify_dashboard_write_is_safe(projects_root, args.force_dashboard)
         legacy_dashboard_removed = cleanup_legacy_markdown_dashboard(projects_root)
         generator_path = copy_generator(repo_root)
+        content_calendar_files = install_content_calendar_templates(docs_root) if args.with_content_calendar else []
         package_json_updated = patch_package_json(repo_root, docs_root.name)
         readme_updated = patch_projects_readme(projects_root)
         regenerate_dashboard(repo_root, docs_root.name)
@@ -196,6 +223,10 @@ def main() -> int:
     print(f"Generator installed: {generator_path}")
     print(f"package.json updated: {'yes' if package_json_updated else 'no'}")
     print(f"PROJECTS/README.md updated: {'yes' if readme_updated else 'no'}")
+    print(
+        "Content calendar templates installed: "
+        + (", ".join(str(path) for path in content_calendar_files) if content_calendar_files else "no")
+    )
     print(f"Legacy dashboard.md removed: {'yes' if legacy_dashboard_removed else 'no'}")
     print("Dashboard regenerated: yes")
     return 0

@@ -33,6 +33,7 @@ The dashboard is a generated HTML portfolio view for docs-native project plannin
 - Count bullets in `## Risks` and `## Open Questions` when present.
 - Extract unresolved `MAGGIE TODO:` callouts anywhere in the file and de-duplicate identical lines within a project.
 - Detect status drift when normalized frontmatter `status` does not match the lifecycle folder.
+- Optionally load a content calendar from `docs/content/content-calendar.json`, `docs/content/blog-content-calendar.json`, or the first `docs/content/*calendar*.json` match. Calendar items should include `publishTarget` or `targetDate`, `status`, `priority`, `pillar` or `category`, `title`, optional `project`, optional `artifact`, `primaryIntent` or `intent`, and `blockedBy`.
 
 ## Required Sections
 
@@ -44,12 +45,15 @@ The dashboard is a generated HTML portfolio view for docs-native project plannin
 6. `Status Drift`
 7. `Full Register`
 
+When a content calendar is present, include an additional `Content Calendar` section after `Attention Queue` and before `Maggie TODO`.
+
 ## Required Behaviors
 
 - Include links to the underlying planning docs.
 - Keep `blocked`, `in-review`, and `active` highly visible.
 - Surface unresolved `MAGGIE TODO:` items in their own dashboard section with links back to the owning project docs.
 - Group child streams when `parentProject` or `programTrack` is present.
+- Render the optional content calendar without making external publishing assumptions. Treat repo-side calendar files as planning/review inputs, not proof that anything has been published.
 - Sort `Recently Updated` descending by parsed `lastUpdated`.
 - Keep the page self-contained so it opens locally without a build step.
 - Prefer a static HTML file with embedded CSS and light client-side filtering over markdown tables.

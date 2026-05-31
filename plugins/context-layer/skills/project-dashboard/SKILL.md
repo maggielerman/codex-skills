@@ -38,6 +38,7 @@ Check that:
 - `README.md` and `NNNN_project_template.md` are skipped
 - blocked and in-review items are visible
 - unresolved `MAGGIE TODO:` items appear in a dedicated section
+- optional content calendar appears when `DOCS/content/content-calendar.json`, `DOCS/content/blog-content-calendar.json`, or another `DOCS/content/*calendar*.json` file exists
 - `parentProject` and `programTrack` fields produce grouping
 - status drift is surfaced when frontmatter differs from folder lane
 

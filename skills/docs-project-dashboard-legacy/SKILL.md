@@ -20,6 +20,8 @@ Use this legacy skill only when:
 
 Use this legacy skill to add a generated `PROJECTS/dashboard.html` file plus a reusable repo-side generator script so the dashboard can be regenerated after project-doc changes.
 
+The generator also supports an optional repo-side content calendar. When `docs/content/content-calendar.json`, `docs/content/blog-content-calendar.json`, or another `docs/content/*calendar*.json` file exists, the dashboard renders a `Content Calendar` section with cadence metrics and planned items.
+
 Assume the target repository already follows the product-operating-system-scaffold project layout:
 
 - `DOCS/`, `docs/`, or `documentation/`
@@ -75,7 +77,8 @@ Optional flags:
 python3 <skill_dir>/scripts/install_docs_project_dashboard.py \
   --repo /absolute/path/to/repo \
   --docs-root DOCS \
-  --force-dashboard
+  --force-dashboard \
+  --with-content-calendar
 ```
 
 The installer:
@@ -84,6 +87,7 @@ The installer:
 - copies the repo-side generator to `scripts/docs/projects-dashboard.mjs`
 - adds `docs:projects-dashboard` to `package.json` when present
 - appends or updates a dashboard link in `PROJECTS/README.md`
+- optionally installs starter `content-calendar.json` and `content-calendar.md` files under `<docs-root>/content/`
 - generates `PROJECTS/dashboard.html`
 - rebuilds the docs manifest when `scripts/docs/manifest.mjs` exists
 
@@ -115,6 +119,7 @@ Confirm:
 
 - `PROJECTS/dashboard.html` exists
 - dashboard cards and rows link to the correct planning docs
+- content calendar appears when a supported calendar JSON exists
 - blocked, in-review, and active queues render
 - recently updated projects are sorted correctly
 - grouped program rows appear when `parentProject` or `programTrack` metadata exists
@@ -127,9 +132,11 @@ Confirm:
 - Use folder location as the lane shown in the dashboard even when frontmatter `status` drifts.
 - Surface lane/frontmatter drift in the dashboard instead of silently correcting project docs.
 - Use relative links from `PROJECTS/dashboard.html` to the planning documents.
+- Keep the content calendar optional: install starter files only when requested, and let existing repos surface their own calendar JSON without rewriting it.
 
 ## Resources
 
 - Installer: `scripts/install_docs_project_dashboard.py`
 - Dashboard contract: `references/dashboard-contract.md`
 - Repo-side generator asset: `assets/repo/scripts/docs/projects-dashboard.mjs`
+- Optional content calendar templates: `assets/repo/docs/content/content-calendar.{json,md}`

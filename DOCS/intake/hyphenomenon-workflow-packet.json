@@ -1,0 +1,73 @@
+{
+  "projectId": "project-codex-skills-library",
+  "projectSlug": "codex-skills-library",
+  "workflows": [
+    {
+      "id": "workflow-codex-skills-sync-and-catalog-governance",
+      "slug": "codex-skills-sync-and-catalog-governance",
+      "title": "Codex Skills sync and catalog governance",
+      "summary": "How local skill or plugin changes become durable repository artifacts: inspect the repo instructions, compare local skill homes to the allowlisted suite, decide whether new local work belongs in the curated catalog, regenerate source-backed indexes, review docs-site output, and record drift or blockers before publishing or handoff.",
+      "tags": ["content:workflows", "workflow", "domain:ai-workflows", "domain:developer-tools"],
+      "workflowTags": ["skills", "catalog", "plugin-backup", "human-review", "generated-docs", "repo-governance"],
+      "relatedProjectSlugs": ["codex-skills-library"],
+      "relatedNoteSlugs": [
+        "codex-skills-library-readme",
+        "codex-skills-library-agents",
+        "codex-skills-library-build-catalog",
+        "codex-skills-library-docs-site-readme",
+        "codex-skills-library-context-layer-plugin-json"
+      ],
+      "relatedLinks": [
+        {
+          "title": "Source repo",
+          "url": "https://github.com/maggielerman/codex-skills"
+        },
+        {
+          "title": "Local docs review",
+          "url": "http://localhost:3030"
+        }
+      ],
+      "sourcePath": "DOCS/intake/hyphenomenon-workflow-packet.json",
+      "sourceUrl": "https://github.com/maggielerman/codex-skills/blob/main/DOCS/intake/hyphenomenon-workflow-packet.json",
+      "layoutType": "xyflow",
+      "steps": [
+        {
+          "id": "inspect",
+          "label": "Inspect AGENTS.md, README.md, suite metadata, plugin backups, and current git status before changing skill or catalog surfaces",
+          "type": "action",
+          "position": { "x": 0, "y": 0 }
+        },
+        {
+          "id": "sync-check",
+          "label": "Run the source comparison or catalog artifact check to identify local skill changes, stale repo files, source-only files, or suite allowlist drift",
+          "type": "subprocess",
+          "position": { "x": 420, "y": 0 }
+        },
+        {
+          "id": "operator-decision",
+          "label": "Human operator decides whether new local work should enter the curated public suite, remain local-only, or stay blocked for later review",
+          "type": "decision",
+          "position": { "x": 900, "y": 0 }
+        },
+        {
+          "id": "regenerate",
+          "label": "Regenerate approved catalog artifacts such as skills/INDEX.md, skills/manifest.json, and docs-site/src/lib/catalog.generated.ts",
+          "type": "action",
+          "position": { "x": 1340, "y": 0 }
+        },
+        {
+          "id": "proof",
+          "label": "Create evidence by running catalog checks, docs-site build or local server review, and screenshot proof for representative catalog and detail routes",
+          "type": "action",
+          "position": { "x": 1780, "y": 0 }
+        },
+        {
+          "id": "checkpoint",
+          "label": "Record the artifact paths, command results, unresolved drift, human review state, and next checkpoint before merge, publish, or handoff",
+          "type": "state",
+          "position": { "x": 2240, "y": 0 }
+        }
+      ]
+    }
+  ]
+}

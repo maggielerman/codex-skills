@@ -1,0 +1,28 @@
+{
+  "generatedAt": "YYYY-MM-DD HH:MM ET (America/New_York)",
+  "title": "Content Calendar",
+  "description": "Publishing queue generated from the repo-side content calendar.",
+  "cadence": {
+    "publishFrequency": "1 item per week",
+    "publishDay": "Tuesday",
+    "draftReviewWindow": "Prior Thursday or Friday",
+    "qaWindow": "Prior Monday",
+    "notes": "Do not publish until the item has reviewed assets, verified links, and final source-of-truth copy."
+  },
+  "items": [
+    {
+      "publishTarget": "YYYY-MM-DD",
+      "status": "brief-ready",
+      "pillar": "example-pillar",
+      "priority": "P1",
+      "title": "Example Content Item",
+      "slug": "example-content-item",
+      "project": "NNNN",
+      "artifact": "../evidence/active/NNNN/example-content-item.md",
+      "primaryIntent": "Describe the reader job, buyer question, release note, campaign purpose, or decision this content should serve.",
+      "requiredAssets": "feature image, source links, QA checklist",
+      "internalLinks": [],
+      "blockedBy": "Maggie review, final assets, publish QA"
+    }
+  ]
+}

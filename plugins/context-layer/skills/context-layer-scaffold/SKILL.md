@@ -1,6 +1,6 @@
 ---
 name: context-layer-scaffold
-description: "Use when asked to scaffold or repair Context Layer repos: canonical DOCS root, project lifecycle, evidence, dashboard, checkpoints, AGENTS/ROADMAP/CHANGELOG, optional docs site, product docs, UX bugs, or review board."
+description: "Use when asked to scaffold or repair Context Layer repos: canonical DOCS root, project lifecycle, evidence, dashboard, checkpoints, AGENTS/ROADMAP/CHANGELOG, optional content calendar, docs site, product docs, UX bugs, or review board."
 ---
 
 # Context Layer Scaffold
@@ -29,13 +29,15 @@ Before writing files, ask only for optional modules that are not part of the req
 1. Do you want a docs site scaffolded now (`yes`/`no`)?
 2. Do you want product docs pack scaffolding included (`yes`/`no`)?
 3. Do you want UX/UI bug intake scaffolding included (`yes`/`no`)?
-4. Do you want the optional Review Board Operating Pattern scaffold included for visual comparison, evidence review, and numbered human corrections (`yes`/`no`)?
+4. Do you want the optional content calendar scaffold included for repo-side publishing cadence, review status, and content queue planning (`yes`/`no`)?
+5. Do you want the optional Review Board Operating Pattern scaffold included for visual comparison, evidence review, and numbered human corrections (`yes`/`no`)?
 
 Defaults when unspecified:
 
 - docs site: `no`
 - product docs pack: `no`
 - UX/UI bug intake: `no`
+- content calendar: `no`
 - Review Board Operating Pattern scaffold: `no`
 
 If invoked through a product-docs compatibility skill, force product docs pack to `yes`.
@@ -68,7 +70,7 @@ Read only the references needed for the current run:
 7. Copy docs tooling scripts from `assets/scripts/scripts/docs/` into `scripts/docs/`.
 8. Add package scripts when `package.json` exists and the repo can support them.
 9. Install and generate the project dashboard.
-10. Install optional docs site, product docs, UX/UI bug intake, and review-board scaffolds only when selected.
+10. Install optional docs site, product docs, UX/UI bug intake, content calendar, and review-board scaffolds only when selected.
 11. Run verification from `references/verification.md` and report created, updated, skipped, blocked, and manually gated items.
 
 ## Required Assets
@@ -96,6 +98,7 @@ Optional assets:
 - UX/UI bug intake: `assets/templates/ux-ui-bugs/`
 - Review-board workflow: `assets/templates/review-board-operating-pattern/`
 - Docs site: `assets/vitepress/`
+- Content calendar: installed through the required dashboard installer with `--with-content-calendar`
 
 ## Safe-Write Rules
 
