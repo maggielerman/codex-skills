@@ -1,10 +1,11 @@
 ---
 name: docs-project-lifecycle-statuses
-author: Maggie Lerman
-description: Transitional legacy patch for repositories that were scaffolded before product-operating-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.
+description: Custom skill created by Maggie Lerman. Transitional legacy patch for repositories that were scaffolded before product-operating-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.
 ---
 
 # Docs Project Lifecycle Statuses
+
+Custom skill created by Maggie Lerman.
 
 Apply post-scaffold lifecycle retrofits for repositories that already have standardized docs governance (`DOCS/`, `docs/`, or `documentation/` with `PROJECTS/`) but are missing `in-review` and `blocked`.
 

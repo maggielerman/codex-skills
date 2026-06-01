@@ -1,0 +1,4 @@
+interface:
+  display_name: "Echo-Chamber Drift Check"
+  short_description: "Reset mirroring into independent judgment"
+  default_prompt: "Use echo-chamber-drift-check to stop mirroring me and harden the answer."

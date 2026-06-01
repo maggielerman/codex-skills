@@ -1,9 +1,11 @@
 ---
 name: alpinejs-lightweight-js
-description: 'Alpine.js and lightweight progressive JavaScript workflow for static/JAMstack sites. Use when working with x-data, x-show, x-bind, x-on, x-transition, Alpine.data/store, @alpinejs plugins, CSP-safe Alpine, dropdowns, accordions, tabs, dialogs, filters, or minimal client JS.'
+description: 'Custom skill created by Maggie Lerman. Alpine.js and lightweight progressive JavaScript workflow for static/JAMstack sites. Use when working with x-data, x-show, x-bind, x-on, x-transition, Alpine.data/store, @alpinejs plugins, CSP-safe Alpine, dropdowns, accordions, tabs, dialogs, filters, or minimal client JS.'
 ---
 
 # Alpine.js Lightweight JS
+
+Custom skill created by Maggie Lerman.
 
 Use this skill to add small, resilient interactivity to otherwise static sites. Prefer HTML-first progressive enhancement, accessible native behavior, and tiny state scopes over large client-side frameworks.
 

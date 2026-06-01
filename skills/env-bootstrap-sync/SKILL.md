@@ -1,10 +1,11 @@
 ---
 name: env-bootstrap-sync
-author: Maggie Lerman
-description: Create or upgrade a repo-owned environment bootstrap workflow with reproducible `.env` handling, worktree sync, required-variable documentation, secret-file layout, and new-machine runbooks. Use when a repo has drifting `.env` files, unclear setup requirements, worktree-specific config loss, or scattered credential/bootstrap instructions.
+description: Custom skill created by Maggie Lerman. Create or upgrade a repo-owned environment bootstrap workflow with reproducible `.env` handling, worktree sync, required-variable documentation, secret-file layout, and new-machine runbooks. Use when a repo has drifting `.env` files, unclear setup requirements, worktree-specific config loss, or scattered credential/bootstrap instructions.
 ---
 
 # Env Bootstrap Sync
+
+Custom skill created by Maggie Lerman.
 
 Use this skill when a repo needs a durable environment-management pattern instead of ad hoc local setup.
 

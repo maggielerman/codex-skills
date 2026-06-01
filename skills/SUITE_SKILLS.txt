@@ -26,6 +26,8 @@ eleventy-jamstack-expert
 jamstack-version-auditor
 tailwindcss-expert
 chronicle
+critical-thinking-partner
+echo-chamber-drift-check
 rapid-iteration-mode
 review-board-operating-pattern
 rps-etsy-shop-uploader-listing-workflow
@@ -50,3 +52,4 @@ shopify-polaris-customer-account-extensions
 shopify-pos-ui
 shopify-storefront-graphql
 visual-design-critique
+working-modes

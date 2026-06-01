@@ -1,10 +1,11 @@
 ---
 name: user-journey-audit
-author: Maggie Lerman
-description: Create current-state user journey audits with route mapping, screenshots, coverage verification, and a final PDF report. Use when Codex needs to audit navigation or UX flows for one or more user types in any repository or deployed app, suggest which user types to include, capture click-by-click evidence, verify route coverage against code and tests, and export a screenshot-backed PDF artifact.
+description: Custom skill created by Maggie Lerman. Create current-state user journey audits with route mapping, screenshots, coverage verification, and a final PDF report. Use when Codex needs to audit navigation or UX flows for one or more user types in any repository or deployed app, suggest which user types to include, capture click-by-click evidence, verify route coverage against code and tests, and export a screenshot-backed PDF artifact.
 ---
 
 # User Journey Audit
+
+Custom skill created by Maggie Lerman.
 
 ## Overview
 

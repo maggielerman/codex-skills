@@ -1,10 +1,11 @@
 ---
 name: docs-evidence-backfill
-author: Maggie Lerman
-description: Retrofit an existing repository from fragmented audit and artifact storage into a unified docs evidence system. Use when an existing repo has evidence spread across places like docs assets, review-board folders, repo-root artifacts, tmp folders, or legacy generated outputs and needs a canonical docs-root evidence structure such as `DOCS/evidence/` or `docs/evidence/` plus path/reference cleanup.
+description: Custom skill created by Maggie Lerman. Retrofit an existing repository from fragmented audit and artifact storage into a unified docs evidence system. Use when an existing repo has evidence spread across places like docs assets, review-board folders, repo-root artifacts, tmp folders, or legacy generated outputs and needs a canonical docs-root evidence structure such as `DOCS/evidence/` or `docs/evidence/` plus path/reference cleanup.
 ---
 
 # Docs Evidence Backfill
+
+Custom skill created by Maggie Lerman.
 
 Use this skill to retrofit an existing repo onto a unified evidence system.
 

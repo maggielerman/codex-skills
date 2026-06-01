@@ -1,0 +1,24 @@
+{
+  "name": "working-modes",
+  "version": "0.1.0",
+  "description": "Custom plugin created by Maggie Lerman. Choose the right collaboration posture for user-directed work.",
+  "author": {
+    "name": "Maggie Lerman"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Working Modes",
+    "shortDescription": "Choose the right collaboration posture for the current thread.",
+    "longDescription": "Local skill package created by Maggie Lerman for choosing among critical thinking, rapid iteration, and echo-chamber drift correction modes without adding mode-management overhead.",
+    "developerName": "Maggie Lerman",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Use working-modes to choose the right custom mode for this thread.",
+      "Use critical-thinking-partner to pressure-test this.",
+      "Use echo-chamber-drift-check to stop mirroring me and harden the answer."
+    ]
+  }
+}

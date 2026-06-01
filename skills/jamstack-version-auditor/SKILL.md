@@ -1,9 +1,11 @@
 ---
 name: jamstack-version-auditor
-description: 'Repo-aware version and upgrade assessment for JAMstack/frontend stacks. Use when checking Tailwind CSS, Eleventy/11ty, Build Awesome, Nunjucks, Alpine.js, PostCSS, Vite, Node, deployment, or static-site repo versions, latest stable releases, docs currency, or upgrade value.'
+description: 'Custom skill created by Maggie Lerman. Repo-aware version and upgrade assessment for JAMstack/frontend stacks. Use when checking Tailwind CSS, Eleventy/11ty, Build Awesome, Nunjucks, Alpine.js, PostCSS, Vite, Node, deployment, or static-site repo versions, latest stable releases, docs currency, or upgrade value.'
 ---
 
 # JAMstack Version Auditor
+
+Custom skill created by Maggie Lerman.
 
 Use this skill to make version awareness part of JAMstack work. The goal is not "always upgrade"; the goal is to know what the repo uses, know what is current, and make a careful recommendation.
 

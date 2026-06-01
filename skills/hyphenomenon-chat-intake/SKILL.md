@@ -1,10 +1,11 @@
 ---
 name: hyphenomenon-chat-intake
-author: Maggie Lerman
-description: Intake a ChatGPT, Codex, Cursor, Gemini, or other AI conversation into Hyphenomenon as a chat object. Use when a user asks to capture, import, archive, or publish a chat/session/transcript, especially when raw transcripts, created skills, created projects, created repos, related projects, validation, sync, or rendered chat routes are involved.
+description: Custom skill created by Maggie Lerman. Intake a ChatGPT, Codex, Cursor, Gemini, or other AI conversation into Hyphenomenon as a chat object. Use when a user asks to capture, import, archive, or publish a chat/session/transcript, especially when raw transcripts, created skills, created projects, created repos, related projects, validation, sync, or rendered chat routes are involved.
 ---
 
 # Hyphenomenon Chat Intake
+
+Custom skill created by Maggie Lerman.
 
 Create a durable, transcript-backed Hyphenomenon chat intake artifact.
 

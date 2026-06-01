@@ -1,10 +1,11 @@
 ---
 name: repo-implementation-review
-author: Maggie Lerman
-description: Review and compare 2-3 repositories that implement the same product idea, then generate a downloadable HTML comparison artifact with pros/cons, feature gaps, scores, recommendation paths, and CSV/PDF export options. Use when a user asks for side-by-side technical assessment of multiple implementation repos or wants a recommendation between competing codebases.
+description: Custom skill created by Maggie Lerman. Review and compare 2-3 repositories that implement the same product idea, then generate a downloadable HTML comparison artifact with pros/cons, feature gaps, scores, recommendation paths, and CSV/PDF export options. Use when a user asks for side-by-side technical assessment of multiple implementation repos or wants a recommendation between competing codebases.
 ---
 
 # Repo Implementation Review
+
+Custom skill created by Maggie Lerman.
 
 Assess two or three repositories independently and comparatively, then produce a report artifact the user can open and download.
 

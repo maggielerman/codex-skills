@@ -1,10 +1,11 @@
 ---
 name: github-docs-tracking-sync
-author: Maggie Lerman
-description: Optional docs-to-GitHub tracking sync (1027-style). Prefer manual/targeted use only when explicitly requested.
+description: Custom skill created by Maggie Lerman. Optional docs-to-GitHub tracking sync (1027-style). Prefer manual/targeted use only when explicitly requested.
 ---
 
 # GitHub Docs Tracking Sync (Optional / Low-Use)
+
+Custom skill created by Maggie Lerman.
 
 This skill is **optional** and should not run by default.
 

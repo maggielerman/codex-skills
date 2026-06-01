@@ -1,10 +1,11 @@
 ---
 name: docs-product-pack
-author: Maggie Lerman
-description: Deprecated shim. Use `product-operating-system-scaffold` for product-doc scaffolding, repo-native product operations, docs governance, evidence, and tooling in one workflow.
+description: Custom skill created by Maggie Lerman. Deprecated shim. Use `product-operating-system-scaffold` for product-doc scaffolding, repo-native product operations, docs governance, evidence, and tooling in one workflow.
 ---
 
 # Product Docs Pack (Deprecated)
+
+Custom skill created by Maggie Lerman.
 
 This skill is deprecated and retained only for backward compatibility.
 

@@ -1,10 +1,11 @@
 ---
 name: ux-ui-bug-intake
-author: Maggie Lerman
-description: Set up a lightweight UX/UI bug intake system with lifecycle docs, routing rules, and routines. Use when starting a new project stream, standardizing repo operations, or replacing ad hoc bug tracking with a simple docs-backed workflow.
+description: Custom skill created by Maggie Lerman. Set up a lightweight UX/UI bug intake system with lifecycle docs, routing rules, and routines. Use when starting a new project stream, standardizing repo operations, or replacing ad hoc bug tracking with a simple docs-backed workflow.
 ---
 
 # UX/UI Bug Intake
+
+Custom skill created by Maggie Lerman.
 
 ## Overview
 

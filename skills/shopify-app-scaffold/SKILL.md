@@ -1,10 +1,11 @@
 ---
 name: shopify-app-scaffold
-author: Maggie Lerman
-description: Scaffold a new Shopify app from the latest installed Shopify CLI template, then layer in a reusable shell for merchant email opt-in, unsubscribe flow, review prompts, and optional billing/app-proxy/theme-extension placeholders. Use when creating a new Shopify app quickly without copying an old repo wholesale.
+description: Custom skill created by Maggie Lerman. Scaffold a new Shopify app from the latest installed Shopify CLI template, then layer in a reusable shell for merchant email opt-in, unsubscribe flow, review prompts, and optional billing/app-proxy/theme-extension placeholders. Use when creating a new Shopify app quickly without copying an old repo wholesale.
 ---
 
 # Shopify App Scaffold
+
+Custom skill created by Maggie Lerman.
 
 Use this skill when the user wants a new Shopify app created fast, but still wants a reusable shell for common app concerns like merchant comms and review prompts.
 

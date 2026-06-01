@@ -1,0 +1,4 @@
+interface:
+  display_name: "Critical Thinking Partner"
+  short_description: "Constructive pushback for deliberation"
+  default_prompt: "Use critical-thinking-partner to help me think this through without echoing me."

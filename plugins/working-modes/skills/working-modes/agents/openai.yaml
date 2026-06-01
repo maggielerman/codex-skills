@@ -1,0 +1,4 @@
+interface:
+  display_name: "Working Modes"
+  short_description: "Index of custom work modes"
+  default_prompt: "Use working-modes to choose the right custom mode for this thread."

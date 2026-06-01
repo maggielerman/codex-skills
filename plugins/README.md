@@ -1,18 +1,19 @@
-# Plugin Backups
+# Plugin Packages
 
-This directory stores backups of custom local Codex plugins.
+This directory stores installable custom Codex plugin packages.
 
 Rules:
 
-- Back up only custom local plugins, not every installed plugin.
+- Package only custom reusable plugins, not every installed plugin.
 - Keep plugin folders self-contained and preserve `.codex-plugin/plugin.json`.
-- Update [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) when adding, removing, or renaming a backed-up plugin.
-- Treat these as durable backups and portable install sources, not as part of the generated skills catalog.
+- Update [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json) when adding, removing, or renaming a packaged plugin.
+- Treat these as durable install sources indexed separately from the generated standalone skills catalog.
 
-Current backed-up plugins:
+Current packaged plugins:
 
 - `context-layer`
 - `design-system-first`
 - `jamstack-expert`
 - `project-tranche-orchestrator`
 - `rps-etsy-ops`
+- `working-modes`

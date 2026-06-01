@@ -1,9 +1,11 @@
 ---
 name: "tmora-print-proof-deck"
-description: "Use when creating or revising TMORA, The Museum of Russian Art, print proof PDFs or option decks for Mary, museum gift-shop print files, postcard fronts/backs, 11x17 proofs, or packaging/layout option review."
+description: "Custom skill created by Maggie Lerman. Use when creating or revising TMORA, The Museum of Russian Art, print proof PDFs or option decks for Mary, museum gift-shop print files, postcard fronts/backs, 11x17 proofs, or packaging/layout option review."
 ---
 
 # TMORA Print Proof Deck
+
+Custom skill created by Maggie Lerman.
 
 Use this skill for client-facing TMORA proof PDFs that show print files, sizes, front/back options, and recommendations. The goal is an editorial proof deck Mary can inspect quickly, not a contact sheet or a generic gallery.
 
@@ -19,6 +21,7 @@ Use this skill for client-facing TMORA proof PDFs that show print files, sizes, 
 2. One proof page per SKU/artwork. Do not add overview/contact-sheet pages unless the user asks.
 3. Each proof page groups all related assets for that SKU:
    - 11x17 print and 11x17 info card, if present.
+   - 4x6 info card, if present.
    - 4x6 front options, if present.
    - postcard backs, labeled `Back A` and `Back B`.
 4. Include a source manifest CSV beside the PDF.
@@ -28,6 +31,7 @@ Use this skill for client-facing TMORA proof PDFs that show print files, sizes, 
 - Use TMORA charcoal background, gold accents, cream text, square edges, and no decorative shadows or gradients.
 - Use serif for artist/artwork metadata, sans serif for proof labels and small structural text.
 - Keep proof labels small, sans serif, uppercase, and gold. Examples: `4X6 A`, `4X6 B`, `BACK A`, `BACK B`, `11X17 INFO CARD`.
+  Use `4X6 INFO CARD` when the info-card asset is a postcard-size card.
 - Do not show raw filenames under proof images in the client deck.
 - Footer rules are acceptable on proof pages. Do not put a footer on the cover if the user wants the cleaner reference style.
 
@@ -56,6 +60,8 @@ Set the column width so text wraps automatically inside the available left colum
 - All 4x6 components on the same page must share the same physical scale.
 - Portrait 4x6 fronts and info backs should render at the same dimensions.
 - Landscape postal backs should render as the same scale rotated, not visually larger or smaller.
+- Landscape and portrait 11x17 artwork options should render at the same physical 11x17 scale; labels should sit just above the rendered artwork, not at the top of a larger fitting box.
+- Info-card assets named like `TMORA###-info-card.png` should render at 4x6 scale unless the asset path or name explicitly marks it as 11x17.
 - Do not let image-fit logic make same-size proofs appear different just because one is portrait and another is landscape.
 
 ## Asset Grouping

@@ -4,7 +4,7 @@ import type { CatalogItem } from './catalog-types';
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
   "skillCount": 55,
-  "pluginCount": 5,
+  "pluginCount": 6,
   "items": [
     {
       "slug": "catalog-review",
@@ -906,14 +906,14 @@ export const catalog = {
       "folder": "critical-thinking-partner",
       "status": "active",
       "summary": "Constructive pushback for deliberation",
-      "description": "Custom skill created by Maggie Lerman. Use when Maggie asks for critical thinking, critical thinking mode, pressure testing mode, pressure-test this, a sounding board, help thinking something through, an opinion, what she is missing, whether an idea makes sense, or shows uncertainty while brainstorming, planning, choosing direction, weighing tradeoffs, or deciding how to execute product, design, strategy, workflow, skill, plugin, UI, UX, marketing, visual, or system-shaping work. Do not use for concrete task lists, straightforward implementation, command output, or rapid execution unless explicitly requested.",
+      "description": "Custom skill created by Maggie Lerman. Use when the user asks for critical thinking, critical thinking mode, pressure testing mode, pressure-test this, a sounding board, help thinking something through, an opinion, what they are missing, whether an idea makes sense, or shows uncertainty while brainstorming, planning, choosing direction, weighing tradeoffs, or deciding how to execute product, design, strategy, workflow, skill, plugin, UI, UX, marketing, visual, or system-shaping work. Do not use for concrete task lists, straightforward implementation, command output, or rapid execution unless explicitly requested.",
       "category": "Documentation systems",
       "path": "skills/critical-thinking-partner",
       "resources": [
         "agent metadata"
       ],
       "useCases": [
-        "Maggie asks for critical thinking",
+        "The user asks for critical thinking",
         "Critical thinking mode",
         "Pressure testing mode",
         "Pressure-test this",
@@ -938,16 +938,16 @@ export const catalog = {
       "folder": "echo-chamber-drift-check",
       "status": "active",
       "summary": "Reset mirroring into independent judgment",
-      "description": "Custom skill created by Maggie Lerman. Use when Maggie says the assistant is echoing, mirroring, repeating her back, falling into an echo chamber, over-validating, being too agreeable, polishing instead of thinking, missing the point, needing a reset, needing to harden an answer, or asks for an echo-chamber drift check. This is a recovery/reset skill for replacing reflective validation with independent judgment.",
+      "description": "Custom skill created by Maggie Lerman. Use when the user says the assistant is echoing, mirroring, repeating them back, falling into an echo chamber, over-validating, being too agreeable, polishing instead of thinking, missing the point, needing a reset, needing to harden an answer, or asks for an echo-chamber drift check. This is a recovery/reset skill for replacing reflective validation with independent judgment.",
       "category": "Agent workflow accelerators",
       "path": "skills/echo-chamber-drift-check",
       "resources": [
         "agent metadata"
       ],
       "useCases": [
-        "Maggie says the assistant is echoing",
+        "The user says the assistant is echoing",
         "Mirroring",
-        "Repeating her back",
+        "Repeating them back",
         "Falling into an echo chamber",
         "Over-validating"
       ],
@@ -1696,15 +1696,15 @@ export const catalog = {
       "title": "Working Modes",
       "folder": "working-modes",
       "status": "active",
-      "summary": "Index of Maggie custom work modes",
-      "description": "Custom skill created by Maggie Lerman. Lightweight index of Maggie's custom working modes. Use when Maggie asks what modes exist, wants to switch modes, mentions mode switcher, working modes, custom modes, pressure testing mode, critical thinking mode, rapid iteration mode, echo-chamber reset, or needs help choosing between critical deliberation, rapid iteration, and drift correction. This is an index, not a dispatcher plugin.",
+      "summary": "Index of custom work modes",
+      "description": "Custom skill created by Maggie Lerman. Lightweight index of custom working modes. Use when the user asks what modes exist, wants to switch modes, mentions mode switcher, working modes, custom modes, pressure testing mode, critical thinking mode, rapid iteration mode, echo-chamber reset, or needs help choosing between critical deliberation, rapid iteration, and drift correction. This is an index, not a dispatcher plugin.",
       "category": "Agent workflow accelerators",
       "path": "skills/working-modes",
       "resources": [
         "agent metadata"
       ],
       "useCases": [
-        "Maggie asks what modes exist",
+        "The user asks what modes exist",
         "Switch modes",
         "Mentions mode switcher",
         "Working modes",
@@ -1742,7 +1742,7 @@ export const catalog = {
         "Use $maggie-todo to surface and resolve Maggie-owned follow-ups."
       ],
       "gettingStarted": [
-        "Install the complete plugin folder from the public repo or local backup.",
+        "Install the complete plugin folder from the public repo or local checkout.",
         "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
         "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],
@@ -1772,7 +1772,7 @@ export const catalog = {
         "Refine this starter's tokens, hierarchy, and surfaces."
       ],
       "gettingStarted": [
-        "Install the complete plugin folder from the public repo or local backup.",
+        "Install the complete plugin folder from the public repo or local checkout.",
         "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
         "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],
@@ -1803,7 +1803,7 @@ export const catalog = {
         "Audit this JAMstack repo for stale dependencies."
       ],
       "gettingStarted": [
-        "Install the complete plugin folder from the public repo or local backup.",
+        "Install the complete plugin folder from the public repo or local checkout.",
         "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
         "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],
@@ -1834,7 +1834,7 @@ export const catalog = {
         "Split the next tranche into safe subagent assignments."
       ],
       "gettingStarted": [
-        "Install the complete plugin folder from the public repo or local backup.",
+        "Install the complete plugin folder from the public repo or local checkout.",
         "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
         "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],
@@ -1865,7 +1865,36 @@ export const catalog = {
         "Create an RPS digital product packet plan."
       ],
       "gettingStarted": [
-        "Install the complete plugin folder from the public repo or local backup.",
+        "Install the complete plugin folder from the public repo or local checkout.",
+        "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
+        "Start from one suggested prompt, then add the target repo path and desired deliverable."
+      ],
+      "troubleshooting": [
+        "If the plugin does not appear, confirm .codex-plugin/plugin.json is present and the plugin registry points to the folder.",
+        "If a plugin skill cannot find scripts or assets, the plugin folder was likely flattened or partially copied.",
+        "If the workflow is too broad, rerun with a narrower deliverable and explicit no-touch files."
+      ]
+    },
+    {
+      "slug": "working-modes",
+      "kind": "plugin",
+      "title": "Working Modes",
+      "folder": "working-modes",
+      "status": "available",
+      "summary": "Choose the right collaboration posture for the current thread.",
+      "description": "Local skill package created by Maggie Lerman for choosing among critical thinking, rapid iteration, and echo-chamber drift correction modes without adding mode-management overhead.",
+      "category": "Productivity",
+      "path": "plugins/working-modes",
+      "resources": [
+        "Interactive capability"
+      ],
+      "useCases": [
+        "Use working-modes to choose the right custom mode for this thread.",
+        "Use critical-thinking-partner to pressure-test this.",
+        "Use echo-chamber-drift-check to stop mirroring me and harden the answer."
+      ],
+      "gettingStarted": [
+        "Install the complete plugin folder from the public repo or local checkout.",
         "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
         "Start from one suggested prompt, then add the target repo path and desired deliverable."
       ],

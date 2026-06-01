@@ -1,10 +1,11 @@
 ---
 name: "codex-to-claude-handoff"
-author: Maggie Lerman
-description: "Prepare a repository for Claude Code Desktop by generating CLAUDE.md, .claude/rules/*.md, and .claude/settings.json from existing Codex instruction files (especially AGENTS.md and .github/copilot-instructions.md). Use when migrating or handing off a repo from Codex to Claude while preserving operating rules and safety guardrails."
+description: "Custom skill created by Maggie Lerman. Prepare a repository for Claude Code Desktop by generating CLAUDE.md, .claude/rules/*.md, and .claude/settings.json from existing Codex instruction files (especially AGENTS.md and .github/copilot-instructions.md). Use when migrating or handing off a repo from Codex to Claude while preserving operating rules and safety guardrails."
 ---
 
 # Codex to Claude Handoff
+
+Custom skill created by Maggie Lerman.
 
 Create Claude Code project files that mirror Codex repository rules.
 Use this skill when the user wants Claude Code to follow the same repo policies Codex uses.

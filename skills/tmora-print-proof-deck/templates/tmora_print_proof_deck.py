@@ -17,6 +17,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -33,6 +34,8 @@ MARGIN_X = 70
 FOOTER_Y = 44
 CARD_SHORT = 116
 CARD_LONG = 174
+POSTER_SHORT = 125
+POSTER_LONG = round(POSTER_SHORT * 17 / 11)
 
 CHARCOAL = "#2A2725"
 GOLD = "#B19149"
@@ -180,6 +183,10 @@ def page_base(c: canvas.Canvas, footer_label: str, show_footer: bool = True) -> 
 
 
 def infer_code(path: Path, code_order: list[str], back_prefix_to_code: dict[str, str]) -> str:
+    for part in reversed(path.parts):
+        part_upper = part.upper()
+        if part_upper in {code.upper() for code in code_order}:
+            return next(code for code in code_order if code.upper() == part_upper)
     upper = path.name.upper()
     for code in code_order:
         if code.upper() in upper:
@@ -205,6 +212,10 @@ def infer_kind(path: Path) -> str:
     if "postcard fronts" in parts:
         return "4x6 front"
     name = path.name.lower()
+    if "info-card" in name or "info_card" in name:
+        if "11x17" in name or "11x17" in parts:
+            return "11x17 info card"
+        return "4x6 info card"
     if "postal" in name:
         return "4x6 postal back"
     if "back" in name:
@@ -226,9 +237,9 @@ def infer_size(kind: str) -> str:
 
 def infer_option(path: Path, kind: str) -> str:
     name = path.stem.lower()
-    if "option-a" in name or name.endswith("-a"):
+    if "option-a" in name or re.search(r"[-_]a$", name):
         return "A"
-    if "option-b" in name or name.endswith("-b"):
+    if "option-b" in name or re.search(r"[-_]b$", name):
         return "B"
     if "postal" in kind:
         return "Postal back"
@@ -292,13 +303,19 @@ def by_code(assets: list[ProofAsset], code_order: list[str]) -> dict[str, list[P
     return ordered
 
 
-def image_fit(c: canvas.Canvas, asset: ProofAsset, x: float, y: float, w: float, h: float) -> None:
+def fitted_rect(asset: ProofAsset, x: float, y: float, w: float, h: float) -> tuple[float, float, float, float]:
     ratio = min(w / asset.width, h / asset.height)
     draw_w = asset.width * ratio
     draw_h = asset.height * ratio
     draw_x = x + (w - draw_w) / 2
-    draw_y = y + (h - draw_h) / 2
+    draw_y = y
+    return draw_x, draw_y, draw_w, draw_h
+
+
+def image_fit(c: canvas.Canvas, asset: ProofAsset, x: float, y: float, w: float, h: float) -> tuple[float, float, float, float]:
+    draw_x, draw_y, draw_w, draw_h = fitted_rect(asset, x, y, w, h)
     c.drawImage(ImageReader(str(asset.optimized_path)), draw_x, draw_y, draw_w, draw_h, preserveAspectRatio=True, mask="auto")
+    return draw_x, draw_y, draw_w, draw_h
 
 
 def recommended_badge(c: canvas.Canvas, x: float, y: float) -> None:
@@ -310,18 +327,25 @@ def recommended_badge(c: canvas.Canvas, x: float, y: float) -> None:
 
 
 def labeled_image(c: canvas.Canvas, asset: ProofAsset, x: float, y: float, w: float, h: float, label: str, recommended: bool = False) -> None:
+    draw_x, draw_y, draw_w, draw_h = fitted_rect(asset, x, y, w, h)
     fill(c, GOLD)
     c.setFont(SANS_BOLD, 8.8)
-    c.drawString(x, y + h + 10, label.upper())
+    c.drawString(draw_x, draw_y + draw_h + 10, label.upper())
     image_fit(c, asset, x, y, w, h)
     if recommended:
-        recommended_badge(c, x, y - 25)
+        recommended_badge(c, draw_x, y - 25)
 
 
 def card_dims(asset: ProofAsset) -> tuple[float, float]:
     if asset.width > asset.height:
         return CARD_LONG, CARD_SHORT
     return CARD_SHORT, CARD_LONG
+
+
+def poster_dims(asset: ProofAsset) -> tuple[float, float]:
+    if asset.width > asset.height:
+        return POSTER_LONG, POSTER_SHORT
+    return POSTER_SHORT, POSTER_LONG
 
 
 def labeled_card(c: canvas.Canvas, asset: ProofAsset, x: float, y: float, label: str, recommended: bool = False) -> None:
@@ -352,7 +376,9 @@ def cover(c: canvas.Canvas, title: str, date: str, prepared_by: str) -> None:
         c.drawString(84, 406, date)
     if prepared_by:
         c.drawString(84, 103, "Prepared by")
-        draw_wrapped(c, prepared_by, 84, 82, 240, SANS, 8.5, 16, MUTED)
+        y = 82
+        for line in prepared_by.splitlines():
+            y = draw_wrapped(c, line, 84, y, 240, SANS, 8.5, 16, MUTED)
 
 
 def left_info_panel(c: canvas.Canvas, code: str, files: list[ProofAsset], metadata: dict) -> None:
@@ -405,6 +431,7 @@ def proof_page(c: canvas.Canvas, code: str, files: list[ProofAsset], metadata: d
     fronts_11 = sorted([a for a in files if a.kind == "11x17 print"], key=lambda a: a.option_label)
     fronts_4 = sorted([a for a in files if a.kind == "4x6 front"], key=lambda a: a.option_label)
     info_11 = [a for a in files if a.kind == "11x17 info card"]
+    info_cards = [a for a in files if a.kind == "4x6 info card"]
     info_backs = [a for a in files if a.kind == "4x6 info back"]
     postal_backs = [a for a in files if a.kind == "4x6 postal back"]
 
@@ -413,10 +440,16 @@ def proof_page(c: canvas.Canvas, code: str, files: list[ProofAsset], metadata: d
     top_y = 410
     if fronts_11:
         for asset in fronts_11:
-            labeled_image(c, asset, x, top_y, 125, 190, front_label(asset), recommended=has_front_options and asset.option_label == recommended_option)
-            x += 145
+            w, h = poster_dims(asset)
+            labeled_image(c, asset, x, top_y, w, h, front_label(asset), recommended=has_front_options and asset.option_label == recommended_option)
+            x += w + 35
         for asset in info_11:
-            labeled_image(c, asset, x, top_y + 30, 180, 120, "11x17 info card")
+            labeled_image(c, asset, x, top_y, 180, 120, "11x17 info card")
+            x += 212
+        for asset in info_cards:
+            w, h = card_dims(asset)
+            labeled_image(c, asset, x, top_y, w, h, "4x6 info card")
+            x += w + 32
     else:
         for asset in fronts_4:
             labeled_card(c, asset, x, top_y, front_label(asset), recommended=has_front_options and asset.option_label == recommended_option)
@@ -427,10 +460,10 @@ def proof_page(c: canvas.Canvas, code: str, files: list[ProofAsset], metadata: d
     if fronts_11 and fronts_4:
         for asset in fronts_4:
             labeled_card(c, asset, x, bottom_y, front_label(asset), recommended=has_front_options and asset.option_label == recommended_option)
-            x += 148
+            x += card_dims(asset)[0] + 32
     for asset in info_backs:
         labeled_card(c, asset, x, bottom_y, "Back A")
-        x += 148
+        x += card_dims(asset)[0] + 32
     for asset in postal_backs:
         labeled_card(c, asset, x, bottom_y, "Back B")
 

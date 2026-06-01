@@ -1,10 +1,11 @@
 ---
 name: plan-signoff-review
-author: Maggie Lerman
-description: Review a proposed final plan against the full current thread and the latest supporting audits, reports, and decision artifacts before approval. Use when the user asks to double-check that a plan reflects everything discussed, incorporates the newest review documents, or needs a final readiness pass in an existing Plan mode thread.
+description: Custom skill created by Maggie Lerman. Review a proposed final plan against the full current thread and the latest supporting audits, reports, and decision artifacts before approval. Use when the user asks to double-check that a plan reflects everything discussed, incorporates the newest review documents, or needs a final readiness pass in an existing Plan mode thread.
 ---
 
 # Plan Signoff Review
+
+Custom skill created by Maggie Lerman.
 
 Rebuild the review from primary source context instead of trusting compressed summaries. Use this only after a draft plan already exists and the thread is already operating in Plan mode.
 

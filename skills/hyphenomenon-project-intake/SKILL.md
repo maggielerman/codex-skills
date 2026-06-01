@@ -1,10 +1,11 @@
 ---
 name: hyphenomenon-project-intake
-author: Maggie Lerman
-description: Create a Hyphenomenon import-ready project intake package (single markdown dossier plus 4-8 screenshots) for a software repository. Use when a user asks to prepare a repo for import as a project + graph nodes, especially when they require exact dossier section headers, screenshot gallery links, hydration artifacts, workflow summaries, and a handoff checklist.
+description: Custom skill created by Maggie Lerman. Create a Hyphenomenon import-ready project intake package (single markdown dossier plus 4-8 screenshots) for a software repository. Use when a user asks to prepare a repo for import as a project + graph nodes, especially when they require exact dossier section headers, screenshot gallery links, hydration artifacts, workflow summaries, and a handoff checklist.
 ---
 
 # Hyphenomenon Project Intake
+
+Custom skill created by Maggie Lerman.
 
 Build a repeatable dossier + screenshot package for Hyphenomenon import.
 

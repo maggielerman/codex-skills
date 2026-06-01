@@ -1,9 +1,11 @@
 ---
 name: review-board-operating-pattern
-description: Repo-agnostic visual review-board operating pattern for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into bounded apply/verify passes with evidence artifacts. Use when asked to create review boards, compare visual options, audit UI/screenshots/content/assets, prepare a human review packet, or apply numbered review corrections.
+description: Custom skill created by Maggie Lerman. Repo-agnostic visual review-board operating pattern for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into bounded apply/verify passes with evidence artifacts. Use when asked to create review boards, compare visual options, audit UI/screenshots/content/assets, prepare a human review packet, or apply numbered review corrections.
 ---
 
 # Review Board Operating Pattern
+
+Custom skill created by Maggie Lerman.
 
 Use this skill when work should be driven by a human-reviewed visual packet rather than by blind automation.
 

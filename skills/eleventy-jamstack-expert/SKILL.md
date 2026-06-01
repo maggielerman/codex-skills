@@ -1,9 +1,11 @@
 ---
 name: eleventy-jamstack-expert
-description: 'Eleventy/11ty, Build Awesome, Nunjucks, and JAMstack expert workflow. Use when working with .eleventy.*, eleventy.config.*, @11ty/eleventy, Build Awesome/Pro, .njk, Nunjucks includes/macros/layouts, _data, _includes, collections, pagination, shortcodes, filters, static assets, or deployments.'
+description: 'Custom skill created by Maggie Lerman. Eleventy/11ty, Build Awesome, Nunjucks, and JAMstack expert workflow. Use when working with .eleventy.*, eleventy.config.*, @11ty/eleventy, Build Awesome/Pro, .njk, Nunjucks includes/macros/layouts, _data, _includes, collections, pagination, shortcodes, filters, static assets, or deployments.'
 ---
 
 # Eleventy JAMstack Expert
+
+Custom skill created by Maggie Lerman.
 
 Use this skill to work as an Eleventy/Nunjucks/JAMstack specialist. Treat Build Awesome as the continuation/rebrand path for Eleventy, with Build Awesome Pro as optional paid workflow/services on top. Favor static-first architecture, small build-time data transforms, clear template composition, and progressive enhancement over app-like client complexity.
 

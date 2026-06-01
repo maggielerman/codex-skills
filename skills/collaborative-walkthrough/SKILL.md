@@ -1,10 +1,11 @@
 ---
 name: collaborative-walkthrough
-author: Maggie Lerman
-description: Run a structured Q&A walkthrough for in-review project streams in repos with standardized docs scaffolding. Use when a user asks for collaborative walkthrough, sign-off review, or readiness check before moving projects to completed.
+description: Custom skill created by Maggie Lerman. Run a structured Q&A walkthrough for in-review project streams in repos with standardized docs scaffolding. Use when a user asks for collaborative walkthrough, sign-off review, or readiness check before moving projects to completed.
 ---
 
 # Collaborative Walkthrough
+
+Custom skill created by Maggie Lerman.
 
 ## Overview
 

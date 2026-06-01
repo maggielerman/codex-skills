@@ -1,10 +1,11 @@
 ---
 name: continue-until-blocked
-author: Maggie Lerman
-description: Execute already-scoped repository work autonomously until the cutover is complete or a true blocker requires user input. Use when the user says to keep going without intervention, continue until blocked, finish the cutover, or otherwise hand the thread continuous execution authority. Assume the current thread already understands the repository and approved scope, and assume project docs follow the standard docs scaffolding with governance files and status-based project docs.
+description: Custom skill created by Maggie Lerman. Execute already-scoped repository work autonomously until the cutover is complete or a true blocker requires user input. Use when the user says to keep going without intervention, continue until blocked, finish the cutover, or otherwise hand the thread continuous execution authority. Assume the current thread already understands the repository and approved scope, and assume project docs follow the standard docs scaffolding with governance files and status-based project docs.
 ---
 
 # Continue Until Blocked
+
+Custom skill created by Maggie Lerman.
 
 Execute the next approved work continuously instead of pausing for routine check-ins.
 

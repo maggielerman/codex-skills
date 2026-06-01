@@ -1,9 +1,11 @@
 ---
 name: tailwindcss-expert
-description: 'Tailwind CSS expert workflow for utility-first inline classes. Use when working with Tailwind repos/files: tailwind.config.*, @import "tailwindcss", @theme/@apply, class/className utilities, PostCSS/Vite setup, shadcn-style utilities, or default Tailwind UI styling.'
+description: 'Custom skill created by Maggie Lerman. Tailwind CSS expert workflow for utility-first inline classes. Use when working with Tailwind repos/files: tailwind.config.*, @import "tailwindcss", @theme/@apply, class/className utilities, PostCSS/Vite setup, shadcn-style utilities, or default Tailwind UI styling.'
 ---
 
 # Tailwind CSS Expert
+
+Custom skill created by Maggie Lerman.
 
 Use this skill to make Tailwind utility classes in markup the default styling surface. Treat repo conventions as authoritative, but prefer inline utilities over new CSS selectors, CSS modules, styled components, or broad custom styles unless the existing system clearly requires them.
 

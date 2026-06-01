@@ -1,10 +1,11 @@
 ---
 name: product-operating-system-scaffold
-author: Maggie Lerman
-description: Scaffold or standardize a comprehensive repo-native product operating system for human-agent teams. Installs the docs root, project lifecycle model, governance files, agent instructions, ROADMAP/CHANGELOG control plane, evidence system, docs automation scripts, timestamp/checkpoint rules, visual design critique gates, optional VitePress docs site, optional product-doc pack, optional PROJECTS dashboard, and optional repo-agnostic review-board workflow. Use when asked for product operating system setup, repo-native product management, agent-readable project memory, lifecycle/governance scaffolding, evidence-system setup, docs-site setup, product docs, project dashboards, visual/design quality gates, or review-board scaffolding.
+description: Custom skill created by Maggie Lerman. Scaffold or standardize a comprehensive repo-native product operating system for human-agent teams. Installs the docs root, project lifecycle model, governance files, agent instructions, ROADMAP/CHANGELOG control plane, evidence system, docs automation scripts, timestamp/checkpoint rules, visual design critique gates, optional VitePress docs site, optional product-doc pack, optional PROJECTS dashboard, and optional repo-agnostic review-board workflow. Use when asked for product operating system setup, repo-native product management, agent-readable project memory, lifecycle/governance scaffolding, evidence-system setup, docs-site setup, product docs, project dashboards, visual/design quality gates, or review-board scaffolding.
 ---
 
 # Product Operating System Scaffold
+
+Custom skill created by Maggie Lerman.
 
 ## Overview
 Create or standardize a comprehensive repo-native product operating system with safe-write behavior. This is not just documentation scaffolding. It turns a repository into the shared operating layer for product intent, project state, agent instructions, evidence, checkpoints, review, and launch memory.

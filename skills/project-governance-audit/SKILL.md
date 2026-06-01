@@ -1,10 +1,11 @@
 ---
 name: project-governance-audit
-author: Maggie Lerman
-description: Run a governance audit across project planning docs and roadmap artifacts. Use for blocker/dependency/order analysis, strategy consistency checks, and checkpoint-quality enforcement with file-backed evidence.
+description: Custom skill created by Maggie Lerman. Run a governance audit across project planning docs and roadmap artifacts. Use for blocker/dependency/order analysis, strategy consistency checks, and checkpoint-quality enforcement with file-backed evidence.
 ---
 
 # Project Governance Audit
+
+Custom skill created by Maggie Lerman.
 
 Audit non-completed project streams and roadmap sequencing with a deterministic, evidence-first workflow.
 

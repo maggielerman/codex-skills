@@ -130,7 +130,7 @@ def plugin_doc(plugin_json: Path) -> dict:
         "resources": [f"{capability} capability" for capability in capabilities] or ["plugin package"],
         "useCases": prompts[:5] or [data.get("description", "Use this plugin when its workflow matches your target repo.")],
         "gettingStarted": [
-            "Install the complete plugin folder from the public repo or local backup.",
+            "Install the complete plugin folder from the public repo or local checkout.",
             "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
             "Start from one suggested prompt, then add the target repo path and desired deliverable.",
         ],

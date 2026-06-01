@@ -1,10 +1,11 @@
 ---
 name: cluster-assignment
-author: Maggie Lerman
-description: Split repository work into dependency-safe parallel clusters, then bootstrap branches/worktrees, GitHub tracking issues, and ready-to-run agent prompts. Use when a user asks to run multiple agents in parallel or wants branch/worktree cluster setup.
+description: Custom skill created by Maggie Lerman. Split repository work into dependency-safe parallel clusters, then bootstrap branches/worktrees, GitHub tracking issues, and ready-to-run agent prompts. Use when a user asks to run multiple agents in parallel or wants branch/worktree cluster setup.
 ---
 
 # Cluster Assignment
+
+Custom skill created by Maggie Lerman.
 
 ## Overview
 

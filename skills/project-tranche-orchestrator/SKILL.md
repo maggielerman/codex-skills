@@ -1,12 +1,13 @@
 ---
 name: project-tranche-orchestrator
-author: Maggie Lerman
-description: Act as the primary project manager and agent orchestrator for repos using the standard docs scaffold. Use when the user wants one primary agent to read project docs, derive the next tranche, delegate bounded work to subagents, manage handoffs, review completion, and write status updates back into the existing docs without creating a second source of truth.
+description: Custom skill created by Maggie Lerman. Act as the primary project manager and agent orchestrator for repos using the standard docs scaffold. Use when the user wants one primary agent to read project docs, derive the next tranche, delegate bounded work to subagents, manage handoffs, review completion, and write status updates back into the existing docs without creating a second source of truth.
 metadata:
   short-description: Primary-agent tranche orchestration for docs-scaffold repos
 ---
 
 # Project Tranche Orchestrator
+
+Custom skill created by Maggie Lerman.
 
 Treat the primary agent as the only interface the user needs to manage. The primary agent owns tranche selection, subagent delegation, review synthesis, and docs writeback.
 
