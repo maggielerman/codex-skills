@@ -3,7 +3,7 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 52,
+  "skillCount": 55,
   "pluginCount": 5,
   "items": [
     {
@@ -13,7 +13,7 @@ export const catalog = {
       "folder": "catalog-review",
       "status": "active",
       "summary": "Run numbered Shopify-first catalog review workflows",
-      "description": "Standard Shopify-first catalog review workflow for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review boards, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.",
+      "description": "Custom skill created by Maggie Lerman. Standard Shopify-first catalog review workflow for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review boards, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.",
       "category": "Storefront and commerce",
       "path": "skills/catalog-review",
       "resources": [
@@ -45,7 +45,7 @@ export const catalog = {
       "folder": "cluster-assignment",
       "status": "active",
       "summary": "Plan and bootstrap parallel work clusters",
-      "description": "Split repository work into dependency-safe parallel clusters, then bootstrap branches/worktrees, GitHub tracking issues, and ready-to-run agent prompts. Use when a user asks to run multiple agents in parallel or wants branch/worktree cluster setup.",
+      "description": "Custom skill created by Maggie Lerman. Split repository work into dependency-safe parallel clusters, then bootstrap branches/worktrees, GitHub tracking issues, and ready-to-run agent prompts. Use when a user asks to run multiple agents in parallel or wants branch/worktree cluster setup.",
       "category": "Repository setup",
       "path": "skills/cluster-assignment",
       "resources": [
@@ -76,7 +76,7 @@ export const catalog = {
       "folder": "codex-to-claude-handoff",
       "status": "active",
       "summary": "Mirror Codex rules into Claude setup + docs",
-      "description": "Prepare a repository for Claude Code Desktop by generating CLAUDE.md, .claude/rules/*.md, and .claude/settings.json from existing Codex instruction files (especially AGENTS.md and .github/copilot-instructions.md). Use when migrating or handing off a repo from Codex to Claude while preserving operating rules and safety guardrails.",
+      "description": "Custom skill created by Maggie Lerman. Prepare a repository for Claude Code Desktop by generating CLAUDE.md, .claude/rules/*.md, and .claude/settings.json from existing Codex instruction files (especially AGENTS.md and .github/copilot-instructions.md). Use when migrating or handing off a repo from Codex to Claude while preserving operating rules and safety guardrails.",
       "category": "Repository setup",
       "path": "skills/codex-to-claude-handoff",
       "resources": [
@@ -107,7 +107,7 @@ export const catalog = {
       "folder": "collaborative-walkthrough",
       "status": "active",
       "summary": "Run Q&A walkthrough on in-review projects",
-      "description": "Run a structured Q&A walkthrough for in-review project streams in repos with standardized docs scaffolding. Use when a user asks for collaborative walkthrough, sign-off review, or readiness check before moving projects to completed.",
+      "description": "Custom skill created by Maggie Lerman. Run a structured Q&A walkthrough for in-review project streams in repos with standardized docs scaffolding. Use when a user asks for collaborative walkthrough, sign-off review, or readiness check before moving projects to completed.",
       "category": "Delivery governance",
       "path": "skills/collaborative-walkthrough",
       "resources": [
@@ -138,7 +138,7 @@ export const catalog = {
       "folder": "continue-until-blocked",
       "status": "active",
       "summary": "Run autonomously until cutover or blocker",
-      "description": "Execute already-scoped repository work autonomously until the cutover is complete or a true blocker requires user input. Use when the user says to keep going without intervention, continue until blocked, finish the cutover, or otherwise hand the thread continuous execution authority. Assume the current thread already understands the repository and approved scope, and assume project docs follow the standard docs scaffolding with governance files and status-based project docs.",
+      "description": "Custom skill created by Maggie Lerman. Execute already-scoped repository work autonomously until the cutover is complete or a true blocker requires user input. Use when the user says to keep going without intervention, continue until blocked, finish the cutover, or otherwise hand the thread continuous execution authority. Assume the current thread already understands the repository and approved scope, and assume project docs follow the standard docs scaffolding with governance files and status-based project docs.",
       "category": "Delivery governance",
       "path": "skills/continue-until-blocked",
       "resources": [
@@ -170,7 +170,7 @@ export const catalog = {
       "folder": "docs-evidence-backfill",
       "status": "active",
       "summary": "Retrofit an existing repo onto a unified docs evidence system",
-      "description": "Retrofit an existing repository from fragmented audit and artifact storage into a unified docs evidence system. Use when an existing repo has evidence spread across places like docs assets, review-board folders, repo-root artifacts, tmp folders, or legacy generated outputs and needs a canonical docs-root evidence structure such as `DOCS/evidence/` or `docs/evidence/` plus path/reference cleanup.",
+      "description": "Custom skill created by Maggie Lerman. Retrofit an existing repository from fragmented audit and artifact storage into a unified docs evidence system. Use when an existing repo has evidence spread across places like docs assets, review-board folders, repo-root artifacts, tmp folders, or legacy generated outputs and needs a canonical docs-root evidence structure such as `DOCS/evidence/` or `docs/evidence/` plus path/reference cleanup.",
       "category": "Documentation systems",
       "path": "skills/docs-evidence-backfill",
       "resources": [
@@ -203,7 +203,7 @@ export const catalog = {
       "folder": "docs-product-pack",
       "status": "deprecated",
       "summary": "Deprecated; redirects to Product Operating System Scaffold",
-      "description": "Deprecated shim. Use `product-operating-system-scaffold` for product-doc scaffolding, repo-native product operations, docs governance, evidence, and tooling in one workflow.",
+      "description": "Custom skill created by Maggie Lerman. Deprecated shim. Use `product-operating-system-scaffold` for product-doc scaffolding, repo-native product operations, docs governance, evidence, and tooling in one workflow.",
       "category": "Delivery governance",
       "path": "skills/docs-product-pack",
       "resources": [
@@ -233,7 +233,7 @@ export const catalog = {
       "folder": "docs-project-dashboard-legacy",
       "status": "active",
       "summary": "Deprecated standalone backfill for the HTML dashboard",
-      "description": "Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.",
+      "description": "Custom skill created by Maggie Lerman. Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.",
       "category": "Delivery governance",
       "path": "skills/docs-project-dashboard-legacy",
       "resources": [
@@ -265,7 +265,7 @@ export const catalog = {
       "folder": "docs-project-lifecycle-statuses",
       "status": "legacy",
       "summary": "Legacy retrofit for in-review/blocked project lifecycle states",
-      "description": "Transitional legacy patch for repositories that were scaffolded before product-operating-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.",
+      "description": "Custom skill created by Maggie Lerman. Transitional legacy patch for repositories that were scaffolded before product-operating-system-scaffold included `in-review` and `blocked` lifecycle states. Use only to retrofit those states and synchronized governance updates across project docs and instruction files.",
       "category": "Delivery governance",
       "path": "skills/docs-project-lifecycle-statuses",
       "resources": [
@@ -295,8 +295,8 @@ export const catalog = {
       "title": "docs-system-scaffold",
       "folder": "docs-system-scaffold",
       "status": "deprecated",
-      "summary": "Deprecated compatibility alias.",
-      "description": "Deprecated compatibility alias. Use $product-operating-system-scaffold for the full repo-native product operating system scaffold, including docs root, project lifecycle, governance, roadmap/changelog, evidence, dashboards, docs site, product docs, and review-board workflows.",
+      "summary": "Custom skill created by Maggie Lerman.",
+      "description": "Custom skill created by Maggie Lerman. Deprecated compatibility alias. Use $product-operating-system-scaffold for the full repo-native product operating system scaffold, including docs root, project lifecycle, governance, roadmap/changelog, evidence, dashboards, docs site, product docs, and review-board workflows.",
       "category": "Delivery governance",
       "path": "skills/docs-system-scaffold",
       "resources": [
@@ -325,7 +325,7 @@ export const catalog = {
       "folder": "env-bootstrap-sync",
       "status": "active",
       "summary": "Help with env sync and bootstrap workflows",
-      "description": "Create or upgrade a repo-owned environment bootstrap workflow with reproducible `.env` handling, worktree sync, required-variable documentation, secret-file layout, and new-machine runbooks. Use when a repo has drifting `.env` files, unclear setup requirements, worktree-specific config loss, or scattered credential/bootstrap instructions.",
+      "description": "Custom skill created by Maggie Lerman. Create or upgrade a repo-owned environment bootstrap workflow with reproducible `.env` handling, worktree sync, required-variable documentation, secret-file layout, and new-machine runbooks. Use when a repo has drifting `.env` files, unclear setup requirements, worktree-specific config loss, or scattered credential/bootstrap instructions.",
       "category": "Documentation systems",
       "path": "skills/env-bootstrap-sync",
       "resources": [
@@ -357,7 +357,7 @@ export const catalog = {
       "folder": "github-docs-tracking-sync",
       "status": "active",
       "summary": "On-demand docs-to-GitHub sync; do not run by default",
-      "description": "Optional docs-to-GitHub tracking sync (1027-style). Prefer manual/targeted use only when explicitly requested.",
+      "description": "Custom skill created by Maggie Lerman. Optional docs-to-GitHub tracking sync (1027-style). Prefer manual/targeted use only when explicitly requested.",
       "category": "Documentation systems",
       "path": "skills/github-docs-tracking-sync",
       "resources": [
@@ -387,8 +387,8 @@ export const catalog = {
       "title": "hyphenomenon-chat-intake",
       "folder": "hyphenomenon-chat-intake",
       "status": "active",
-      "summary": "Intake a ChatGPT, Codex, Cursor, Gemini, or other AI conversation into Hyphenomenon as a chat object.",
-      "description": "Intake a ChatGPT, Codex, Cursor, Gemini, or other AI conversation into Hyphenomenon as a chat object. Use when a user asks to capture, import, archive, or publish a chat/session/transcript, especially when raw transcripts, created skills, created projects, created repos, related projects, validation, sync, or rendered chat routes are involved.",
+      "summary": "Custom skill created by Maggie Lerman.",
+      "description": "Custom skill created by Maggie Lerman. Intake a ChatGPT, Codex, Cursor, Gemini, or other AI conversation into Hyphenomenon as a chat object. Use when a user asks to capture, import, archive, or publish a chat/session/transcript, especially when raw transcripts, created skills, created projects, created repos, related projects, validation, sync, or rendered chat routes are involved.",
       "category": "Delivery governance",
       "path": "skills/hyphenomenon-chat-intake",
       "resources": [
@@ -420,7 +420,7 @@ export const catalog = {
       "folder": "hyphenomenon-project-intake",
       "status": "active",
       "summary": "Build project intake dossier + screenshots",
-      "description": "Create a Hyphenomenon import-ready project intake package (single markdown dossier plus 4-8 screenshots) for a software repository. Use when a user asks to prepare a repo for import as a project + graph nodes, especially when they require exact dossier section headers, screenshot gallery links, hydration artifacts, workflow summaries, and a handoff checklist.",
+      "description": "Custom skill created by Maggie Lerman. Create a Hyphenomenon import-ready project intake package (single markdown dossier plus 4-8 screenshots) for a software repository. Use when a user asks to prepare a repo for import as a project + graph nodes, especially when they require exact dossier section headers, screenshot gallery links, hydration artifacts, workflow summaries, and a handoff checklist.",
       "category": "Delivery governance",
       "path": "skills/hyphenomenon-project-intake",
       "resources": [
@@ -454,7 +454,7 @@ export const catalog = {
       "folder": "plan-signoff-review",
       "status": "active",
       "summary": "Re-read the full thread and latest audits before plan approval",
-      "description": "Review a proposed final plan against the full current thread and the latest supporting audits, reports, and decision artifacts before approval. Use when the user asks to double-check that a plan reflects everything discussed, incorporates the newest review documents, or needs a final readiness pass in an existing Plan mode thread.",
+      "description": "Custom skill created by Maggie Lerman. Review a proposed final plan against the full current thread and the latest supporting audits, reports, and decision artifacts before approval. Use when the user asks to double-check that a plan reflects everything discussed, incorporates the newest review documents, or needs a final readiness pass in an existing Plan mode thread.",
       "category": "Delivery governance",
       "path": "skills/plan-signoff-review",
       "resources": [
@@ -484,7 +484,7 @@ export const catalog = {
       "folder": "product-operating-system-scaffold",
       "status": "active",
       "summary": "Scaffold a repo-native product operating system for human-agent teams",
-      "description": "Scaffold or standardize a comprehensive repo-native product operating system for human-agent teams. Installs the docs root, project lifecycle model, governance files, agent instructions, ROADMAP/CHANGELOG control plane, evidence system, docs automation scripts, timestamp/checkpoint rules, visual design critique gates, optional VitePress docs site, optional product-doc pack, optional PROJECTS dashboard, and optional repo-agnostic review-board workflow. Use when asked for product operating system setup, repo-native product management, agent-readable project memory, lifecycle/governance scaffolding, evidence-system setup, docs-site setup, product docs, project dashboards, visual/design quality gates, or review-board scaffolding.",
+      "description": "Custom skill created by Maggie Lerman. Scaffold or standardize a comprehensive repo-native product operating system for human-agent teams. Installs the docs root, project lifecycle model, governance files, agent instructions, ROADMAP/CHANGELOG control plane, evidence system, docs automation scripts, timestamp/checkpoint rules, visual design critique gates, optional VitePress docs site, optional product-doc pack, optional PROJECTS dashboard, and optional repo-agnostic review-board workflow. Use when asked for product operating system setup, repo-native product management, agent-readable project memory, lifecycle/governance scaffolding, evidence-system setup, docs-site setup, product docs, project dashboards, visual/design quality gates, or review-board scaffolding.",
       "category": "Delivery governance",
       "path": "skills/product-operating-system-scaffold",
       "resources": [
@@ -519,7 +519,7 @@ export const catalog = {
       "folder": "project-governance-audit",
       "status": "active",
       "summary": "Audit project docs, checkpoint hygiene, and roadmap ordering",
-      "description": "Run a governance audit across project planning docs and roadmap artifacts. Use for blocker/dependency/order analysis, strategy consistency checks, and checkpoint-quality enforcement with file-backed evidence.",
+      "description": "Custom skill created by Maggie Lerman. Run a governance audit across project planning docs and roadmap artifacts. Use for blocker/dependency/order analysis, strategy consistency checks, and checkpoint-quality enforcement with file-backed evidence.",
       "category": "Delivery governance",
       "path": "skills/project-governance-audit",
       "resources": [
@@ -548,7 +548,7 @@ export const catalog = {
       "folder": "project-tranche-orchestrator",
       "status": "active",
       "summary": "Primary-agent tranche planning, delegation, review, and docs writeback in collaborative or autonomous mode.",
-      "description": "Act as the primary project manager and agent orchestrator for repos using the standard docs scaffold. Use when the user wants one primary agent to read project docs, derive the next tranche, delegate bounded work to subagents, manage handoffs, review completion, and write status updates back into the existing docs without creating a second source of truth.",
+      "description": "Custom skill created by Maggie Lerman. Act as the primary project manager and agent orchestrator for repos using the standard docs scaffold. Use when the user wants one primary agent to read project docs, derive the next tranche, delegate bounded work to subagents, manage handoffs, review completion, and write status updates back into the existing docs without creating a second source of truth.",
       "category": "Delivery governance",
       "path": "skills/project-tranche-orchestrator",
       "resources": [
@@ -582,7 +582,7 @@ export const catalog = {
       "folder": "repo-implementation-review",
       "status": "active",
       "summary": "Compare 2-3 repos and generate a review report",
-      "description": "Review and compare 2-3 repositories that implement the same product idea, then generate a downloadable HTML comparison artifact with pros/cons, feature gaps, scores, recommendation paths, and CSV/PDF export options. Use when a user asks for side-by-side technical assessment of multiple implementation repos or wants a recommendation between competing codebases.",
+      "description": "Custom skill created by Maggie Lerman. Review and compare 2-3 repositories that implement the same product idea, then generate a downloadable HTML comparison artifact with pros/cons, feature gaps, scores, recommendation paths, and CSV/PDF export options. Use when a user asks for side-by-side technical assessment of multiple implementation repos or wants a recommendation between competing codebases.",
       "category": "Documentation systems",
       "path": "skills/repo-implementation-review",
       "resources": [
@@ -614,7 +614,7 @@ export const catalog = {
       "folder": "shopify-app-scaffold",
       "status": "active",
       "summary": "Create a fresh Shopify app shell with reusable comms and review modules",
-      "description": "Scaffold a new Shopify app from the latest installed Shopify CLI template, then layer in a reusable shell for merchant email opt-in, unsubscribe flow, review prompts, and optional billing/app-proxy/theme-extension placeholders. Use when creating a new Shopify app quickly without copying an old repo wholesale.",
+      "description": "Custom skill created by Maggie Lerman. Scaffold a new Shopify app from the latest installed Shopify CLI template, then layer in a reusable shell for merchant email opt-in, unsubscribe flow, review prompts, and optional billing/app-proxy/theme-extension placeholders. Use when creating a new Shopify app quickly without copying an old repo wholesale.",
       "category": "Storefront and commerce",
       "path": "skills/shopify-app-scaffold",
       "resources": [
@@ -645,7 +645,7 @@ export const catalog = {
       "folder": "user-journey-audit",
       "status": "active",
       "summary": "Audit user journeys and export PDF",
-      "description": "Create current-state user journey audits with route mapping, screenshots, coverage verification, and a final PDF report. Use when Codex needs to audit navigation or UX flows for one or more user types in any repository or deployed app, suggest which user types to include, capture click-by-click evidence, verify route coverage against code and tests, and export a screenshot-backed PDF artifact.",
+      "description": "Custom skill created by Maggie Lerman. Create current-state user journey audits with route mapping, screenshots, coverage verification, and a final PDF report. Use when Codex needs to audit navigation or UX flows for one or more user types in any repository or deployed app, suggest which user types to include, capture click-by-click evidence, verify route coverage against code and tests, and export a screenshot-backed PDF artifact.",
       "category": "Documentation systems",
       "path": "skills/user-journey-audit",
       "resources": [
@@ -678,8 +678,8 @@ export const catalog = {
       "title": "ux-ui-bug-intake",
       "folder": "ux-ui-bug-intake",
       "status": "active",
-      "summary": "Set up a lightweight UX/UI bug intake system with lifecycle docs, routing rules, and routines.",
-      "description": "Set up a lightweight UX/UI bug intake system with lifecycle docs, routing rules, and routines. Use when starting a new project stream, standardizing repo operations, or replacing ad hoc bug tracking with a simple docs-backed workflow.",
+      "summary": "Custom skill created by Maggie Lerman.",
+      "description": "Custom skill created by Maggie Lerman. Set up a lightweight UX/UI bug intake system with lifecycle docs, routing rules, and routines. Use when starting a new project stream, standardizing repo operations, or replacing ad hoc bug tracking with a simple docs-backed workflow.",
       "category": "Delivery governance",
       "path": "skills/ux-ui-bug-intake",
       "resources": [
@@ -711,7 +711,7 @@ export const catalog = {
       "folder": "alpinejs-lightweight-js",
       "status": "active",
       "summary": "Small progressive interactivity patterns",
-      "description": "Alpine.js and lightweight progressive JavaScript workflow for static/JAMstack sites. Use when working with x-data, x-show, x-bind, x-on, x-transition, Alpine.data/store, @alpinejs plugins, CSP-safe Alpine, dropdowns, accordions, tabs, dialogs, filters, or minimal client JS.",
+      "description": "Custom skill created by Maggie Lerman. Alpine.js and lightweight progressive JavaScript workflow for static/JAMstack sites. Use when working with x-data, x-show, x-bind, x-on, x-transition, Alpine.data/store, @alpinejs plugins, CSP-safe Alpine, dropdowns, accordions, tabs, dialogs, filters, or minimal client JS.",
       "category": "Agent workflow accelerators",
       "path": "skills/alpinejs-lightweight-js",
       "resources": [
@@ -778,7 +778,7 @@ export const catalog = {
       "folder": "eleventy-jamstack-expert",
       "status": "active",
       "summary": "11ty, Nunjucks, and JAMstack patterns",
-      "description": "Eleventy/11ty, Build Awesome, Nunjucks, and JAMstack expert workflow. Use when working with .eleventy.*, eleventy.config.*, @11ty/eleventy, Build Awesome/Pro, .njk, Nunjucks includes/macros/layouts, _data, _includes, collections, pagination, shortcodes, filters, static assets, or deployments.",
+      "description": "Custom skill created by Maggie Lerman. Eleventy/11ty, Build Awesome, Nunjucks, and JAMstack expert workflow. Use when working with .eleventy.*, eleventy.config.*, @11ty/eleventy, Build Awesome/Pro, .njk, Nunjucks includes/macros/layouts, _data, _includes, collections, pagination, shortcodes, filters, static assets, or deployments.",
       "category": "Agent workflow accelerators",
       "path": "skills/eleventy-jamstack-expert",
       "resources": [
@@ -811,7 +811,7 @@ export const catalog = {
       "folder": "jamstack-version-auditor",
       "status": "active",
       "summary": "Repo-aware frontend version checks",
-      "description": "Repo-aware version and upgrade assessment for JAMstack/frontend stacks. Use when checking Tailwind CSS, Eleventy/11ty, Build Awesome, Nunjucks, Alpine.js, PostCSS, Vite, Node, deployment, or static-site repo versions, latest stable releases, docs currency, or upgrade value.",
+      "description": "Custom skill created by Maggie Lerman. Repo-aware version and upgrade assessment for JAMstack/frontend stacks. Use when checking Tailwind CSS, Eleventy/11ty, Build Awesome, Nunjucks, Alpine.js, PostCSS, Vite, Node, deployment, or static-site repo versions, latest stable releases, docs currency, or upgrade value.",
       "category": "Documentation systems",
       "path": "skills/jamstack-version-auditor",
       "resources": [
@@ -844,7 +844,7 @@ export const catalog = {
       "folder": "tailwindcss-expert",
       "status": "active",
       "summary": "Utility-first Tailwind implementation",
-      "description": "Tailwind CSS expert workflow for utility-first inline classes. Use when working with Tailwind repos/files: tailwind.config.*, @import \"tailwindcss\", @theme/@apply, class/className utilities, PostCSS/Vite setup, shadcn-style utilities, or default Tailwind UI styling.",
+      "description": "Custom skill created by Maggie Lerman. Tailwind CSS expert workflow for utility-first inline classes. Use when working with Tailwind repos/files: tailwind.config.*, @import \"tailwindcss\", @theme/@apply, class/className utilities, PostCSS/Vite setup, shadcn-style utilities, or default Tailwind UI styling.",
       "category": "Agent workflow accelerators",
       "path": "skills/tailwindcss-expert",
       "resources": [
@@ -900,6 +900,70 @@ export const catalog = {
       ]
     },
     {
+      "slug": "critical-thinking-partner",
+      "kind": "skill",
+      "title": "Critical Thinking Partner",
+      "folder": "critical-thinking-partner",
+      "status": "active",
+      "summary": "Constructive pushback for deliberation",
+      "description": "Custom skill created by Maggie Lerman. Use when Maggie asks for critical thinking, critical thinking mode, pressure testing mode, pressure-test this, a sounding board, help thinking something through, an opinion, what she is missing, whether an idea makes sense, or shows uncertainty while brainstorming, planning, choosing direction, weighing tradeoffs, or deciding how to execute product, design, strategy, workflow, skill, plugin, UI, UX, marketing, visual, or system-shaping work. Do not use for concrete task lists, straightforward implementation, command output, or rapid execution unless explicitly requested.",
+      "category": "Documentation systems",
+      "path": "skills/critical-thinking-partner",
+      "resources": [
+        "agent metadata"
+      ],
+      "useCases": [
+        "Maggie asks for critical thinking",
+        "Critical thinking mode",
+        "Pressure testing mode",
+        "Pressure-test this",
+        "A sounding board"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "echo-chamber-drift-check",
+      "kind": "skill",
+      "title": "Echo-Chamber Drift Check",
+      "folder": "echo-chamber-drift-check",
+      "status": "active",
+      "summary": "Reset mirroring into independent judgment",
+      "description": "Custom skill created by Maggie Lerman. Use when Maggie says the assistant is echoing, mirroring, repeating her back, falling into an echo chamber, over-validating, being too agreeable, polishing instead of thinking, missing the point, needing a reset, needing to harden an answer, or asks for an echo-chamber drift check. This is a recovery/reset skill for replacing reflective validation with independent judgment.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/echo-chamber-drift-check",
+      "resources": [
+        "agent metadata"
+      ],
+      "useCases": [
+        "Maggie says the assistant is echoing",
+        "Mirroring",
+        "Repeating her back",
+        "Falling into an echo chamber",
+        "Over-validating"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
       "slug": "rapid-iteration-mode",
       "kind": "skill",
       "title": "Rapid Iteration Mode",
@@ -938,7 +1002,7 @@ export const catalog = {
       "folder": "review-board-operating-pattern",
       "status": "active",
       "summary": "Run numbered visual review-board workflows for evidence, comparison, and correction",
-      "description": "Repo-agnostic visual review-board operating pattern for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into bounded apply/verify passes with evidence artifacts. Use when asked to create review boards, compare visual options, audit UI/screenshots/content/assets, prepare a human review packet, or apply numbered review corrections.",
+      "description": "Custom skill created by Maggie Lerman. Repo-agnostic visual review-board operating pattern for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into bounded apply/verify passes with evidence artifacts. Use when asked to create review boards, compare visual options, audit UI/screenshots/content/assets, prepare a human review packet, or apply numbered review corrections.",
       "category": "Delivery governance",
       "path": "skills/review-board-operating-pattern",
       "resources": [
@@ -969,8 +1033,8 @@ export const catalog = {
       "title": "rps-etsy-shop-uploader-listing-workflow",
       "folder": "rps-etsy-shop-uploader-listing-workflow",
       "status": "active",
-      "summary": "Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification.",
-      "description": "Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification. Custom skill by Maggie Lerman.",
+      "summary": "Custom skill created by Maggie Lerman.",
+      "description": "Custom skill created by Maggie Lerman. Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification.",
       "category": "Research and review",
       "path": "skills/rps-etsy-shop-uploader-listing-workflow",
       "resources": [
@@ -1002,7 +1066,7 @@ export const catalog = {
       "folder": "rps-wall-art-mockup-workflow",
       "status": "active",
       "summary": "Create source-aware RPS wall art mockups",
-      "description": "Use when creating, refining, organizing, or applying Rock Paper Scissors wall art mockups for Shopify listings, Shopify blog/editorial images, collection heroes, catalog cleanup, marketplace imagery, social, ads, or reusable mockup packs. Custom skill by Maggie Lerman.",
+      "description": "Custom skill created by Maggie Lerman. Use when creating, refining, organizing, or applying Rock Paper Scissors wall art mockups for Shopify listings, Shopify blog/editorial images, collection heroes, catalog cleanup, marketplace imagery, social, ads, or reusable mockup packs.",
       "category": "Storefront and commerce",
       "path": "skills/rps-wall-art-mockup-workflow",
       "resources": [
@@ -1035,8 +1099,8 @@ export const catalog = {
       "title": "tmora-print-proof-deck",
       "folder": "tmora-print-proof-deck",
       "status": "active",
-      "summary": "Use when creating or revising TMORA, The Museum of Russian Art, print proof PDFs or option decks for Mary, museum gift-shop print files, postcard fronts/backs, 11x17 proofs, or packaging/layout option review.",
-      "description": "Use when creating or revising TMORA, The Museum of Russian Art, print proof PDFs or option decks for Mary, museum gift-shop print files, postcard fronts/backs, 11x17 proofs, or packaging/layout option review.",
+      "summary": "Custom skill created by Maggie Lerman.",
+      "description": "Custom skill created by Maggie Lerman. Use when creating or revising TMORA, The Museum of Russian Art, print proof PDFs or option decks for Mary, museum gift-shop print files, postcard fronts/backs, 11x17 proofs, or packaging/layout option review.",
       "category": "Research and review",
       "path": "skills/tmora-print-proof-deck",
       "resources": [
@@ -1627,6 +1691,38 @@ export const catalog = {
       ]
     },
     {
+      "slug": "working-modes",
+      "kind": "skill",
+      "title": "Working Modes",
+      "folder": "working-modes",
+      "status": "active",
+      "summary": "Index of Maggie custom work modes",
+      "description": "Custom skill created by Maggie Lerman. Lightweight index of Maggie's custom working modes. Use when Maggie asks what modes exist, wants to switch modes, mentions mode switcher, working modes, custom modes, pressure testing mode, critical thinking mode, rapid iteration mode, echo-chamber reset, or needs help choosing between critical deliberation, rapid iteration, and drift correction. This is an index, not a dispatcher plugin.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/working-modes",
+      "resources": [
+        "agent metadata"
+      ],
+      "useCases": [
+        "Maggie asks what modes exist",
+        "Switch modes",
+        "Mentions mode switcher",
+        "Working modes",
+        "Custom modes"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
       "slug": "context-layer",
       "kind": "plugin",
       "title": "Context Layer",
@@ -1755,7 +1851,7 @@ export const catalog = {
       "folder": "rps-etsy-ops",
       "status": "available",
       "summary": "Govern RPS Etsy mockups, media URLs, Shop Uploader packets, and digital products.",
-      "description": "Local workflow plugin for Rock Paper Scissors Etsy catalog operations. It keeps live listing mutation behind approved Shop Uploader apply plans, routes reusable mockup assets through the creative asset library, and defines reusable packet contracts without storing project evidence or production assets in the plugin.",
+      "description": "Local workflow plugin for Rock Paper Scissors Etsy catalog operations. It keeps live listing mutation behind approved Shop Uploader apply plans, routes reusable mockup assets through the Google Drive creative asset catalog, and defines reusable packet contracts without storing project evidence or production assets in the plugin.",
       "category": "Productivity",
       "path": "plugins/rps-etsy-ops",
       "resources": [

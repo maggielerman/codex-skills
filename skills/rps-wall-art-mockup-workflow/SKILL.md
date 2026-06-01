@@ -1,22 +1,26 @@
 ---
 name: "rps-wall-art-mockup-workflow"
-description: "Use when creating, refining, organizing, or applying Rock Paper Scissors wall art mockups for Shopify listings, Shopify blog/editorial images, collection heroes, catalog cleanup, marketplace imagery, social, ads, or reusable mockup packs. Custom skill by Maggie Lerman."
+description: "Custom skill created by Maggie Lerman. Use when creating, refining, organizing, or applying Rock Paper Scissors wall art mockups for Shopify listings, Shopify blog/editorial images, collection heroes, catalog cleanup, marketplace imagery, social, ads, or reusable mockup packs."
 ---
 
 # RPS Wall Art Mockup Workflow
 
-Custom skill by Maggie Lerman.
+Custom skill created by Maggie Lerman.
 
 Use this skill for Rock Paper Scissors wall art mockup work across Shopify listings, Shopify editorial/content, Shopify collections, catalog cleanup, Faire/Etsy/marketplace images, social, ads, and reusable creative asset packs.
 
 ## Source Of Truth
 
-- Asset repo default: `${HOME}/Github/rps-creative-assets`
+- Reusable asset storage: Google Drive `RPS Creative Assets`
+- Catalog authority: `rps-etsy/docs/etsy/creative-asset-drive-catalog.md` and its Google Sheet
+- Automation snapshot: `rps-etsy/docs/etsy/creative-asset-catalog-snapshot.csv`
+- Optional native Drive cache: `RPS_CREATIVE_ASSETS_DRIVE_CACHE` may point at the Drive desktop `RPS Creative Assets` folder
+- Local archive/cache: `${HOME}/Github/rps-creative-assets` is read-only migration history only
 - Durable plugin backup: `/Users/maggielerman/Github/codex-skills/plugins/rps-etsy-ops/`
 - Standalone transition copy: `/Users/maggielerman/Github/codex-skills/skills/rps-wall-art-mockup-workflow/`
 - Application repos keep project evidence, live apply proof, and deployment records.
 
-If the asset repo is missing, create or locate it before generating a new reusable pack. See `references/repository-contract.md`.
+Do not create new active packs in the local archive. See `references/repository-contract.md`.
 
 ## Core Rule
 
@@ -29,22 +33,21 @@ For named artists, public-domain works, or identifiable artworks:
 ## Workflow
 
 1. Identify the target surface: `shopify-listing`, `shopify-blog`, `shopify-collection`, `faire`, `etsy`, `social`, `ads`, or `catalog-cleanup`.
-2. Search the asset repo for an approved pack that already fits the surface and visual direction.
+2. Search the Drive catalog snapshot and channel availability matrix for an approved pack that already fits the surface and visual direction. Use Drive IDs/URLs from the catalog as durable references; native Drive desktop paths are cache hints only.
 3. If a pack exists, reuse it or adapt it before generating a new scene.
 4. If a new base is needed, generate blank-frame/blank-placeholder scenes only.
 5. Gather real RPS artwork assets for all visible framed art.
 6. Composite artwork into the generated base with plausible perspective, crop, scale, and frame fill.
 7. Export a small labeled option set and one review board.
-8. Write or update `manifest.json` using `templates/mockup-manifest.template.json`.
-9. If a new reusable wall-art mockup pack or base is created, register it in the relevant channel availability/index before treating the work as complete. For Etsy, update `rps-etsy/docs/etsy/mockup-availability.csv`, regenerate the Etsy mockup visual index, and keep the asset repo wall-art index current.
-10. Validate the pack with the asset repo script.
-11. Promote approved packs under `mockups/wall-art/approved-packs/`.
+8. Store reusable binaries/review boards in Google Drive and register the row in the catalog sheet/snapshot.
+9. If a new reusable wall-art mockup pack or base is created, register it in the relevant channel availability/index before treating the work as complete. For Etsy, update `rps-etsy/docs/etsy/mockup-availability.csv` and regenerate the Etsy mockup visual index.
+10. Validate the Etsy matrix against the Drive catalog snapshot.
 
 ## Library Naming Rule
 
 Reusable pack names, matrix rows, review-board labels, and generated indexes must use generic product/use-case language such as `modern botanical`, `warm metallic`, `traditional single frame`, or `Samsung Frame TV`.
 
-Do not use artist/provenance names as reusable library labels, CSV product-fit copy, pack titles, or visual-index titles. If old filesystem paths still contain legacy names, migrate them to generic names before publishing or committing new library work.
+Do not use artist/provenance names as reusable library labels, CSV product-fit copy, pack titles, or visual-index titles. If old filesystem paths still contain legacy names, keep those as historical cache paths only and use generic names in Drive/catalog rows before publishing new library work.
 
 ## Practical Defaults
 
@@ -62,18 +65,13 @@ Do not use artist/provenance names as reusable library labels, CSV product-fit c
 
 ## Validation
 
-In the asset repo:
-
-```bash
-node scripts/build-wall-art-index.mjs
-node scripts/validate-manifests.mjs
-```
-
 For Etsy mockup work in `rps-etsy`:
 
 ```bash
+python3 scripts/etsy/check-creative-asset-drive-cache.py
 python3 scripts/etsy/validate-mockup-availability.py
 python3 scripts/etsy/build-mockup-library-visual-index.py
+python3 scripts/etsy/build-creative-template-audit-index.py
 ```
 
 For skill repo changes:

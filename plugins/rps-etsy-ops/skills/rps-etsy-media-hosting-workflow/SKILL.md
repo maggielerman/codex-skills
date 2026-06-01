@@ -11,7 +11,7 @@ such as `image_*`, `video_1`, or `digital_file_*`.
 ## Source Of Truth
 
 - Etsy catalog repo: `/Users/maggielerman/Github/rps-etsy`
-- Creative asset repo: `/Users/maggielerman/Github/rps-creative-assets`
+- Creative asset storage/catalog: Google Drive `RPS Creative Assets` plus `/Users/maggielerman/Github/rps-etsy/docs/etsy/creative-asset-drive-catalog.md`
 - Hosting policy: `/Users/maggielerman/Github/rps-etsy/docs/etsy/asset-hosting-policy.md`
 - Plugin reference: `../../references/media-hosting-url-contract.md`
 

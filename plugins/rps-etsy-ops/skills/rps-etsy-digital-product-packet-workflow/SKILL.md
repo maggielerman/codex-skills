@@ -11,7 +11,7 @@ updating Etsy listings through Shop Uploader.
 ## Source Of Truth
 
 - Etsy catalog repo: `/Users/maggielerman/Github/rps-etsy`
-- Creative asset repo: `/Users/maggielerman/Github/rps-creative-assets`
+- Creative asset storage/catalog: Google Drive `RPS Creative Assets` plus `/Users/maggielerman/Github/rps-etsy/docs/etsy/creative-asset-drive-catalog.md`
 - Packet reference: `../../references/digital-product-packet-contract.md`
 - Shop Uploader workflow: `$rps-etsy-shop-uploader-listing-workflow`
 - Media hosting workflow: `$rps-etsy-media-hosting-workflow`

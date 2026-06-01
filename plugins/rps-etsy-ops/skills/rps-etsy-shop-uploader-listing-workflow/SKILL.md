@@ -12,7 +12,7 @@ Use this skill for RPS Etsy listing work that touches Shop Uploader or could bec
 ## Source Of Truth
 
 - Etsy catalog repo: `/Users/maggielerman/Github/rps-etsy`
-- Creative asset repo: `/Users/maggielerman/Github/rps-creative-assets`
+- Creative asset storage/catalog: Google Drive `RPS Creative Assets` plus `/Users/maggielerman/Github/rps-etsy/docs/etsy/creative-asset-drive-catalog.md`
 - Durable plugin backup: `/Users/maggielerman/Github/codex-skills/plugins/rps-etsy-ops/`
 - Shop Uploader dashboard: `https://www.shopuploader.com/app/dashboard`
 - Live Etsy mutation path: Shop Uploader CSV/XLSX only, after Maggie approves a reviewable apply plan.
@@ -29,6 +29,7 @@ In `/Users/maggielerman/Github/rps-etsy`, read:
 4. For media/mockup/image/video work, also read:
    - `docs/etsy/workstreams/listing-images-and-alt-text.md`
    - `docs/etsy/mockup-library.md`
+   - `docs/etsy/creative-asset-drive-catalog.md`
    - `docs/etsy/asset-hosting-policy.md`
    - `$rps-wall-art-mockup-workflow`
    - `$rps-etsy-media-hosting-workflow`
@@ -141,7 +142,7 @@ Before any Shop Uploader file includes media or file URLs:
    ```
 
 4. Confirm artwork count gates match the listing.
-5. Build a review board and manifest mapping listing ID, SKU, source art, mockup base, output path, intended slot, and approval status.
+5. Build a review board and manifest mapping listing ID, SKU, source art, mockup catalog row/template ID, output path, intended slot, and approval status.
 6. Confirm mockup/media labels use generic product/use-case language and do not expose artist/provenance labels.
 7. Use clear hosted URL paths from `docs/etsy/asset-hosting-policy.md`.
 8. Use `$rps-etsy-media-hosting-workflow` for hosted URL manifests, URL access audits, and cleanup tracking.

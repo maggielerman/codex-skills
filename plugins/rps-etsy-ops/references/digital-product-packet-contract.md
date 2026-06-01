@@ -21,6 +21,6 @@ Store real packets in:
 
 `/Users/maggielerman/Github/rps-etsy/docs/evidence/active/<project>/`
 
-Store reusable creative assets in:
-
-`/Users/maggielerman/Github/rps-creative-assets/`
+Store reusable creative assets in the Google Drive `RPS Creative Assets`
+library and register them in the Drive-backed creative asset catalog snapshot
+used by `rps-etsy`.

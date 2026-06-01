@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "RPS Etsy Ops",
     "shortDescription": "Govern RPS Etsy mockups, media URLs, Shop Uploader packets, and digital products.",
-    "longDescription": "Local workflow plugin for Rock Paper Scissors Etsy catalog operations. It keeps live listing mutation behind approved Shop Uploader apply plans, routes reusable mockup assets through the creative asset library, and defines reusable packet contracts without storing project evidence or production assets in the plugin.",
+    "longDescription": "Local workflow plugin for Rock Paper Scissors Etsy catalog operations. It keeps live listing mutation behind approved Shop Uploader apply plans, routes reusable mockup assets through the Google Drive creative asset catalog, and defines reusable packet contracts without storing project evidence or production assets in the plugin.",
     "developerName": "Maggie Lerman",
     "category": "Productivity",
     "capabilities": [
