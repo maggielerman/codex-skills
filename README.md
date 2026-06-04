@@ -1,13 +1,13 @@
 # Codex Skills Library
 
-This repository is the durable source of truth for Maggie Lerman's custom Codex skills library plus installable custom plugin packages.
+This repository is the durable source of truth for my custom Codex skills library plus installable custom plugin packages.
 
 The goals of this repo are simple:
 - back up custom skills outside local Codex state
 - package reusable skill groups as installable Codex plugins
 - make the collection easier to browse, validate, and evolve
 - share useful Codex workflow patterns publicly
-- support Maggie Lerman's public work around practical human-agent workflows
+- support my public work around practical human-agent workflows
 
 ## License
 
