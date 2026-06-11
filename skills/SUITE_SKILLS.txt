@@ -4,6 +4,7 @@ codex-to-claude-handoff
 collaborative-walkthrough
 continue-until-blocked
 docs-evidence-backfill
+context-layer-dashboard-backfill
 docs-product-pack
 docs-project-dashboard-legacy
 docs-project-lifecycle-statuses

@@ -5,6 +5,11 @@
       "replacement": "product-operating-system-scaffold",
       "note": "Backward-compatibility shim for older invocations."
     },
+    "docs-project-dashboard-legacy": {
+      "status": "deprecated",
+      "replacement": "context-layer-dashboard-backfill",
+      "note": "Use the modern Context Layer dashboard backfill skill for existing repos."
+    },
     "docs-project-lifecycle-statuses": {
       "status": "legacy",
       "replacement": "product-operating-system-scaffold",

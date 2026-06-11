@@ -3,7 +3,7 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 55,
+  "skillCount": 56,
   "pluginCount": 6,
   "items": [
     {
@@ -197,6 +197,41 @@ export const catalog = {
       ]
     },
     {
+      "slug": "context-layer-dashboard-backfill",
+      "kind": "skill",
+      "title": "Context Layer Dashboard Backfill",
+      "folder": "context-layer-dashboard-backfill",
+      "status": "active",
+      "summary": "Refresh existing repos with the modern Context Layer dashboard",
+      "description": "Custom skill created by Maggie Lerman. Backfill or refresh the modern Context Layer generated project dashboard in existing repositories that already have DOCS/PROJECTS lifecycle folders. Use when a repo needs the sidebar-based dashboard.html, All Projects register, MAGGIE TODO rollup, status drift, program tracks, and optional content calendar without rerunning the broader context-layer scaffold.",
+      "category": "Delivery governance",
+      "path": "skills/context-layer-dashboard-backfill",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "A repo needs the sidebar-based dashboard.html",
+        "All Projects register",
+        "MAGGIE TODO rollup",
+        "Status drift",
+        "Program tracks"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
       "slug": "docs-product-pack",
       "kind": "skill",
       "title": "Product Docs Pack (Deprecated)",
@@ -231,9 +266,9 @@ export const catalog = {
       "kind": "skill",
       "title": "Docs Project Dashboard (Legacy)",
       "folder": "docs-project-dashboard-legacy",
-      "status": "active",
-      "summary": "Deprecated standalone backfill for the HTML dashboard",
-      "description": "Custom skill created by Maggie Lerman. Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.",
+      "status": "deprecated",
+      "summary": "Deprecated older dashboard backfill",
+      "description": "Custom skill created by Maggie Lerman. Deprecated standalone backfill for the older generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer `$context-layer-dashboard-backfill` for modern sidebar-based dashboard refreshes in existing repos.",
       "category": "Delivery governance",
       "path": "skills/docs-project-dashboard-legacy",
       "resources": [
@@ -1729,7 +1764,7 @@ export const catalog = {
       "folder": "context-layer",
       "status": "available",
       "summary": "Scaffold and operate repo-native context memory for human-agent teams",
-      "description": "Package for installing and using a repo-native context layer: canonical DOCS root, project lifecycle, evidence, dashboard, MAGGIE TODOs, review boards, checkpoints, governance audits, collaborative walkthroughs, and UX/UI bug intake.",
+      "description": "Package for installing and using a repo-native context layer: canonical DOCS root, project lifecycle, evidence, dashboard, dashboard backfills, MAGGIE TODOs, review boards, checkpoints, governance audits, collaborative walkthroughs, and UX/UI bug intake.",
       "category": "Productivity",
       "path": "plugins/context-layer",
       "resources": [
@@ -1738,6 +1773,7 @@ export const catalog = {
       ],
       "useCases": [
         "Use $context-layer-scaffold to standardize this repo as a context layer.",
+        "Use $context-layer-dashboard-backfill to refresh the generated dashboard in an existing context-layer repo.",
         "Use $review-board to generate a numbered review board for this work.",
         "Use $maggie-todo to surface and resolve Maggie-owned follow-ups."
       ],

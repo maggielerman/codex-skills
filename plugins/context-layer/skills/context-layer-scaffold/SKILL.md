@@ -90,7 +90,7 @@ Required docs scripts:
 
 Required dashboard installer:
 
-- `${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/scripts/install_docs_project_dashboard.py`
+- `${CODEX_HOME:-$HOME/.codex}/skills/context-layer-dashboard-backfill/scripts/install_docs_project_dashboard.py`
 
 Optional assets:
 

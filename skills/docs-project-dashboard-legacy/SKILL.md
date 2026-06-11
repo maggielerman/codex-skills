@@ -1,6 +1,6 @@
 ---
 name: docs-project-dashboard-legacy
-description: Custom skill created by Maggie Lerman. Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.
+description: Custom skill created by Maggie Lerman. Deprecated standalone backfill for the older generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer `$context-layer-dashboard-backfill` for modern sidebar-based dashboard refreshes in existing repos.
 ---
 
 # Docs Project Dashboard Legacy
@@ -9,7 +9,7 @@ Custom skill created by Maggie Lerman.
 
 ## Deprecation Note
 
-Prefer the optional HTML project dashboard step built into `$product-operating-system-scaffold`.
+Prefer `$context-layer-dashboard-backfill` for existing repos that need the modern sidebar-based generated dashboard.
 
 Use this legacy skill only when:
 

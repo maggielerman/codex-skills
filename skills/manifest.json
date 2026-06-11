@@ -1,6 +1,6 @@
 {
   "generated_by": "scripts/build_catalog.py",
-  "skill_count": 55,
+  "skill_count": 56,
   "skills": [
     {
       "folder": "catalog-review",
@@ -105,6 +105,23 @@
       "file_count": 2
     },
     {
+      "folder": "context-layer-dashboard-backfill",
+      "name": "context-layer-dashboard-backfill",
+      "display_name": "Context Layer Dashboard Backfill",
+      "description": "Custom skill created by Maggie Lerman. Backfill or refresh the modern Context Layer generated project dashboard in existing repositories that already have DOCS/PROJECTS lifecycle folders. Use when a repo needs the sidebar-based dashboard.html, All Projects register, MAGGIE TODO rollup, status drift, program tracks, and optional content calendar without rerunning the broader context-layer scaffold.",
+      "short_description": "Refresh existing repos with the modern Context Layer dashboard",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/context-layer-dashboard-backfill",
+      "skill_md": "skills/context-layer-dashboard-backfill/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true,
+      "file_count": 8
+    },
+    {
       "folder": "docs-product-pack",
       "name": "docs-product-pack",
       "display_name": "Product Docs Pack (Deprecated)",
@@ -125,11 +142,11 @@
       "folder": "docs-project-dashboard-legacy",
       "name": "docs-project-dashboard-legacy",
       "display_name": "Docs Project Dashboard (Legacy)",
-      "description": "Custom skill created by Maggie Lerman. Deprecated standalone backfill for a generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer the built-in optional dashboard step in `$product-operating-system-scaffold`. Use this legacy skill only when patching an existing repo without rerunning the main scaffold flow.",
-      "short_description": "Deprecated standalone backfill for the HTML dashboard",
-      "status": "active",
-      "replacement": null,
-      "note": null,
+      "description": "Custom skill created by Maggie Lerman. Deprecated standalone backfill for the older generated HTML project-management dashboard in repositories that already use the product-operating-system-scaffold `PROJECTS/` lifecycle structure. Prefer `$context-layer-dashboard-backfill` for modern sidebar-based dashboard refreshes in existing repos.",
+      "short_description": "Deprecated older dashboard backfill",
+      "status": "deprecated",
+      "replacement": "context-layer-dashboard-backfill",
+      "note": "Use the modern Context Layer dashboard backfill skill for existing repos.",
       "path": "skills/docs-project-dashboard-legacy",
       "skill_md": "skills/docs-project-dashboard-legacy/SKILL.md",
       "has_agents_metadata": true,

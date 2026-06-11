@@ -18,7 +18,7 @@ When `package.json` exists, add:
 Run the existing dashboard installer:
 
 ```bash
-python3 "${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/scripts/install_docs_project_dashboard.py" \
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/context-layer-dashboard-backfill/scripts/install_docs_project_dashboard.py" \
   --repo . \
   --docs-root DOCS
 ```
@@ -32,7 +32,7 @@ node scripts/docs/projects-dashboard.mjs DOCS
 If the repo also needs the optional content calendar planning surface, run the installer with:
 
 ```bash
-python3 "${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/scripts/install_docs_project_dashboard.py" \
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/context-layer-dashboard-backfill/scripts/install_docs_project_dashboard.py" \
   --repo . \
   --docs-root DOCS \
   --with-content-calendar

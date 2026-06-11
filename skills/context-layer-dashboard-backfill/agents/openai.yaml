@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Layer Dashboard Backfill"
+  short_description: "Refresh existing repos with the modern Context Layer dashboard"
+  default_prompt: "Use $context-layer-dashboard-backfill to update this existing repo to the modern generated Context Layer dashboard without rerunning the full scaffold."

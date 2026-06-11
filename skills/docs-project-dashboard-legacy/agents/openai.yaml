@@ -1,4 +1,4 @@
 interface:
   display_name: "Docs Project Dashboard (Legacy)"
-  short_description: "Deprecated standalone backfill for the HTML dashboard"
-  default_prompt: "Use $docs-project-dashboard-legacy only when you need to retrofit the HTML project dashboard into an already-scaffolded repo without rerunning $product-operating-system-scaffold."
+  short_description: "Deprecated older dashboard backfill"
+  default_prompt: "Use $docs-project-dashboard-legacy only for older dashboard retrofit compatibility; prefer $context-layer-dashboard-backfill for current dashboard refreshes."

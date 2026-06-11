@@ -209,7 +209,7 @@ This built-in step should wire the same repo-level assets as the legacy standalo
 - optional `{{DOCS_ROOT}}/content/content-calendar.{json,md}` files when the user wants repo-side content calendar setup
 
 ```bash
-python3 "${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/scripts/install_docs_project_dashboard.py" \
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/context-layer-dashboard-backfill/scripts/install_docs_project_dashboard.py" \
   --repo . \
   --docs-root {{DOCS_ROOT}}
 ```
@@ -217,7 +217,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/script
 If the user also asks for a content calendar, pass:
 
 ```bash
-python3 "${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/scripts/install_docs_project_dashboard.py" \
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/context-layer-dashboard-backfill/scripts/install_docs_project_dashboard.py" \
   --repo . \
   --docs-root {{DOCS_ROOT}} \
   --with-content-calendar
@@ -363,4 +363,4 @@ Docs changes merged to `main` should run docs normalization, manifest regenerati
 - Tooling scripts: `assets/scripts/`
 - Optional Review Board Operating Pattern templates: `assets/templates/review-board-operating-pattern/`
 - Optional VitePress/docs-site assets: `assets/vitepress/`
-- Companion dashboard installer: `${CODEX_HOME:-$HOME/.codex}/skills/docs-project-dashboard-legacy/scripts/install_docs_project_dashboard.py`
+- Companion dashboard installer: `${CODEX_HOME:-$HOME/.codex}/skills/context-layer-dashboard-backfill/scripts/install_docs_project_dashboard.py`
