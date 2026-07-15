@@ -1,0 +1,50 @@
+{
+  "duration": {
+    "instant": 0.08,
+    "micro": 0.14,
+    "fast": 0.22,
+    "base": 0.42,
+    "slow": 0.72,
+    "cinematic": 1.15
+  },
+  "ease": {
+    "standard": "power2.out",
+    "entrance": "power3.out",
+    "exit": "power2.in",
+    "inOut": "power2.inOut",
+    "emphasis": "back.out(1.2)",
+    "linear": "none"
+  },
+  "stagger": {
+    "tight": 0.035,
+    "base": 0.065,
+    "loose": 0.11
+  },
+  "distance": {
+    "micro": 8,
+    "subtle": 16,
+    "base": 24,
+    "expressive": 48
+  },
+  "intensity": {
+    "utility": 0.35,
+    "polished": 0.6,
+    "expressive": 0.85,
+    "hero": 1
+  },
+  "scroll": {
+    "scrubSoft": 0.6,
+    "scrubPrecise": true,
+    "pinSceneShort": 900,
+    "pinSceneMedium": 1600,
+    "pinSceneLong": 2400
+  },
+  "tasteRules": {
+    "bodyTextMaxY": 18,
+    "controlsMaxDuration": 0.24,
+    "heroMaxInitialDelay": 0.3,
+    "defaultReducedMotion": "opacity-only-or-instant",
+    "denseUiMaxDuration": 0.24,
+    "decorativeMotionCanDelayControls": false
+  }
+}

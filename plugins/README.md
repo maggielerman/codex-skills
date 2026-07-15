@@ -14,6 +14,7 @@ Current packaged plugins:
 - `context-layer`
 - `design-system-first`
 - `jamstack-expert`
+- `motion-design-director`
 - `project-tranche-orchestrator`
 - `rps-etsy-ops`
 - `working-modes`

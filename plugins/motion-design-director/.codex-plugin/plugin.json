@@ -1,0 +1,37 @@
+{
+  "name": "motion-design-director",
+  "version": "0.1.0",
+  "description": "Taste-first frontend motion design workflow with bundled GSAP implementation skills.",
+  "author": {
+    "name": "Maggie Lerman"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "motion",
+    "animation",
+    "gsap",
+    "frontend",
+    "design",
+    "editorial-motion",
+    "visual-qa"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Motion Design Director",
+    "shortDescription": "Plan, critique, and refine tasteful frontend motion",
+    "longDescription": "A local plugin that adds a taste-layer motion workflow for Codex: motion intent, editorial vocabulary, tokens, pattern selection, critique, refinement, anti-patterns, accessibility, and performance policy. It bundles official GSAP skills as the implementation layer without rewriting GSAP documentation.",
+    "developerName": "Maggie Lerman",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Code",
+      "Documentation",
+      "Design Review"
+    ],
+    "defaultPrompt": [
+      "Use Motion Design Director to review this animation and make it feel more polished.",
+      "Use Motion Design Director to make this hero transition feel more editorial and less template-like.",
+      "Use Motion Design Director to implement subtle premium motion with GSAP while preserving reduced-motion support."
+    ],
+    "brandColor": "#111827"
+  }
+}

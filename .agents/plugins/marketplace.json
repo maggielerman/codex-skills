@@ -29,6 +29,18 @@
       "category": "Developer Tools"
     },
     {
+      "name": "motion-design-director",
+      "source": {
+        "source": "local",
+        "path": "./plugins/motion-design-director"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
       "name": "context-layer",
       "source": {
         "source": "local",

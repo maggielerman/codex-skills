@@ -1,0 +1,11 @@
+version: 1
+name: motion-design-director
+description: Taste-first frontend motion planning, critique, refinement, and GSAP implementation routing.
+tags:
+  - motion
+  - animation
+  - gsap
+  - frontend
+  - design-review
+  - accessibility
+  - performance
