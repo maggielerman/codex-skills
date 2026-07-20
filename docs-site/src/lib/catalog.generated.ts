@@ -3,8 +3,8 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 56,
-  "pluginCount": 6,
+  "skillCount": 57,
+  "pluginCount": 7,
   "items": [
     {
       "slug": "catalog-review",
@@ -174,7 +174,6 @@ export const catalog = {
       "category": "Documentation systems",
       "path": "skills/docs-evidence-backfill",
       "resources": [
-        "reference guides",
         "agent metadata"
       ],
       "useCases": [
@@ -483,6 +482,35 @@ export const catalog = {
       ]
     },
     {
+      "slug": "hyphenomenon-codex-usage-report",
+      "kind": "skill",
+      "title": "Hyphenomenon Codex Usage Report",
+      "folder": "hyphenomenon-codex-usage-report",
+      "status": "active",
+      "summary": "Analyze and publish Codex usage reports",
+      "description": "Custom skill created by Maggie Lerman. Generate, analyze, validate, preview, and safely promote a Hyphenomenon Codex usage report. Use for daily or weekly Codex activity reports that require deterministic telemetry, GPT-5.6 Sol/high interpretation, Agent Stack evidence, Chronicle context, and fail-closed publication gates.",
+      "category": "Documentation systems",
+      "path": "skills/hyphenomenon-codex-usage-report",
+      "resources": [
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Hyphenomenon Codex Usage Report when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
       "slug": "plan-signoff-review",
       "kind": "skill",
       "title": "Plan Signoff Review",
@@ -523,8 +551,6 @@ export const catalog = {
       "category": "Delivery governance",
       "path": "skills/product-operating-system-scaffold",
       "resources": [
-        "bundled scripts",
-        "reference guides",
         "starter assets",
         "agent metadata"
       ],
@@ -623,7 +649,6 @@ export const catalog = {
       "resources": [
         "bundled scripts",
         "reference guides",
-        "starter assets",
         "agent metadata"
       ],
       "useCases": [
@@ -1837,6 +1862,37 @@ export const catalog = {
         "Use JAMstack Expert on this 11ty/Tailwind repo.",
         "Make this UI with inline Tailwind utilities.",
         "Audit this JAMstack repo for stale dependencies."
+      ],
+      "gettingStarted": [
+        "Install the complete plugin folder from the public repo or local checkout.",
+        "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
+        "Start from one suggested prompt, then add the target repo path and desired deliverable."
+      ],
+      "troubleshooting": [
+        "If the plugin does not appear, confirm .codex-plugin/plugin.json is present and the plugin registry points to the folder.",
+        "If a plugin skill cannot find scripts or assets, the plugin folder was likely flattened or partially copied.",
+        "If the workflow is too broad, rerun with a narrower deliverable and explicit no-touch files."
+      ]
+    },
+    {
+      "slug": "motion-design-director",
+      "kind": "plugin",
+      "title": "Motion Design Director",
+      "folder": "motion-design-director",
+      "status": "available",
+      "summary": "Plan, critique, and refine tasteful frontend motion",
+      "description": "A local plugin that adds a taste-layer motion workflow for Codex: motion intent, editorial vocabulary, tokens, pattern selection, critique, refinement, anti-patterns, accessibility, and performance policy. It bundles official GSAP skills as the implementation layer without rewriting GSAP documentation.",
+      "category": "Developer Tools",
+      "path": "plugins/motion-design-director",
+      "resources": [
+        "Code capability",
+        "Documentation capability",
+        "Design Review capability"
+      ],
+      "useCases": [
+        "Use Motion Design Director to review this animation and make it feel more polished.",
+        "Use Motion Design Director to make this hero transition feel more editorial and less template-like.",
+        "Use Motion Design Director to implement subtle premium motion with GSAP while preserving reduced-motion support."
       ],
       "gettingStarted": [
         "Install the complete plugin folder from the public repo or local checkout.",

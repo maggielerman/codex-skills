@@ -1,6 +1,6 @@
 {
   "generated_by": "scripts/build_catalog.py",
-  "skill_count": 56,
+  "skill_count": 57,
   "skills": [
     {
       "folder": "catalog-review",
@@ -51,7 +51,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": false,
-      "file_count": 6
+      "file_count": 4
     },
     {
       "folder": "collaborative-walkthrough",
@@ -100,7 +100,7 @@
       "skill_md": "skills/docs-evidence-backfill/SKILL.md",
       "has_agents_metadata": true,
       "has_scripts": false,
-      "has_references": true,
+      "has_references": false,
       "has_assets": false,
       "file_count": 2
     },
@@ -119,7 +119,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": true,
-      "file_count": 8
+      "file_count": 7
     },
     {
       "folder": "docs-product-pack",
@@ -136,7 +136,7 @@
       "has_scripts": false,
       "has_references": true,
       "has_assets": false,
-      "file_count": 4
+      "file_count": 3
     },
     {
       "folder": "docs-project-dashboard-legacy",
@@ -153,7 +153,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": true,
-      "file_count": 8
+      "file_count": 7
     },
     {
       "folder": "docs-project-lifecycle-statuses",
@@ -258,6 +258,23 @@
       "file_count": 5
     },
     {
+      "folder": "hyphenomenon-codex-usage-report",
+      "name": "hyphenomenon-codex-usage-report",
+      "display_name": "Hyphenomenon Codex Usage Report",
+      "description": "Custom skill created by Maggie Lerman. Generate, analyze, validate, preview, and safely promote a Hyphenomenon Codex usage report. Use for daily or weekly Codex activity reports that require deterministic telemetry, GPT-5.6 Sol/high interpretation, Agent Stack evidence, Chronicle context, and fail-closed publication gates.",
+      "short_description": "Analyze and publish Codex usage reports",
+      "status": "active",
+      "replacement": null,
+      "note": "Uses the Hyphenomenon repository's analyzer and publication contracts; GPT-5.6 Sol/high is required for interpretation.",
+      "path": "skills/hyphenomenon-codex-usage-report",
+      "skill_md": "skills/hyphenomenon-codex-usage-report/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": false,
+      "has_references": false,
+      "has_assets": false,
+      "file_count": 2
+    },
+    {
       "folder": "plan-signoff-review",
       "name": "plan-signoff-review",
       "display_name": "Plan Signoff Review",
@@ -286,8 +303,8 @@
       "path": "skills/product-operating-system-scaffold",
       "skill_md": "skills/product-operating-system-scaffold/SKILL.md",
       "has_agents_metadata": true,
-      "has_scripts": true,
-      "has_references": true,
+      "has_scripts": false,
+      "has_references": false,
       "has_assets": true,
       "file_count": 44
     },
@@ -339,8 +356,8 @@
       "has_agents_metadata": true,
       "has_scripts": true,
       "has_references": true,
-      "has_assets": true,
-      "file_count": 8
+      "has_assets": false,
+      "file_count": 6
     },
     {
       "folder": "shopify-app-scaffold",
@@ -357,7 +374,7 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": true,
-      "file_count": 22
+      "file_count": 21
     },
     {
       "folder": "user-journey-audit",
@@ -612,7 +629,7 @@
       "has_scripts": false,
       "has_references": false,
       "has_assets": false,
-      "file_count": 4
+      "file_count": 3
     },
     {
       "folder": "shopify-admin",

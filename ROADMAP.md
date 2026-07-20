@@ -2,7 +2,7 @@
 title: Development Roadmap
 description: Future development plans and milestones
 status: evolving
-lastUpdated: "2026-04-28 12:04 ET (America/New_York)"
+lastUpdated: "2026-07-20 09:56 ET (America/New_York)"
 owner: Product/Engineering
 ---
 
@@ -12,7 +12,7 @@ Use checkpoint-driven execution tracking. Avoid `today/tomorrow` handoff phrasin
 Use `node scripts/docs/timestamp-et.mjs --json` for any timestamp added in roadmap notes.
 
 ## Immediate Priorities
-1. Priority item
+1. Project `1102` is in review with the GPT-5.6 Sol/high Hyphenomenon Codex usage-report workflow packaged as a portable, fail-closed skill.
 
 ## Mid-term
 - Item 1

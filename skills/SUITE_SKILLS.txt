@@ -13,6 +13,7 @@ env-bootstrap-sync
 github-docs-tracking-sync
 hyphenomenon-chat-intake
 hyphenomenon-project-intake
+hyphenomenon-codex-usage-report
 plan-signoff-review
 product-operating-system-scaffold
 project-governance-audit
