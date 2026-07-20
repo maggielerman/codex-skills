@@ -1,5 +1,9 @@
 {
   "skills": {
+    "hyphenomenon-codex-usage-report": {
+      "status": "active",
+      "note": "Uses the Hyphenomenon repository's analyzer and publication contracts; GPT-5.6 Sol/high is required for interpretation."
+    },
     "docs-product-pack": {
       "status": "deprecated",
       "replacement": "product-operating-system-scaffold",

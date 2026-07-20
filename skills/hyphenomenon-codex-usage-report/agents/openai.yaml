@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hyphenomenon Codex Usage Report"
+  short_description: "Analyze and publish Codex usage reports"
+  default_prompt: "Use $hyphenomenon-codex-usage-report with GPT-5.6 Sol/high to generate, analyze, validate, and preview this Codex usage report without treating generation as production permission."
