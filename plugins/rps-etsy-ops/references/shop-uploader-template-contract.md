@@ -14,4 +14,6 @@ files must be generated and preserved in `rps-etsy`.
 
 ## Current Template Source
 
-`/Users/maggielerman/Github/rps-etsy/docs/evidence/templates/shop-uploader/digital-downloads/digital-prints-2078-template-set-2026-05-27/`
+Resolve the `rps-etsy` root using `repository-resolution.md`, then use
+`docs/evidence/templates/shop-uploader/digital-downloads/digital-prints-2078-template-set-2026-05-27/`
+relative to that root.

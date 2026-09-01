@@ -166,6 +166,28 @@ class WorkstationDoctorTest(unittest.TestCase):
             )
         )
 
+    def test_reports_required_source_with_workstation_specific_home_path(self) -> None:
+        absolute_path = "/Users/example-person/Documents/project"
+        skill_path = self.repo / "skills" / "alpha" / "SKILL.md"
+        installed_skill_path = self.codex_home / "skills" / "alpha" / "SKILL.md"
+        skill_text = skill_path.read_text(encoding="utf-8") + f"\nRun from `{absolute_path}`.\n"
+        skill_path.write_text(skill_text, encoding="utf-8")
+        installed_skill_path.write_text(skill_text, encoding="utf-8")
+
+        result = self.run_doctor()
+
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        report = json.loads(result.stdout)
+        self.assertNotIn(absolute_path, result.stdout + result.stderr)
+        self.assertTrue(
+            any(
+                check["kind"] == "portable-source"
+                and check["name"] == "standalone-skill:alpha"
+                and check["status"] == "drift"
+                for check in report["checks"]
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

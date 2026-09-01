@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -14,6 +15,7 @@ from typing import Any, Dict, List
 
 
 IGNORED_NAMES = {".DS_Store", "__pycache__"}
+MACOS_HOME_PATH = re.compile(rb"/Users/[^/\s`'\"<>]+/")
 
 
 def parse_args() -> argparse.Namespace:
@@ -112,6 +114,32 @@ def digest_check(kind: str, name: str, expected: Path, actual: Path) -> Dict[str
     }
 
 
+def portable_source_check(name: str, source: Path) -> Dict[str, Any]:
+    affected: List[str] = []
+    if source.exists():
+        candidates = [source] if source.is_file() else sorted(source.rglob("*"))
+        for path in candidates:
+            if any(part in IGNORED_NAMES for part in path.relative_to(source).parts):
+                continue
+            if path.is_symlink():
+                content = os.readlink(path).encode("utf-8", errors="replace")
+            elif path.is_file():
+                try:
+                    content = path.read_bytes()
+                except OSError:
+                    continue
+            else:
+                continue
+            if MACOS_HOME_PATH.search(content):
+                affected.append("." if path == source else path.relative_to(source).as_posix())
+    return {
+        "kind": "portable-source",
+        "name": name,
+        "status": "pass" if not affected else "drift",
+        "workstationSpecificPathFiles": affected,
+    }
+
+
 def build_report(
     repo_root: Path,
     codex_home: Path,
@@ -124,14 +152,16 @@ def build_report(
     checks.append(policy_check(policy_source, codex_home / "AGENTS.md"))
 
     for skill in manifest.get("standaloneSkills", []):
+        skill_source = repo_root / skill["source"]
         checks.append(
             digest_check(
                 "standalone-skill",
                 skill["name"],
-                repo_root / skill["source"],
+                skill_source,
                 codex_home / "skills" / skill["name"],
             )
         )
+        checks.append(portable_source_check(f"standalone-skill:{skill['name']}", skill_source))
 
     installed = {item.get("name"): item for item in state.get("installed", [])}
     for plugin in manifest.get("plugins", []):
@@ -143,7 +173,8 @@ def build_report(
             source_root = repo_root
         else:
             source_root = Path(host_overlay.get("repositoryRoots", {}).get(source_root_name, ""))
-        expected_digest = tree_digest(source_root / plugin["source"])
+        expected_source = source_root / plugin["source"]
+        expected_digest = tree_digest(expected_source)
         actual_digest = "missing"
         observed_version = None
         observed_enabled = False
@@ -172,6 +203,7 @@ def build_report(
                 "actualDigest": actual_digest,
             }
         )
+        checks.append(portable_source_check(f"plugin:{plugin['name']}", expected_source))
 
     status = "pass" if all(check["status"] == "pass" for check in checks) else "drift"
     return {"schemaVersion": 1, "status": status, "checks": checks}

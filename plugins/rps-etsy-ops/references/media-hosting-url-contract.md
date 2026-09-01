@@ -5,7 +5,7 @@ Use this contract whenever an Etsy Shop Uploader file includes `image_*`,
 
 ## Required Behavior
 
-- Follow `/Users/maggielerman/Github/rps-etsy/docs/etsy/asset-hosting-policy.md`.
+- Resolve the `rps-etsy` root using `repository-resolution.md`, then follow `docs/etsy/asset-hosting-policy.md` from that root.
 - Use approval-state-aware paths that are clear, current, and not copied from historical rapid-draft locations.
 - Preserve a hosted URL manifest under the owning `rps-etsy` evidence folder.
 - Audit every public URL before upload.

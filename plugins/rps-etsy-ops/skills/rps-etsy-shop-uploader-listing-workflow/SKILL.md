@@ -11,9 +11,9 @@ Use this skill for RPS Etsy listing work that touches Shop Uploader or could bec
 
 ## Source Of Truth
 
-- Etsy catalog repo: `/Users/maggielerman/Github/rps-etsy`
-- Creative asset storage/catalog: Google Drive `RPS Creative Assets` plus `/Users/maggielerman/Github/rps-etsy/docs/etsy/creative-asset-drive-catalog.md`
-- Durable plugin backup: `/Users/maggielerman/Github/codex-skills/plugins/rps-etsy-ops/`
+- Etsy catalog repo: resolve `rps-etsy` using `../../references/repository-resolution.md`
+- Creative asset storage/catalog: Google Drive `RPS Creative Assets` plus `docs/etsy/creative-asset-drive-catalog.md` in the resolved `rps-etsy` root
+- Durable plugin backup: `plugins/rps-etsy-ops/` in the resolved `codex-skills` root
 - Shop Uploader dashboard: `https://www.shopuploader.com/app/dashboard`
 - Live Etsy mutation path: Shop Uploader CSV/XLSX only, after Maggie approves a reviewable apply plan.
 
@@ -21,7 +21,7 @@ Do not use Etsy API mutation paths for this workflow.
 
 ## Required Reading
 
-In `/Users/maggielerman/Github/rps-etsy`, read:
+In the resolved `rps-etsy` root, read:
 
 1. `AGENTS.md`
 2. `docs/etsy/workstreams/shop-uploader-operations.md`
@@ -100,7 +100,7 @@ Create listings as drafts first and keep publishing as a separate approval step.
 
 For `Digital Prints (2078)`, use the reusable typed template set before preparing a review packet:
 
-`/Users/maggielerman/Github/rps-etsy/docs/evidence/templates/shop-uploader/digital-downloads/digital-prints-2078-template-set-2026-05-27/`
+`docs/evidence/templates/shop-uploader/digital-downloads/digital-prints-2078-template-set-2026-05-27/`
 
 Key files:
 
@@ -174,7 +174,7 @@ Keep:
 
 ## Validation Commands
 
-Common commands from `/Users/maggielerman/Github/rps-etsy`:
+Common commands from the resolved `rps-etsy` root:
 
 ```bash
 python3 scripts/etsy/validate-mockup-availability.py
