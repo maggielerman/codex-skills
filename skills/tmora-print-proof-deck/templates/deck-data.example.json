@@ -1,0 +1,34 @@
+{
+  "deck_title": "Waters Triptych Print Proofs and Options",
+  "date": "July 2026",
+  "prepared_by": "Maggie Lerman",
+  "company": "Rock Paper Scissors",
+  "artworks": [
+    {
+      "sku": "TMORA116",
+      "artist": "Elena Kalman",
+      "title": "Waters",
+      "year": "2025",
+      "material": "Mixed Media on Canvas",
+      "print_size": "8x10 in.",
+      "postcard_size": "4x6 in.",
+      "recommended_fronts": ["A", "C"],
+      "assets": {
+        "set_cover": "/path/to/set-cover.png",
+        "panels": [
+          "/path/to/panel-1.png",
+          "/path/to/panel-2.png",
+          "/path/to/panel-3.png"
+        ],
+        "fronts": {
+          "A": "/path/to/front-a.png",
+          "B": "/path/to/front-b.png",
+          "C": "/path/to/front-c.png"
+        },
+        "backs": {
+          "A": "/path/to/info-card-back.png"
+        }
+      }
+    }
+  ]
+}

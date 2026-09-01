@@ -9,6 +9,8 @@ Custom skill created by Maggie Lerman.
 
 Build a repeatable dossier + screenshot package for Hyphenomenon import.
 
+Forward artifact rule: create project intake artifacts in the Hyphenomenon repo under `DOCS/intake/runs/projects/<date>-<project-slug>/`. Do not write generated Hyphenomenon intake dossiers or screenshots into the source repo.
+
 This skill covers the project intake lane. It does not cover chat/session intake; use `hyphenomenon-chat-intake` for AI conversation transcripts, chat artifacts, created-skill/project/repository capture, and chat route sync. In the Hyphenomenon repo, branch lifecycle and merge/delete policy for committed intake artifacts is documented in `DOCS/intake/README.md`.
 
 ## Quick Start
@@ -18,17 +20,19 @@ This skill covers the project intake lane. It does not cover chat/session intake
 SKILL_ROOT="${CODEX_HOME:-$HOME/.codex}/skills/hyphenomenon-project-intake"
 ```
 
-2. Generate scaffold files in the target repository:
+2. Generate scaffold files in the Hyphenomenon repo:
 ```bash
 python3 "$SKILL_ROOT/scripts/create_intake_scaffold.py" \
   --project-name "Family Shapes" \
   --repo-url "https://github.com/maggielerman/family-shapes" \
   --live-url "https://familyshapes.com" \
-  --source-repo-path "/Users/maggielerman/Github" \
-  --repo-root "/Users/maggielerman/Github/family-shapes"
+  --source-repo-path "/Users/maggielerman/Github/family-shapes" \
+  --repo-root "/Users/maggielerman/Github/hyphenomenon" \
+  --output "DOCS/intake/runs/projects/2026-06-01-family-shapes/dossier.md" \
+  --screenshots-dir "DOCS/intake/runs/projects/2026-06-01-family-shapes/screenshots"
 ```
 
-3. Capture screenshots into `docs/intake/screenshots/` (use browser automation tools):
+3. Capture screenshots into the run directory's `screenshots/` folder (use browser automation tools):
 - `01-home.png`
 - `02-primary-workflow.png`
 - `03-key-feature.png`
@@ -56,11 +60,11 @@ python3 "$SKILL_ROOT/scripts/verify_intake.py" \
 - Pull evidence from docs + code (README, docs hub, route files, package/tooling, CI workflows).
 
 3. Produce required artifacts.
-- Create `docs/intake/hyphenomenon-project-intake.md`.
-- Create `docs/intake/screenshots/`.
+- Create `DOCS/intake/runs/projects/<date>-<project-slug>/dossier.md`.
+- Create `DOCS/intake/runs/projects/<date>-<project-slug>/screenshots/`.
 - Save 4-8 screenshots with clear names; include home, primary workflow, key feature, and admin/settings equivalent.
-- Create `docs/intake/hyphenomenon-project-page-packet.json` for public project-page proof sections, product surfaces, tech stack, key dates, data-model highlights, and first-class data-model artifacts when useful.
-- Create `docs/intake/hyphenomenon-workflow-packet.json` when the project depends on visible process, automation, AI collaboration, human review, or repeatable operations.
+- Create `DOCS/intake/runs/projects/<date>-<project-slug>/project-page-packet.json` for public project-page proof sections, product surfaces, tech stack, key dates, data-model highlights, and first-class data-model artifacts when useful.
+- Create `DOCS/intake/runs/projects/<date>-<project-slug>/workflow-packet.json` when the project depends on visible process, automation, AI collaboration, human review, or repeatable operations.
 
 4. Enforce exact dossier structure.
 - Use the exact required headers:
@@ -94,6 +98,7 @@ python3 "$SKILL_ROOT/scripts/verify_intake.py" \
 - Verify screenshot links resolve from the dossier location.
 - Treat the target output as a public logbook/proof record, not a glossy case study. The packet should show artifacts, workflows/process, decisions/tradeoffs, AI or automation use, human review, failures/limits, and enough narrative context to understand what happened.
 - Avoid intake-framed public headings such as `What This Fresh Intake Proves`; write headings for readers inspecting the work and its evidence.
+- Treat the dossier as source material, not public copy. Manually review the repository evidence, then author the project-page packet as the actual project record. Do not paste the dossier/checklist into the packet, and keep run mechanics such as pre-apply status, local preview waivers, source-branch correction, and screenshot-capture blockers out of the public project narrative unless the project itself is an intake/tooling project.
 - Workflow packets should include at least four concrete steps, one decision/subprocess step, artifact or dry-run proof, a human/operator review point, project linkage, and source provenance.
 - End the completion message with:
   - `files created/updated`

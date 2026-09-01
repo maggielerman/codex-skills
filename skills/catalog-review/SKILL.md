@@ -1,6 +1,6 @@
 ---
 name: catalog-review
-description: Custom skill created by Maggie Lerman. Standard Shopify-first catalog review workflow for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review boards, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.
+description: Custom skill created by Maggie Lerman. Standard Shopify-first catalog review workflow for opening a numbered project, choosing the right numbered review-packet shape (static JPG/PDF boards, hosted-image HTML pages, or interactive decision-capture surfaces), collecting human corrections or saved decisions, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review pages, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.
 ---
 
 # Catalog Review
@@ -39,19 +39,27 @@ Keep local taxonomy, collection logic, and metafield rules in the repo.
 
 1. Define the review target.
 2. Define the source selector or buckets.
-3. Generate numbered JPG review boards.
-4. Optionally bundle the JPGs into a PDF for easier markup.
-5. Emit `manifest.json`, `manifest.csv`, and `index.md`.
-6. Collect numbered human corrections.
-7. Normalize corrections into a bounded apply plan.
-8. Apply changes.
-9. Verify the touched records.
-10. Record checkpoints and evidence artifact paths in the project doc.
-11. Delete the temporary review packet unless the user explicitly wants it kept or archived.
+3. Choose the review-packet shape that fits the work.
+4. Ask whether the review packet should include all images for each product or only the first image when image inclusion is not already defined. Default to the first image if the user does not choose.
+5. Generate the numbered review packet.
+6. Emit the shared apply/verify artifacts: `manifest.json`, `manifest.csv`, and `index.md`.
+7. Emit shape-specific artifacts such as numbered JPG pages, an optional PDF bundle, a numbered HTML review page, or `requests.csv` for interactive decision-capture runs.
+8. Collect numbered human corrections or saved/exported interactive decisions.
+9. Normalize corrections into a bounded apply plan.
+10. Apply changes.
+11. Verify the touched records.
+12. Record checkpoints and evidence artifact paths in the project doc.
+13. Delete the temporary review packet unless the user explicitly wants it kept or archived.
 
-## Standard Artifact Contract
+## Standard Packet Shapes
 
-Every review packet should include:
+Choose one packet shape at the start of a review stream and record that choice in the project doc or packet `index.md`.
+
+### Static JPG / PDF Boards
+
+Use this for bounded visual-review sets, printable review, simple approve / reject / revise decisions, and markup where screenshots or PDF annotation are the natural review surface.
+
+Standard artifacts:
 
 - numbered JPG pages
 - optional combined PDF bundle
@@ -59,13 +67,54 @@ Every review packet should include:
 - `manifest.csv`
 - `index.md`
 
+### Hosted-Image HTML Page
+
+Use this for larger Shopify-first review packets where images should load from live hosted Shopify CDN URLs instead of being downloaded into the packet. Prefer this shape when the reviewer needs a browser page but not persistent in-page decision controls.
+
+Standard artifacts:
+
+- numbered HTML review page
+- `manifest.json`
+- `manifest.csv`
+- `index.md`
+
+### Interactive Decision-Capture Surface
+
+Use this for complex markup, multi-filter review, per-image actions such as change, delete, crop whitespace, and order changes, saved local decisions, and agent handoff. In repos that provide an internal review route or app surface, prefer this shape when the reviewer needs to capture structured decisions rather than just read a packet.
+
+Standard artifacts:
+
+- interactive route or app surface
+- `manifest.json`
+- `manifest.csv`
+- `requests.csv`
+- `index.md`
+
+## Standard Artifact Contract
+
+Every review packet should include:
+
+- `manifest.json`
+- `manifest.csv`
+- `index.md`
+
 The manifest is the source of truth for later apply/verify work.
+
+The review surface depends on the selected packet shape: numbered JPG pages, an optional PDF bundle, a numbered HTML page, or an interactive route/app surface.
+
+Hosted-image HTML pages and interactive decision-capture surfaces should render product images from the live hosted image URLs returned by Shopify or the repo's product source. Do not download or copy all product images into those packets by default. If the user explicitly requests a self-contained archive or offline review packet, record that exception in `index.md` and preserve both the hosted URL and any local copy path in the manifest.
+
+Static JPG / PDF boards may include locally rendered image assets because their purpose is a portable visual review artifact. Still preserve source image URLs in the manifest whenever available.
+
+Each product entry should have a stable review number that appears in the review surface and both manifest files. Include enough product metadata for review without needing to open Shopify: product title, handle, product ID or GID when available, current bucket or selector context, relevant tags/metafields under review, image count included, and source image URLs.
 
 ## Human Feedback Contract
 
 - numbered correction notes in chat or markdown are authoritative
-- annotated PDFs are supporting context only
-- if the PDF and numbered notes disagree, resolve the conflict explicitly before applying changes
+- annotated screenshots or browser notes are supporting context only
+- saved/exported interactive decisions are authoritative when the project doc names the interactive manifest as the review input
+- if visual annotations and numbered notes disagree, resolve the conflict explicitly before applying changes
+- if saved interactive decisions and separate written notes disagree, resolve the conflict explicitly before applying changes
 
 ## Shopify-First Guidance
 
@@ -75,7 +124,13 @@ Prefer these source selectors:
 - product query
 - explicit product-handle list
 
-Prefer featured images by default unless the repo’s local workflow says otherwise.
+Prefer the first product image by default unless the user asks to include all images or the repo’s local workflow says otherwise.
+
+When asking about image inclusion, use a direct question:
+
+`Should the review packet include all images for each product, or just the first image?`
+
+If all images are included, keep each product grouped under one review number unless the local workflow specifically needs per-image decisions. If the review needs per-image decisions, make the sub-numbering explicit, such as `12.1`, `12.2`, and `12.3`.
 
 Common mutation outputs include:
 
@@ -85,13 +140,15 @@ Common mutation outputs include:
 - write orientation/color/subject decisions
 - set boolean merchandising flags
 
-## Project And Review-Board Expectations
+## Project And Packet Expectations
 
 A catalog-review project should record:
 
 - review target
 - source or bucket definition
-- generated board packet
+- selected packet shape
+- image inclusion choice: all product images or first image only
+- generated board/page/surface packet
 - feedback packet reviewed
 - apply audit paths
 - verify audit paths
@@ -99,7 +156,7 @@ A catalog-review project should record:
 - next checkpoint targets
 
 Keep the project doc lightweight.
-Use a repo's generic project template for the project doc itself, and keep review-board-specific scaffolding under the docs root's `evidence/templates/catalog-review/` area when the repo has one.
+Use a repo's generic project template for the project doc itself, and keep review-page-specific scaffolding under the docs root's `evidence/templates/catalog-review/` area when the repo has one.
 
 ## Cleanup Rule
 
@@ -109,7 +166,8 @@ After apply + verify + project-doc checkpointing are complete, delete the run pa
 
 ## Prompt Examples
 
-- `Create a catalog review board for all products that do not have a color set.`
-- `Set up a catalog cleanup project and generate review boards for portrait/landscape mismatches.`
-- `Prepare a merchandising review packet for this collection and include a PDF bundle.`
+- `Create a catalog review packet for all products that do not have a color set.`
+- `Set up a catalog cleanup project and choose the best review packet shape for portrait/landscape mismatches.`
+- `Prepare a merchandising review page for this collection using all product images.`
+- `Use the interactive catalog-review surface for image order and delete/change requests.`
 - `Apply the numbered catalog review corrections and verify the touched products.`
