@@ -1,0 +1,7 @@
+interface:
+  display_name: "RPS 8x10 Gallery Sleeve Package"
+  short_description: "Create a presentation from this saved template"
+  icon_large: "./assets/preview.png"
+  default_prompt: "Use $artifact-template-rps-8x10-gallery-sleeve-package to create a new presentation with this template."
+policy:
+  allow_implicit_invocation: true

@@ -18,8 +18,8 @@ This skill covers chat/session/conversation intake. For repository/project dossi
 - Keep project `1059` in mind for chat intake contract changes unless a newer project supersedes it.
 
 2. Capture the raw transcript.
-- Store every intaked chat transcript in git under `scripts/intake/chat/runs/transcripts/`.
-- Name it predictably, for example `<date>-<provider>-<session-or-share-id>-<slug>-transcript.txt`.
+- Store every new intaked chat transcript in git under `DOCS/intake/runs/chats/<date>-<slug>/transcript.txt`.
+- Historical transcripts under `scripts/intake/chat/runs/transcripts/` remain valid legacy records, but do not use that path for new runs.
 - The private transcript archive must be a complete source record, not a hand-written summary or curated retelling.
 - Preserve the full turn/event sequence. Include tool calls and tool outputs in parseable form; summarize tool-output sections only when raw output is too large/noisy, and mark the section with raw-output size/hash or equivalent provenance.
 - Mark every redaction explicitly. If there are no redactions, say so in the archive.
@@ -28,8 +28,8 @@ This skill covers chat/session/conversation intake. For repository/project dossi
 - Do not commit inline raw transcript text in JSON. Use `transcriptSourcePath`.
 
 3. Build the JSON artifact.
-- Save the run artifact under `scripts/intake/chat/runs/*.json`.
-- Set `transcriptSourcePath` relative to the artifact file, normally `transcripts/<file>.txt`.
+- Save the run artifact under `DOCS/intake/runs/chats/<date>-<slug>/artifact.json`.
+- Set `transcriptSourcePath` relative to the artifact file, normally `transcript.txt`.
 - Set `transcriptReviewedAt` after reviewing/redacting the transcript.
 - Keep public content curated: `summary`, `highlights`, `decisions`, `contentBodyMarkdown`, verified `sourceExtracts`, optional `conversationRender.featuredMoment`, and public-safe links.
 - Public summaries belong only in the JSON artifact/public fields; never use a public summary as the private transcript archive.
@@ -48,9 +48,9 @@ This skill covers chat/session/conversation intake. For repository/project dossi
 
 6. Validate and sync.
 ```bash
-npm run intake:validate:chat -- --artifact "scripts/intake/chat/runs/<artifact>.json"
-npm run intake:sync:chat -- --artifact "scripts/intake/chat/runs/<artifact>.json"
-npm run intake:sync:chat:apply -- --artifact "scripts/intake/chat/runs/<artifact>.json"
+npm run intake:validate:chat -- --artifact "DOCS/intake/runs/chats/<date>-<slug>/artifact.json"
+npm run intake:sync:chat -- --artifact "DOCS/intake/runs/chats/<date>-<slug>/artifact.json"
+npm run intake:sync:chat:apply -- --artifact "DOCS/intake/runs/chats/<date>-<slug>/artifact.json"
 ```
 
 7. Verify the rendered route.

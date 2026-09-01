@@ -1,0 +1,6 @@
+interface:
+  display_name: "RPS Print Order"
+  short_description: "Find and queue RPS print orders"
+  default_prompt: "Use $rps-print-order to print the latest incoming order, including its packing slip and artwork."
+policy:
+  allow_implicit_invocation: true

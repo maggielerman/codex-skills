@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a Hyphenomenon intake scaffold in a target repository."""
+"""Create a Hyphenomenon-owned project intake scaffold."""
 
 from __future__ import annotations
 
@@ -108,13 +108,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--repo-root", required=True, help="Absolute path to repo root")
     parser.add_argument(
         "--output",
-        default="docs/intake/hyphenomenon-project-intake.md",
-        help="Path relative to repo root",
+        default="DOCS/intake/runs/projects/manual-project-intake/dossier.md",
+        help="Path relative to the Hyphenomenon repo root",
     )
     parser.add_argument(
         "--screenshots-dir",
-        default="docs/intake/screenshots",
-        help="Path relative to repo root",
+        default="DOCS/intake/runs/projects/manual-project-intake/screenshots",
+        help="Path relative to the Hyphenomenon repo root",
     )
     parser.add_argument("--force", action="store_true", help="Overwrite output file if it exists")
     return parser.parse_args()

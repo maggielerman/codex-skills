@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate a Hyphenomenon intake dossier and screenshot pack."""
+"""Validate a Hyphenomenon-owned intake dossier and screenshot pack."""
 
 from __future__ import annotations
 
@@ -35,16 +35,16 @@ CATEGORY_PATTERNS = {
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repo-root", required=True, help="Absolute path to repo root")
+    parser.add_argument("--repo-root", required=True, help="Absolute path to the Hyphenomenon repo root")
     parser.add_argument(
         "--dossier",
-        default="docs/intake/hyphenomenon-project-intake.md",
-        help="Path relative to repo root",
+        default="DOCS/intake/runs/projects/manual-project-intake/dossier.md",
+        help="Path relative to the Hyphenomenon repo root",
     )
     parser.add_argument(
         "--screenshots-dir",
-        default="docs/intake/screenshots",
-        help="Path relative to repo root",
+        default="DOCS/intake/runs/projects/manual-project-intake/screenshots",
+        help="Path relative to the Hyphenomenon repo root",
     )
     parser.add_argument("--repo-url", required=True)
     parser.add_argument("--live-url", action="append", dest="live_urls", required=True)
