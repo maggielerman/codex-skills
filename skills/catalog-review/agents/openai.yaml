@@ -1,4 +1,4 @@
 interface:
   display_name: "Catalog Review"
   short_description: "Run numbered Shopify-first catalog review workflows"
-  default_prompt: "Use $catalog-review to open a catalog-review project, generate numbered JPG review boards with optional PDF bundles, collect numbered human corrections, and translate them into apply/verify passes with audit artifacts."
+  default_prompt: "Use $catalog-review to open a catalog-review project, choose the right packet shape (static JPG/PDF boards, hosted-image HTML page, or interactive decision-capture surface), ask whether to include all product images or only the first image when needed, collect numbered corrections or saved decisions, and translate them into apply/verify passes with audit artifacts."

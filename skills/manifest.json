@@ -1,12 +1,29 @@
 {
   "generated_by": "scripts/build_catalog.py",
-  "skill_count": 57,
+  "skill_count": 59,
   "skills": [
+    {
+      "folder": "artifact-template-rps-8x10-gallery-sleeve-package",
+      "name": "artifact-template-rps-8x10-gallery-sleeve-package",
+      "display_name": "RPS 8x10 Gallery Sleeve Package",
+      "description": "Create a presentation using the RPS 8x10 Gallery Sleeve Package template and its retained reference file. Use when the user selects this template, names RPS 8x10 Gallery Sleeve Package, or explicitly invokes $artifact-template-rps-8x10-gallery-sleeve-package. Create an 8x10 retail package front for RPS print sets using the sophisticated gallery sleeve layout with editable product art, title, specs, price, and micro SKU.",
+      "short_description": "Create a presentation from this saved template",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/artifact-template-rps-8x10-gallery-sleeve-package",
+      "skill_md": "skills/artifact-template-rps-8x10-gallery-sleeve-package/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": false,
+      "has_references": false,
+      "has_assets": true,
+      "file_count": 5
+    },
     {
       "folder": "catalog-review",
       "name": "catalog-review",
       "display_name": "Catalog Review",
-      "description": "Custom skill created by Maggie Lerman. Standard Shopify-first catalog review workflow for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review boards, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.",
+      "description": "Custom skill created by Maggie Lerman. Standard Shopify-first catalog review workflow for opening a numbered project, choosing the right numbered review-packet shape (static JPG/PDF boards, hosted-image HTML pages, or interactive decision-capture surfaces), collecting human corrections or saved decisions, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review pages, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.",
       "short_description": "Run numbered Shopify-first catalog review workflows",
       "status": "active",
       "replacement": null,
@@ -581,6 +598,23 @@
       "file_count": 2
     },
     {
+      "folder": "rps-print-order",
+      "name": "rps-print-order",
+      "display_name": "RPS Print Order",
+      "description": "Discover the latest incoming Rock Paper Scissors Shopify or Faire order, or use an attached packing slip, pick list, CSV, or manifest; print its packing slip and queue its artwork through Photoshop and Adobe Creative Cloud. Use when the user asks to print or queue an RPS order, including \u201cprint the order that just came in.\u201d",
+      "short_description": "Find and queue RPS print orders",
+      "status": "active",
+      "replacement": null,
+      "note": null,
+      "path": "skills/rps-print-order",
+      "skill_md": "skills/rps-print-order/SKILL.md",
+      "has_agents_metadata": true,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": false,
+      "file_count": 6
+    },
+    {
       "folder": "rps-etsy-shop-uploader-listing-workflow",
       "name": "rps-etsy-shop-uploader-listing-workflow",
       "display_name": null,
@@ -618,7 +652,7 @@
       "folder": "tmora-print-proof-deck",
       "name": "tmora-print-proof-deck",
       "display_name": null,
-      "description": "Custom skill created by Maggie Lerman. Use when creating or revising TMORA, The Museum of Russian Art, print proof PDFs or option decks for Mary, museum gift-shop print files, postcard fronts/backs, 11x17 proofs, or packaging/layout option review.",
+      "description": "Use when creating or revising TMORA client-facing landscape-letter print proof packets, postcard front/back comparisons, triptych proofs, or final proof PDFs for Mary.",
       "short_description": null,
       "status": "active",
       "replacement": null,
@@ -627,9 +661,9 @@
       "skill_md": "skills/tmora-print-proof-deck/SKILL.md",
       "has_agents_metadata": false,
       "has_scripts": false,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false,
-      "file_count": 3
+      "file_count": 7
     },
     {
       "folder": "shopify-admin",

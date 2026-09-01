@@ -10,9 +10,9 @@ such as `image_*`, `video_1`, or `digital_file_*`.
 
 ## Source Of Truth
 
-- Etsy catalog repo: `/Users/maggielerman/Github/rps-etsy`
-- Creative asset storage/catalog: Google Drive `RPS Creative Assets` plus `/Users/maggielerman/Github/rps-etsy/docs/etsy/creative-asset-drive-catalog.md`
-- Hosting policy: `/Users/maggielerman/Github/rps-etsy/docs/etsy/asset-hosting-policy.md`
+- Etsy catalog repo: resolve `rps-etsy` using `../../references/repository-resolution.md`
+- Creative asset storage/catalog: Google Drive `RPS Creative Assets` plus `docs/etsy/creative-asset-drive-catalog.md` in the resolved `rps-etsy` root
+- Hosting policy: `docs/etsy/asset-hosting-policy.md` in the resolved `rps-etsy` root
 - Plugin reference: `../../references/media-hosting-url-contract.md`
 
 ## Core Rules

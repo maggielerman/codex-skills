@@ -16,8 +16,8 @@ Use this skill for Rock Paper Scissors wall art mockup work across Shopify listi
 - Automation snapshot: `rps-etsy/docs/etsy/creative-asset-catalog-snapshot.csv`
 - Optional native Drive cache: `RPS_CREATIVE_ASSETS_DRIVE_CACHE` may point at the Drive desktop `RPS Creative Assets` folder
 - Local archive/cache: `${HOME}/Github/rps-creative-assets` is read-only migration history only
-- Durable plugin backup: `/Users/maggielerman/Github/codex-skills/plugins/rps-etsy-ops/`
-- Standalone transition copy: `/Users/maggielerman/Github/codex-skills/skills/rps-wall-art-mockup-workflow/`
+- Durable plugin source: resolve `plugins/rps-etsy-ops/` from the `codex-skills` repository root.
+- Standalone transition source: resolve `skills/rps-wall-art-mockup-workflow/` from the `codex-skills` repository root.
 - Application repos keep project evidence, live apply proof, and deployment records.
 
 Do not create new active packs in the local archive. See `references/repository-contract.md`.

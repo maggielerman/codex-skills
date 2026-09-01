@@ -17,9 +17,8 @@ publishing Etsy digital-download products. They are not live-upload authority.
 
 ## Storage
 
-Store real packets in:
-
-`/Users/maggielerman/Github/rps-etsy/docs/evidence/active/<project>/`
+Resolve the `rps-etsy` root using `repository-resolution.md`, then store real
+packets in `docs/evidence/active/<project>/` relative to that root.
 
 Store reusable creative assets in the Google Drive `RPS Creative Assets`
 library and register them in the Drive-backed creative asset catalog snapshot

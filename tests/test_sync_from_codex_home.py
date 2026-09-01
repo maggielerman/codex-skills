@@ -4,6 +4,7 @@ import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from typing import Dict, Optional
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -25,7 +26,12 @@ class SyncFromCodexHomeTest(unittest.TestCase):
     def tearDown(self) -> None:
         self.tempdir.cleanup()
 
-    def write_skill(self, root: Path, name: str, files: dict[str, str] | None = None) -> None:
+    def write_skill(
+        self,
+        root: Path,
+        name: str,
+        files: Optional[Dict[str, str]] = None,
+    ) -> None:
         files = files or {"SKILL.md": f"---\nname: {name}\ndescription: Test skill.\n---\n"}
         skill_dir = root / name
         skill_dir.mkdir(parents=True, exist_ok=True)
