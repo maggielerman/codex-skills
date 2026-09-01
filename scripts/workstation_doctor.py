@@ -31,6 +31,13 @@ def tree_digest(root: Path) -> str:
     digest = hashlib.sha256()
     if not root.exists():
         return "missing"
+    if root.is_file():
+        mode = root.stat().st_mode & 0o777
+        digest.update(f"file\0.\0{mode:o}\0".encode("utf-8"))
+        with root.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
+        return digest.hexdigest()
     for path in sorted(root.rglob("*"), key=lambda item: item.as_posix()):
         if any(part in IGNORED_NAMES for part in path.relative_to(root).parts):
             continue
@@ -51,6 +58,32 @@ def tree_digest(root: Path) -> str:
 def load_json(path: Path) -> Dict[str, Any]:
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def file_content_digest(path: Path) -> str:
+    if not path.is_file():
+        return "missing"
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def policy_check(expected: Path, actual: Path) -> Dict[str, Any]:
+    expected_digest = file_content_digest(expected)
+    actual_digest = file_content_digest(actual)
+    actual_mode = f"{actual.stat().st_mode & 0o777:o}" if actual.exists() else "missing"
+    matches = expected_digest == actual_digest and actual_mode == "600"
+    return {
+        "kind": "global-policy",
+        "name": "AGENTS.md",
+        "status": "pass" if matches else "drift",
+        "expectedDigest": expected_digest,
+        "actualDigest": actual_digest,
+        "expectedMode": "600",
+        "actualMode": actual_mode,
+    }
 
 
 def plugin_state(path: Path | None) -> Dict[str, Any]:
@@ -88,7 +121,7 @@ def build_report(
 ) -> Dict[str, Any]:
     checks: List[Dict[str, Any]] = []
     policy_source = repo_root / manifest["globalPolicy"]
-    checks.append(digest_check("global-policy", "AGENTS.md", policy_source, codex_home / "AGENTS.md"))
+    checks.append(policy_check(policy_source, codex_home / "AGENTS.md"))
 
     for skill in manifest.get("standaloneSkills", []):
         checks.append(

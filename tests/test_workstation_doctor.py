@@ -30,6 +30,7 @@ class WorkstationDoctorTest(unittest.TestCase):
         plugin = '{"name":"sample","version":"1.0.0"}\n'
         (self.repo / "templates" / "global-AGENTS.md").write_text(policy, encoding="utf-8")
         (self.codex_home / "AGENTS.md").write_text(policy, encoding="utf-8")
+        (self.codex_home / "AGENTS.md").chmod(0o600)
         (self.repo / "skills" / "alpha" / "SKILL.md").write_text(skill, encoding="utf-8")
         (self.codex_home / "skills" / "alpha" / "SKILL.md").write_text(skill, encoding="utf-8")
         (self.external_repo / "plugins" / "sample" / ".codex-plugin" / "plugin.json").write_text(
@@ -133,6 +134,36 @@ class WorkstationDoctorTest(unittest.TestCase):
         self.assertNotIn(secret_marker, result.stdout + result.stderr)
         self.assertTrue(
             any(check["name"] == "alpha" and check["status"] == "drift" for check in report["checks"])
+        )
+
+    def test_reports_global_policy_file_drift(self) -> None:
+        (self.codex_home / "AGENTS.md").write_text("different policy\n", encoding="utf-8")
+
+        result = self.run_doctor()
+
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        report = json.loads(result.stdout)
+        self.assertTrue(
+            any(
+                check["kind"] == "global-policy" and check["status"] == "drift"
+                for check in report["checks"]
+            )
+        )
+
+    def test_reports_insecure_global_policy_permissions(self) -> None:
+        (self.codex_home / "AGENTS.md").chmod(0o644)
+
+        result = self.run_doctor()
+
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        report = json.loads(result.stdout)
+        self.assertTrue(
+            any(
+                check["kind"] == "global-policy"
+                and check["status"] == "drift"
+                and check["actualMode"] == "644"
+                for check in report["checks"]
+            )
         )
 
 
