@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -12,6 +13,9 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict
+
+
+IGNORED_NAMES = {".DS_Store", "__pycache__"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -28,6 +32,28 @@ def parse_args() -> argparse.Namespace:
 def load_json(path: Path) -> Dict[str, Any]:
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def tree_digest(root: Path) -> str:
+    digest = hashlib.sha256()
+    if not root.exists():
+        return "missing"
+    if root.is_file():
+        digest.update(root.read_bytes())
+        return digest.hexdigest()
+    for path in sorted(root.rglob("*"), key=lambda item: item.as_posix()):
+        if any(part in IGNORED_NAMES for part in path.relative_to(root).parts):
+            continue
+        relative = path.relative_to(root).as_posix()
+        if path.is_symlink():
+            digest.update(f"symlink\0{relative}\0{os.readlink(path)}\0".encode("utf-8"))
+        elif path.is_file():
+            mode = path.stat().st_mode & 0o777
+            digest.update(f"file\0{relative}\0{mode:o}\0".encode("utf-8"))
+            digest.update(path.read_bytes())
+        elif path.is_dir():
+            digest.update(f"dir\0{relative}\0".encode("utf-8"))
+    return digest.hexdigest()
 
 
 def run_codex(*args: str) -> str:
@@ -117,9 +143,19 @@ def install_plugins(
     state = json.loads(run_codex("list", "--available", "--json"))
     installed = {item.get("name"): item for item in state.get("installed", [])}
     for plugin in required_plugins:
-        if plugin["name"] in installed:
-            continue
-        run_codex("add", f"{plugin['name']}@{plugin['marketplace']}", "--json")
+        observed = installed.get(plugin["name"])
+        expected_root = source_root(plugin.get("sourceRoot", "codex-skills"), repo_root, overlay)
+        expected_digest = tree_digest(expected_root / plugin["source"])
+        actual_path = observed.get("source", {}).get("path") if observed else None
+        actual_digest = tree_digest(Path(actual_path)) if actual_path else "missing"
+        current = (
+            observed is not None
+            and observed.get("version") == plugin["version"]
+            and bool(observed.get("enabled")) == bool(plugin.get("enabled", True))
+            and actual_digest == expected_digest
+        )
+        if not current:
+            run_codex("add", f"{plugin['name']}@{plugin['marketplace']}", "--json")
 
 
 def main() -> int:

@@ -1,13 +1,19 @@
+import importlib.util
 import json
 import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = REPO_ROOT / "scripts" / "workstation_bootstrap.py"
+SPEC = importlib.util.spec_from_file_location("workstation_bootstrap", SCRIPT)
+assert SPEC and SPEC.loader
+BOOTSTRAP = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(BOOTSTRAP)
 
 
 class WorkstationBootstrapTest(unittest.TestCase):
@@ -89,6 +95,51 @@ class WorkstationBootstrapTest(unittest.TestCase):
         self.assertEqual(len(skill_backups), 1)
         self.assertEqual(skill_backups[0].read_text(), "old skill\n")
         self.assertEqual((self.codex_home / "AGENTS.md").stat().st_mode & 0o777, 0o600)
+
+    def test_refreshes_installed_plugin_when_source_digest_has_drifted(self) -> None:
+        plugin_source = self.repo / "plugins" / "sample"
+        installed_source = self.root / "installed-plugin"
+        plugin_source.mkdir(parents=True)
+        installed_source.mkdir(parents=True)
+        (plugin_source / "content.txt").write_text("canonical\n", encoding="utf-8")
+        (installed_source / "content.txt").write_text("old\n", encoding="utf-8")
+        manifest = {
+            "marketplaces": [{"name": "local", "sourceRoot": "codex-skills"}],
+            "plugins": [
+                {
+                    "name": "sample",
+                    "marketplace": "local",
+                    "version": "1.0.0",
+                    "source": "plugins/sample",
+                    "enabled": True,
+                }
+            ],
+        }
+
+        def fake_run_codex(*args: str) -> str:
+            if args == ("marketplace", "list"):
+                return "MARKETPLACE ROOT\nlocal /tmp/local\n"
+            if args == ("list", "--available", "--json"):
+                return json.dumps(
+                    {
+                        "installed": [
+                            {
+                                "name": "sample",
+                                "version": "1.0.0",
+                                "enabled": True,
+                                "source": {"path": str(installed_source)},
+                            }
+                        ]
+                    }
+                )
+            if args == ("add", "sample@local", "--json"):
+                return "{}"
+            raise AssertionError(f"unexpected Codex command: {args}")
+
+        with mock.patch.object(BOOTSTRAP, "run_codex", side_effect=fake_run_codex) as run:
+            BOOTSTRAP.install_plugins(self.repo, manifest, {}, True)
+
+        run.assert_any_call("add", "sample@local", "--json")
 
 
 if __name__ == "__main__":
