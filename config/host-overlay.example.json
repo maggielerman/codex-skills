@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "hostId": "replace-with-stable-host-id",
+  "hostRole": "pro-or-air",
+  "repositoryRoots": {
+    "codex-skills": "/path/to/codex-skills",
+    "multi-mailbox-ops": "/path/to/multi-mailbox-ops",
+    "hyphenomenon": "/path/to/hyphenomenon",
+    "shopify-headless": "/path/to/shopify-headless",
+    "aerial-platform": "/path/to/aerial-platform",
+    "chronicle-visualizer": "/path/to/chronicle-visualizer"
+  }
+}

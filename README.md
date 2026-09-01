@@ -78,6 +78,34 @@ The sync preflight resolves allowlisted skills from `${CODEX_HOME:-$HOME/.codex}
 
 If you update custom plugins, also refresh the repo-local plugin marketplace in `.agents/plugins/marketplace.json` so the package stays installable. Then run `python3 scripts/build_docs_site_catalog.py` so the public plugin docs stay current.
 
+## Workstation baseline
+
+`config/workstation-baseline.json` is the shared two-workstation capability lock. It selects the canonical global policy, required direct skills, required plugin packages, machine roles, and host capabilities. Workstation-specific repository paths belong in ignored `config/host-overlay.local.json`; copy `config/host-overlay.example.json` to start one.
+
+Preview installation without changing local state:
+
+```bash
+python3 scripts/workstation_bootstrap.py \
+  --host-overlay config/host-overlay.local.json
+```
+
+Apply the baseline with recoverable backups under the local Codex home:
+
+```bash
+python3 scripts/workstation_bootstrap.py \
+  --host-overlay config/host-overlay.local.json \
+  --apply
+```
+
+Audit installed policy, direct-skill trees, plugin versions, enabled state, and plugin source trees without writing:
+
+```bash
+python3 scripts/workstation_doctor.py \
+  --host-overlay config/host-overlay.local.json
+```
+
+The doctor reports digests and capability names only; it does not print skill contents or secret values. Plugin caches remain installation evidence, never source authority.
+
 ## Included skills
 
 See [skills/INDEX.md](./skills/INDEX.md) for the current catalog.

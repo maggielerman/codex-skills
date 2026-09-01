@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "globalPolicy": "templates/global-AGENTS.md",
+  "marketplaces": [
+    {
+      "name": "custom-plugin-backups",
+      "sourceRoot": "codex-skills"
+    },
+    {
+      "name": "multi-mailbox-ops-local",
+      "sourceRoot": "multi-mailbox-ops"
+    }
+  ],
+  "standaloneSkills": [
+    {"name": "artifact-template-rps-8x10-gallery-sleeve-package", "source": "skills/artifact-template-rps-8x10-gallery-sleeve-package"},
+    {"name": "catalog-review", "source": "skills/catalog-review"},
+    {"name": "context-layer-dashboard-backfill", "source": "skills/context-layer-dashboard-backfill"},
+    {"name": "hyphenomenon-chat-intake", "source": "skills/hyphenomenon-chat-intake"},
+    {"name": "hyphenomenon-project-intake", "source": "skills/hyphenomenon-project-intake"},
+    {"name": "hyphenomenon-codex-usage-report", "source": "skills/hyphenomenon-codex-usage-report"},
+    {"name": "rps-print-order", "source": "skills/rps-print-order"},
+    {"name": "alpinejs-lightweight-js", "source": "skills/alpinejs-lightweight-js"},
+    {"name": "eleventy-jamstack-expert", "source": "skills/eleventy-jamstack-expert"},
+    {"name": "jamstack-version-auditor", "source": "skills/jamstack-version-auditor"},
+    {"name": "tailwindcss-expert", "source": "skills/tailwindcss-expert"},
+    {"name": "project-tranche-orchestrator", "source": "skills/project-tranche-orchestrator"}
+  ],
+  "plugins": [
+    {"name": "context-layer", "marketplace": "custom-plugin-backups", "version": "0.1.0", "source": "plugins/context-layer", "enabled": true},
+    {"name": "rps-etsy-ops", "marketplace": "custom-plugin-backups", "version": "0.1.0", "source": "plugins/rps-etsy-ops", "enabled": true},
+    {"name": "working-modes", "marketplace": "custom-plugin-backups", "version": "0.1.0", "source": "plugins/working-modes", "enabled": true},
+    {"name": "motion-design-director", "marketplace": "custom-plugin-backups", "version": "0.1.0", "source": "plugins/motion-design-director", "enabled": true},
+    {"name": "multi-mailbox-ops", "marketplace": "multi-mailbox-ops-local", "version": "0.1.0", "sourceRoot": "multi-mailbox-ops", "source": "plugins/multi-mailbox-ops", "enabled": true},
+    {"name": "design-system-first", "marketplace": "custom-plugin-backups", "version": "0.1.0", "source": "plugins/design-system-first", "enabled": false, "required": false},
+    {"name": "jamstack-expert", "marketplace": "custom-plugin-backups", "version": "0.2.0", "source": "plugins/jamstack-expert", "enabled": false, "required": false},
+    {"name": "project-tranche-orchestrator", "marketplace": "custom-plugin-backups", "version": "0.1.0", "source": "plugins/project-tranche-orchestrator", "enabled": false, "required": false}
+  ],
+  "projectRoles": {
+    "hyphenomenon": {"pro": "primary", "air": "fallback"},
+    "shopify-headless": {"pro": "primary", "air": "fallback"},
+    "aerial-platform": {"pro": "primary", "air": "fallback"},
+    "multi-mailbox-ops": {"pro": "development-supervision", "air": "live-operations"},
+    "codex-skills": {"pro": "capability-source", "air": "capability-source"},
+    "chronicle-visualizer": {"pro": "report-aggregation", "air": "source-collection"}
+  },
+  "hostCapabilities": {
+    "pro": {"orchestration": true, "liveMailboxMonitor": false, "combinedReportPublisher": true},
+    "air": {"orchestration": false, "liveMailboxMonitor": true, "combinedReportPublisher": false}
+  }
+}

@@ -18,6 +18,8 @@ This skill covers the project intake lane. It does not cover chat/session intake
 1. Set the skill root:
 ```bash
 SKILL_ROOT="${CODEX_HOME:-$HOME/.codex}/skills/hyphenomenon-project-intake"
+SOURCE_REPO_ROOT="/path/to/source-repo"
+HYPHENOMENON_ROOT="/path/to/hyphenomenon"
 ```
 
 2. Generate scaffold files in the Hyphenomenon repo:
@@ -26,8 +28,8 @@ python3 "$SKILL_ROOT/scripts/create_intake_scaffold.py" \
   --project-name "Family Shapes" \
   --repo-url "https://github.com/maggielerman/family-shapes" \
   --live-url "https://familyshapes.com" \
-  --source-repo-path "/Users/maggielerman/Github/family-shapes" \
-  --repo-root "/Users/maggielerman/Github/hyphenomenon" \
+  --source-repo-path "$SOURCE_REPO_ROOT" \
+  --repo-root "$HYPHENOMENON_ROOT" \
   --output "DOCS/intake/runs/projects/2026-06-01-family-shapes/dossier.md" \
   --screenshots-dir "DOCS/intake/runs/projects/2026-06-01-family-shapes/screenshots"
 ```
@@ -44,7 +46,7 @@ python3 "$SKILL_ROOT/scripts/create_intake_scaffold.py" \
 5. Validate requirements:
 ```bash
 python3 "$SKILL_ROOT/scripts/verify_intake.py" \
-  --repo-root "/Users/maggielerman/Github/family-shapes" \
+  --repo-root "$HYPHENOMENON_ROOT" \
   --repo-url "https://github.com/maggielerman/family-shapes" \
   --live-url "https://familyshapes.com"
 ```

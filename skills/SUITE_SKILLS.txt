@@ -1,3 +1,4 @@
+artifact-template-rps-8x10-gallery-sleeve-package
 catalog-review
 cluster-assignment
 codex-to-claude-handoff
@@ -32,6 +33,7 @@ critical-thinking-partner
 echo-chamber-drift-check
 rapid-iteration-mode
 review-board-operating-pattern
+rps-print-order
 rps-etsy-shop-uploader-listing-workflow
 rps-wall-art-mockup-workflow
 tmora-print-proof-deck

@@ -6,6 +6,32 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 class PluginSourceParityTest(unittest.TestCase):
+    def test_required_two_mac_skills_do_not_embed_a_workstation_home(self) -> None:
+        required_skills = [
+            "hyphenomenon-chat-intake",
+            "hyphenomenon-project-intake",
+            "rps-print-order",
+            "rps-wall-art-mockup-workflow",
+        ]
+
+        violations = []
+        for skill_name in required_skills:
+            for path in (REPO_ROOT / "skills" / skill_name).rglob("*"):
+                if not path.is_file():
+                    continue
+                try:
+                    text = path.read_text(encoding="utf-8")
+                except UnicodeDecodeError:
+                    continue
+                if "/Users/" in text:
+                    violations.append(str(path.relative_to(REPO_ROOT)))
+
+        self.assertEqual(
+            violations,
+            [],
+            "Required two-Mac skills must resolve host paths at runtime.",
+        )
+
     def test_rps_visual_guardrails_match_marketplace_package(self) -> None:
         standalone = (
             REPO_ROOT

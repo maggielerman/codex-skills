@@ -3,9 +3,42 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 57,
+  "skillCount": 59,
   "pluginCount": 7,
   "items": [
+    {
+      "slug": "artifact-template-rps-8x10-gallery-sleeve-package",
+      "kind": "skill",
+      "title": "RPS 8x10 Gallery Sleeve Package",
+      "folder": "artifact-template-rps-8x10-gallery-sleeve-package",
+      "status": "active",
+      "summary": "Create a presentation from this saved template",
+      "description": "Create a presentation using the RPS 8x10 Gallery Sleeve Package template and its retained reference file. Use when the user selects this template, names RPS 8x10 Gallery Sleeve Package, or explicitly invokes $artifact-template-rps-8x10-gallery-sleeve-package. Create an 8x10 retail package front for RPS print sets using the sophisticated gallery sleeve layout with editable product art, title, specs, price, and micro SKU.",
+      "category": "Documentation systems",
+      "path": "skills/artifact-template-rps-8x10-gallery-sleeve-package",
+      "resources": [
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user selects this template",
+        "Names RPS 8x10 Gallery Sleeve Package",
+        "Explicitly invokes $artifact-template-rps-8x10-gallery-sleeve-package. Create an 8x10 retail package front for RPS print sets using the sophisticated gallery sleeve layout with editable product art",
+        "Title",
+        "Specs"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
     {
       "slug": "catalog-review",
       "kind": "skill",
@@ -13,14 +46,14 @@ export const catalog = {
       "folder": "catalog-review",
       "status": "active",
       "summary": "Run numbered Shopify-first catalog review workflows",
-      "description": "Custom skill created by Maggie Lerman. Standard Shopify-first catalog review workflow for opening a numbered project, generating numbered JPG review boards with optional PDF bundles, collecting human corrections, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review boards, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.",
+      "description": "Custom skill created by Maggie Lerman. Standard Shopify-first catalog review workflow for opening a numbered project, choosing the right numbered review-packet shape (static JPG/PDF boards, hosted-image HTML pages, or interactive decision-capture surfaces), collecting human corrections or saved decisions, and translating that feedback into apply/verify passes with evidence artifacts. Use when asked to create catalog review pages, set up a catalog cleanup project, review missing colors/orientations/subjects, prepare a merchandising review packet, or apply catalog review corrections.",
       "category": "Storefront and commerce",
       "path": "skills/catalog-review",
       "resources": [
         "agent metadata"
       ],
       "useCases": [
-        "Create catalog review boards",
+        "Create catalog review pages",
         "Set up a catalog cleanup project",
         "Review missing colors/orientations/subjects",
         "Prepare a merchandising review packet",
@@ -1088,6 +1121,37 @@ export const catalog = {
       ]
     },
     {
+      "slug": "rps-print-order",
+      "kind": "skill",
+      "title": "RPS Print Order",
+      "folder": "rps-print-order",
+      "status": "active",
+      "summary": "Find and queue RPS print orders",
+      "description": "Discover the latest incoming Rock Paper Scissors Shopify or Faire order, or use an attached packing slip, pick list, CSV, or manifest; print its packing slip and queue its artwork through Photoshop and Adobe Creative Cloud. Use when the user asks to print or queue an RPS order, including \u201cprint the order that just came in.\u201d",
+      "category": "Storefront and commerce",
+      "path": "skills/rps-print-order",
+      "resources": [
+        "reference guides",
+        "agent metadata"
+      ],
+      "useCases": [
+        "The user asks to print",
+        "Queue an RPS order",
+        "Including \u201cprint the order that just came in.\u201d"
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
       "slug": "rps-etsy-shop-uploader-listing-workflow",
       "kind": "skill",
       "title": "rps-etsy-shop-uploader-listing-workflow",
@@ -1159,19 +1223,19 @@ export const catalog = {
       "title": "tmora-print-proof-deck",
       "folder": "tmora-print-proof-deck",
       "status": "active",
-      "summary": "Custom skill created by Maggie Lerman.",
-      "description": "Custom skill created by Maggie Lerman. Use when creating or revising TMORA, The Museum of Russian Art, print proof PDFs or option decks for Mary, museum gift-shop print files, postcard fronts/backs, 11x17 proofs, or packaging/layout option review.",
-      "category": "Research and review",
+      "summary": "Use when creating or revising TMORA client-facing landscape-letter print proof packets, postcard front/back comparisons, triptych proofs, or final proof PDFs for Mary.",
+      "description": "Use when creating or revising TMORA client-facing landscape-letter print proof packets, postcard front/back comparisons, triptych proofs, or final proof PDFs for Mary.",
+      "category": "Agent workflow accelerators",
       "path": "skills/tmora-print-proof-deck",
       "resources": [
-        "portable skill instructions"
+        "reference guides"
       ],
       "useCases": [
         "Creating",
-        "Revising TMORA",
-        "The Museum of Russian Art",
-        "Print proof PDFs",
-        "Option decks for Mary"
+        "Revising TMORA client-facing landscape-letter print proof packets",
+        "Postcard front/back comparisons",
+        "Triptych proofs",
+        "Final proof PDFs for Mary"
       ],
       "gettingStarted": [
         "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
