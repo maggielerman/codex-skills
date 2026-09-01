@@ -21,6 +21,13 @@
 - Show clear art, believable scale, and useful room context.
 - Do not imply framed fulfillment if only prints are sold.
 - Use alt-ready file naming and manifest metadata.
+- For a standard single-artwork physical print, use the approved gallery order:
+  artwork-only main image, single-vertical living-room mockup, light-wood frame,
+  then black frame. Treat digital, custom, multi-artwork, editorial, and
+  marketplace-specific products as separate reviewed variants.
+- Render every new or normalized listing image at a minimum of 2000 px on its
+  shortest side. Use a native-quality source and mockup base; do not meet the
+  requirement by enlarging a weak source or an already-small mockup.
 
 ## Editorial And Collection Images
 

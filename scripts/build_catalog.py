@@ -327,8 +327,10 @@ def write_index(records: list[SkillRecord]) -> None:
         if record.note:
             notes.append(record.note)
         notes_text = " ".join(notes) if notes else ""
+        escaped_summary = summary.replace("|", "\\|")
+        escaped_notes = notes_text.replace("|", "\\|")
         lines.append(
-            f"| `{record.status}` | [`{label}`](./{record.folder}/SKILL.md) | {summary.replace('|', '\\|')} | {resource_text} | {notes_text.replace('|', '\\|')} |"
+            f"| `{record.status}` | [`{label}`](./{record.folder}/SKILL.md) | {escaped_summary} | {resource_text} | {escaped_notes} |"
         )
 
     lines.extend(
