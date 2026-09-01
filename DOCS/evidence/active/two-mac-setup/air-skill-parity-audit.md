@@ -59,7 +59,7 @@ The audit's directory hash used sorted paths, file type, mode, symlink target, a
 - **Context Layer:** functional. The active bundle contained ten skills, but omitted `context-layer-dashboard-backfill` and carried an older `context-layer-scaffold`. Dashboard backfill remained available as a direct skill.
 - **Working Modes and Critical Thinking Partner:** functional. Repository/cache and direct copies of `working-modes`, `critical-thinking-partner`, `echo-chamber-drift-check`, and `rapid-iteration-mode` matched.
 - **Hyphenomenon:** project intake, chat intake, and usage reporting were present. The report matched `origin/main`; the two intake skills were forward local variants requiring promotion or reconciliation.
-- **RPS Etsy and wall art:** functional but overlapping. The enabled plugin source differed from the repository, and direct uploader/wall-art skills coexisted with different plugin variants.
+- **RPS Etsy and wall art:** present and synchronizable, but production quality is unverified. The enabled plugin source differed from the repository, direct uploader/wall-art skills coexisted with different plugin variants, and historical operator experience reports weak mockup output and insufficiently hardened listing behavior. Installation parity must not be treated as production-readiness evidence.
 - **RPS print and Faire:** `rps-print-order` was present as a local-only direct skill. No dedicated Faire-named skill or plugin was found in the audited locations.
 - **Design system:** present but disabled; keep inactive until its extra source assets are reviewed.
 - **Jamstack:** four direct skills matched their repository direct copies. The duplicate plugin remained inactive, and its formulations were not byte-identical to the direct skills.
@@ -78,3 +78,4 @@ Two cached Xyppy print-configurator previews were observed. They are preview/cac
 4. Keep MMO locked to Air checkpoint `39db2f161194edd37a0dbf26df3ef63e696da789` until that checkpoint is reviewed and merged.
 5. Choose one active lane per overlapping capability: plugin or direct, not both.
 6. Treat all plugin caches and Xyppy previews as evidence only. Git-backed sources remain authoritative.
+7. Keep portability/parity work separate from RPS workflow hardening. Record broken or suboptimal behavior instead of silently preserving it, and require representative Etsy and Shopify mockup/listing fixtures plus human visual review before assigning a production-ready verdict.
