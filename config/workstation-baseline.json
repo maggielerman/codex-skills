@@ -40,8 +40,15 @@
     "shopify-headless": {"pro": "primary", "air": "fallback"},
     "aerial-platform": {"pro": "primary", "air": "fallback"},
     "multi-mailbox-ops": {"pro": "development-supervision", "air": "live-operations"},
-    "codex-skills": {"pro": "capability-source", "air": "capability-source"},
-    "chronicle-visualizer": {"pro": "report-aggregation", "air": "source-collection"}
+    "codex-skills": {"pro": "capability-source", "air": "capability-source"}
+  },
+  "projectTransitions": {
+    "chronicle-visualizer": {
+      "status": "retire-after-air-shadow",
+      "replacement": "hyphenomenon",
+      "proRequired": false,
+      "airRequired": false
+    }
   },
   "hostCapabilities": {
     "pro": {"orchestration": true, "liveMailboxMonitor": false, "combinedReportPublisher": true},

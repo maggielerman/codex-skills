@@ -82,6 +82,12 @@ If you update custom plugins, also refresh the repo-local plugin marketplace in 
 
 `config/workstation-baseline.json` is the shared two-workstation capability lock. It selects the canonical global policy, required direct skills, required plugin packages, machine roles, and host capabilities. Workstation-specific repository paths belong in ignored `config/host-overlay.local.json`; copy `config/host-overlay.example.json` to start one.
 
+Chronicle Visualizer is a preserved historical repository, not a required Pro
+or Air workstation project. Current Skysight source durability and combined
+reporting belong to Hyphenomenon. The transition record remains in the baseline
+only until the Air dry-run/shadow cutover is verified; it does not require a
+Chronicle clone or project binding on either host.
+
 Preview installation without changing local state:
 
 ```bash
