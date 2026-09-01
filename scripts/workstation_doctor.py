@@ -151,6 +151,18 @@ def build_report(
     policy_source = repo_root / manifest["globalPolicy"]
     checks.append(policy_check(policy_source, codex_home / "AGENTS.md"))
 
+    for name, configured_path in sorted(host_overlay.get("repositoryRoots", {}).items()):
+        present = Path(configured_path).expanduser().is_dir()
+        checks.append(
+            {
+                "kind": "repository-root",
+                "name": name,
+                "status": "pass" if present else "drift",
+                "expectedPresent": True,
+                "actualPresent": present,
+            }
+        )
+
     for skill in manifest.get("standaloneSkills", []):
         skill_source = repo_root / skill["source"]
         checks.append(

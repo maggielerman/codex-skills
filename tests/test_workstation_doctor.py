@@ -188,6 +188,31 @@ class WorkstationDoctorTest(unittest.TestCase):
             )
         )
 
+    def test_reports_missing_host_overlay_repository_root(self) -> None:
+        missing = self.root / "missing-external-repo"
+        self.host_overlay.write_text(
+            json.dumps(
+                {
+                    "schemaVersion": 1,
+                    "repositoryRoots": {"external": str(missing)},
+                }
+            ),
+            encoding="utf-8",
+        )
+
+        result = self.run_doctor()
+
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        report = json.loads(result.stdout)
+        self.assertTrue(
+            any(
+                check["kind"] == "repository-root"
+                and check["name"] == "external"
+                and check["status"] == "drift"
+                for check in report["checks"]
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
