@@ -12,6 +12,8 @@ Engineering guides should be flat (no nested subfolders). Add new guides directl
 
 ## Guides
 
+- [Docs library refresh](./docs-library-refresh.md)
+
 - [Skill and plugin source status](./source-status.md)
 - [Checkpoint Workflow](./checkpoint-workflow.md)
 

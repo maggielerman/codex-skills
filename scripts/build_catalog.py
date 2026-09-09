@@ -71,14 +71,28 @@ def parse_frontmatter(skill_md: Path) -> dict[str, str]:
         raise ValueError(f"Missing YAML frontmatter in {skill_md}")
 
     data: dict[str, str] = {}
-    for raw_line in match.group(1).splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith("#"):
+    lines = match.group(1).splitlines()
+    index = 0
+    while index < len(lines):
+        raw_line = lines[index]
+        index += 1
+        # Only top-level fields belong to the skill metadata.
+        if not raw_line or raw_line[0].isspace() or raw_line.startswith("#") or ":" not in raw_line:
             continue
-        if ":" not in line:
-            continue
-        key, value = line.split(":", 1)
-        data[key.strip()] = value.strip().strip("\"'")
+        key, value = raw_line.split(":", 1)
+        value = value.strip()
+        if value in ("|", ">", "|-", ">-"):
+            block = []
+            while index < len(lines) and (not lines[index].strip() or lines[index][0].isspace()):
+                block.append(lines[index].strip())
+                index += 1
+            if value.startswith(">"):
+                paragraphs = "\n".join(block).strip().split("\n\n")
+                data[key.strip()] = "\n".join(" ".join(part.splitlines()) for part in paragraphs)
+            else:
+                data[key.strip()] = "\n".join(block).strip()
+        else:
+            data[key.strip()] = value.strip("\"'")
     return data
 
 

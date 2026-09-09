@@ -969,16 +969,18 @@ export const catalog = {
       "title": "chronicle",
       "folder": "chronicle",
       "status": "active",
-      "summary": "|",
-      "description": "|",
+      "summary": "Allows you to view the user's screen as well as several hours of history.",
+      "description": "Allows you to view the user's screen as well as several hours of history. Use when the user makes a reference to their recent work, for which it'd be helpful to see the screen. This skill MUST be used whenever you need to resolve ambiguity in a user request, where the user hasn't specified enough context to do the task. Examples include disambiguating the specific user/app/document/error the user is referring to.\n\nYou must also use this skill if the user asks about any question regarding Chronicle or asks what you can see from the screen.",
       "category": "Agent workflow accelerators",
       "path": "skills/chronicle",
       "resources": [
         "portable skill instructions"
       ],
       "useCases": [
-        "Run chronicle when its workflow matches the repo outcome you need.",
-        "Use it after the target repo has enough context for Codex to act safely."
+        "The user makes a reference to their recent work",
+        "For which it'd be helpful to see the screen. This skill MUST be used whenever you need to resolve ambiguity in a user request",
+        "Where the user hasn't specified enough context to do the task. Examples include disambiguating the specific user/app/document/error the user is referring to.\n\nYou must also use this skill if the user asks about any question regarding Chronicle",
+        "Asks what you can see from the screen"
       ],
       "gettingStarted": [
         "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
@@ -1490,16 +1492,19 @@ export const catalog = {
       "title": "shopify-merchant-onboarding",
       "folder": "shopify-merchant-onboarding",
       "status": "active",
-      "summary": ">",
-      "description": ">",
+      "summary": "Set up and connect a Shopify store from your AI assistant.",
+      "description": "Set up and connect a Shopify store from your AI assistant. Use when the user wants to: set up my Shopify store, connect my store, install Shopify plugin, get started with Shopify, manage my store, add products to my store, merchant onboarding, start selling online, Shopify setup help, create my first store, how do I set up an online store, shopify.com/SKILL.md, import products, migrate from Square, migrate from WooCommerce, migrate from Etsy, migrate from Amazon, migrate from eBay, migrate from Wix, import from Google Merchant Center, migrate from Clover, migrate from Lightspeed, move products to Shopify, import catalog, replatform to Shopify. This is for store owners \u2014 not developers.",
       "category": "Storefront and commerce",
       "path": "skills/shopify-merchant-onboarding",
       "resources": [
         "portable skill instructions"
       ],
       "useCases": [
-        "Run shopify-merchant-onboarding when its workflow matches the repo outcome you need.",
-        "Use it after the target repo has enough context for Codex to act safely."
+        "The user wants to: set up my Shopify store",
+        "Connect my store",
+        "Install Shopify plugin",
+        "Get started with Shopify",
+        "Manage my store"
       ],
       "gettingStarted": [
         "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",

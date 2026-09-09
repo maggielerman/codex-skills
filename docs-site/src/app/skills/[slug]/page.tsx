@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const item = getCatalogItem("skill", slug);
   if (!item) return {};
   return {
-    title: `${item.title} | Codex Skills Packs`,
+    title: `${item.title} | Codex Skills`,
     description: item.summary,
   };
 }
