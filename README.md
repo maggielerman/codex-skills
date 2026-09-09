@@ -11,7 +11,7 @@ The goals of this repo are simple:
 
 ## License
 
-This repository is being prepared for public release, but a public license has not been selected yet.
+This repository is publicly viewable. A public open-source license has not been selected.
 
 Until an explicit license is added:
 - all rights remain reserved by the repository owner
@@ -64,17 +64,19 @@ python3 scripts/build_catalog.py
 python3 scripts/build_docs_site_catalog.py
 ```
 
-If you want to refresh the repo from local skill directories, run:
+To inspect local standalone skill sources, start with the read-only preflight. Apply only after reviewing its diff and resolving missing sources:
 
 ```bash
 ./scripts/sync_from_codex_home.sh --check
-./scripts/sync_from_codex_home.sh --prune-stale
+./scripts/sync_from_codex_home.sh
 python3 scripts/build_catalog.py --check
 python3 scripts/build_catalog.py
 python3 scripts/build_docs_site_catalog.py
 ```
 
 The sync preflight resolves allowlisted skills from `${CODEX_HOME:-$HOME/.codex}/skills` and `${AGENTS_HOME:-$HOME/.agents}/skills`. It reports allowlisted skills that are missing from local sources, local skills that are intentionally outside the curated suite, stale repo-only files inside synced skill folders, source-only files, and changed source files. Use `--prune-stale` in apply mode when the preflight identifies stale files that should be deleted from the repo copy.
+
+Skills installed only inside plugins will appear missing in the standalone preflight. Missing does not mean obsolete: keep the curated repo source, compare the corresponding custom plugin separately, and reconcile changes deliberately. Do not import the entire installed plugin catalog or prune repository files to match one workstation. See [the current source audit](DOCS/development/source-status.md).
 
 If you update custom plugins, also refresh the repo-local plugin marketplace in `.agents/plugins/marketplace.json` so the package stays installable. Then run `python3 scripts/build_docs_site_catalog.py` so the public plugin docs stay current.
 

@@ -7,6 +7,10 @@ description: Custom skill created by Maggie Lerman. Set up a lightweight UX/UI b
 
 Custom skill created by Maggie Lerman.
 
+## Script paths
+
+Run the `scripts/` commands below from this installed skill folder, using absolute paths for the target repository. Resolve the skill folder from its installed location; do not assume a particular username or checkout path.
+
 ## Overview
 
 Use this skill when a repository needs a lightweight, docs-backed UX/UI bug intake system that works during active implementation without turning into a heavyweight issue tracker.
@@ -61,7 +65,7 @@ If the repo uses `docs/`, adapt the casing accordingly.
 Use the helper script when it fits:
 
 ```bash
-python3 /Users/maggielerman/.codex/skills/ux-ui-bug-intake/scripts/setup_bug_intake.py --root /path/to/repo
+python3 scripts/setup_bug_intake.py --root /path/to/repo
 ```
 
 The script will:

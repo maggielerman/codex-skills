@@ -9,6 +9,10 @@ Custom skill created by Maggie Lerman.
 
 Use this skill when the user wants a new Shopify app created fast, but still wants a reusable shell for common app concerns like merchant comms and review prompts.
 
+## Script paths
+
+Run the `scripts/` commands below from this installed skill folder, using absolute paths for the target repository. Resolve the skill folder from its installed location; do not assume a particular username or checkout path.
+
 ## What This Skill Does
 
 The skill is intentionally split into two layers:
@@ -50,13 +54,13 @@ Do not assume GitHub repo creation. The scaffold script creates the app locally;
 Use the bundled script first:
 
 ```bash
-python3 /Users/maggielerman/.codex/skills/shopify-app-scaffold/scripts/scaffold_shopify_app.py --help
+python3 scripts/scaffold_shopify_app.py --help
 ```
 
 Typical command:
 
 ```bash
-python3 /Users/maggielerman/.codex/skills/shopify-app-scaffold/scripts/scaffold_shopify_app.py \
+python3 scripts/scaffold_shopify_app.py \
   --app-name "Agentic Shopping SEO" \
   --path /absolute/path/to/new-app \
   --support-email support@example.com \

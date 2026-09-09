@@ -612,13 +612,13 @@
       "has_scripts": false,
       "has_references": true,
       "has_assets": false,
-      "file_count": 6
+      "file_count": 7
     },
     {
       "folder": "rps-etsy-shop-uploader-listing-workflow",
       "name": "rps-etsy-shop-uploader-listing-workflow",
       "display_name": null,
-      "description": "Custom skill created by Maggie Lerman. Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification.",
+      "description": "Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification. Custom skill by Maggie Lerman.",
       "short_description": null,
       "status": "active",
       "replacement": null,
@@ -627,9 +627,9 @@
       "skill_md": "skills/rps-etsy-shop-uploader-listing-workflow/SKILL.md",
       "has_agents_metadata": false,
       "has_scripts": false,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false,
-      "file_count": 1
+      "file_count": 2
     },
     {
       "folder": "rps-wall-art-mockup-workflow",

@@ -9,6 +9,10 @@ Custom local skill note: this is a Maggie-created custom skill, not a bundled de
 
 Use this skill as a design-review gate, not as generic aesthetic encouragement. The job is to make UI work more intentional, legible, cohesive, and emotionally appropriate for its product context.
 
+## Script paths
+
+Run the `scripts/` commands below from this installed skill folder, using absolute paths for the target repository. Resolve the skill folder from its installed location; do not assume a particular username or checkout path.
+
 ## Start Here
 
 1. Identify the mode: quick critique, implementation sign-off, complete design audit, concept comparison, design-system audit, or repair pass.
@@ -91,7 +95,7 @@ When a repository has a product operating system:
 For repos that already have the product operating system scaffold but predate this skill, run:
 
 ```bash
-python3 /Users/maggielerman/.codex/skills/visual-design-critique/scripts/backfill_visual_design_gate.py --repo /path/to/repo
+python3 scripts/backfill_visual_design_gate.py --repo /path/to/repo
 ```
 
 Use `--dry-run` first when you want a change preview. The script detects `DOCS/`, `docs/`, or `documentation/`; requires a `PROJECTS/` system; creates the visual design quality guide; and safely appends missing references to `AGENTS.md`, docs indexes, the projects index, and the active project template.

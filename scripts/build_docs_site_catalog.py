@@ -104,7 +104,7 @@ def skill_doc(skill: dict) -> dict:
         "troubleshooting": [
             "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
             "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-            "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact.",
+            "If a bundled script fails, follow the skill’s documented working directory and confirm the full skill folder was copied intact.",
         ],
     }
 

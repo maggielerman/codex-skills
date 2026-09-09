@@ -36,7 +36,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -68,7 +68,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -99,7 +99,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -130,7 +130,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -161,7 +161,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -193,7 +193,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -225,7 +225,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -260,7 +260,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -290,7 +290,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -322,7 +322,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -353,7 +353,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -382,7 +382,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -414,7 +414,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -445,7 +445,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -477,7 +477,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -511,7 +511,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -540,7 +540,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -570,7 +570,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -603,7 +603,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -632,7 +632,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -666,7 +666,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -697,7 +697,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -728,7 +728,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -762,7 +762,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -794,7 +794,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -827,7 +827,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -861,7 +861,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -894,7 +894,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -927,7 +927,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -960,7 +960,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -989,7 +989,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1021,7 +1021,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1053,7 +1053,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1085,7 +1085,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1117,7 +1117,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1148,7 +1148,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1157,12 +1157,12 @@ export const catalog = {
       "title": "rps-etsy-shop-uploader-listing-workflow",
       "folder": "rps-etsy-shop-uploader-listing-workflow",
       "status": "active",
-      "summary": "Custom skill created by Maggie Lerman.",
-      "description": "Custom skill created by Maggie Lerman. Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification.",
+      "summary": "Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification.",
+      "description": "Use when preparing, reviewing, applying, verifying, or debugging Rock Paper Scissors Etsy listing work through Shop Uploader, including exports, CSV/XLSX templates, draft-create packets, partial updates, media/file URLs, upload reports, and post-update verification. Custom skill by Maggie Lerman.",
       "category": "Research and review",
       "path": "skills/rps-etsy-shop-uploader-listing-workflow",
       "resources": [
-        "portable skill instructions"
+        "reference guides"
       ],
       "useCases": [
         "Preparing",
@@ -1180,7 +1180,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1214,7 +1214,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1246,7 +1246,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1276,7 +1276,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1305,7 +1305,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1334,7 +1334,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1364,7 +1364,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1393,7 +1393,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1423,7 +1423,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1452,7 +1452,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1481,7 +1481,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1510,7 +1510,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1542,7 +1542,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1572,7 +1572,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1602,7 +1602,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1631,7 +1631,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1660,7 +1660,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1689,7 +1689,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1718,7 +1718,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1747,7 +1747,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1777,7 +1777,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1811,7 +1811,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {
@@ -1843,7 +1843,7 @@ export const catalog = {
       "troubleshooting": [
         "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
         "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
-        "If a bundled script fails, run it from the target repo root and confirm the full skill folder was copied intact."
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
       ]
     },
     {

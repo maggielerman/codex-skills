@@ -19,7 +19,7 @@ Navigate directly to the trusted Shopify Admin or Faire brand portal rather than
 
 For Shopify, open the exact order and verify its order ID, creation time, paid/processable state, fulfillment state, and physical line items. For Faire, open the exact brand-portal order and verify its order ID, creation time, active/processable state, fulfillment state, and physical line items.
 
-Build the manifest from the live order surface, including exact ordered SKU/variant, size, and unit quantity. Use displayed unit equivalents for case-packed Faire lines. If email and the live order disagree, use the live order for product data but stop and report any discrepancy that makes the target order or its eligibility uncertain.
+Build the manifest from the live order surface, including exact ordered SKU/variant, size, and unit quantity. For every stable SKU, open the corresponding canonical Shopify product and capture its explicit portrait/landscape orientation from the product field, metafield, option, or variant value, including for Faire orders. Record the orientation source and the expected 300-ppi canvas dimensions. If Shopify lacks orientation, follow the fallback in the main skill; do not infer orientation from the size label alone. Use displayed unit equivalents for case-packed Faire lines. If email and the live order disagree, use the live order for product data but stop and report any discrepancy that makes the target order or its eligibility uncertain.
 
 This request authorizes printing preparation. It does not authorize accepting an order, changing inventory, marking fulfilled, purchasing postage, sending a message, or changing customer/order data.
 

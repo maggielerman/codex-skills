@@ -7,6 +7,10 @@ description: Custom skill created by Maggie Lerman. Create current-state user jo
 
 Custom skill created by Maggie Lerman.
 
+## Script paths
+
+Run the `scripts/` commands below from this installed skill folder, using absolute paths for the target repository. Resolve the skill folder from its installed location; do not assume a particular username or checkout path.
+
 ## Overview
 
 Audit current-state navigation for one or more user types, preserve the evidence in docs, and export a final PDF report that combines diagrams, tables, screenshots, and coverage verification.
@@ -74,7 +78,7 @@ Load [references/invocation-recipe.md](references/invocation-recipe.md) when you
 Use the scaffold script to initialize a manifest quickly:
 
 ```bash
-python3 /Users/maggielerman/.codex/skills/user-journey-audit/scripts/init_journey_audit_manifest.py \
+python3 scripts/init_journey_audit_manifest.py \
   --title "Project Journey Audit" \
   --audit-root /absolute/path/to/DOCS/JOURNEY_AUDIT \
   --output /absolute/path/to/journey-audit-manifest.json \
@@ -106,7 +110,7 @@ Use it to check:
 Use the bundled renderer when you want the same final report style across repositories:
 
 ```bash
-node /Users/maggielerman/.codex/skills/user-journey-audit/scripts/render_journey_audit_pdf.mjs \
+node scripts/render_journey_audit_pdf.mjs \
   --input /absolute/path/to/journey-audit-manifest.json \
   --output /absolute/path/to/final-report.pdf
 ```

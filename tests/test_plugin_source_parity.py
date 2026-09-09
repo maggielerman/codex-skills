@@ -11,6 +11,11 @@ class PluginSourceParityTest(unittest.TestCase):
             "hyphenomenon-chat-intake",
             "hyphenomenon-project-intake",
             "rps-print-order",
+            "rps-etsy-shop-uploader-listing-workflow",
+            "shopify-app-scaffold",
+            "user-journey-audit",
+            "ux-ui-bug-intake",
+            "visual-design-critique",
             "rps-wall-art-mockup-workflow",
         ]
 

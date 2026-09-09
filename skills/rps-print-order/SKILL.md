@@ -26,12 +26,17 @@ Before queueing anything, extract one manifest row per order line:
 - ordered SKU
 - stable/main SKU
 - ordered print size
+- product orientation: `portrait` or `landscape`
+- orientation source
+- expected canvas dimensions at 300 pixels per inch
 - unit quantity
 - selected printer label
 
 The stable SKU is the product identifier such as `PXC10029`; variant prefixes or suffixes may differ between the order and Adobe assets. Do not remove digits that belong to the stable SKU. If the stable SKU or unit quantity is genuinely ambiguous, stop that line and report the ambiguity instead of guessing.
 
 Use displayed unit equivalents for case-packed orders. Do not confuse cases with copies.
+
+Resolve orientation from the canonical Shopify product associated with the stable SKU, including when the order came through Faire. Prefer an explicit Shopify product field, metafield, option, or variant value. If Shopify does not expose orientation, inspect an approved document in the current Creative Cloud SKU folder and the sold product image. If orientation remains unavailable or those sources conflict, stop that line instead of guessing. CUPS may verify orientation when it exposes `orientation-requested`, but CUPS is not the source of truth.
 
 ## Select one printer for the whole order
 
@@ -49,7 +54,7 @@ For a discovered latest order, now print and verify its packing slip using the f
 
 ## Route each line
 
-Enter the Adobe/Photoshop folder whose name begins with the stable SKU, then inspect its contents. Do not rely on broad global asset ranking.
+Enter the current Adobe Creative Cloud SKU folder whose name begins with the stable SKU, then inspect its contents. Also check current variant-SKU folders when the ordered and stable SKU differ. Do not rely on broad global asset ranking. A missing or weak search result is not evidence that the folder or artwork is absent; confirm through the Creative Cloud folder hierarchy before selecting the new-artwork route.
 
 1. Exact ordered size exists: read [references/existing-size.md](references/existing-size.md).
 2. The stable-SKU folder exists but the ordered size does not: read [references/create-missing-size.md](references/create-missing-size.md).
@@ -57,14 +62,17 @@ Enter the Adobe/Photoshop folder whose name begins with the stable SKU, then ins
 
 Work existing exact-size files first, then missing-size derivations, then new artwork. This keeps routine queueing separate from files that require visual judgment and proof approval.
 
+For any file created or changed during the order, finish one SKU completely before starting the next: save the cloud document, verify its folder/name/dimensions/orientation/composition, submit its proof and held remainder, and read those jobs back successfully.
+
 ## Shared production rules
 
 - Require an exact size match. Never substitute another available size.
 - Preserve approved originals. Duplicate before adapting an existing cloud document, and save new work with a size-prefixed name such as `8x10-PXC10029.psdc`.
+- The current Creative Cloud SKU folders are the production system of record. Do not use a local PSD, downloaded product image, browser preview, or Codex work folder as the production master or as the document submitted to Photoshop printing.
 - Use the single printer selected for the current order. Similar Canon queue names are not interchangeable.
 - Use the exact ordered paper size. Choose the borderless paper preset for standard sizes; `11x14` and `13x19` use their exact custom-paper presets instead of borderless presets.
 - Use Normal print quality for new jobs. Do not alter jobs already queued at Best unless the user asks.
-- Do not open **Print Settings** for every file. In the normal Photoshop print flow, confirm the visible printer and paper size, set the required copies, and continue. Open settings only when the printer or paper is wrong, unclear, or unavailable.
+- Use [references/submit-print-job.md](references/submit-print-job.md) for every Photoshop submission. Do not open **Print Settings** for every file; open it only when the printer, paper, quality, or orientation is wrong, unclear, or unavailable.
 - Close each Photoshop document after its print job has been submitted. Save created or changed cloud documents first; do not save incidental changes to an existing approved file.
 - Preserve the current printer-level paused state unless the user explicitly asks to resume it.
 - A queued, held, waiting, printing, error, needs-paper, or ink-low state is not proof of physical output, fulfillment, or shipment.
@@ -88,8 +96,9 @@ For a discovered latest order, re-verify that exactly one packing-slip job carri
 
 For every line:
 
-- verify the queued filename and its size prefix against the ordered SKU and size
+- verify the queued filename is the expected size-prefixed `.psdc` from the current Creative Cloud SKU folder; a source-image name, browser asset, or local PSD fails reconciliation
 - verify the job's paper/media is the exact ordered size
+- verify `orientation-requested` against the Shopify-derived orientation when CUPS exposes it; otherwise rely on the recorded Photoshop print-preview check and explicitly note that CUPS did not expose orientation
 - sum copies across any proof and remainder jobs and confirm the total equals the ordered unit quantity
 - verify every job is on the one selected printer and that no job from the order landed on the other printer
 - verify held-versus-released state, keeping proof and remainder jobs visibly distinct

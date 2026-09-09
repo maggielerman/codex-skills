@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T13:59:15.518Z",
+  "generatedAt": "2026-09-09T17:19:31.592Z",
   "items": [
     {
       "path": "DOCS/PROJECTS/README.md",
@@ -56,6 +56,14 @@
       "status": "evolving",
       "lastUpdated": "\"2026-04-28 12:04 ET (America/New_York)\"",
       "owner": "Engineering"
+    },
+    {
+      "path": "DOCS/development/source-status.md",
+      "title": "Skill and plugin source status",
+      "description": "Source comparison and public release preparation for the curated Codex skills suite.",
+      "status": "in-review",
+      "lastUpdated": "\"2026-09-09 13:18 ET (America/New_York)\"",
+      "owner": "Maggie Lerman"
     },
     {
       "path": "DOCS/evidence/README.md",

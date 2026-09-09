@@ -8,7 +8,7 @@ Good additions include:
 - new Codex skills with clear triggering behavior
 - improvements to existing skill instructions
 - reusable scripts, references, or assets that materially strengthen a skill
-- catalog, validation, customer docs, and sync tooling for the repo itself
+- catalog, validation, public docs, and sync tooling for the repo itself
 
 Avoid adding:
 - repo-specific project management docs
@@ -52,7 +52,7 @@ When relevant, preserve:
 python3 scripts/build_catalog.py --check
 ```
 
-5. Regenerate the catalog and customer-facing docs-site catalog:
+5. Regenerate the catalog and public-facing docs-site catalog:
 
 ```bash
 python3 scripts/build_catalog.py
@@ -64,16 +64,16 @@ python3 scripts/build_docs_site_catalog.py
 
 ## Licensing note
 
-This repository is intended for a future paid-access distribution model.
+This repository is publicly viewable, with optional support as its intended funding model.
 
-Until a formal commercial license is added:
+Until the owner selects an explicit public license:
 - treat the repository as all rights reserved
 - do not assume contribution implies open-source licensing
 - do not add or change top-level licensing terms without explicit owner direction
 
-## Customer-facing docs site
+## Public docs site
 
-The `docs-site/` app is for buyers implementing skills packs in their own repositories and workflows. Keep its language focused on setup, use cases, and troubleshooting. Do not turn it into maintenance documentation for this repository.
+The `docs-site/` app is for readers evaluating and applying skills in their own projects. Keep its language focused on setup, use cases, and troubleshooting. Do not turn it into maintenance documentation for this repository.
 
 When skill or plugin metadata changes, regenerate `docs-site/src/lib/catalog.generated.ts` with:
 

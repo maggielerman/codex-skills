@@ -17,8 +17,8 @@ Rules:
 
 Example:
   bootstrap_worktrees.sh \
-    --repo /Users/me/Github/my-repo \
-    --worktrees /Users/me/Github/my-repo-worktrees \
+    --repo /path/to/my-repo \
+    --worktrees /path/to/my-repo-worktrees \
     --plan ./references/cluster-plan.csv \
     --push
 USAGE
