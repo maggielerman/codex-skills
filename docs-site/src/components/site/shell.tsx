@@ -35,7 +35,6 @@ export function PageShell({ children }: { children: React.ReactNode }) {
             <i />
           </span>
           <strong>Codex Skills</strong>
-          <span>by Maggie Lerman</span>
         </Link>
         <nav className="primary-nav" aria-label="Primary navigation">
           {navigation.map(({ href, label, icon: Icon }) => (

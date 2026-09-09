@@ -17,20 +17,8 @@ const items = [...allCatalogItems].sort((a, b) => {
 export default function HomePage() {
   return (
     <PageShell>
-      <main id="main">
-        <section className="intro">
-          <h1>
-            Better context.
-            <br />
-            More useful agents.
-          </h1>
-          <p>
-            The skills and plugins I use to build products, run a print
-            business,
-            <br className="desktop-break" /> and keep human–agent work
-            organized.
-          </p>
-        </section>
+      <main id="main" className="overview-page">
+        <h1 className="sr-only">Codex Skills library</h1>
         <section className="context-feature" aria-labelledby="context-title">
           <div>
             <p className="feature-label">Start here</p>
