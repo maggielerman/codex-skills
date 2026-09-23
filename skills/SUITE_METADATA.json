@@ -23,6 +23,12 @@
       "status": "deprecated",
       "replacement": "product-operating-system-scaffold",
       "note": "Deprecated compatibility alias for the renamed product operating system scaffold."
+    },
+    "rps-faire-packing-sheet": {
+      "status": "active"
+    },
+    "rps-label-4up": {
+      "status": "active"
     }
   }
 }

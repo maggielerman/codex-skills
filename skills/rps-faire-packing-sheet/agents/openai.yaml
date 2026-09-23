@@ -1,0 +1,4 @@
+interface:
+  display_name: "Faire Packing Sheets"
+  short_description: "Searchable photo packing checklists for Faire orders"
+  default_prompt: "Use $rps-faire-packing-sheet to create packing checklists for all open Faire orders."

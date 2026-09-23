@@ -1,0 +1,34 @@
+{
+  "name": "rps-fulfillment",
+  "version": "0.1.0",
+  "description": "Rock Paper Scissors packing checklists and four-up shipping label sheets.",
+  "author": {
+    "name": "Maggie Lerman"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "RPS Fulfillment",
+    "shortDescription": "Faire packing checklists and Letter four-up shipping labels.",
+    "longDescription": "Create offline photo packing checklists from verified Faire orders and combine supplied shipping-label PDFs into four equal US Letter quarters. Includes reusable generators and validation without customer data, label purchasing, order mutation, or automatic printing.",
+    "developerName": "Maggie Lerman",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Create packing checklists for my open Faire orders.",
+      "Combine these shipping labels into a four-up Letter sheet."
+    ]
+  },
+  "repository": "https://github.com/maggielerman/codex-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "rps",
+    "faire",
+    "packing",
+    "shipping-labels",
+    "letter",
+    "4-up"
+  ]
+}

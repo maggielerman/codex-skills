@@ -57,3 +57,5 @@ shopify-pos-ui
 shopify-storefront-graphql
 visual-design-critique
 working-modes
+rps-faire-packing-sheet
+rps-label-4up

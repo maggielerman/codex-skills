@@ -17,4 +17,7 @@ Current packaged plugins:
 - `motion-design-director`
 - `project-tranche-orchestrator`
 - `rps-etsy-ops`
+- `rps-fulfillment`
 - `working-modes`
+
+`rps-fulfillment` bundles `rps-faire-packing-sheet` and `rps-label-4up`. Keep its skill copies synchronized with the corresponding standalone sources in `skills/` when updating either workflow. Customer orders, photos, labels, and generated documents stay outside the repository.

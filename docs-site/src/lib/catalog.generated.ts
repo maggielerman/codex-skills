@@ -3,8 +3,8 @@ import type { CatalogItem } from './catalog-types';
 
 export const catalog = {
   "generatedBy": "scripts/build_docs_site_catalog.py",
-  "skillCount": 59,
-  "pluginCount": 7,
+  "skillCount": 61,
+  "pluginCount": 8,
   "items": [
     {
       "slug": "artifact-template-rps-8x10-gallery-sleeve-package",
@@ -1852,6 +1852,68 @@ export const catalog = {
       ]
     },
     {
+      "slug": "rps-faire-packing-sheet",
+      "kind": "skill",
+      "title": "Faire Packing Sheets",
+      "folder": "rps-faire-packing-sheet",
+      "status": "active",
+      "summary": "Searchable photo packing checklists for Faire orders",
+      "description": "Create searchable, offline HTML packing checklists for Rock Paper Scissors Faire orders, using a photo-card format with titles, SKUs, ordered sizes, quantities, saved checkmarks, and a print view. Use for one order or all open Faire orders.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/rps-faire-packing-sheet",
+      "resources": [
+        "bundled scripts",
+        "reference guides",
+        "starter assets",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Faire Packing Sheets when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
+      "slug": "rps-label-4up",
+      "kind": "skill",
+      "title": "Shipping Labels: Letter 4-Up",
+      "folder": "rps-label-4up",
+      "status": "active",
+      "summary": "Fit shipping labels into four equal Letter quarters",
+      "description": "Combine shipping-label PDFs into print-ready US Letter sheets with four equal quarters. Use for Faire, UPS, USPS, or other supplied labels requested as 4-up, quarter-sheet, or four equal labels per page.",
+      "category": "Agent workflow accelerators",
+      "path": "skills/rps-label-4up",
+      "resources": [
+        "bundled scripts",
+        "agent metadata"
+      ],
+      "useCases": [
+        "Run Shipping Labels: Letter 4-Up when its workflow matches the repo outcome you need.",
+        "Use it after the target repo has enough context for Codex to act safely."
+      ],
+      "gettingStarted": [
+        "Copy or install the complete skill folder so scripts, references, assets, and metadata stay together.",
+        "Open the target repo and read its local agent instructions before invoking the skill.",
+        "Name the outcome you want, the repo constraints, and any files or routes Codex should avoid.",
+        "Review generated scripts, docs, or code before adopting the result into your workflow."
+      ],
+      "troubleshooting": [
+        "If Codex does not trigger the skill, invoke it by name and include the target repo outcome.",
+        "If the output has the wrong audience, explicitly say whether the deliverable is public, personal, team-facing, or repo-internal.",
+        "If a bundled script fails, follow the skill\u2019s documented working directory and confirm the full skill folder was copied intact."
+      ]
+    },
+    {
       "slug": "context-layer",
       "kind": "plugin",
       "title": "Context Layer",
@@ -2024,6 +2086,35 @@ export const catalog = {
         "Prepare an RPS Etsy Shop Uploader review packet.",
         "Review RPS Etsy mockup availability before media work.",
         "Create an RPS digital product packet plan."
+      ],
+      "gettingStarted": [
+        "Install the complete plugin folder from the public repo or local checkout.",
+        "Refresh Codex so plugin skills, metadata, assets, and default prompts are visible.",
+        "Start from one suggested prompt, then add the target repo path and desired deliverable."
+      ],
+      "troubleshooting": [
+        "If the plugin does not appear, confirm .codex-plugin/plugin.json is present and the plugin registry points to the folder.",
+        "If a plugin skill cannot find scripts or assets, the plugin folder was likely flattened or partially copied.",
+        "If the workflow is too broad, rerun with a narrower deliverable and explicit no-touch files."
+      ]
+    },
+    {
+      "slug": "rps-fulfillment",
+      "kind": "plugin",
+      "title": "RPS Fulfillment",
+      "folder": "rps-fulfillment",
+      "status": "available",
+      "summary": "Faire packing checklists and Letter four-up shipping labels.",
+      "description": "Create offline photo packing checklists from verified Faire orders and combine supplied shipping-label PDFs into four equal US Letter quarters. Includes reusable generators and validation without customer data, label purchasing, order mutation, or automatic printing.",
+      "category": "Productivity",
+      "path": "plugins/rps-fulfillment",
+      "resources": [
+        "Interactive capability",
+        "Write capability"
+      ],
+      "useCases": [
+        "Create packing checklists for my open Faire orders.",
+        "Combine these shipping labels into a four-up Letter sheet."
       ],
       "gettingStarted": [
         "Install the complete plugin folder from the public repo or local checkout.",

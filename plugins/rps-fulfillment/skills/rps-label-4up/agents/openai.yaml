@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shipping Labels: Letter 4-Up"
+  short_description: "Fit shipping labels into four equal Letter quarters"
+  default_prompt: "Use $rps-label-4up to combine these shipping-label PDFs into a print-ready four-quarter Letter sheet."
